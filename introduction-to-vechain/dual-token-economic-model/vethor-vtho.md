@@ -4,7 +4,7 @@ description: Vechain's transaction / gas token.
 
 # VeThor (VTHO)
 
-<table><thead><tr><th width="265">VTHO</th><th></th></tr></thead><tbody><tr><td>Type</td><td><a href="https://github.com/vechain/VIPs/blob/master/vips/VIP-180.md">VIP180</a></td></tr><tr><td>Token contract address</td><td>0x0000000000000000000000000000456E65726779</td></tr><tr><td>Precision</td><td>18 decimal places</td></tr><tr><td>Supply</td><td>VTHO is the energy or the cost of carrying out the payment and smart contract transactions on the VechainThor blockchain. VTHO is generated from VET in each block over time in a linear manner. (0.000432 VTHO is generated per VET per block)</td></tr><tr><td>Consumption</td><td>70% of the transaction fee paid in VTHO in each block is burned and the remaining 30% is rewarded to the Authority Masternode which produces the block.</td></tr></tbody></table>
+<table><thead><tr><th width="265">VTHO</th><th></th></tr></thead><tbody><tr><td>Type</td><td><a href="https://github.com/vechain/VIPs/blob/master/vips/VIP-180.md">VIP180</a></td></tr><tr><td>Token contract address</td><td>0x0000000000000000000000000000456E65726779</td></tr><tr><td>Precision</td><td>18 decimal places</td></tr><tr><td>Supply</td><td>VTHO is the energy or the cost of carrying out the payment and smart contract transactions on the VechainThor blockchain. VTHO is generated from VET in each block over time in a linear manner. (0.000432 VTHO is generated per VET per day)</td></tr><tr><td>Consumption</td><td>70% of the transaction fee paid in VTHO in each block is burned and the remaining 30% is rewarded to the Authority Masternode which produces the block.</td></tr></tbody></table>
 
 ## What is a VIP180 token?&#x20;
 
