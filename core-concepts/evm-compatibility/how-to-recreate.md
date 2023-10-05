@@ -22,8 +22,9 @@ cd openzeppelin-contracts
 ### Install the required Vechain libraries
 
 ```bash
-npm i @vechain/hardhat-vechain
-npm i @vechain/hardhat-web3
+npm install @vechain/hardhat-vechain@0.0.1 --save-exact
+npm install @vechain/hardhat-web3@0.0.1 --save-exact
+npm install @vechain/web3-providers-connex@1.0.0 --save-exact
 ```
 
 ### Modify your hardhat.config.js
