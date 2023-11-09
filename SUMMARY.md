@@ -82,6 +82,7 @@
     * [EntryPoint Contract](core-concepts/account-abstraction/entrypoint-contract.md)
     * [Account Factory Contract](core-concepts/account-abstraction/account-factory-contract.md)
     * [Paymaster Contract](core-concepts/account-abstraction/paymaster-contract.md)
+  * [Token Bound Accounts](core-concepts/token-bound-accounts/README.md)
 * [Start Building](start-building/README.md)
   * [Tutorials](start-building/tutorials/README.md)
     * [How to run a Thor Solo Node](start-building/tutorials/how-to-run-a-thor-solo-node/README.md)
