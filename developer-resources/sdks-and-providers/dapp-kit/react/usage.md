@@ -2,11 +2,13 @@
 description: Using the vechain dApp kit in react
 ---
 
-## Initialization
+# Usage
 
-#### 1. Create the node options
+### Initialization
 
-```typescript jsx
+**1. Create the node options**
+
+```typescript
 import type { Options } from '@vechain/connex';
 
 const nodeOptions: Omit<Options, 'signer'> = {
@@ -15,26 +17,29 @@ const nodeOptions: Omit<Options, 'signer'> = {
 };
 ```
 
-#### 2. Optional: Wallet Connect Options
+**2. Optional: Wallet Connect Options**
 
 ```typescript
 import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
 
 const walletConnectOptions: WalletConnectOptions = {
-    projectId: '<PROJECT_ID>', // Create your project here: https://cloud.walletconnect.com/sign-up
+    // Create your project here: https://cloud.walletconnect.com/sign-up
+    projectId: '<PROJECT_ID>', 
     metadata: {
         name: 'My dApp',
         description: 'My dApp description',
-        url: window.location.origin, // Your app URL
-        icons: [`${window.location.origin}/images/my-dapp-icon.png`], // Your app Icon
+        // Your app URL
+        url: window.location.origin, 
+        // Your app Icon
+        icons: [`${window.location.origin}/images/my-dapp-icon.png`], 
     },
 };
 ```
 
+**3. Initialise the `ConnexVendor`**
 
-#### 3. Initialise the `ConnexVendor`
-
-```typescript jsx
+{% code overflow="wrap" %}
+```typescript
 import { ConnexProvider } from '@vechainfoundation/dapp-kit-react';
 
 export const App = (): JSX.Element => {
@@ -42,7 +47,8 @@ export const App = (): JSX.Element => {
         <>
             <ConnexProvider
                 nodeOptions={nodeOptions}
-                persistState={false} // Optional - defaults to false. If true, account and source will be persisted in local storage
+                // Optional - defaults to false. If true, account and source will be persisted in local storage
+                persistState={false} 
                 walletConnectOptions={walletConnectOptions}
             >
                 <YourApp />
@@ -51,59 +57,65 @@ export const App = (): JSX.Element => {
     );
 };
 ```
+{% endcode %}
 
+### Hooks
 
-## Hooks
+#### `useWallet`
 
-### `useWallet`
-
-```typescript jsx
+```typescript
 import { useWallet } from '@vechainfoundation/dapp-kit-react';
 
 const {
-    account, // The current connected account
-    source, // The current wallet source
-    setSource, // Set the wallet source
-    connect, // Connect to the wallet
-    availableWallets, // A list of available wallets
-    disconnect, // Disconnect from the wallet
+    // The current connected account
+    account, 
+    // The current wallet source
+    source, 
+    // Set the wallet source
+    setSource, 
+    // Connect to the wallet
+    connect, 
+    // A list of available wallets
+    availableWallets, 
+    // Disconnect from the wallet
+    disconnect, 
 } = useWallet();
 ```
 
-### `useConnex`
+#### `useConnex`
 
-- This hook exposes the `thor` and `vendor` instances of `@vechain/connex`. To interact with a wallet, you must `useWallet` and call `setSource` first.
+* This hook exposes the `thor` and `vendor` instances of `@vechain/connex`. To interact with a wallet, you must `useWallet` and call `setSource` first.
 
 {% hint style="info" %}
 For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
 {% endhint %}
 
-```typescript jsx
+```typescript
 import { useConnex } from '@vechainfoundation/dapp-kit-react';
 
 const { thor, vendor } = useConnex();
 ```
 
-### `useModal`
+#### `useModal`
 
-- This hook can be used to open and close the wallet modal.
-- The modal will display the available wallets and allow the user to connect to one of them.
+* This hook can be used to open and close the wallet modal.
+* The modal will display the available wallets and allow the user to connect to one of them.
 
-```typescript jsx
+```typescript
 import { useWalletModal } from '@vechainfoundation/dapp-kit-react';
 
 const { open, close } = useWalletModal();
 ```
 
-## UI Components
+### UI Components
 
-### `ConnectWalletButton`
+#### `ConnectWalletButton`
 
-- This component mounts a button inside your component that will open a modal with the available wallets when clicked.
-- The user can then select a wallet of their choice and connect to it.
-- Once connected, the `account` and `source` will be available via the `useWallet` hook.
+* This component mounts a button inside your component that will open a modal with the available wallets when clicked.
+* The user can then select a wallet of their choice and connect to it.
+* Once connected,  `account` and `source` will be available via the `useWallet` hook.
 
-```typescript jsx
+```typescript
 import { ConnectWalletButtonWithModal } from '@vechainfoundation/dapp-kit-react';
 
 const MyComponent = (): JSX.Element => {
