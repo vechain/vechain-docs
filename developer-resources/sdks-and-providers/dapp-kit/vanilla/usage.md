@@ -39,4 +39,4 @@ console.log(`Connex configured`, connex.thor.genesis.id);
 <body>
     <vwk-vechain-dapp-connect-kit mode="DARK"></vwk-vechain-dapp-connect-kit>
 </body>
-```~~
+```
