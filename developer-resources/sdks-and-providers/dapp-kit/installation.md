@@ -1,6 +1,7 @@
 ---
 description: >-
-    How to install `@vechain/dapp-kit` in order to use it with TypeScript or Javascript.
+  How to install `@vechain/dapp-kit` in order to use it with TypeScript or
+  Javascript.
 ---
 
 # Installation
@@ -21,7 +22,9 @@ Upon installation, you may utilize the subsequent code snippet to verify the pro
 
 ```typescript
 const connex = new MultiWalletConnex({
-  nodeUrl: 'https://sync-testnet.vechain.org/', //Required
-  genesis: 'test', // Required if not connecting to the mainnet
+  // Required
+  nodeUrl: 'https://sync-testnet.vechain.org/', 
+  // Required ONLY if connecting to a network other than main net
+  genesis: 'test', 
 });
 ```
