@@ -33,7 +33,7 @@ const vechainWalletKitOptions: DAppKitOptions = {
     walletConnectOptions, 
     // Optional - If false/undefined, the default Wallet Connect model will be used
     useWalletKitModal: true, 
-    // Optional - Defaults to false. If true, account and source will be persisted in local storage
+    // Optional - Defaults to false. If true, the account and source will be persisted in local storage
     usePersistence: true, 
 };
 
