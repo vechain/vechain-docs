@@ -4,6 +4,8 @@ description: Using the vechain dApp kit in react
 
 # Usage
 
+***
+
 ### Initialization
 
 **1. Create the node options**
@@ -59,6 +61,8 @@ export const App = (): JSX.Element => {
 ```
 {% endcode %}
 
+***
+
 ### Hooks
 
 #### `useWallet`
@@ -106,6 +110,10 @@ import { useWalletModal } from '@vechainfoundation/dapp-kit-react';
 
 const { open, close } = useWalletModal();
 ```
+
+
+
+***
 
 ### UI Components
 
