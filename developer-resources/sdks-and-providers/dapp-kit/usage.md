@@ -23,7 +23,7 @@ const walletConnectOptions: WalletConnectOptions = {
 };
 ```
 
-### 2. Initialise the `Connex` instance
+### 2. Initialise the `DAppKit` instance
 
 {% hint style="info" %}
 For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
@@ -52,10 +52,19 @@ const {thor, vendor, wallet} = new DAppKit({
 
 ***
 
-### Setting the Wallet
+## Wallet Manager
 
-* If you provided `useFirstDetectedSource` as true, then you don't need to do anything. You can start using the `thor` and `vendor` instances.
-* Otherwise, you will have to set the wallet source. This is usually chosen by the user, but it can be done manually too:
+The wallet manager is the layer provided on top of `connex` . It can be created following the usage above.
+
+```typescript
+const {wallet, thor, connex} = new DAppKit(...)
+```
+
+***
+
+### Set the wallet source
+
+* Set the current wallet source. This step is necessary if `usePersistence` was not provided as true.
 
 ```typescript
 import type { WalletSource } from '@vechainfoundation/dapp-kit';
@@ -70,11 +79,37 @@ wallet.setSource('veworld');
 
 ***
 
+### Connect
+
+* Connect to the selected wallet. The purpose of this is to improve the UX. For example, connecting a wallet via Wallet Connect involves switching applications multiple times. This will reduce the friction and create a better experience for the user.
+* This will connect to the user's wallet and return its address.&#x20;
+  * For certificate-based wallets, (eg. Sync2), this involves signing a signature
+  * For other wallets, such as those using Wallet Connect, it will fetch the address without signing a certificate
+* The response will contain `verified` equal to true if the user signed a certificate
+
+```typescript
+import { ConnectResponse } from '@vechainfoundation/dapp-kit'
+
+const res: ConnectResponse = await wallet.connect()
+
+console.log(res)
+// { "address": "0x995711ADca070C8f6cC9ca98A5B9C5A99b8350b1","verified": true}
+```
 
 
-## Available Methods
 
+***
 
+### State
 
+```typescript
+import { WalletManagerState } from '@vechainfoundation/dapp-kit'
 
+const state: WalletManagerState = wallet.state
+```
 
+#### WalletManagerState:
+
+* `account` - the address of the connected wallet. Null if not connected
+* `source` - the source of the currently selected wallet. Null if not selected
+* `availableWallets` - A list of available wallet sources
