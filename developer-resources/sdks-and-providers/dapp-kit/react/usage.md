@@ -130,7 +130,7 @@ const MyComponent = () => {
 
 #### `ConnectWalletButton`
 
-* This component mounts a button inside your component that will open a modal with the available wallets when clicked.
+* This component mounts a button that will open a modal with the available wallets when clicked.
 * The user can then select a wallet of their choice and connect to it.
 * Once connected,  `account` and `source` will be available via the `useWallet` hook.
 
