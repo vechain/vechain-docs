@@ -21,7 +21,7 @@ npm i @vechain/dapp-kit
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
 
 ```typescript
-import { DAppKit } from '@vechainfoundation/dapp-kit';
+import { DAppKit } from '@vechain/dapp-kit';
 
 const { thor, vendor, wallet } = new DAppKit({
     //Required

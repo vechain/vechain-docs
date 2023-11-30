@@ -7,7 +7,7 @@ description: Using the vechain dApp kit
 ### 1. Optional: Wallet Connect Options
 
 ```typescript
-import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
+import type { WalletConnectOptions } from '@vechain/dapp-kit';
 
 const walletConnectOptions: WalletConnectOptions = {
     // Create your project here: https://cloud.walletconnect.com/sign-up
@@ -30,7 +30,7 @@ For more information on using connex, please refer to the [Connex documentation]
 {% endhint %}
 
 ```typescript
-import { DAppKit } from '@vechainfoundation/dapp-kit';
+import { DAppKit } from '@vechain/dapp-kit';
 
 const {thor, vendor, wallet} = new DAppKit({
   // Required - The URL of the node to connect to
@@ -67,7 +67,7 @@ const {wallet, thor, connex} = new DAppKit(...)
 * Set the current wallet source. This step is necessary if `usePersistence` was not provided as true.
 
 ```typescript
-import type { WalletSource } from '@vechainfoundation/dapp-kit';
+import type { WalletSource } from '@vechain/dapp-kit';
 
 // type WalletSource = 'wallet-connect' | 'veworld' | 'sync2' | 'sync';
 const mySource: WalletSource = 'veworld';
@@ -88,7 +88,7 @@ wallet.setSource('veworld');
 * The response will contain `verified` equal to true if the user signed a certificate
 
 ```typescript
-import { ConnectResponse } from '@vechainfoundation/dapp-kit'
+import { ConnectResponse } from '@vechain/dapp-kit'
 
 const res: ConnectResponse = await wallet.connect()
 
@@ -106,7 +106,7 @@ console.log(res)
   * `address` will be whatever address was retrieved when connecting, signing a certificate, or sending a transaction.
 
 ```typescript
-import { WalletManagerState } from '@vechainfoundation/dapp-kit'
+import { WalletManagerState } from '@vechain/dapp-kit'
 
 const state: WalletManagerState = wallet.state
 ```
@@ -126,7 +126,7 @@ const state: WalletManagerState = wallet.state
 * You can subscribe to state changes:
 
 ```typescript
-import { WalletManagerState } from '@vechainfoundation/dapp-kit'
+import { WalletManagerState } from '@vechain/dapp-kit'
 
 const myListener = (newState: WalletManagerState) => {
     console.log(newState)
@@ -149,7 +149,7 @@ subscription()
 * You can also subscribe to a single value in the state:
 
 ```typescript
-import { WalletSource } from '@vechainfoundation/dapp-kit'
+import { WalletSource } from '@vechain/dapp-kit'
 
 const myListener = (newWalletSource: WalletSource) => {
     console.log(newWalletSource)

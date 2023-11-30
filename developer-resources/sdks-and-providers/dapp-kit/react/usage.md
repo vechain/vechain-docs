@@ -11,7 +11,7 @@ description: Using the vechain dApp kit in react
 **1. Optional: Wallet Connect Options**
 
 ```tsx
-import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
+import type { WalletConnectOptions } from '@vechain/dapp-kit';
 
 const walletConnectOptions: WalletConnectOptions = {
     // Create your project here: https://cloud.walletconnect.com/sign-up
@@ -31,7 +31,7 @@ const walletConnectOptions: WalletConnectOptions = {
 
 {% code overflow="wrap" %}
 ```tsx
-import { DAppKitProvider } from '@vechainfoundation/dapp-kit-react';
+import { DAppKitProvider } from '@vechain/dapp-kit-react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -61,7 +61,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 #### `useWallet`
 
 ```tsx
-import { useWallet } from '@vechainfoundation/dapp-kit-react';
+import { useWallet } from '@vechain/dapp-kit-react';
   
 const MyComponent: React.FC = () => {
 
@@ -93,7 +93,7 @@ For more information on using connex, please refer to the [Connex documentation]
 {% endhint %}
 
 ```typescript
-import { useConnex } from '@vechainfoundation/dapp-kit-react';
+import { useConnex } from '@vechain/dapp-kit-react';
 
 const { thor, vendor } = useConnex();
 ```
@@ -105,7 +105,7 @@ const { thor, vendor } = useConnex();
 * Once the user has connected, the modal will close itself
 
 ```typescript
-import { useWalletModal, useWallet } from '@vechainfoundation/dapp-kit-react';
+import { useWalletModal, useWallet } from '@vechain/dapp-kit-react';
 
 const MyComponent = () => {
     const { open, close } = useWalletModal();
@@ -135,7 +135,7 @@ const MyComponent = () => {
 * Once connected,  `account` and `source` will be available via the `useWallet` hook.
 
 ```typescript
-import { ConnectWalletButtonWithModal } from '@vechainfoundation/dapp-kit-react';
+import { ConnectWalletButtonWithModal } from '@vechain/dapp-kit-react';
 
 const MyComponent = (): JSX.Element => {
 

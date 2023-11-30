@@ -7,8 +7,8 @@ description: Using the vechain dApp kit UI components
 #### Initialization
 
 ```typescript
-import { DAppKit } from '@vechainfoundation/dapp-kit-ui';
-import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
+import { DAppKit } from '@vechain/dapp-kit-ui';
+import type { WalletConnectOptions } from '@vechain/dapp-kit';
 import type { DAppKitOptions } from '@vechain/dapp-kit-ui';
 
 const walletConnectOptions: WalletConnectOptions = {
@@ -41,7 +41,7 @@ const vechainWalletKitOptions: DAppKitOptions = {
 
 const dappKit = DAppKit.configure(vechainWalletKitOptions);
 
-console.log(`Connex configured`, dappKit.thor.genesis.id);
+console.log(`DAppKit configured`, dappKit.thor.genesis.id);
 ```
 
 #### Place the custom element in your HTML

@@ -41,5 +41,5 @@ Upon installation, you may utilize the subsequent code snippet to verify the pro
 
 
 ```typescript
-import { ConnexProvider } from '@vechainfoundation/dapp-kit-react';
+import { DAppKitProvider } from '@vechain/dapp-kit-react';
 ```
