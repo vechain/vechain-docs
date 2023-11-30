@@ -27,8 +27,6 @@ const { thor, vendor, wallet } = new DAppKit({
     //Required
     nodeUrl: 'https://sync-testnet.vechain.org/', 
     //Optional - "main" | "test" | Connex.Thor.Block
-    genesis: 'main', 
-    //Optional
-    walletConnectOptions, 
+    genesis: 'test', 
 });
 ```
