@@ -35,3 +35,19 @@ The vechain dApp kit is designed to make it easy to interact with all vechain th
 1. **Wallet Management**: Connex was designed with Sync / Sync2 in mind, so this library provides an additional layer on top, making it easier to manage multiple wallets.
 2. **Wallet Selection**: The `@vechain/dapp-kit-ui` library provides multiple components to make it easy to select and connect to a wallet.
 3. **React**: The `@vechain-dapp-kit-react` library provides several hooks and components to make it easy to use the dApp kit with React.
+4.
+
+***
+
+## Adding your Wallet
+
+Since the DApp Kit is designed to work with 1 to many wallets, you can create a pull request and configure your wallet in the DApp Kit.
+
+1. Clone the repo \[here]\([https://github.com/vechainfoundation/vechain-dapp-kit](https://github.com/vechainfoundation/vechain-dapp-kit))
+2. Inside `./packages/dapp-kit`&#x20;
+   1. Modify `WalletSource` in `src/types.d.ts`
+   2. Modify the `createWallet` function in `src/create-wallet.ts`
+3. Add your wallet details in: `./packages/dapp-kit-ui/src/constants/sources.ts`
+4. Test you that can successfully integrate with your wallet
+5. Add unit tests
+6. Create your pull request
