@@ -31,15 +31,17 @@ const vechainWalletKitOptions: DAppKitOptions = {
     network: 'test', 
     // Optional - Wallet connect options
     walletConnectOptions, 
-    // Optional - If false/undefined, the default Wallet Connect model will be used
-    useWalletKitModal: true, 
     // Optional - Defaults to false. If true, the account and source will be persisted in local storage
     usePersistence: true, 
+    // Optional - Defaults to the first available wallet. Default value is false
+    useFirstDetectedSource: true,
+    // Optional - Set a log level to debug the library
+    logLevel: 'DEBUG'
 };
 
-const connex = DAppKit.configure(vechainWalletKitOptions);
+const dappKit = DAppKit.configure(vechainWalletKitOptions);
 
-console.log(`Connex configured`, connex.thor.genesis.id);
+console.log(`Connex configured`, dappKit.thor.genesis.id);
 ```
 
 #### Place the custom element in your HTML
