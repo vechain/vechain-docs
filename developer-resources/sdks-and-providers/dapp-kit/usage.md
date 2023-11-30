@@ -140,3 +140,25 @@ subscription()
 
 ```
 
+
+
+***
+
+### Subscribe to a single value in the state
+
+* You can also subscribe to a single value in the state:
+
+```typescript
+import { WalletSource } from '@vechainfoundation/dapp-kit'
+
+const myListener = (newWalletSource: WalletSource) => {
+    console.log(newWalletSource)
+}
+
+//Start the subscription
+const subscription = wallet.subscribeToKey('source', myListener)
+
+//End the subscription
+subscription()
+```
+
