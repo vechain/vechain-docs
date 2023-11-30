@@ -1,5 +1,5 @@
 ---
-description: Using the vechain dApp kit in react
+description: Using the vechain dApp kit
 ---
 
 # Usage
@@ -10,12 +10,15 @@ description: Using the vechain dApp kit in react
 import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
 
 const walletConnectOptions: WalletConnectOptions = {
-    projectId: '<PROJECT_ID>', // Create your project here: https://cloud.walletconnect.com/sign-up
+    // Create your project here: https://cloud.walletconnect.com/sign-up
+    projectId: '<PROJECT_ID>', 
     metadata: {
         name: 'My dApp',
         description: 'My dApp description',
-        url: window.location.origin, // Your app URL
-        icons: [`${window.location.origin}/images/my-dapp-icon.png`], // Your app Icon
+        // Your app URL
+        url: window.location.origin, 
+        // Your app Icon
+        icons: [`${window.location.origin}/images/my-dapp-icon.png`], 
     },
 };
 ```
