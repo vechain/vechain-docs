@@ -102,6 +102,9 @@ console.log(res)
 
 ### State
 
+* The wallet manager will have some fields in state for ease of use.
+  * `address` will be whatever address was retrieved when connecting, signing a certificate, or sending a transaction.
+
 ```typescript
 import { WalletManagerState } from '@vechainfoundation/dapp-kit'
 
@@ -113,3 +116,27 @@ const state: WalletManagerState = wallet.state
 * `account` - the address of the connected wallet. Null if not connected
 * `source` - the source of the currently selected wallet. Null if not selected
 * `availableWallets` - A list of available wallet sources
+
+
+
+***
+
+### Subscribe to State
+
+* You can subscribe to state changes:
+
+```typescript
+import { WalletManagerState } from '@vechainfoundation/dapp-kit'
+
+const myListener = (newState: WalletManagerState) => {
+    console.log(newState)
+}
+
+//Start the subscription
+const subscription = wallet.subscribe(myListener)
+
+//End the subscription
+subscription()
+
+```
+
