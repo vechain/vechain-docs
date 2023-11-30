@@ -8,20 +8,9 @@ description: Using the vechain dApp kit in react
 
 ### Initialization
 
-**1. Create the node options**
+**1. Optional: Wallet Connect Options**
 
-```typescript
-import type { Options } from '@vechain/connex';
-
-const nodeOptions: Omit<Options, 'signer'> = {
-    node: 'https://testnet.vechain.org/', //Required
-    network: 'test', // Required if connecting to a network other than mainnet
-};
-```
-
-**2. Optional: Wallet Connect Options**
-
-```typescript
+```tsx
 import type { WalletConnectOptions } from '@vechainfoundation/dapp-kit';
 
 const walletConnectOptions: WalletConnectOptions = {
@@ -38,26 +27,30 @@ const walletConnectOptions: WalletConnectOptions = {
 };
 ```
 
-**3. Initialise the `ConnexVendor`**
+**2. Initialise the**`DAppKitProvider`&#x20;
 
 {% code overflow="wrap" %}
-```typescript
-import { ConnexProvider } from '@vechainfoundation/dapp-kit-react';
+```tsx
+import { DAppKitProvider } from '@vechainfoundation/dapp-kit-react';
 
-export const App = (): JSX.Element => {
-    return (
-        <>
-            <ConnexProvider
-                nodeOptions={nodeOptions}
-                // Optional - defaults to false. If true, account and source will be persisted in local storage
-                persistState={false} 
-                walletConnectOptions={walletConnectOptions}
-            >
-                <YourApp />
-            </ConnexProvider>
-        </>
-    );
-};
+ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+        <DAppKitProvider
+            // REQUIRED: The URL of the node you want to connect to
+            nodeUrl={'https://testnet.vechain.org/'}
+            // OPTIONAL: Required if you're not connecting to the main net
+            genesis={'test'}
+            // OPTIONAL: Whether or not to persist state in local storage (account, wallet source)
+            usePersistence={true}
+            // OPTIONAL: Options to enable wallet connect
+            walletConnectOptions={walletConnectOptions}
+            // OPTIONAL: A log level for console logs
+            logLevel="DEBUG"
+        >
+            <App />
+        </DAppKitProvider>
+    </React.StrictMode>,
+);
 ```
 {% endcode %}
 
@@ -67,23 +60,28 @@ export const App = (): JSX.Element => {
 
 #### `useWallet`
 
-```typescript
+```tsx
 import { useWallet } from '@vechainfoundation/dapp-kit-react';
+  
+const MyComponent: React.FC = () => {
 
-const {
+  const {
     // The current connected account
-    account, 
+    account,
     // The current wallet source
-    source, 
+    source,
     // Set the wallet source
-    setSource, 
+    setSource,
     // Connect to the wallet
-    connect, 
+    connect,
     // A list of available wallets
-    availableWallets, 
+    availableWallets,
     // Disconnect from the wallet
-    disconnect, 
-} = useWallet();
+    disconnect,
+  } = useWallet();
+  
+  return <div>...</div>;
+}
 ```
 
 #### `useConnex`
@@ -104,11 +102,24 @@ const { thor, vendor } = useConnex();
 
 * This hook can be used to open and close the wallet modal.
 * The modal will display the available wallets and allow the user to connect to one of them.
+* Once the user has connected, the modal will close itself
 
 ```typescript
-import { useWalletModal } from '@vechainfoundation/dapp-kit-react';
+import { useWalletModal, useWallet } from '@vechainfoundation/dapp-kit-react';
 
-const { open, close } = useWalletModal();
+const MyComponent = () => {
+    const { open, close } = useWalletModal();
+    const { account } = useWallet();
+
+    useEffect(() => {
+        if (account) {
+            console.log(`Account connected: ${account}`);
+        }
+    }, [account]);
+
+    return <button onClick={open}>Open Modal</button>;
+};
+
 ```
 
 
