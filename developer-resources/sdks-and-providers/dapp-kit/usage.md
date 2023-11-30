@@ -52,7 +52,7 @@ const {thor, vendor, wallet} = new DAppKit({
 
 ***
 
-### Setting the Walet
+### Setting the Wallet
 
 * If you provided `useFirstDetectedSource` as true, then you don't need to do anything. You can start using the `thor` and `vendor` instances.
 * Otherwise, you will have to set the wallet source. This is usually chosen by the user, but it can be done manually too:
@@ -65,3 +65,16 @@ const mySource: WalletSource = 'veworld';
 
 wallet.setSource('veworld');
 ```
+
+
+
+***
+
+
+
+## Available Methods
+
+
+
+
+
