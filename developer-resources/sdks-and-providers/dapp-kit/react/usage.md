@@ -27,7 +27,7 @@ const walletConnectOptions: WalletConnectOptions = {
 };
 ```
 
-**2. Initialise the**`DAppKitProvider`&#x20;
+**2. Initialise the**`DAppKitProvider`
 
 {% code overflow="wrap" %}
 ```tsx
@@ -95,6 +95,13 @@ For more information on using connex, please refer to the [Connex documentation]
 ```typescript
 import { useConnex } from '@vechain/dapp-kit-react';
 
+const MyComponent: React.FC = () => {
+
+  const { thor, vendor } = useConnex();
+  
+  return <div>...</div>;
+}
+
 const { thor, vendor } = useConnex();
 ```
 
@@ -122,8 +129,6 @@ const MyComponent = () => {
 
 ```
 
-
-
 ***
 
 ### UI Components
@@ -132,7 +137,7 @@ const MyComponent = () => {
 
 * This component mounts a button that will open a modal with the available wallets when clicked.
 * The user can then select a wallet of their choice and connect to it.
-* Once connected,  `account` and `source` will be available via the `useWallet` hook.
+* Once connected, `account` and `source` will be available via the `useWallet` hook.
 
 ```typescript
 import { ConnectWalletButtonWithModal } from '@vechain/dapp-kit-react';
