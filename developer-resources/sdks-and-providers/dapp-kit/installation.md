@@ -19,7 +19,9 @@ npm i @vechain/dapp-kit
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
 
 ```typescript
-const connex = new MultiWalletConnex({
+import { DAppKit } from "@vechain/dapp-kit"
+
+const dappKit = new DAppKit({
   //Required
   nodeUrl: 'https://sync-testnet.vechain.org/', 
   // Required if not connecting to the mainnet
