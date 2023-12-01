@@ -1,8 +1,6 @@
----
-description: Using the vechain dApp kit in react
----
-
 # Usage
+
+### Initialization
 
 ***
 

@@ -1,7 +1,5 @@
 ---
-description: >-
-  How to install `@vechain/dapp-kit` in order to use it with TypeScript or
-  Javascript.
+description: How to install dApp kit in order to use it with TypeScript or Javascript.
 ---
 
 # Installation
@@ -21,12 +19,10 @@ npm i @vechain/dapp-kit
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
 
 ```typescript
-import { DAppKit } from '@vechain/dapp-kit';
-
-const { thor, vendor, wallet } = new DAppKit({
-    //Required
-    nodeUrl: 'https://sync-testnet.vechain.org/', 
-    //Optional - "main" | "test" | Connex.Thor.Block
-    genesis: 'test', 
+const connex = new MultiWalletConnex({
+  //Required
+  nodeUrl: 'https://sync-testnet.vechain.org/', 
+  // Required if not connecting to the mainnet
+  genesis: 'test', 
 });
 ```

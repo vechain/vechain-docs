@@ -4,6 +4,8 @@ description: Using the vechain dApp kit
 
 # Usage
 
+### 1. Create the node options
+
 ### 1. Optional: Wallet Connect Options
 
 ```typescript
@@ -26,7 +28,7 @@ const walletConnectOptions: WalletConnectOptions = {
 ### 2. Initialise the `DAppKit` instance
 
 {% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
+For more information on using connex, please refer to the [Connex documentation](../connex/).
 {% endhint %}
 
 ```typescript

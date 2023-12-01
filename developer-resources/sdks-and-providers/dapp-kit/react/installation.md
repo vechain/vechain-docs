@@ -1,6 +1,6 @@
 ---
 description: >-
-  How to install `@vechain/dapp-kit-react` in order to use it with TypeScript or
+  How to install @vechain/dapp-kit-react in order to use it with TypeScript or
   Javascript.
 ---
 
@@ -34,11 +34,7 @@ pnpm i @vechain/dapp-kit-react
 {% endtab %}
 {% endtabs %}
 
-
-
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
-
-
 
 ```typescript
 import { DAppKitProvider } from '@vechain/dapp-kit-react';
