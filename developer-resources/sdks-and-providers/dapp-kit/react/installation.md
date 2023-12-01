@@ -1,6 +1,6 @@
 ---
 description: >-
-  How to install `@vechain/dapp-kit-react` in order to use it with TypeScript or
+  How to install @vechain/dapp-kit-react in order to use it with TypeScript or
   Javascript.
 ---
 
