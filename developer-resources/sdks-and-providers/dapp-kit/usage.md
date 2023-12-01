@@ -48,8 +48,6 @@ const {thor, vendor, wallet} = new DAppKit({
 });
 ```
 
-
-
 ***
 
 ## Wallet Manager
@@ -64,7 +62,7 @@ const {wallet, thor, connex} = new DAppKit(...)
 
 ### Set the wallet source
 
-* Set the current wallet source. This step is necessary if `usePersistence` was not provided as true.
+* Set the current wallet source. This step is necessary if `useFirstDetectedSource` was not provided as true.
 
 ```typescript
 import type { WalletSource } from '@vechain/dapp-kit';
@@ -75,14 +73,12 @@ const mySource: WalletSource = 'veworld';
 wallet.setSource('veworld');
 ```
 
-
-
 ***
 
 ### Connect
 
 * Connect to the selected wallet. The purpose of this is to improve the UX. For example, connecting a wallet via Wallet Connect involves switching applications multiple times. This will reduce the friction and create a better experience for the user.
-* This will connect to the user's wallet and return its address.&#x20;
+* This will connect to the user's wallet and return its address.
   * For certificate-based wallets, (eg. Sync2), this involves signing a signature
   * For other wallets, such as those using Wallet Connect, it will fetch the address without signing a certificate
 * The response will contain `verified` equal to true if the user signed a certificate
@@ -95,8 +91,6 @@ const res: ConnectResponse = await wallet.connect()
 console.log(res)
 // { "address": "0x995711ADca070C8f6cC9ca98A5B9C5A99b8350b1","verified": true}
 ```
-
-
 
 ***
 
@@ -116,8 +110,6 @@ const state: WalletManagerState = wallet.state
 * `account` - the address of the connected wallet. Null if not connected
 * `source` - the source of the currently selected wallet. Null if not selected
 * `availableWallets` - A list of available wallet sources
-
-
 
 ***
 
@@ -140,8 +132,6 @@ subscription()
 
 ```
 
-
-
 ***
 
 ### Subscribe to a single value in the state
@@ -161,4 +151,3 @@ const subscription = wallet.subscribeToKey('source', myListener)
 //End the subscription
 subscription()
 ```
-
