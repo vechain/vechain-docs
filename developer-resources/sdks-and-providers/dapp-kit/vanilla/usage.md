@@ -7,7 +7,7 @@ description: Using the vechain dApp kit UI components
 #### Initialization
 
 ```typescript
-import { DAppKit } from '@vechain/dapp-kit-ui';
+import { DAppKitUI } from '@vechain/dapp-kit-ui';
 import type { WalletConnectOptions } from '@vechain/dapp-kit';
 import type { DAppKitOptions } from '@vechain/dapp-kit-ui';
 
@@ -39,7 +39,7 @@ const vechainWalletKitOptions: DAppKitOptions = {
     logLevel: 'DEBUG'
 };
 
-const dappKit = DAppKit.configure(vechainWalletKitOptions);
+const dappKit = DAppKitUI.configure(vechainWalletKitOptions);
 
 console.log(`DAppKit configured`, dappKit.thor.genesis.id);
 ```
