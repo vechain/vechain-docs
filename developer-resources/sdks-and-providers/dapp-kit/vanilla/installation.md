@@ -1,6 +1,7 @@
 ---
 description: >-
-    How to install `@vechain/dapp-kit-ui` in order to use it with TypeScript or Javascript.
+  How to install `@vechain/dapp-kit-ui` in order to use it with TypeScript or
+  Javascript.
 ---
 
 # Installation
@@ -20,5 +21,5 @@ npm i @vechain/dapp-kit-ui
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
 
 ```typescript
-import { DAppKitProvider } from '@vechain/dapp-kit-react';
+import { DAppKitUI } from '@vechain/dapp-kit-ui';
 ```
