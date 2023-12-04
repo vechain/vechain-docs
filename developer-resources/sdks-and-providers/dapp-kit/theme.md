@@ -6,7 +6,6 @@ description: use CSS variables to customise your components
 
 variables that can be customized:
 
-````css
 ```css
 :root {
     # color variables
@@ -32,11 +31,9 @@ variables that can be customized:
 
 }
 ```
-````
 
 example of a vechain theme:
 
-````
 ```css
 :root {
     --vwk-color-dark-primary: linear-gradient(
@@ -80,4 +77,3 @@ example of a vechain theme:
     --vwk-color-light-quaternary: #747474;
 }
 ```
-````
