@@ -25,6 +25,16 @@ color variables that can be used:
 ```
 ````
 
+font variable that can be used:
+
+````css
+```css
+:root {
+    --vwk-font-family-inter: 'Inter', sans-serif;
+}
+```
+````
+
 this is an example of a red theme:
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-12-01 at 19.13.27.png" alt=""><figcaption></figcaption></figure>
