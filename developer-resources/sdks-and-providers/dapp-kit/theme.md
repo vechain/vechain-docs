@@ -33,3 +33,51 @@ variables that can be customized:
 }
 ```
 ````
+
+example of a vechain theme:
+
+````
+```css
+:root {
+    --vwk-color-dark-primary: linear-gradient(
+        90deg,
+        rgba(40, 0, 140, 1) 16%,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-dark-primary-hover: linear-gradient(
+        90deg,
+        rgba(40, 0, 140, 1) 16%,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-dark-primary-active: linear-gradient(
+        90deg,
+        rgba(40, 0, 140, 1) 16%,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-dark-secondary: #2a2a2a;
+    --vwk-color-dark-tertiary: #ffffff;
+    --vwk-color-dark-quaternary: #888888;
+    --vwk-color-light-primary: linear-gradient(
+        90deg,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-light-primary-hover: linear-gradient(
+        90deg,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-light-primary-active: linear-gradient(
+        90deg,
+        rgba(0, 190, 215, 1) 60%,
+        rgba(130, 190, 0, 1) 100%
+    );
+    --vwk-color-light-secondary: #ffffff;
+    --vwk-color-light-tertiary: #2a2a2a;
+    --vwk-color-light-quaternary: #747474;
+}
+```
+````
