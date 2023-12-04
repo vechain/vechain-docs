@@ -4,39 +4,32 @@ description: use CSS variables to customise your components
 
 # Theme
 
-color variables that can be used:
+variables that can be customized:
 
 ````css
 ```css
 :root {
-    --vwk-color-white: #ffffff;
-    --vwk-color-xxlightgrey: #f2f2f2;
-    --vwk-color-xlightgrey: #eeeeee;
-    --vwk-color-lightgrey: #eaeaea;
-    --vwk-color-grey: #888888;
-    --vwk-color-darkgrey: #4a4a4a;
-    --vwk-color-xdarkgrey: #454545;
-    --vwk-color-xxdarkgrey: #404040;
-    --vwk-color-xxlightblack: #353535;
-    --vwk-color-xlightblack: #303030;
-    --vwk-color-lightblack: #2a2a2a;
+    # color variables
+    --vwk-color-dark-primary: #404040;
+    --vwk-color-dark-primary-hover: #454545;
+    --vwk-color-dark-primary-active: #4a4a4a;
+    --vwk-color-dark-secondary: #2a2a2a;
+    --vwk-color-dark-tertiary: #ffffff;
+    --vwk-color-dark-quaternary: #888888;
+    --vwk-color-light-primary: #f2f2f2;
+    --vwk-color-light-primary-hover: #eeeeee;
+    --vwk-color-light-primary-active: #eaeaea;
+    --vwk-color-light-secondary: #ffffff;
+    --vwk-color-light-tertiary: #2a2a2a;
+    --vwk-color-light-quaternary: #747474;
     --vwk-color-walletconnectblue: #3496ff;
+    
+    # font variables
+    --vwk-font-family: 'Inter', sans-serif;
+    --vwk-font-size-medium: 14px;
+    --vwk-font-size-large: 18px;
+    --vwk-font-weight-medium: 500;
+
 }
 ```
 ````
-
-font variable that can be used:
-
-````css
-```css
-:root {
-    --vwk-font-family-inter: 'Inter', sans-serif;
-}
-```
-````
-
-this is an example of a red theme:
-
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-12-01 at 19.13.27.png" alt=""><figcaption></figcaption></figure>
-
-![](<../../../.gitbook/assets/Screenshot 2023-12-01 at 19.13.35.png>)
