@@ -120,7 +120,7 @@
       * [React](developer-resources/sdks-and-providers/dapp-kit/react/README.md)
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/react/installation.md)
         * [Usage](developer-resources/sdks-and-providers/dapp-kit/react/usage.md)
-      * [Vanilla](developer-resources/sdks-and-providers/dapp-kit/vanilla/README.md)
+      * [Vanilla (UI)](developer-resources/sdks-and-providers/dapp-kit/vanilla/README.md)
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/vanilla/installation.md)
         * [Usage](developer-resources/sdks-and-providers/dapp-kit/vanilla/usage.md)
       * [Theme](developer-resources/sdks-and-providers/dapp-kit/theme.md)
