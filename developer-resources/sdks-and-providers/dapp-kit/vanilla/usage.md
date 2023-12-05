@@ -4,7 +4,7 @@ description: Using the vechain dApp kit UI components
 
 # Usage
 
-#### Initialization
+### Initialization
 
 ```typescript
 import { DAppKitUI } from '@vechain/dapp-kit-ui';
@@ -44,7 +44,7 @@ const dappKit = DAppKitUI.configure(vechainWalletKitOptions);
 console.log(`DAppKit configured`, dappKit.thor.genesis.id);
 ```
 
-#### Place the custom element in your HTML
+### Place the custom element in your HTML
 
 ```html
 <body>
