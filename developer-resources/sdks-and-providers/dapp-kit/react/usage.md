@@ -2,10 +2,6 @@
 
 ### Initialization
 
-***
-
-### Initialization
-
 **1. Optional: Wallet Connect Options**
 
 ```tsx
