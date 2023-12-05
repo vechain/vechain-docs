@@ -14,6 +14,10 @@ light mode palette
 
 
 
+***
+
+### Option 1: Set the root CSS
+
 variables that can be customized:
 
 ```css
@@ -86,4 +90,26 @@ example of a vechain theme:
     --vwk-color-light-tertiary: #2a2a2a;
     --vwk-color-light-quaternary: #747474;
 }
+```
+
+
+
+***
+
+### Option 2: Using the customStyles
+
+```typescript
+import {CustomizedStyle, DAppKitUI, DAppKitUIOptions} from '@vechain/dapp-kit-ui';
+
+const styles: CustomizedStyle = {
+  '--vwk-modal-z-index': '9999',
+}
+
+const vechainWalletKitOptions: DAppKitUIOptions = {
+    nodeUrl: 'https://testnet.vechain.org/',
+    genesis: 'test',
+    customStyles: styles,
+};
+
+DAppKitUI.configure(vechainWalletKitOptions);
 ```
