@@ -124,6 +124,7 @@
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/vanilla/installation.md)
         * [Usage](developer-resources/sdks-and-providers/dapp-kit/vanilla/usage.md)
       * [Styles (UI)](developer-resources/sdks-and-providers/dapp-kit/theme.md)
+      * [i18n](developer-resources/sdks-and-providers/dapp-kit/i18n.md)
     * [Connex](developer-resources/sdks-and-providers/connex/README.md)
       * [Installation](developer-resources/sdks-and-providers/connex/installation.md)
       * [API Specification](developer-resources/sdks-and-providers/connex/api-specification.md)
