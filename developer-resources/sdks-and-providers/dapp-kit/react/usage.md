@@ -138,7 +138,7 @@ const MyComponent = () => {
 * Once connected, `account` and `source` will be available via the `useWallet` hook.
 
 ```typescript
-import { ConnectWalletButtonWithModal } from '@vechain/dapp-kit-react';
+import { ConnectButtonWithModal } from '@vechain/dapp-kit-react';
 
 const MyComponent = (): JSX.Element => {
 
@@ -150,7 +150,7 @@ const MyComponent = (): JSX.Element => {
 
   return (
     <>
-      <ConnectWalletButtonWithModal/>
+      <ConnectButtonWithModal/>
     </>
   );
 };
