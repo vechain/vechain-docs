@@ -2,9 +2,17 @@
 description: use CSS variables to customise your components
 ---
 
-# Theme
+# Styles (UI)
 
-### Option 1: Using :root
+black mode palette:
+
+[https://coolors.co/404040-2a2a2a-ffffff-888888](https://coolors.co/404040-2a2a2a-ffffff-888888)
+
+light mode palette
+
+[https://coolors.co/f2f2f2-ffffff-2a2a2a-747474](https://coolors.co/f2f2f2-ffffff-2a2a2a-747474)
+
+
 
 variables that can be customized:
 
@@ -78,26 +86,4 @@ example of a vechain theme:
     --vwk-color-light-tertiary: #2a2a2a;
     --vwk-color-light-quaternary: #747474;
 }
-```
-
-
-
-***
-
-### Option 2: Using the customStyles
-
-```typescript
-import {CustomizedStyle, DAppKitUI, DAppKitUIOptions} from '@vechain/dapp-kit-ui';
-
-const styles: CustomizedStyle = {
-  '--vwk-modal-z-index': '9999',
-}
-
-const vechainWalletKitOptions: DAppKitUIOptions = {
-    nodeUrl: 'https://testnet.vechain.org/',
-    genesis: 'test',
-    customStyles: styles,
-};
-
-DAppKitUI.configure(vechainWalletKitOptions);
 ```

@@ -35,7 +35,6 @@ The vechain dApp kit is designed to make it easy to interact with all vechain th
 1. **Wallet Management**: Connex was designed with Sync / Sync2 in mind, so this library provides an additional layer on top, making it easier to manage multiple wallets.
 2. **Wallet Selection**: The `@vechain/dapp-kit-ui` library provides multiple components to make it easy to select and connect to a wallet.
 3. **React**: The `@vechain-dapp-kit-react` library provides several hooks and components to make it easy to use the dApp kit with React.
-4.
 
 ***
 
