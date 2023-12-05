@@ -114,7 +114,7 @@
         * [Transactions](developer-resources/sdks-and-providers/thor-devkit/usage/transactions.md)
         * [Certificates](developer-resources/sdks-and-providers/thor-devkit/usage/certificates.md)
         * [Bloom Filter](developer-resources/sdks-and-providers/thor-devkit/usage/bloom-filter.md)
-    * [DApp Kit](developer-resources/sdks-and-providers/dapp-kit/README.md)
+    * [dApp Kit](developer-resources/sdks-and-providers/dapp-kit/README.md)
       * [Installation](developer-resources/sdks-and-providers/dapp-kit/installation.md)
       * [Usage](developer-resources/sdks-and-providers/dapp-kit/usage.md)
       * [React](developer-resources/sdks-and-providers/dapp-kit/react/README.md)
