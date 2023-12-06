@@ -127,7 +127,7 @@ Cool right? After around 3–10 seconds this “new block!” message is printed
 
 Actually, the \*\*VTHO contract itself is an [ERC20 ](https://en.wikipedia.org/wiki/ERC-20)/[VIP180 ](https://github.com/vechain/VIPs/blob/master/VIP-180-EN.md)compatible contract \*\*living on the VeChain! And you know what, I happen to know the address of it on the testnet: 😜
 
-> ## 0x0000000000000000000000000000456e65726779 <a href="#_0x0000000000000000000000000000456e65726779" id="_0x0000000000000000000000000000456e65726779"></a>
+> ### 0x0000000000000000000000000000456e65726779 <a href="#_0x0000000000000000000000000000456e65726779" id="_0x0000000000000000000000000000456e65726779"></a>
 
 For those who don’t understand ERC20/VIP180, a contract is a long living object on the blockchain. Thinking of it as a set of program instructions and a simple free-form permanent storage that the program controls it. ERC20/VIP180 contracts are simple “virtual bank” program which keeps track on each client and his balance of a specific virtual coin/token.
 
