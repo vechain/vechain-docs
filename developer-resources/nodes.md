@@ -6,7 +6,7 @@ description: RESTful API to access the VechainThor blockchain
 
 ## Overview
 
-Vechain nodes are the gateway to interacting with the VechainThor blockchain. The VecahinThor blockchain uses a RESTful application programmable interface (API) communication approach, this is referred to as the Thorest API.
+Vechain nodes are the gateway to interacting with the VechainThor blockchain. The VechainThor blockchain uses a RESTful application programmable interface (API) communication approach, this is referred to as the Thorest API.
 
 Vechain and several community projects provide access to public mainnet and testnet VechainThor nodes.
 

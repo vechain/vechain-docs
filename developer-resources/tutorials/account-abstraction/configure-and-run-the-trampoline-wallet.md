@@ -17,7 +17,7 @@ cd trampoline && yarn install
 ```
 
 * Modify `src/exconfig.ts` to include:
-* Where the `Account_Factory_Address` is the address of the `SimpleAccountFactory` from [this](broken-reference) tutorial.
+* Where the `Account_Factory_Address` is the address of the `SimpleAccountFactory` from [this](../../../start-building/tutorials/account-abstraction/broken-reference/) tutorial.
 
 ```typescript
 export default {
@@ -93,4 +93,3 @@ Trampoline has been verified to work in Chromium, the examples can be applied to
 * Select `Load Unpacked,` then navigate to, and select `trampoline/build` which should open
 
 <figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
-

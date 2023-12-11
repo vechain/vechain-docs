@@ -24,7 +24,7 @@ The ticker is a concept that describes chain increment. When there is a new bloc
 >
 > * **progress**: A number \[0-1] indicates the syncing progress of the currently connected node
 
-ref: [connex API - create a ticker](../../developer-resources/sdks-and-providers/connex/api-specification.md#create-a-ticker)
+ref: [connex API - create a ticker](../sdks-and-providers/connex/api-specification.md#create-a-ticker)
 
 ***
 
@@ -40,7 +40,7 @@ Account visitor is a bunch of APIs to get account details and interact with acco
 > * **energy**: hex form of VTHO balance in unit _wei_
 > * **hasCode**: when it equal to _true_, it means that its a smart contract
 
-ref: [connex API - account visitor](../../developer-resources/sdks-and-providers/connex/api-specification.md#account-visitor)
+ref: [connex API - account visitor](../sdks-and-providers/connex/api-specification.md#account-visitor)
 
 ***
 
@@ -58,7 +58,7 @@ Transaction visitor is a bunch of APIs to get transaction details.
 > * **gasPayer**: the address which paid the transaction fee. It is an important factor to determine the transaction is whether using fee delegation or not. If the transaction is paid by another address, the `txOrigin` and `gasPayer` will be different..
 > * **txOrigin**: the address which signed the transaction
 
-ref: [connex API - transaction visitor](../../developer-resources/sdks-and-providers/connex/api-specification.md#transaction-visitor)
+ref: [connex API - transaction visitor](../sdks-and-providers/connex/api-specification.md#transaction-visitor)
 
 ***
 
@@ -85,7 +85,7 @@ Filter event by setting criteria base on the contract methods(Contract ABI).
 
 {% embed url="https://codepen.io/xjwx89/embed/xxdOxya?default-tab=result&theme-id=light" %}
 
-ref: [connex API - filter](../../developer-resources/sdks-and-providers/connex/api-specification.md#filter)
+ref: [connex API - filter](../sdks-and-providers/connex/api-specification.md#filter)
 
 ***
 
@@ -99,7 +99,7 @@ The certificate is a message signing-based mechanism that can easily request the
 
 {% embed url="https://codepen.io/xjwx89/embed/xxqxPBv?default-tab=result&theme-id=light" %}
 
-ref: [connex API - certificate signing service](../../developer-resources/sdks-and-providers/connex/api-specification.md#certificate-signing-service)
+ref: [connex API - certificate signing service](../sdks-and-providers/connex/api-specification.md#certificate-signing-service)
 
 ***
 
@@ -115,7 +115,7 @@ Signing a transaction is the most common interaction between dApp and user.A tra
 > * Provide a brief `comment` to the transaction or a clause to help the user to understand
 > * Provide a `link` to reveal transaction-related information, the link will be used for connex to assemble a callback url by replacing the placeholder _{txid}_ by Transaction ID
 
-ref: [connex API - transaction signing service](../../developer-resources/sdks-and-providers/connex/api-specification.md#transaction-signing-service)
+ref: [connex API - transaction signing service](../sdks-and-providers/connex/api-specification.md#transaction-signing-service)
 
 ***
 
@@ -151,7 +151,7 @@ ref: [connex API - transaction signing service](../../developer-resources/sdks-a
 
 **Prerequisites**:
 
-1. Need to know the _**Base gas price**_ from [params](broken-reference) contract
+1. Need to know the _**Base gas price**_ from [params](../../start-building/tutorials/broken-reference/) contract
 2. According to [transaction calculation](../../core-concepts/transactions/transaction-calculation.md)
    * we need to calculate the _**intrinsic gas**_
    * we need to know the _**vm gasUsed**_ (aka. virtual machine execution cost)

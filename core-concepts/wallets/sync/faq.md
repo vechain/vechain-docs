@@ -8,7 +8,7 @@ Please check [Export wallet](user-guide/wallet.md#export-keystore)
 
 ## How to connect custom node ? <a href="#how-to-connect-custom-node" id="how-to-connect-custom-node"></a>
 
-1. [Run thor](../../../start-building/tutorials/how-to-run-a-thor-solo-node/)
+1. [Run thor](../../../developer-resources/tutorials/how-to-run-a-thor-solo-node/)
 2. Open Sync
 3. Follow the step to [add custom node](user-guide/browser-dapps-and-web.md#connect-to-a-node)
 

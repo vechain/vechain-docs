@@ -42,7 +42,7 @@ Sync releases updates from time to time. Install the update version for feature,
 6. Wait for a while ,it will automatically identify the network name (MAIN/TEST/SOLO/UNKNOWN) and add the node to the list
 
 {% hint style="info" %}
-Get more information [how-to-run-a-thor-solo-node](../../../../start-building/tutorials/how-to-run-a-thor-solo-node/ "mention")
+Get more information [how-to-run-a-thor-solo-node](../../../../developer-resources/tutorials/how-to-run-a-thor-solo-node/ "mention")
 {% endhint %}
 
 ### Edit Custom Node's Name <a href="#edit-custom-node-s-name" id="edit-custom-node-s-name"></a>
