@@ -15,7 +15,7 @@ description: >-
 
 ## Languages and Frameworks
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Please note that server-side rendering (SSR) must be disabled when using the dApp kit libraries.
 {% endhint %}
 
@@ -29,10 +29,6 @@ The dApp kit library is available in the following languages and frameworks:
 * Svelte
 * Next.js
 
-{% hint style="info" %}
-For an example of how to use the dApp kit libraries please refer to these [examples](https://github.com/vechainfoundation/vechain-dapp-kit/tree/main/apps)
-{% endhint %}
-
 ## Key Features
 
 The vechain dApp kit is designed to make it easy to interact with all VechainThor compatible wallets
@@ -40,8 +36,6 @@ The vechain dApp kit is designed to make it easy to interact with all VechainTho
 1. **Wallet Management**: Connex was designed with Sync / Sync2 in mind, so this library provides an additional layer on top, making it easier to manage multiple wallets.
 2. **Wallet Selection**: The `@vechain/dapp-kit-ui` library provides multiple components to make it easy to select and connect to a wallet.
 3. **React**: The `@vechain-dapp-kit-react` library provides several hooks and components to make it easy to use the dApp kit with React.
-
-***
 
 ## Adding your Wallet
 
