@@ -1,6 +1,28 @@
-# Usage
+---
+description: DApp kit for React apps
+---
 
-### Initialization
+# React
+
+## Installation
+
+```typescript
+import { DAppKitProvider } from '@vechain/dapp-kit-react';
+```
+
+Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
+
+```bash
+npm i @vechain/dapp-kit-react
+```
+
+{% hint style="info" %}
+Should you wish to implement this in a pure JavaScript project, it is recommended to use CommonJS (CJS) imports. Potential complications might arise with ES Module (ESM) imports.
+{% endhint %}
+
+If using TypeScript follow the NPM installation steps, for JavaScript follow the CommonJS (CJS) installation steps.
+
+## Usage
 
 **1. Optional: Wallet Connect Options**
 
@@ -83,7 +105,7 @@ const MyComponent: React.FC = () => {
 * This hook exposes the `thor` and `vendor` instances of `@vechain/connex`. To interact with a wallet, you must `useWallet` and call `setSource` first.
 
 {% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
+For more information on using connex, please refer to the [Connex documentation](../connex/api-specification.md).
 {% endhint %}
 
 ```typescript

@@ -10,7 +10,7 @@ layout:
   outline:
     visible: false
   pagination:
-    visible: false
+    visible: true
 ---
 
 # Usage

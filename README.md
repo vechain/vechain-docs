@@ -8,7 +8,7 @@ layout:
   tableOfContents:
     visible: true
   outline:
-    visible: false
+    visible: true
   pagination:
     visible: false
 ---
@@ -37,4 +37,6 @@ The VechainThor blockchain is built for mass adoption:
 
 Like any truly decentralised network, vechain is not controlled by any one person or collection of individuals. Rather, it is an open, public network which encourages community members to support and promote in any way they can. Like any ship however, it does need to be steered in a direction which benefits the ecosystem and thats where the steering committee and Vechain Foundation support.
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Vechain Blockchain</td><td><a href="introduction-to-vechain/about-the-vechain-blockchain/">about-the-vechain-blockchain</a></td></tr><tr><td align="center">Dual-Token Model</td><td><a href="introduction-to-vechain/dual-token-economic-model/">dual-token-economic-model</a></td></tr><tr><td align="center">Acquire Vechain Assets</td><td><a href="introduction-to-vechain/acquire-vechain-assets.md">acquire-vechain-assets.md</a></td></tr><tr><td align="center">Sustainability</td><td><a href="introduction-to-vechain/sustainability.md">sustainability.md</a></td></tr></tbody></table>
+
+
+<table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">VechainThor</td><td><a href="introduction-to-vechain/about-the-vechain-blockchain/">about-the-vechain-blockchain</a></td></tr><tr><td align="center">Dual-Token Model</td><td><a href="introduction-to-vechain/dual-token-economic-model/">dual-token-economic-model</a></td></tr><tr><td align="center">Acquire Vechain Assets</td><td><a href="introduction-to-vechain/acquire-vechain-assets.md">acquire-vechain-assets.md</a></td></tr><tr><td align="center">Sustainability</td><td><a href="introduction-to-vechain/sustainability.md">sustainability.md</a></td></tr></tbody></table>

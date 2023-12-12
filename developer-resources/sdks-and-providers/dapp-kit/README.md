@@ -1,6 +1,11 @@
-# dApp Kit
+---
+description: >-
+  The vechain dApp kit is a frontend library designed to make it easy to build
+  dApps on the VechainThor blockchain. This documentation provides a
+  comprehensive guide to using the dApp kit library, inclu
+---
 
-The vechain dApp kit is a frontend library designed to make it easy to build dApps on the VechainThor blockchain. This documentation provides a comprehensive guide to using the dApp kit library, including installation, usage instructions, and details about its key features and methods.
+# DApp Kit
 
 ## Libraries
 
@@ -43,7 +48,7 @@ The vechain dApp kit is designed to make it easy to interact with all VechainTho
 The dApp kit is designed to be extendable and provide support for all wallets. Follow the steps below to create a pull request and configure the dApp kit to support your wallet.
 
 1. Clone the repo \[here]\([https://github.com/vechainfoundation/vechain-dapp-kit](https://github.com/vechainfoundation/vechain-dapp-kit))
-2. Inside `./packages/dapp-kit`&#x20;
+2. Inside `./packages/dapp-kit`
    1. Modify `WalletSource` in `src/types.d.ts`
    2. Modify the `createWallet` function in `src/create-wallet.ts`
 3. Add your wallet details in: `./packages/dapp-kit-ui/src/constants/sources.ts`
