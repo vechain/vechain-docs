@@ -10,7 +10,7 @@ The vechain dApp kit is a frontend library designed to make it easy to build dAp
 
 ## Languages and Frameworks
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Please note that server-side rendering (SSR) must be disabled when using the dApp kit libraries.
 {% endhint %}
 
@@ -23,10 +23,6 @@ The dApp kit library is available in the following languages and frameworks:
 * Angular
 * Svelte
 * Next.js
-
-{% hint style="info" %}
-For an example of how to use the dApp kit libraries please refer to these [examples](https://github.com/vechainfoundation/vechain-dapp-kit/tree/main/apps)
-{% endhint %}
 
 ## Key Features
 
