@@ -1,6 +1,10 @@
-# Useful tips for building a dApp by using Connex
+---
+description: >-
+  This article will help you to understand how to use connex to build a dApp and
+  also how it interacts with the user, application, and Sync2.
+---
 
-This article will help you to understand how to use connex to build a dApp and also how it interacts with the user, application, and Sync2.
+# Build a dApp by using Connex
 
 ## Prerequisites <a href="#something-you-might" id="something-you-might"></a>
 

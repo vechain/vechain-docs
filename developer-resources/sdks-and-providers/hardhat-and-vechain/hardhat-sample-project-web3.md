@@ -40,7 +40,7 @@ npm i @vechain/hardhat-web3
 
 ## Start Thor
 
-To be able to run the tests on Vechain you need Thor installed, which is Vechain's node implementation. We have a detailed guide on how to do that [here](broken-reference).
+To be able to run the tests on Vechain you need Thor installed, which is Vechain's node implementation. We have a detailed guide on how to do that [here](../../frameworks-and-ides/hardhat-and-vechain/broken-reference/).
 
 ## Running the tests
 
