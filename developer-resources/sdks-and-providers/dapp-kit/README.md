@@ -10,7 +10,7 @@ The vechain dApp kit is a frontend library designed to make it easy to build dAp
 
 ## Languages and Frameworks
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Please note that server-side rendering (SSR) must be disabled when using the dApp kit libraries.
 {% endhint %}
 
@@ -24,10 +24,6 @@ The dApp kit library is available in the following languages and frameworks:
 * Svelte
 * Next.js
 
-{% hint style="info" %}
-For an example of how to use the dApp kit libraries please refer to these [examples](https://github.com/vechainfoundation/vechain-dapp-kit/tree/main/apps)
-{% endhint %}
-
 ## Key Features
 
 The vechain dApp kit is designed to make it easy to interact with all VechainThor compatible wallets
@@ -35,18 +31,3 @@ The vechain dApp kit is designed to make it easy to interact with all VechainTho
 1. **Wallet Management**: Connex was designed with Sync / Sync2 in mind, so this library provides an additional layer on top, making it easier to manage multiple wallets.
 2. **Wallet Selection**: The `@vechain/dapp-kit-ui` library provides multiple components to make it easy to select and connect to a wallet.
 3. **React**: The `@vechain-dapp-kit-react` library provides several hooks and components to make it easy to use the dApp kit with React.
-
-***
-
-## Adding your Wallet
-
-The dApp kit is designed to be extendable and provide support for all wallets. Follow the steps below to create a pull request and configure the dApp kit to support your wallet.
-
-1. Clone the repo \[here]\([https://github.com/vechainfoundation/vechain-dapp-kit](https://github.com/vechainfoundation/vechain-dapp-kit))
-2. Inside `./packages/dapp-kit`&#x20;
-   1. Modify `WalletSource` in `src/types.d.ts`
-   2. Modify the `createWallet` function in `src/create-wallet.ts`
-3. Add your wallet details in: `./packages/dapp-kit-ui/src/constants/sources.ts`
-4. Test you that can successfully integrate with your wallet
-5. Add unit tests
-6. Create your pull request
