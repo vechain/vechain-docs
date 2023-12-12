@@ -17,7 +17,7 @@ layout:
 
 ## What is vechain?
 
-Vechain, headquartered in San Marino, Europe, is a blockchain ecosystem and the curator of VechainThor, a world leading smart contract platform spearheading the real world adoption of blockchain technology. Since its inception in 2015 by founder Sunny Lu, vechain has always strived to deliver a transparent, efficient, scalable and adaptable blockchain platform.
+Vechain, headquartered in San Marino, Europe, is a [blockchain](core-concepts/blockchain-a-crash-course/) ecosystem and the curator of VechainThor, a world leading smart contract platform spearheading the real world adoption of blockchain technology. Since its inception in 2015 by founder Sunny Lu, vechain has always strived to deliver a transparent, efficient, scalable and adaptable blockchain platform.
 
 This endeavour wasn't in vein, as vechain has cemented its position among the world's leading blockchain ecosystems and has partnered with many prestigious organizations and agencies, such as Walmart China, BMW, DNV, and the government of San Marino but to name a few. Vechain now turns it's attention to the greatest challenge of all — building digital ecosystems to drive sustainability and digital transformation at global scale.
 
