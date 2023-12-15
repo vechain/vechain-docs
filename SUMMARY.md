@@ -103,6 +103,7 @@
       * [Run a Paymaster Contract](start-building/tutorials/account-abstraction/run-a-paymaster-contract.md)
       * [Configure and Run the Trampoline Wallet](start-building/tutorials/account-abstraction/configure-and-run-the-trampoline-wallet.md)
 * [Developer Resources](developer-resources/README.md)
+  * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
   * [SDKs & Providers](developer-resources/sdks-and-providers/README.md)
     * [Thor DevKit](developer-resources/sdks-and-providers/thor-devkit/README.md)
