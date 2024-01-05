@@ -17,7 +17,7 @@ Sync2 would not provide the list of your address unless you sign the certificate
 
 ## Signing steps <a href="#signing-steps" id="signing-steps"></a>
 
-### 1. Confirm the request source External Request <a href="#_1-confirm-the-request-source" id="_1-confirm-the-request-source"></a>
+### 1. Confirm the request source External Request <a href="#id-1-confirm-the-request-source" id="id-1-confirm-the-request-source"></a>
 
 Sync allows users to choose your browser to interact with dApp. Therefore, It is a behaviour that the browser requesting Sync2 as a signature provider. Once Sync2 receives the signing content, please verify the below contents to continue the signing process.
 
@@ -27,7 +27,7 @@ Sync allows users to choose your browser to interact with dApp. Therefore, It is
 * **Summary**: Description of transaction
 * **Network**: If there's no network appear, it means that the transaction is mainnet based. Otherwise, it will show the network identifier at the upper right
 
-### 2. Review the signing content <a href="#_2-review-the-signing-content" id="_2-review-the-signing-content"></a>
+### 2. Review the signing content <a href="#id-2-review-the-signing-content" id="id-2-review-the-signing-content"></a>
 
 #### **A. Transaction content**
 
@@ -67,7 +67,7 @@ Priority is a human-readable term of the Gas Price coefficient. Sync2 offer thre
 * Medium : **\~1.5x** of _Regular_ VTHO cost
 * High : **2x** of _Regular_ VTHO cost
 
-### 3. Confirm to sign <a href="#_3-confirm-to-sign" id="_3-confirm-to-sign"></a>
+### 3. Confirm to sign <a href="#id-3-confirm-to-sign" id="id-3-confirm-to-sign"></a>
 
 Due to the nature of blockchain, transactions cannot be canceled or altered once they are initiated. Therefore, you must **ALWAYS review the signing content before signing.**
 
@@ -77,6 +77,6 @@ Due to the nature of blockchain, transactions cannot be canceled or altered once
    1. **Password**: Enter your password to authorize the signing
    2. **Ledger User**: follow the signing steps and confirm the signing on your Ledger device
 
-### 4. Check the result <a href="#_4-check-the-result" id="_4-check-the-result"></a>
+### 4. Check the result <a href="#id-4-check-the-result" id="id-4-check-the-result"></a>
 
 Once the transaction/ certificate is signed, you can check the result in [activities](activities.md)

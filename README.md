@@ -35,7 +35,7 @@ Explore and learn all about vechain.
 
 Some core blockchain concepts with specific details and information relating to vechain.
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Networks</td><td><a href="core-concepts/networks/">networks</a></td></tr><tr><td align="center">Nodes</td><td><a href="core-concepts/nodes.md">nodes.md</a></td></tr><tr><td align="center">Blocks</td><td><a href="core-concepts/blocks/">blocks</a></td></tr><tr><td align="center">Transactions</td><td><a href="core-concepts/transactions/">transactions</a></td></tr><tr><td align="center">Block Explorers</td><td><a href="core-concepts/block-explorers.md">block-explorers.md</a></td></tr><tr><td align="center">Fee Delegation</td><td><a href="core-concepts/transactions/meta-transaction-features/fee-delegation/">fee-delegation</a></td></tr><tr><td align="center">Wallets</td><td><a href="core-concepts/wallets/">wallets</a></td></tr><tr><td align="center">EVM Compatibility</td><td><a href="core-concepts/evm-compatibility/">evm-compatibility</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Networks</td><td><a href="core-concepts/networks/">networks</a></td></tr><tr><td align="center">Nodes</td><td><a href="core-concepts/nodes/">nodes</a></td></tr><tr><td align="center">Blocks</td><td><a href="core-concepts/blocks/">blocks</a></td></tr><tr><td align="center">Transactions</td><td><a href="core-concepts/transactions/">transactions</a></td></tr><tr><td align="center">Block Explorers</td><td><a href="core-concepts/block-explorers.md">block-explorers.md</a></td></tr><tr><td align="center">Fee Delegation</td><td><a href="core-concepts/transactions/meta-transaction-features/fee-delegation/">fee-delegation</a></td></tr><tr><td align="center">Wallets</td><td><a href="core-concepts/wallets/">wallets</a></td></tr><tr><td align="center">EVM Compatibility</td><td><a href="core-concepts/evm-compatibility/">evm-compatibility</a></td></tr></tbody></table>
 
 ## Start Building
 
@@ -51,6 +51,6 @@ A collection of resources aimed to educate developers who are building on the Ve
 
 ## How to Contribute
 
-See the following instructions on how best to contribute to the vechain documentation or vechain via a Vechain Improvement Proposal (VIP):&#x20;
+See the following instructions on how best to contribute to the vechain documentation or vechain via a Vechain Improvement Proposal (VIP):
 
 <table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Documentation</td><td><a href="how-to-contribute.md#create-issues">#create-issues</a></td></tr><tr><td align="center">VIPs</td><td><a href="https://github.com/vechain/VIPs">https://github.com/vechain/VIPs</a></td></tr></tbody></table>

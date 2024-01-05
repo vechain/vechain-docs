@@ -12,8 +12,6 @@ light mode palette
 
 [https://coolors.co/f2f2f2-ffffff-2a2a2a-747474](https://coolors.co/f2f2f2-ffffff-2a2a2a-747474)
 
-
-
 ***
 
 ### Option 1: Set the root CSS
@@ -91,8 +89,6 @@ example of a vechain theme:
     --vwk-color-light-quaternary: #747474;
 }
 ```
-
-
 
 ***
 

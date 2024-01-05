@@ -4,7 +4,7 @@ description: A guideline on how to purchase vechain assets.
 
 # Acquire Vechain Assets
 
-## How do I buy VET & VTHO?&#x20;
+## How do I buy VET & VTHO?
 
 ### Centralized Exchange
 
@@ -19,7 +19,7 @@ Vechain's tokens are available to purchase on multiple notable centralised excha
 * Withdraw funds to a personal wallet.
 
 {% hint style="warning" %}
-Always double check and confirm the CEX website address to ensure you are using the official website.&#x20;
+Always double check and confirm the CEX website address to ensure you are using the official website.
 {% endhint %}
 
 ### Virtual Currency Platform
@@ -34,7 +34,7 @@ Another way to purchase the VET token is to use a virtual currency platform such
 * Provide debit or credit card details.
 * Place your order.
 
-## Should I withdraw my VET & VTHO from a CEX?&#x20;
+## Should I withdraw my VET & VTHO from a CEX?
 
 There is a well-known saying within the blockchain industry that was popularized by Andreas Antonopoulos: "Not your keys, not your bitcoin". Although Andreas referenced bitcoin, this saying is true for any cryptocurrency.
 
