@@ -40,6 +40,18 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             walletConnectOptions={walletConnectOptions}
             // OPTIONAL: A log level for console logs
             logLevel="DEBUG"
+            // OPTIONAL: theme mode 'LIGHT' or 'DARK'
+            themeMode='LIGHT';
+            // OPTIONAL: theme variables (check theme variables section)
+            themeVariables={ThemeVariables}
+            // OPTIONAL: app current language
+            language="en";
+            // OPTIONAL: i18n default object (check i18n section)
+            i18n={defaultI18n}
+            // OPTIONAL: where to render the modal, document.body is the default
+            modalParent={document.body}
+            // OPTIONAL: handle source click to customise wallet connect
+            onSourceClick={source => void}
         >
             <App />
         </DAppKitProvider>
@@ -47,6 +59,35 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 );
 ```
 {% endcode %}
+
+***
+
+### UI Components
+
+#### `WalletButton`
+
+* This component mounts a button that will open a modal with the available wallets when clicked.
+* The user can then select a wallet of their choice and connect to it.
+* Once connected, `account` and `source` will be available via the `useWallet` hook.
+
+```typescript
+import { WalletButton } from '@vechain/dapp-kit-react';
+
+const MyComponent = (): JSX.Element => {
+
+  const { account, source } = useWallet();
+
+  useEffect(() => {
+    console.log(account, source);
+  }, [account, source]);
+
+  return (
+    <>
+      <WalletButton/>
+    </>
+  );
+};
+```
 
 ***
 
@@ -83,7 +124,7 @@ const MyComponent: React.FC = () => {
 * This hook exposes the `thor` and `vendor` instances of `@vechain/connex`. To interact with a wallet, you must `useWallet` and call `setSource` first.
 
 {% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
+For more information on using connex, please refer to the [Connex documentation](../../../connex/api-specification.md).
 {% endhint %}
 
 ```typescript
@@ -99,17 +140,17 @@ const MyComponent: React.FC = () => {
 const { thor, vendor } = useConnex();
 ```
 
-#### `useModal`
+#### `useWalletModal`
 
 * This hook can be used to open and close the wallet modal.
 * The modal will display the available wallets and allow the user to connect to one of them.
-* Once the user has connected, the modal will close itself
+* Once the user has connected, the modal will close itself and it will call the onConnected function2
 
 ```typescript
 import { useWalletModal, useWallet } from '@vechain/dapp-kit-react';
 
 const MyComponent = () => {
-    const { open, close } = useWalletModal();
+    const { open, close, onConnected } = useWalletModal();
     const { account } = useWallet();
 
     useEffect(() => {
@@ -121,33 +162,4 @@ const MyComponent = () => {
     return <button onClick={open}>Open Modal</button>;
 };
 
-```
-
-***
-
-### UI Components
-
-#### `ConnectWalletButton`
-
-* This component mounts a button that will open a modal with the available wallets when clicked.
-* The user can then select a wallet of their choice and connect to it.
-* Once connected, `account` and `source` will be available via the `useWallet` hook.
-
-```typescript
-import { ConnectButtonWithModal } from '@vechain/dapp-kit-react';
-
-const MyComponent = (): JSX.Element => {
-
-  const { account, source } = useWallet();
-
-  useEffect(() => {
-    console.log(account, source);
-  }, [account, source]);
-
-  return (
-    <>
-      <ConnectButtonWithModal/>
-    </>
-  );
-};
 ```

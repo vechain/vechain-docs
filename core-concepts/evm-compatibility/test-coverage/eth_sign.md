@@ -2,7 +2,7 @@
 
 ## Description
 
-The `eth_sign` issue arises due to the fact that Vechain and Ethereum use different hash functions, more information on this subject [here](broken-reference). This failure is justifiable as it is a design difference between the two chains. To fix the failing tests, we imported Ethereum's hash function and replaced the `eth_sign` method with one that generates signatures using the required hash function.
+The `eth_sign` issue arises due to the fact that Vechain and Ethereum use different hash functions, more information on this subject [here](https://github.com/vechainfoundation/vechain-docs/blob/carpini/add-getting-starte/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md). This failure is justifiable as it is a design difference between the two chains. To fix the failing tests, we imported Ethereum's hash function and replaced the `eth_sign` method with one that generates signatures using the required hash function.
 
 The following changes we made:
 

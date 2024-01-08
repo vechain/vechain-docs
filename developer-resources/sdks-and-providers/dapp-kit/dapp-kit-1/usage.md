@@ -28,7 +28,7 @@ const walletConnectOptions: WalletConnectOptions = {
 ### 2. Initialise the `DAppKit` instance
 
 {% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../connex/).
+For more information on using connex, please refer to the [Connex documentation](../../connex/).
 {% endhint %}
 
 ```typescript
