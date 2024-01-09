@@ -128,6 +128,7 @@
         * [Styles (UI)](developer-resources/sdks-and-providers/dapp-kit/dapp-kit/theme.md)
         * [i18n](developer-resources/sdks-and-providers/dapp-kit/dapp-kit/i18n.md)
       * [v1](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/README.md)
+        * [V0 to V1](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/v0-to-v1.md)
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/installation.md)
         * [Usage](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/usage.md)
         * [React](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/react/README.md)
