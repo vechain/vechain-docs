@@ -14,4 +14,4 @@ supported frameworks are:
 * Vue
 * Svelte
 
-we created sample projects  [here](https://github.com/vechain/vechain-dapp-kit/tree/main/apps)
+we created sample projects  [here](https://github.com/vechain/vechain-dapp-kit/tree/main/examples)
