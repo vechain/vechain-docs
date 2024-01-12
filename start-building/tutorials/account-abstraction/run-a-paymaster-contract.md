@@ -4,7 +4,7 @@ The following instructions demonstrate how to use a Proof of Concept Paymaster t
 
 ## Prerequisites:
 
-In order to use the paymaster that we will deploy you will need some prerequisites.&#x20;
+In order to use the paymaster that we will deploy you will need some prerequisites.
 
 1. A locally running Thor solo node
 2. EntryPoint contract deployed on Thor solo node
@@ -16,7 +16,7 @@ In order to use the paymaster that we will deploy you will need some prerequisit
 1. Clone the example repo
 
 ```bash
-git clone https://github.com/vechainfoundation/dummyPaymaster
+git clone https://github.com/vechain/dummyPaymaster
 ```
 
 2. Install dependencies

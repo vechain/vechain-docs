@@ -17,7 +17,7 @@ typescript
 ### Clone repository
 
 ```bash
-git clone https://github.com/vechainfoundation/remix-proxy.git
+git clone https://github.com/vechain/remix-proxy.git
 cd remix-proxy
 ```
 

@@ -15,7 +15,7 @@ typescript
 First, clone the sample project from our repository
 
 ```bash
-git clone git@github.com:vechainfoundation/hardhat-plugin-sample-web3.git
+git clone git@github.com:vechain/hardhat-plugin-sample-web3.git
 cd hardhat-plugin-sample-web3
 ```
 
@@ -40,7 +40,7 @@ npm i @vechain/hardhat-web3
 
 ## Start Thor
 
-To be able to run the tests on Vechain you need Thor installed, which is Vechain's node implementation. We have a detailed guide on how to do that [here](https://github.com/vechainfoundation/vechain-docs/blob/carpini/add-getting-starte/developer-resources/frameworks-and-ides/hardhat-and-vechain/broken-reference/README.md).
+To be able to run the tests on Vechain you need Thor installed, which is Vechain's node implementation. We have a detailed guide on how to do that [here](broken-reference/).
 
 ## Running the tests
 

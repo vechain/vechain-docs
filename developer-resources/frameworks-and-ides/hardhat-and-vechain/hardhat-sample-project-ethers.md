@@ -13,7 +13,7 @@ typescript
 First, clone the sample project from our repository
 
 ```bash
-git clone git@github.com:vechainfoundation/hardhat-plugin-sample-ethers.git
+git clone git@github.com:vechain/hardhat-plugin-sample-ethers.git
 cd hardhat-plugin-sample-ethers
 ```
 
