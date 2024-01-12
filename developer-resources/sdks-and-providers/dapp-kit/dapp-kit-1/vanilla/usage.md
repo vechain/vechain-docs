@@ -47,6 +47,8 @@ const vechainWalletKitOptions: DAppKitOptions = {
     modalParent={document.body}
     // OPTIONAL: handle source click to customise wallet connect
     onSourceClick={source => void}
+    // OPTIONAL: every wallet has a connection certificate, but wallet connect doesn't connect with a certificate, it uses a session; if required, with this option, we will force the user to sign a certificate after he finishes the connection with wallet connect
+    requireCertificate=false;
 };
 
 const dappKit = DAppKitUI.configure(vechainWalletKitOptions);

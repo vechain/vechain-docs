@@ -47,6 +47,8 @@ const {thor, vendor, wallet} = new DAppKit({
   useFirstDetectedSource: false,
   // Optional - Log Level - To debug the library
   logLevel: "DEBUG",
+  // OPTIONAL: every wallet has a connection certificate, but wallet connect doesn't connect with a certificate, it uses a session; if required, with this option, we will force the user to sign a certificate after he finishes the connection with wallet connect
+  requireCertificate=false;
 });
 ```
 
@@ -111,6 +113,7 @@ const state: WalletManagerState = wallet.state
 
 * `account` - the address of the connected wallet. Null if not connected
 * `source` - the source of the currently selected wallet. Null if not selected
+* `connectionCertificate` - certificate signed during connection
 * `availableWallets` - A list of available wallet sources
 
 ***
