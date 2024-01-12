@@ -6,22 +6,9 @@ description: The math behind gas fee calculation on the VechainThor blockchain.
 
 ## What is gas? <a href="#intrinsic-gas-calculation" id="intrinsic-gas-calculation"></a>
 
-Blockchain networks often refer to transaction fees as gas. Gas refers to the unit that measures the amount of computation effort required to execute operations on the blockchain network. This is a fee that is paid by the transaction sender and received by the blockchain network validator.&#x20;
+Blockchain networks often refer to transaction fees as gas. Gas refers to the unit that measures the amount of computation effort required to execute operations on the blockchain network. This is a fee that is paid by the transaction sender and received by the blockchain network validator.
 
 ## Intrinsic Gas Calculation <a href="#intrinsic-gas-calculation" id="intrinsic-gas-calculation"></a>
-
-The intrinsic gas for a transaction is the amount of the transaction used before any code runs. In other words, it is a constant "transaction fee" plus a fee for every byte of data supplied with the transaction.The gas in the transaction needs to be greater than or equal to the intrinsic gas used by the transaction.
-
-$$g_{intrinsic} = g_{0} + g_{type} + g_{data}$$
-
-* $$g_{0}$$ is the constant transaction fee 5,000
-* There are two types of $$g_{type}$$
-  * Regular transaction : 16,000
-  * Contract creation : 48,000
-* $$g_{data} = 4 \cdot n_z + 68 \cdot n_{nz}$$
-  * $$n_z$$ is the number of bytes **equal to zero** within the data in the $$i^{th}$$ clause and $$n_{nz}$$ the number of bytes **not equal to zero**
-
-## Total Transaction Gas Calculation <a href="#total-transaction-gas-calculation" id="total-transaction-gas-calculation"></a>
 
 The VechainThor blockchain transaction model is capable of containing clauses which allows a single transaction to carry out multiple tasks. Therefore, the total gas cost of the transaction needs to include all the clauses gas costs in the transaction.
 
