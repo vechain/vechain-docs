@@ -121,15 +121,15 @@ ref: [connex API - transaction signing service](../../developer-resources/sdks-a
 
 ### Demos <a href="#demos" id="demos"></a>
 
-#### 1. Buy an item with user login <a href="#_1-buy-an-item-with-user-login" id="_1-buy-an-item-with-user-login"></a>
+#### 1. Buy an item with user login <a href="#id-1-buy-an-item-with-user-login" id="id-1-buy-an-item-with-user-login"></a>
 
 {% embed url="https://codepen.io/xjwx89/embed/OJpeRmb?default-tab=result&theme-id=light" %}
 
-#### 2. Token transfer <a href="#_2-token-transfer" id="_2-token-transfer"></a>
+#### 2. Token transfer <a href="#id-2-token-transfer" id="id-2-token-transfer"></a>
 
 {% embed url="https://codepen.io/xjwx89/embed/RwpzWaq?default-tab=result&theme-id=light" %}
 
-#### 3. Buy me a coffee <a href="#_3-buy-me-a-coffee" id="_3-buy-me-a-coffee"></a>
+#### 3. Buy me a coffee <a href="#id-3-buy-me-a-coffee" id="id-3-buy-me-a-coffee"></a>
 
 {% embed url="https://codepen.io/xjwx89/embed/PopgXWj?default-tab=result&theme-id=light" %}
 
@@ -143,7 +143,7 @@ ref: [connex API - transaction signing service](../../developer-resources/sdks-a
 
 {% embed url="https://codepen.io/xjwx89/embed/vYmGymd?default-tab=result&theme-id=light" %}
 
-#### 6. Estimate the transaction fee <a href="#_6-estimate-the-transaction-fee" id="_6-estimate-the-transaction-fee"></a>
+#### 6. Estimate the transaction fee <a href="#id-6-estimate-the-transaction-fee" id="id-6-estimate-the-transaction-fee"></a>
 
 > GasPriceCoef can be adjust by the user, thus, the result of the transaction fee is the minimum cost of the transaction.
 
@@ -151,7 +151,7 @@ ref: [connex API - transaction signing service](../../developer-resources/sdks-a
 
 **Prerequisites**:
 
-1. Need to know the _**Base gas price**_ from [params](https://github.com/vechainfoundation/vechain-docs/blob/carpini/add-getting-starte/start-building/tutorials/broken-reference/README.md) contract
+1. Need to know the _**Base gas price**_ from [params](broken-reference) contract
 2. According to [transaction calculation](../../core-concepts/transactions/transaction-calculation.md)
    * we need to calculate the _**intrinsic gas**_
    * we need to know the _**vm gasUsed**_ (aka. virtual machine execution cost)

@@ -12,9 +12,9 @@ A dApp, or decentralized application, is a type of software application that ope
 
 Before you start developing your dApp, ensure you have the following prerequisites:
 
-* Basic understanding of blockchain concepts
-* Development experience with languages like Solidity (for smart contracts) and JavaScript (for front-end development)
-* A [wallet](../core-concepts/wallets/) for testing purposes
+- Basic understanding of blockchain concepts
+- Development experience with languages like Solidity (for smart contracts) and JavaScript (for front-end development)
+- A [wallet](../core-concepts/wallets/) for testing purposes
 
 ## Steps
 
