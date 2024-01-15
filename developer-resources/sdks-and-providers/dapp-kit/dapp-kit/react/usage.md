@@ -83,7 +83,7 @@ const MyComponent: React.FC = () => {
 * This hook exposes the `thor` and `vendor` instances of `@vechain/connex`. To interact with a wallet, you must `useWallet` and call `setSource` first.
 
 {% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../../connex/api-specification.md).
+For more information on using connex, please refer to the [Connex documentation](../../../connex/api-specification.md).
 {% endhint %}
 
 ```typescript
