@@ -12,9 +12,9 @@ A dApp, or decentralized application, is a type of software application that ope
 
 Before you start developing your dApp, ensure you have the following prerequisites:
 
-- Basic understanding of blockchain concepts
-- Development experience with languages like Solidity (for smart contracts) and JavaScript (for front-end development)
-- A [wallet](../core-concepts/wallets/) for testing purposes
+* Basic understanding of blockchain concepts
+* Development experience with languages like Solidity (for smart contracts) and JavaScript (for front-end development)
+* A [wallet](../core-concepts/wallets/) for testing purposes
 
 ## Steps
 
@@ -34,7 +34,7 @@ Use our [Built-in Contracts](built-in-contracts.md) to enhance your smart contra
 
 Create a user interface for your dApp using JavaScript, HTML, and CSS.
 
-Easily create a login button with vechain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit/) with a seamless DevEx, it will handle the login logic to connect with all vechain wallets.
+Easily create a login button with vechain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/) with a seamless DevEx, it will handle the login logic to connect with all vechain wallets.
 
 DappKit uses [Connex](sdks-and-providers/connex/) under the hood, Connex is the standard interface to connect dApps with the vechain blockchain. Our [Web3-Providers-Connex](sdks-and-providers/web3-providers-connex/) library implements a provider on top of connex defined in EIP-1193 compatible with [web3.js](https://github.com/ChainSafe/web3.js) and [ethers.js](https://github.com/ethers-io/ethers.js)
 
