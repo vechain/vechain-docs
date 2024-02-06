@@ -27,7 +27,7 @@ Below is an example flow of a transaction focusing on the EntryPoint contract.
 
 As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the vechainthor blockchain mainnet and testnet.
 
-<table><thead><tr><th width="132">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>Currently Not Deployed</td></tr><tr><td>Testnet</td><td>0xf9188E94783Ca505886488F04249DD7f6a36770B</td></tr></tbody></table>
+<table><thead><tr><th width="132">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>0xeE8A9E01A08bbdf3586dFa97d15aCA174DFc4d29</td></tr><tr><td>Testnet</td><td>0xf9188E94783Ca505886488F04249DD7f6a36770B</td></tr></tbody></table>
 
 ### Vechain EntryPoint Contract Modifications
 
