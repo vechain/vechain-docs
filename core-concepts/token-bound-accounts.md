@@ -36,7 +36,9 @@ Token Bound Accounts are formalized through ERC-6551 If you wish to read more on
 
 ### ERC-6551: Registry
 
-The registry is permissionless and immutable, and it deploys a smart contract account for an NFT.
+The registry is permissionless and immutable, and it deploys a smart contract account for an NFT. As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the VechainThor blockchain mainnet and testnet networks.
+
+<table><thead><tr><th width="303">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>0x99602e4Bbc0503b8ff4432bB1857F916c3653B85</td></tr><tr><td>Testnet</td><td>0x6eBeed52e2BAf27B0d9763c874AbaA23cE1D134a</td></tr></tbody></table>
 
 ### ERC-6551: Account Interface
 

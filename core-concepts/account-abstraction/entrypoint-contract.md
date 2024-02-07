@@ -12,7 +12,7 @@ The EntryPoint contract is a singleton contract that acts as a "guard" or "entry
 
 ## Role
 
-The role of the EntryPoint contract is to handle the verification and execution logic of transactions.&#x20;
+The role of the EntryPoint contract is to handle the verification and execution logic of transactions.
 
 Below is an example flow of a transaction focusing on the EntryPoint contract.
 
@@ -25,7 +25,7 @@ Below is an example flow of a transaction focusing on the EntryPoint contract.
 
 ## Implementation
 
-As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the vechainthor blockchain mainnet and testnet.
+As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the VechainThor blockchain mainnet and testnet.
 
 <table><thead><tr><th width="132">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>0xeE8A9E01A08bbdf3586dFa97d15aCA174DFc4d29</td></tr><tr><td>Testnet</td><td>0xf9188E94783Ca505886488F04249DD7f6a36770B</td></tr></tbody></table>
 
@@ -33,13 +33,13 @@ As the EntryPoint contract is a singleton contract there only exists a single im
 
 The EntryPoint contract was developed for the Ethereum blockchain. Given vechain has some modifications that are not present in Ethereum it is expected that the EntryPoint contract requires some modifications to be interoperable with vechain.
 
-The most significant modification to implementing account abstraction on vechain is to adjust the smart contracts to accommodate for the vechain [two-token design](broken-reference) which is in contrast to the single asset ETH on Ethereum. On Ethereum, all account abstraction participants spend and are compensated in ETH, the native token of Ethereum. Whereas, on vechain the account abstraction participants are modified to accept VTHO, the vechain gas token, instead of VET, the vechain utility token, by adding additional VTHO-equivalent methods.
+The most significant modification to implementing account abstraction on vechain is to adjust the smart contracts to accommodate for the vechain [two-token design](broken-reference/) which is in contrast to the single asset ETH on Ethereum. On Ethereum, all account abstraction participants spend and are compensated in ETH, the native token of Ethereum. Whereas, on vechain the account abstraction participants are modified to accept VTHO, the vechain gas token, instead of VET, the vechain utility token, by adding additional VTHO-equivalent methods.
 
 The EntryPoint contract was modified to accept VTHO instead of VET by adding additional VTHO-equivalent methods to its public interface and subsequently the BaseAccount and Paymaster were modified to reimburse VTHO instead of VET back to the EntryPoint contract using these new methods.
 
 ### StakeManager Modifications
 
-Modifications were made to the StakeManager contract which the EntryPoint contract inherits from. The purpose of the modifications to the StakeManager contract was to use the VTHO asset instead of the VET asset. Modifications were made to all methods that were payable to not payable since we do not require the Account contract or the Paymaster contract to deposit VET. We also added `depositAmount()` and `addStakeAmount()` alongside `deposit()` and `addStake()` such that the Account contract or Paymaster contract can deposit a specific amount and not all of their VTHO allowance.&#x20;
+Modifications were made to the StakeManager contract which the EntryPoint contract inherits from. The purpose of the modifications to the StakeManager contract was to use the VTHO asset instead of the VET asset. Modifications were made to all methods that were payable to not payable since we do not require the Account contract or the Paymaster contract to deposit VET. We also added `depositAmount()` and `addStakeAmount()` alongside `deposit()` and `addStake()` such that the Account contract or Paymaster contract can deposit a specific amount and not all of their VTHO allowance.
 
 The changes to the StakeManager interface can be found below:
 
