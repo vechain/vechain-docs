@@ -30,7 +30,7 @@ The EOA design is inflexible, lacks programmability, provides a poor user experi
 
 Smart contract wallets offer an improved user experience by abstracting the signing of transactions which will offer a dramatic increase in the user experience. Abstracting away the necessity to sign each and every transaction combined with features such as trusted sessions and batch transactions will transform the blockchain user experience.
 
-Smart contact wallets also offer improved security through the ability to flexibly incorporate account recovery methods. Security improvements such as multisig authorization, sharing account security across devices or individuals and the use of whitelists to protect users accounts, just to name a few potential candidates.
+Smart contract wallets also offer improved security through the ability to flexibly incorporate account recovery methods. Security improvements such as multisig authorization, sharing account security across devices or individuals and the use of whitelists to protect users accounts, just to name a few potential candidates.
 
 Currently, the user experience and improved security benefits are not natively supported as only EOAs can initiate transactions. Account abstraction paves the way for smart contracts to initiate transactions, allowing users to code their desired logic directly into the smart contract wallet for execution on the blockchain.
 
