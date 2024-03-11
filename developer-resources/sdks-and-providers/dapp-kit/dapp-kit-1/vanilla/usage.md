@@ -60,6 +60,6 @@ console.log(`DAppKit configured`, dappKit.thor.genesis.id);
 
 ```html
 <body>
-    <vwk-button></vwk-button>
+    <vdk-button></vdk-button>
 </body>
 ```
