@@ -36,9 +36,7 @@ Create a user interface for your dApp using JavaScript, HTML, and CSS.
 
 Easily create a login button with vechain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/) with a seamless DevEx, it will handle the login logic to connect with all vechain wallets.
 
-DappKit uses [Connex](sdks-and-providers/connex/) under the hood, Connex is the standard interface to connect dApps with the vechain blockchain. Our [Web3-Providers-Connex](sdks-and-providers/web3-providers-connex/) library implements a provider on top of connex defined in EIP-1193 compatible with [web3.js](https://github.com/ChainSafe/web3.js) and [ethers.js](https://github.com/ethers-io/ethers.js)
-
-Use the [Thor DevKit](sdks-and-providers/thor-devkit/) which contains a lot of utils to work with transactions, certificates, cryptography, and much more.
+Use the [SDK](./sdks-and-providers/sdk/README.md) to streamline blockchain development on the VeChainThor platform. The SDK offers a wealth of functionalities, including transaction management, certificate handling, cryptographic operations and  smart contract deployment. By utilizing the vechain SDK, developers can build sophisticated decentralized applications (dApps) with ease, leveraging its comprehensive suite of tools to create secure, scalable, and feature-rich solutions on the VeChainThor blockchain.
 
 Check our mainnet and testnet [node endpoints](nodes.md), a gateway to interacting with the VechainThor blockchain.
 
