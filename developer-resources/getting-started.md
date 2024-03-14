@@ -36,7 +36,7 @@ Create a user interface for your dApp using JavaScript, HTML, and CSS.
 
 Easily create a login button with vechain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/) with a seamless DevEx, it will handle the login logic to connect with all vechain wallets.
 
-Use the [SDK](./sdks-and-providers/sdk/README.md) to streamline blockchain development on the VeChainThor platform. The SDK offers a wealth of functionalities, including transaction management, certificate handling, cryptographic operations and  smart contract deployment. By utilizing the vechain SDK, developers can build sophisticated decentralized applications (dApps) with ease, leveraging its comprehensive suite of tools to create secure, scalable, and feature-rich solutions on the VeChainThor blockchain.
+Use the [SDK](./sdks-and-providers/sdk/README.md) to streamline blockchain development on the VechainThor platform. The SDK offers a wealth of functionalities, including transaction management, certificate handling, cryptographic operations and  smart contract deployment. By utilizing the vechain SDK, developers can build sophisticated dApps with ease, leveraging its comprehensive suite of tools to create secure, scalable, and feature-rich solutions on the VechainThor blockchain.
 
 Check our mainnet and testnet [node endpoints](nodes.md), a gateway to interacting with the VechainThor blockchain.
 
