@@ -3,7 +3,7 @@
 [Thor DevKit](https://github.com/vechain/thor-devkit.js) is a library specifically designed to aid in decentralized application (dApp) development on the VechainThor blockchain. This documentation provides a comprehensive guide to using the Thor DevKit library, including installation, usage instructions, and details about its key features and methods.
 
 {% hint style="info" %}
-Please note that it's highly recommended to utilize the [SDK](../sdk/README.md) instead of Thor DevKit. The vechain SDK offers enhanced features, improved performance, and better compatibility with the latest developments on the VeChainThor platform.
+An alternative [SDK](../sdk/README.md) is currently available as a beta release. The vechain SDK offers enhanced features, improved performance, and better compatibility with the latest developments on the VechainThor blockchain.
 {% endhint %}
 
 ## Languages
