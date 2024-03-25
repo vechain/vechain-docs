@@ -2,21 +2,21 @@
 
 ## Overview
 
-The vechain provider is a powerful tool designed to interact with the VechainThor blockchain seamlessly. This documentation outlines the features, usage, and configuration of the vechain provider and its companion, the Hardhat provider.
+The vechain Provider is a powerful tool designed to interact with the vechain blockchain seamlessly. This documentation outlines the features, usage, and configuration of the vechain Provider and its companion, the Hardhat Provider.
 
 ## Vechain Provider
 
-The vechain provider is our core provider, offering direct interaction with the VechainThor blockchain. It extends EventEmitter and implements EIP1193ProviderMessage for efficient event handling and message passing.
+The vechain Provider is our core provider, offering direct interaction with the vechain blockchain. It extends EventEmitter and implements EIP1193ProviderMessage for efficient event handling and message passing.
 
 ### Features
 
- - Seamless interaction with the VechainThor blockchain.
+ - Seamless interaction with the vechain blockchain.
  - Event handling capabilities using EventEmitter.
  - Implementation of EIP1193ProviderMessage for standardized message communication.
 
 ### Usage
 
-To use the vechain provider in your project, follow these steps:
+To use the vechain Provider in your project, follow these steps:
  - Install the package:
     ``` bash
     yarn add @vechain/sdk-provider
@@ -29,7 +29,7 @@ To use the vechain provider in your project, follow these steps:
     ``` bash
     const provider = new VechainProvider(thorClient, wallet);
     ```
- - Start interacting with the VechainThor blockchain using the available methods provided by the vechain provider.
+ - Start interacting with the VeChain blockchain using the available methods provided by the VeChainProvider.
 
 Example:
 ```typescript { name=vechain-provider, category=example }
@@ -56,16 +56,16 @@ expect(rpcCallChainId).toBe('0x186aa');
 
 ## HardHat Provider
 
-The Hardhat provider is a wrapper around the core vechain provider specifically designed for Hardhat integration. It simplifies the process of using the vechain provider within a Hardhat environment.
+The Hardhat Provider is a wrapper around the core vechain Provider specifically designed for Hardhat integration. It simplifies the process of using the vechain Provider within a Hardhat environment.
 
 ### Features
 
- - Wrapper around the core vechain provider.
+ - Wrapper around the core vechain Provider.
  - Simplified integration with Hardhat projects.
 
 ### Usage
 
-To use the Hardhat provider in your project, follow these steps:
+To use the Hardhat Provider in your project, follow these steps:
  - Install the package:
     ``` bash
     yarn add @vechain/sdk-provider
@@ -82,7 +82,7 @@ To use the Hardhat provider in your project, follow these steps:
             (message: string, parent?: Error) => new Error(message, parent)
         );
     ```
- - Start interacting with the VechainThor blockchain using the available methods provided by the HardhatVechainProvider.
+ - Start interacting with the VeChain blockchain using the available methods provided by the HardhatVechainProvider.
 
 Example:
 ```typescript { name=vechain-hardhat-provider, category=example }
