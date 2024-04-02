@@ -15,7 +15,7 @@ Should you wish to implement this in a pure JavaScript project, it is recommende
 ## NPM
 
 ```bash
-npm i @vechain/dapp-kit-ui
+npm i @vechain/dapp-kit-ui @vechain/dapp-kit
 ```
 
 Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:

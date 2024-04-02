@@ -5,7 +5,7 @@
 **1. Optional: Wallet Connect Options**
 
 ```tsx
-import type { WalletConnectOptions } from '@vechain/dapp-kit';
+import type { WalletConnectOptions } from '@vechain/dapp-kit-react';
 
 const walletConnectOptions: WalletConnectOptions = {
     // Create your project here: https://cloud.walletconnect.com/sign-up

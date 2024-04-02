@@ -1,48 +1,24 @@
----
-description: >-
-  How to install `@vechain/dapp-kit` in order to use it with TypeScript or
-  Javascript.
----
-
 # Installation
 
-If using TypeScript follow the installation steps, for JavaScript follow the CommonJS (CJS) installation steps.
+&#x20;We suggest starting with one of the [example apps](https://github.com/vechain/vechain-dapp-kit/tree/main/examples) so:\
+\
+\- You have a working example\
+\- You don't have to strive with node polyfills
 
-{% hint style="info" %}
-Should you wish to implement this in a pure JavaScript project, it is recommended to use CommonJS (CJS) imports. Potential complications might arise with ES Module (ESM) imports.
+However, if you can't, proceed with the manual installation below.
+
+## Manual Installation
+
+{% hint style="warning" %}
+dApp-kit has been built on top of Connex, which will require crypto, buffer, http, https and some other node polyfills, check [example app](https://github.com/vechain/vechain-dapp-kit/tree/main/examples) configuration files if you are stuck. Check also [Node Polyfills page](https://app.gitbook.com/o/H9uzTvrkiE3RQA6J88ka/s/HKk8xWsgscVhGUM2fb7S/\~/changes/1/developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/node-polyfills).&#x20;
 {% endhint %}
 
-## NPM
+* **React**: in case your project uses React or React-compatible framework like Remix and Next\
+  \
+  check the [React Documentation](react/installation.md)
 
-{% tabs %}
-{% tab title="npm" %}
-```
-npm i @vechain/dapp-kit
-```
-{% endtab %}
 
-{% tab title="yarn" %}
-```
-yarn add @vechain/dapp-kit
-```
-{% endtab %}
 
-{% tab title="pnpm" %}
-```
-pnpm i @vechain/dapp-kit
-```
-{% endtab %}
-{% endtabs %}
-
-Upon installation, you may utilize the subsequent code snippet to verify the proper functioning within your TypeScript project:
-
-```typescript
-import { DAppKit } from "@vechain/dapp-kit"
-
-const dappKit = new DAppKit({
-  //Required
-  nodeUrl: 'https://sync-testnet.vechain.org/', 
-  // Required if not connecting to the mainnet
-  genesis: 'test', 
-});
-```
+* **Other Frameworks**: in case your project is not using React, you can still use the dApp-kit with the Vanilla JS implementation\
+  \
+  check the [Vanilla JS Documentation](vanilla/installation.md)
