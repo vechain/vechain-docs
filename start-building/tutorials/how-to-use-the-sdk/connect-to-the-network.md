@@ -1,5 +1,5 @@
 ---
-description: How to connect with to VechainThor blockchain using `@vechain/sdk-network`
+description: How to connect with to VechainThor blockchain using @vechain/sdk-network
 ---
 
 # Connect to the Network
