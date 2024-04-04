@@ -95,6 +95,8 @@
       * [How to Integrate VIP-191 (II)](start-building/tutorials/vip-191-designated-gas-payer/how-to-integrate-vip-191-ii.md)
       * [How to Integrate VIP-191 (III)](start-building/tutorials/vip-191-designated-gas-payer/how-to-integrate-vip-191-iii.md)
     * [Account Abstraction](start-building/tutorials/account-abstraction.md)
+    * [How to use the SDK](start-building/tutorials/how-to-use-the-sdk/README.md)
+      * [Connect to the Network](start-building/tutorials/how-to-use-the-sdk/connect-to-the-network.md)
 * [Developer Resources](developer-resources/README.md)
   * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
