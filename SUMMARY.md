@@ -101,6 +101,8 @@
         * [Read Blocks](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-blocks.md)
         * [Read Transactions](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-transactions.md)
         * [Read Accounts](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-accounts.md)
+      * [Read From Smart Contracts](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/README.md)
+        * [States & Views](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/states-and-views.md)
 * [Developer Resources](developer-resources/README.md)
   * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
