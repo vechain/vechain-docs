@@ -18,12 +18,11 @@ The most relevant information of a transaction includes:
 A transaction's complete details are comprised of two main components:
 
 1. The basic version, which includes all input data and details on how the transaction is stored.
-2. The receipt, which lists all changes broadcasted by the blockchain, including:
-
-* the reverted flag,
-* the address of a newly deployed contract,
-* VET transfers,
-* events initiated by contracts.
+2. The receipt, which lists all changes emitted by the blockchain, including:
+   * the reverted flag,
+   * the address of a newly deployed contract,
+   * VET transfers,
+   * events initiated by contracts.
 
 Example snippet to access transaction details:
 
