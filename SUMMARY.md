@@ -100,6 +100,7 @@
       * [Read Blockchain Information](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/README.md)
         * [Read Blocks](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-blocks.md)
         * [Read Transactions](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-transactions.md)
+        * [Read Accounts](start-building/tutorials/how-to-use-the-sdk/read-blockchain-information/read-accounts.md)
 * [Developer Resources](developer-resources/README.md)
   * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
