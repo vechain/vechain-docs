@@ -15,7 +15,7 @@ The snippet connects to the MainNet, where all production related activity is fo
 
 Additionally there is a TestNet available for testing and development purposes. This allows developers to experiment without risking real assets.
 
-To connect to the TestNet use `https://testnet.vechain.org` as URL. If you have deployed a local solo instance of Vechain, it is normally available on `http://localhost:8669`.
+To connect to the TestNet use `https://testnet.vechain.org` as URL. If you have deployed a  [solo node of Vechain](../how-to-run-a-thor-solo-node/), it is normally available on `http://localhost:8669`.
 
 {% hint style="info" %}
 The `ThorClient` uses a `HttpClient` underneath to communicate with the Vechain nodes with a [JSON API](https://mainnet.vechain.org/doc/swagger-ui/).
