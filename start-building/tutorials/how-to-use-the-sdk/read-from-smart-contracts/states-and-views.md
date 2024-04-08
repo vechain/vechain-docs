@@ -75,6 +75,62 @@ console.log('Transfer Test', transfer);
 
 If the transaction encounters an error, the method call will also throw an error which needs to be handled appropriately.
 
-## Example Project
+### Example Project
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-executecontractcall?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
+## contracts.load(address, abi)
+
+To simplify interaction a dynamic object can be created that can interact with passing less of the repeating arguments.
+
+For example contracts.read.name() can load the name without the need to pass function signature, address and thor client every time.
+
+### Create Contract Object
+
+To create a contract object it needs to be created from the thor client:
+
+```javascript
+import { HttpClient, ThorClient } from '@vechain/sdk-network';
+import { ErrorDecoder } from 'ethers-decode-error';
+import abi from './energy.json' assert { type: 'json' };
+
+const thor = new ThorClient(new HttpClient('https://mainnet.vechain.org'));
+const vtho = thor.contracts.load(
+  '0x0000000000000000000000000000456e65726779',
+  abi
+);
+
+```
+
+{% hint style="info" %}
+The Contract-Loader always requires a JSON ABI Definition.
+
+Fragments are not supported.
+{% endhint %}
+
+### Read Functions
+
+Function calls are encapsulated within a sub-object named `read`. This enables calling the contract for variable content, viewing functions, or performing simple transaction simulations.&#x20;
+
+```javascript
+await vtho.read.name() // returns the name
+await vtho.read.balanceOf(address) // returns balance of address
+await vtho.read.transfer(recipient, amount) // simulates a transfer 
+```
+
+### Read Options
+
+Custom parameters, such as `revision` or specifying the caller of a function call, can be set for all requests using `setContractReadOptions`.
+
+```javascript
+// read balance of an address
+vtho.setContractReadOptions({ revision: 12345678 });
+const balancePast = await vtho.read.balanceOf(
+  '0x0000000000000000000000000000000000000000'
+);
+console.log('Balance Past', balancePast);
+```
+
+### Example Project
+
+{% embed url="https://stackblitz.com/edit/vechain-sdk-executecontractcall-5vzmiy?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
