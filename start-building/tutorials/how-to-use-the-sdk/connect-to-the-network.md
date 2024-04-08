@@ -8,7 +8,7 @@ Interacting with VechainThor requires only an instance of `ThorClient` that is c
 
 ```js
 import { ThorClient } from "@vechain/sdk-network";
-const thor = new ThorClient("https://mainnet.vechain.org");
+const thor = ThorClient.fromUrl("https://mainnet.vechain.org");
 ```
 
 The snippet connects to the MainNet, where all production related activity is found.
