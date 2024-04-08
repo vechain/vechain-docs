@@ -50,4 +50,4 @@ There are specific keywords associated with special blocks:
 
 * **Genesis** refers to the initial block (number `0`) on a chain, serving to identify the available chain on a network.
 * **Best** represents the most recent block, typically having a maximum age of 10 seconds, as a new block is added every 10 seconds.
-* **Final** denotes the most recent finalized block, marking the end of an epoch. It is guaranteed that there will be no further re-ordering or changes. This usually occurs every 180 blocks.
+* **Final** denotes the most recent finalized block, marking the end of an epoch. It is guaranteed that there will be no further re-ordering or changes. A checkpoint happens every 180 blocks and finalization of a checkpointed block occurs again after 180 blocks.
