@@ -25,7 +25,7 @@ const bytecode = await thor.accounts.getBytecode(
 
 Test it yourself:
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-account?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-sdk-read-account?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 The same information is available using the JSON-API:
 

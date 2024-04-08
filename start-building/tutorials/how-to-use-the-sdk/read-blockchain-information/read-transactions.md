@@ -40,7 +40,7 @@ console.log(txReceipt);
 
 Test it yourself:
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-transaction?embed=1&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-sdk-read-transaction?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 The same information is available using the JSON-API:
 

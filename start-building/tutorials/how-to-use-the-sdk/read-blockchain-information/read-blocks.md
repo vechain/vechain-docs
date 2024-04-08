@@ -32,7 +32,7 @@ console.log(expanded);
 
 Test it yourself:
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-block?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-sdk-read-block?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 The same information is available using the JSON-API:
 
