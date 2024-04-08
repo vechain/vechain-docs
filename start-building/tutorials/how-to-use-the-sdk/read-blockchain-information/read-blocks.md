@@ -34,6 +34,11 @@ Test it yourself:
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-read-block?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
+Type definition and documentation of all attributes:
+
+* [Compressed Block Detail](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.CompressedBlockDetail.html)
+* [Expanded Block Detail](https://tsdocs.dev/docs/@vechain/sdk-network/test/interfaces/network.ExpandedBlockDetail.html)
+
 The same information is available using the JSON-API:
 
 * [https://mainnet.vechain.org/blocks/12345678](https://mainnet.vechain.org/blocks/12345678)

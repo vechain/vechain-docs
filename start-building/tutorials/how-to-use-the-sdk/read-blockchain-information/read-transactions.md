@@ -42,6 +42,11 @@ Test it yourself:
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-read-transaction?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
+Type definition and documentation of all attributes:
+
+* [Transaction Body](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/\_internal\_.TransactionBody.html) & [Transaction Details](https://tsdocs.dev/docs/@vechain/sdk-network/latest/types/network.TransactionDetailNoRaw.html)
+* [Transaction Receipt](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransactionReceipt.html)
+
 The same information is available using the JSON-API:
 
 * Successful Transaction: [https://mainnet.vechain.org/transactions/0xfc99fe103fccbe61b3c042c1da3499b883d1b17fb40160ed1170ad5e63751e07](https://mainnet.vechain.org/transactions/0xfc99fe103fccbe61b3c042c1da3499b883d1b17fb40160ed1170ad5e63751e07)

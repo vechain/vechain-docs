@@ -27,6 +27,10 @@ Test it yourself:
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-read-account?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
+Type definition and documentation of all attributes:
+
+* [Account Detail](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.AccountDetail.html)
+
 The same information is available using the JSON-API:
 
 * [https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779)
