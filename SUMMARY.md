@@ -105,6 +105,7 @@
         * [Page](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/page.md)
         * [States & Views](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/states-and-views.md)
         * [Events & Logs](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/events-and-logs.md)
+        * [VET Transfers](start-building/tutorials/how-to-use-the-sdk/read-from-smart-contracts/vet-transfers.md)
 * [Developer Resources](developer-resources/README.md)
   * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
