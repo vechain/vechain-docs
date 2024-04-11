@@ -2,8 +2,21 @@
 
 {% tabs %}
 
-{% tab title="Mobile" %} Here are the instructions for Mobile {% endtab %}
+{% tab title="Mobile" %} 
 
-{% tab title="Extension" %} Here are the instructions for Extension {% endtab %}
+You can install the app on your device by following this links:
+
+- [VeWorld on Play Store](https://play.google.com/store/apps/details?id=org.vechain.veworld.app&utm_source=docs_vechain&utm_medium=website&utm_campaign=vechain_communication)
+- [VeWorld on Apple Store](https://apps.apple.com/us/app/veworld/id6446854569?campaign=docs_vechain)
+
+If you cannot access a marketplace, you can find the latest APK on [veworld.com](https://www.veworld.com/)
+
+{% endtab %}
+
+{% tab title="Extension" %}
+
+For all Chromium-based Browser, you can visit the [Chrome Extension Marketplace](https://chromewebstore.google.com/detail/veworld/ffondjhiilhjpmfakjbejdgbemolaaho?utm_source=docs_vechain&utm_medium=website&utm_campaign=vechain_communication)
+
+{% endtab %}
 
 {% endtabs %}
