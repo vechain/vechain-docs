@@ -1,6 +1,70 @@
 # Wallet
 
-<figure><img src="../../../../.gitbook/assets/wallet.08efbe38.png" alt=""><figcaption></figcaption></figure>
+## Create a new wallet
+
+
+{% tabs %}
+
+{% tab title="Mobile" %} 
+
+<figure><img src="../../../../.gitbook/assets/veworld/mobile.wallet.create.gif" alt=""><figcaption></figcaption></figure>
+
+{% endtab %}
+
+{% tab title="Extension" %}
+
+{% endtab %}
+
+{% endtabs %}
+
+## Import a wallet
+
+### Import from Mnemonic
+
+### Import from Private Key
+
+### Import from KeyStore
+
+### Import from Ledger
+
+## Export a wallet
+
+## Manage your wallets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Wallet list <a href="#wallet-list" id="wallet-list"></a>
 
