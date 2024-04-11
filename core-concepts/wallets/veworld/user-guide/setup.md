@@ -1,5 +1,8 @@
 # Setup
 
+
+## Install the application <a href="#install" id="install"></a>
+
 {% tabs %}
 
 {% tab title="Mobile" %} 
