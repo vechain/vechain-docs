@@ -196,7 +196,7 @@ Feel the benefits of self-organize your wallets as you prefer.
 Change the order of your wallets
 
 1. From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
-2. Tap the icon order-change
+2. Tap the icon order-change ![](../../../../.gitbook/assets/veworld/low\_priority.svg)
 3. Move your wallets to your favorite order
 4. Tap the **Save** button
 
