@@ -27,6 +27,8 @@
 Your browser does not support the video tag.
 </video>
 
+{% embed url="https://www.youtube.com/watch?v=8aktz9VKIE8" %}
+
 {% endtab %}
 
 {% tab title="Extension" %}
