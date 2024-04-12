@@ -168,7 +168,7 @@ Steps for exporting a local wallet:
 2. Tap **Privacy and Security** from the menu
 3. Tap **Backup your mnemonic phrase**
 4. Select the local wallet you want to export
-5. Pass the authenticationn (fingerprint, faceid or password)
+5. Pass the authentication (fingerprint, faceid or password)
 6. Paste or type your saved mnemonic and then tap **VERIFY** button
 7. Read or copy to clipboard your mnemonic
 {% endtab %}
@@ -187,29 +187,16 @@ Steps for exporting a local wallet:
 
 ## Manage your wallets
 
+With VeWorld you can handle multiple wallets and multiple accounts.
+
+Feel the benefits of self-organize your wallets as you prefer.
+
 {% tabs %}
 {% tab title="Mobile" %}
-| Fresh Start                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon</li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+Change the order of your wallets
 
-Steps for importing a local wallet from **mnemonic**:
-
-1. Tap the **Import Wallet** button
-2. Tap **Local wallet**
-3. Paste or type your saved mnemonic and then tap **VERIFY** button
-
-Steps for importing a local wallet from **private key**:
-
-1. Tap the **Import Wallet** button
-2. Tap **Local wallet**
-3. Paste your saved private key and then tap **VERIFY** button
-
-Steps for importing a local wallet from a **keystore file**:
-
-1. Tap the **Import Wallet** button
-2. Tap **Local wallet**
-3. Paste the content of your saved keystore file and then tap **VERIFY** button
+1. From your dashboard tap the top-right wallet icon
+2. Tap the icon&#x20;
 {% endtab %}
 
 {% tab title="Extension" %}
@@ -242,3 +229,4 @@ Steps for importing a local wallet from **keystore file**:
 5. Type your wallet password
 {% endtab %}
 {% endtabs %}
+
