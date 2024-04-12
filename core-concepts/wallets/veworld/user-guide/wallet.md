@@ -45,13 +45,33 @@ If you are starting from a fresh onboarding, the steps you should follow are:
 If you want to create a new wallet, adding it to your list you should:
 
 1. From your dashboard tap the top-right wallet icon 
-2. Tab **Add Wallet" button
+2. Tab **Add Wallet** button
 3. Tap **Create new wallet** button
 4. Follow the above steps in the previous list
 
 {% endtab %}
 
 {% tab title="Extension" %}
+
+If you are starting from a fresh onboarding, the steps you should follow are:
+
+1. Follow or skip the welcome wizard
+2. Click **NEXT: CREATE A PASSWORD** button
+3. Type your favourite password twice and then click **CONFIRM** button
+4. Click **Create wallet** button
+5. Follow or skip the security wizard
+6. Read and store your mnemonic
+7. Mark the checkbox that state you saved your mnemonic somewhere
+8. Pass the quiz the 3 words from your mnemonic
+9. Click **GO TO HOMEPAGE** button
+
+If you want to create a new wallet, adding it to your list you should:
+
+1. From your dashboard tap the top-right 3-dots icon 
+2. Select **Manage Wallets**
+2. Click **Add Wallet** button
+3. Click **Create new wallet** button
+4. Follow the above steps in the previous list
 
 {% endtab %}
 
