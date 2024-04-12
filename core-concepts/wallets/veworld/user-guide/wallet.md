@@ -5,7 +5,7 @@
 
 {% tabs %}
 
-{% tab title="Mobile" %} 
+{% tab title="Experiments" %} 
 
 <figure><img src="../../../../.gitbook/assets/veworld/mobile.wallet.create.gif" alt=""><figcaption></figcaption></figure>
 
@@ -28,6 +28,26 @@ Your browser does not support the video tag.
 </video>
 
 {% embed url="https://www.youtube.com/watch?v=8aktz9VKIE8" %}
+
+{% endtab %}
+
+{% tab title="Mobile" %} 
+
+If you are starting from a fresh onboarding, the steps you should follow are:
+
+1. Tap **Get Started** button
+2. Tap **Create new wallet** button
+3. Read and store your mnemonic
+4. Mark the checkbox that state you saved your mnemonic somewhere
+5. Pass the quiz the 3 words from your mnemonic
+6. Protect your wallet by choosing your favourite method (FaceId, Fingerprint or password)
+
+If you want to create a new wallet, adding it to your list you should:
+
+1. From your dashboard tap the top-right wallet icon 
+2. Tab **Add Wallet" button
+3. Tap **Create new wallet** button
+4. Follow the above steps in the previous list
 
 {% endtab %}
 
