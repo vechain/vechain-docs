@@ -6,6 +6,7 @@
 {% tab title="Mobile" %} 
 
   **Fresh Start**
+
   The first time you install the app you should:
 
   1. Tap **Get Started** button
@@ -14,6 +15,7 @@
   4. Protect your wallet by choosing your favourite method (FaceId, Fingerprint or password)
   
   **Add a new wallet**
+
   If you already have a wallet on VeWorld, and you want to create a new one:
 
   1. From your dashboard tap the top-right wallet icon 
@@ -21,7 +23,7 @@
   3. Tap **Create new wallet** button
   4. Follow [this steps](#mobile-create-new-wallet)
 
-  Steps<a id="mobile-create-new-wallet" name="mobile-create-new-wallet"></a>
+  Steps<a id="mobile-create-new-wallet" href="#mobile-create-new-wallet"></a>
   1. Read and store your mnemonic
   2. Mark the checkbox that state you saved your mnemonic somewhere
   3. Pass the quiz the 3 words from your mnemonic
