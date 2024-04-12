@@ -9,6 +9,20 @@
 
 <figure><img src="../../../../.gitbook/assets/veworld/mobile.wallet.create.gif" alt=""><figcaption></figcaption></figure>
 
+<details open="">
+  <summary class="px-3 py-2">
+    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-device-camera-video">
+    <path d="M16 3.75v8.5a.75.75 0 0 1-1.136.643L11 10.575v.675A1.75 1.75 0 0 1 9.25 13h-7.5A1.75 1.75 0 0 1 0 11.25v-6.5C0 3.784.784 3 1.75 3h7.5c.966 0 1.75.784 1.75 1.75v.675l3.864-2.318A.75.75 0 0 1 16 3.75Zm-6.5 1a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-6.5ZM11 8.825l3.5 2.1v-5.85l-3.5 2.1Z"></path>
+</svg>
+    <span aria-label="Video description DAppDemo.mov" class="m-1">DAppDemo.mov</span>
+    <span class="dropdown-caret"></span>
+  </summary>
+
+  <video src="https://private-user-images.githubusercontent.com/150018882/309203051-5cc133ae-4c6b-4e08-8cff-0e09b6ca43aa.mov?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI5MDMwMDcsIm5iZiI6MTcxMjkwMjcwNywicGF0aCI6Ii8xNTAwMTg4ODIvMzA5MjAzMDUxLTVjYzEzM2FlLTRjNmItNGUwOC04Y2ZmLTBlMDliNmNhNDNhYS5tb3Y_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxMlQwNjE4MjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMzAyOGY0ZjYwNmMxZjRiMTJkMmUzMmMxMTY5N2Y1ODIzM2E2Y2Q0ZjAxMTRmNGM1M2JjZmExYWYwMTJkOTU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.yzhKCRfGu3LWxlgPfyFKlTGSXR5KiuuGTqXBwLvvKVk" data-canonical-src="https://private-user-images.githubusercontent.com/150018882/309203051-5cc133ae-4c6b-4e08-8cff-0e09b6ca43aa.mov?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI5MDMwMDcsIm5iZiI6MTcxMjkwMjcwNywicGF0aCI6Ii8xNTAwMTg4ODIvMzA5MjAzMDUxLTVjYzEzM2FlLTRjNmItNGUwOC04Y2ZmLTBlMDliNmNhNDNhYS5tb3Y_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxMlQwNjE4MjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMzAyOGY0ZjYwNmMxZjRiMTJkMmUzMmMxMTY5N2Y1ODIzM2E2Y2Q0ZjAxMTRmNGM1M2JjZmExYWYwMTJkOTU1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.yzhKCRfGu3LWxlgPfyFKlTGSXR5KiuuGTqXBwLvvKVk" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
+
+  </video>
+</details>
+
 {% endtab %}
 
 {% tab title="Extension" %}
