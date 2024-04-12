@@ -4,36 +4,29 @@
 
 {% tabs %}
 {% tab title="Mobile" %}
-| Fresh Start                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p></p><p>The first time you install the app you should:</p><ol><li>Tap <strong>Get Started</strong> button</li><li>Tap <strong>Create new wallet</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p></p><p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon</li><li>Tab <strong>Add Wallet</strong> button</li><li>Tap <strong>Create new wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| Fresh Start                                                                                                                                                                                                                                                                                                       | Add a new one                                                                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Tap the <strong>Create new wallet</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p></p><p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon</li><li>Tap the <strong>Add Wallet</strong> button</li><li>Tap the <strong>Create new wallet</strong> button</li><li>Follow the below steps</li></ol> |
 
-**Steps**
+**Steps for a new wallet**
 
 1. Read and store your mnemonic
-2. Mark the checkbox that state you saved your mnemonic somewhere
-3. Pass the quiz the 3 words from your mnemonic
+2. Mark the checkbox that states you saved your mnemonic somewhere
+3. Pass the quiz with the 3 words from your mnemonic
 {% endtab %}
 
 {% tab title="Extension" %}
-If you are starting from a fresh onboarding, the steps you should follow are:
+| Fresh Start                                                                                                                                                                                                                                                                                                                     | Add a new one                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><p>The first time you install the extension you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Click the <strong>Create wallet</strong> button</li><li>Follow the below steps</li></ol> | <p></p><p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon</li><li>Select <strong>Manage Wallets</strong></li><li>Click the <strong>Add Wallet</strong> button</li><li>Click the <strong>Create new wallet</strong> button</li><li>Follow the below steps</li></ol> |
 
-1. Follow and complete or skip the _welcome wizard_
-2. Type your favourite password twice and then click **CONFIRM** button
-3. Click **Create wallet** button
-4. Follow and complete or skip the _security wizard_
-5. Read and store your mnemonic
-6. Mark the checkbox that state you saved your mnemonic somewhere
-7. Pass the quiz the 3 words from your mnemonic
-8. Click **GO TO HOMEPAGE** button
+**Steps:**
 
-If you want to create a new wallet, adding it to your list you should:
-
-1. From your dashboard tap the top-right 3-dots icon
-2. Select **Manage Wallets**
-3. Click **Add Wallet** button
-4. Click **Create new wallet** button
-5. Follow the above steps in the previous list
+1. Follow and complete or skip the _security wizard_
+2. Read and store your mnemonic
+3. Mark the checkbox that states you saved your mnemonic somewhere
+4. Pass the quiz with the 3 words from your mnemonic
+5. Click the **GO TO HOMEPAGE** button
 {% endtab %}
 {% endtabs %}
 
