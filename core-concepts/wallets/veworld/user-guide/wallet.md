@@ -55,15 +55,14 @@ If you want to create a new wallet, adding it to your list you should:
 
 If you are starting from a fresh onboarding, the steps you should follow are:
 
-1. Follow or skip the welcome wizard
-2. Click **NEXT: CREATE A PASSWORD** button
-3. Type your favourite password twice and then click **CONFIRM** button
-4. Click **Create wallet** button
-5. Follow or skip the security wizard
-6. Read and store your mnemonic
-7. Mark the checkbox that state you saved your mnemonic somewhere
-8. Pass the quiz the 3 words from your mnemonic
-9. Click **GO TO HOMEPAGE** button
+1. Follow and complete or skip the _welcome wizard_
+2. Type your favourite password twice and then click **CONFIRM** button
+3. Click **Create wallet** button
+4. Follow and complete or skip the _security wizard_
+5. Read and store your mnemonic
+6. Mark the checkbox that state you saved your mnemonic somewhere
+7. Pass the quiz the 3 words from your mnemonic
+8. Click **GO TO HOMEPAGE** button
 
 If you want to create a new wallet, adding it to your list you should:
 
