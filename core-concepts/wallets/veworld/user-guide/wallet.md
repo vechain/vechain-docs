@@ -3,83 +3,19 @@
 ## Create a new wallet
 
 {% tabs %}
-{% tab title="Mobile" %} 
+{% tab title="Mobile" %}
+| Fresh Start                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><p>The first time you install the app you should:</p><ol><li>Tap <strong>Get Started</strong> button</li><li>Tap <strong>Create new wallet</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p></p><p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon</li><li>Tab <strong>Add Wallet</strong> button</li><li>Tap <strong>Create new wallet</strong> button</li><li>Follow the below steps</li></ol> |
 
-  **Fresh Start**
+**Steps**
 
-  The first time you install the app you should:
-
-  1. Tap **Get Started** button
-  2. Tap **Create new wallet** button
-  3. Follow [this steps](#mobile-create-new-wallet)
-  4. Protect your wallet by choosing your favourite method (FaceId, Fingerprint or password)
-  
-  **Add a new wallet**
-
-  If you already have a wallet on VeWorld, and you want to create a new one:
-
-  1. From your dashboard tap the top-right wallet icon 
-  2. Tab **Add Wallet** button
-  3. Tap **Create new wallet** button
-  4. Follow [this steps](#mobile-create-new-wallet)
-
-  Steps<a id="mobile-create-new-wallet" href="#mobile-create-new-wallet"></a>
-  1. Read and store your mnemonic
-  2. Mark the checkbox that state you saved your mnemonic somewhere
-  3. Pass the quiz the 3 words from your mnemonic
-
+1. Read and store your mnemonic
+2. Mark the checkbox that state you saved your mnemonic somewhere
+3. Pass the quiz the 3 words from your mnemonic
 {% endtab %}
 
 {% tab title="Extension" %}
-
-  If you are starting from a fresh onboarding, the steps you should follow are:
-
-  1. Follow and complete or skip the _welcome wizard_
-  2. Type your favourite password twice and then click **CONFIRM** button
-  3. Click **Create wallet** button
-  4. Follow and complete or skip the _security wizard_
-  5. Read and store your mnemonic
-  6. Mark the checkbox that state you saved your mnemonic somewhere
-  7. Pass the quiz the 3 words from your mnemonic
-  8. Click **GO TO HOMEPAGE** button
-
-  If you want to create a new wallet, adding it to your list you should:
-
-  1. From your dashboard tap the top-right 3-dots icon 
-  2. Select **Manage Wallets**
-  2. Click **Add Wallet** button
-  3. Click **Create new wallet** button
-  4. Follow the above steps in the previous list
-
-{% endtab %}
-
-{% endtabs %}
-
-## Import a wallet
-
-### Import from Mnemonic
-
-{% tabs %}
-{% tab title="Mobile" %} 
-
-If you are starting from a fresh onboarding, the steps you should follow are:
-
-1. Tap **Get Started** button
-2. Tap **Import Wallet** button
-3. Tap **Local wallet**
-4. Paste or type your saved mnemonic and then tap **VERIFY** button
-
-If you want to create a new wallet, adding it to your list you should:
-
-1. From your dashboard tap the top-right wallet icon 
-2. Tab **Add Wallet** button
-3. Tap **Create new wallet** button
-4. Follow the above steps in the previous list
-
-{% endtab %}
-
-{% tab title="Extension" %}
-
 If you are starting from a fresh onboarding, the steps you should follow are:
 
 1. Follow and complete or skip the _welcome wizard_
@@ -93,14 +29,55 @@ If you are starting from a fresh onboarding, the steps you should follow are:
 
 If you want to create a new wallet, adding it to your list you should:
 
-1. From your dashboard tap the top-right 3-dots icon 
+1. From your dashboard tap the top-right 3-dots icon
 2. Select **Manage Wallets**
-2. Click **Add Wallet** button
-3. Click **Create new wallet** button
-4. Follow the above steps in the previous list
+3. Click **Add Wallet** button
+4. Click **Create new wallet** button
+5. Follow the above steps in the previous list
+{% endtab %}
+{% endtabs %}
 
+## Import a wallet
+
+### Import from Mnemonic
+
+{% tabs %}
+{% tab title="Mobile" %}
+If you are starting from a fresh onboarding, the steps you should follow are:
+
+1. Tap **Get Started** button
+2. Tap **Import Wallet** button
+3. Tap **Local wallet**
+4. Paste or type your saved mnemonic and then tap **VERIFY** button
+
+If you want to create a new wallet, adding it to your list you should:
+
+1. From your dashboard tap the top-right wallet icon
+2. Tab **Add Wallet** button
+3. Tap **Create new wallet** button
+4. Follow the above steps in the previous list
 {% endtab %}
 
+{% tab title="Extension" %}
+If you are starting from a fresh onboarding, the steps you should follow are:
+
+1. Follow and complete or skip the _welcome wizard_
+2. Type your favourite password twice and then click **CONFIRM** button
+3. Click **Create wallet** button
+4. Follow and complete or skip the _security wizard_
+5. Read and store your mnemonic
+6. Mark the checkbox that state you saved your mnemonic somewhere
+7. Pass the quiz the 3 words from your mnemonic
+8. Click **GO TO HOMEPAGE** button
+
+If you want to create a new wallet, adding it to your list you should:
+
+1. From your dashboard tap the top-right 3-dots icon
+2. Select **Manage Wallets**
+3. Click **Add Wallet** button
+4. Click **Create new wallet** button
+5. Follow the above steps in the previous list
+{% endtab %}
 {% endtabs %}
 
 ### Import from Private Key
@@ -112,41 +89,6 @@ If you want to create a new wallet, adding it to your list you should:
 ## Export a wallet
 
 ## Manage your wallets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Wallet list <a href="#wallet-list" id="wallet-list"></a>
 
