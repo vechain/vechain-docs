@@ -1,3 +1,18 @@
+---
+description: How to create, import and export wallets on VeWorld
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+---
+
 # Wallet
 
 ## Create a new wallet
