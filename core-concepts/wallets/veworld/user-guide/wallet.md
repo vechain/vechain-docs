@@ -313,3 +313,4 @@ Steps for importing a local wallet from **keystore file**:
 5. Type your wallet password
 {% endtab %}
 {% endtabs %}
+
