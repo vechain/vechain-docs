@@ -164,7 +164,7 @@ Not available yet on the Extension.
 {% tab title="Mobile" %}
 Steps for exporting a local wallet:
 
-1. Tap the bottom right icon to the **Settings** page
+1. Tap the bottom right icon ![](../../../../.gitbook/assets/veworld/settings.svg) to the **Settings** page
 2. Tap **Privacy and Security** from the menu
 3. Tap **Backup your mnemonic phrase**
 4. Select the local wallet you want to export
@@ -176,7 +176,7 @@ Steps for exporting a local wallet:
 {% tab title="Extension" %}
 Steps for exporting a local wallet:
 
-1. Click the bottom right icon to **Settings** page
+1. Click the bottom right icon ![](../../../../.gitbook/assets/veworld/settings.svg) to **Settings** page
 2. Click **Privacy and Security** from menu
 3. Click **Backup mnemonic**
 4. Select the local wallet you want to export, then click the **Continue** button
