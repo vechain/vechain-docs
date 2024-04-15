@@ -17,31 +17,34 @@ layout:
 
 ## Create a new wallet
 
+VeWorld is available as a mobile wallet and as a browser extension. 
+The process to create a wallet is similar, the following sections will cover the differences
+
 {% tabs %}
 {% tab title="Mobile" %}
 | Fresh Start                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the steps below</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 **Steps for a new wallet:**
 
 1. Tap the **Create new wallet** button
 2. Read and store your mnemonic
-3. Mark the checkbox that states you saved your mnemonic somewhere
+3. Mark the checkbox that states you saved your mnemonic safely
 4. Pass the quiz with the 3 words from your mnemonic
 {% endtab %}
 
 {% tab title="Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>The first time you install the extension you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Follow the below steps</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Select <strong>Manage Wallets</strong></li><li>Click the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the extension you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Select <strong>Manage Wallets</strong></li><li>Click the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 **Steps for a new wallet:**
 
 1. Click the **Create wallet** button
 2. Follow and complete or skip the _security wizard_
 3. Read and store your mnemonic
-4. Mark the checkbox that states you saved your mnemonic somewhere
+4. Mark the checkbox that states you saved your mnemonic safely
 5. Pass the quiz with the 3 words from your mnemonic
 6. Click the **GO TO HOMEPAGE** button
 {% endtab %}
@@ -55,7 +58,7 @@ layout:
 {% tab title="Mobile" %}
 | Fresh Start                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to import a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the steps below</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to import a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 Steps for importing a local wallet from **mnemonic**:
 
@@ -79,7 +82,7 @@ Steps for importing a local wallet from a **keystore file**:
 {% tab title="Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the below steps</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 Steps for importing a local wallet from **mnemonic**:
 
@@ -113,7 +116,7 @@ Steps for importing a local wallet from **keystore file**:
 {% tab title="Mobile" %}
 | Fresh Start                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the below steps</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to import a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the app you should:</p><ol><li>Tap the <strong>Get Started</strong> button</li><li>Follow the steps below</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li></ol> | <p>If you already have a wallet on VeWorld, and you want to import a new one:</p><ol><li>From your dashboard tap the top-right wallet icon <img src="../../../../.gitbook/assets/veworld/account_balance_wallet.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 Steps for importing a Ledger wallet:
 
@@ -128,7 +131,7 @@ Steps for importing a Ledger wallet:
 {% tab title="Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the below steps</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the below steps</li></ol> |
+| <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
 
 Steps for importing a Ledger wallet:
 
@@ -189,7 +192,7 @@ Steps for exporting a local wallet:
 
 With VeWorld you can handle multiple wallets and multiple accounts.
 
-Feel the benefits of self-organize your wallets as you prefer.
+Feel free to self-organize your wallets as you prefer.
 
 {% tabs %}
 {% tab title="Mobile" %}
