@@ -22,6 +22,8 @@ layout:
 
 ### Theme
 
+## Manage Wallet
+
 ## Transactions
 
 ## Networks
@@ -41,8 +43,6 @@ layout:
 ## Connected Apps
 
 ## About
-
-
 
 
 
