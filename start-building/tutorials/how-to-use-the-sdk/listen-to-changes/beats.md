@@ -73,9 +73,7 @@ The bloom filter is used for testing and includes:
 For more details on the implementation, you can view the [node's code on GitHub](https://github.com/vechain/thor/blob/d847c4683469a8ccffb4e472ca7449059b3ceefc/api/subscriptions/beat2\_reader.go#L29-L90).
 {% endhint %}
 
-`bloomUtils.isInBloom` provides another filter to check for the presence of non-address-data, for example emitted numbers within the events.
-
-It can be used to also check for a the VTHO contract which address is a _bytes32_ encoded version of the word `Energy` (`0x456e65726779`).
+`bloomUtils.isInBloom` provides an additional filter to check for the presence of non-address data, such as numbers emitted within events. It can also be used to check for the VTHO contract, whose address is a special one because its the bytes32-encoded version of the word "Energy" (`0x456e65726779`).
 
 ```javascript
 const dataToTest = "0x456e65726779"
