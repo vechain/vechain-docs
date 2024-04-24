@@ -63,7 +63,7 @@ The bloom filter is used for testing and includes:
 
 * The Gas Payer of a transaction
 * The emitters of all events within transactions
-* The topics of all events in transactions that include an address
+* The topics of all events in transactions that include an address or shorter than an address
 * The sender and receiver of transfers
 * The origin of the transaction
 * The signer of the block
@@ -72,6 +72,15 @@ The bloom filter is used for testing and includes:
 {% hint style="info" %}
 For more details on the implementation, you can view the [node's code on GitHub](https://github.com/vechain/thor/blob/d847c4683469a8ccffb4e472ca7449059b3ceefc/api/subscriptions/beat2\_reader.go#L29-L90).
 {% endhint %}
+
+`bloomUtils.isInBloom` provides another filter to check for the presence of non-address-data, for example emitted numbers within the events.
+
+It can be used to also check for a the VTHO contract which address is a _bytes32_ encoded version of the word `Energy` (`0x456e65726779`).
+
+```javascript
+const dataToTest = "0x456e65726779"
+console.log('Data found', bloomUtils.isInBloom(block.bloom, block.k, dataToTest))
+```
 
 ## Example Project
 
