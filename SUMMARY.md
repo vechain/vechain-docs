@@ -115,6 +115,7 @@
         * [Beats](start-building/tutorials/how-to-use-the-sdk/listen-to-changes/beats.md)
     * [Example dApps](start-building/tutorials/example-dapps/README.md)
       * [Buy me a Coffee](start-building/tutorials/example-dapps/buy-me-a-coffee.md)
+    * [Debug Reverted Transactions](start-building/tutorials/debug-reverted-transactions.md)
 * [Developer Resources](developer-resources/README.md)
   * [Getting Started](developer-resources/getting-started.md)
   * [Nodes](developer-resources/nodes.md)
