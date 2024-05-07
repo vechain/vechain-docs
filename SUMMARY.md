@@ -58,6 +58,7 @@
       * [FAQ](core-concepts/wallets/sync2/faq.md)
     * [VeWorld](core-concepts/wallets/veworld/README.md)
       * [User Guide](core-concepts/wallets/veworld/user-guide.md)
+      * [Developer Guide](core-concepts/wallets/veworld/developer-guide.md)
       * [FAQ](core-concepts/wallets/veworld/faq.md)
   * [EVM Compatibility](core-concepts/evm-compatibility/README.md)
     * [Vechain Modifications](core-concepts/evm-compatibility/vechain-modifications.md)

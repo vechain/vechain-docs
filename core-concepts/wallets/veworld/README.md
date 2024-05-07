@@ -1,5 +1,5 @@
 ---
-description: A browser plugin wallet
+description: A mobile and browser plugin wallet
 ---
 
 # VeWorld
