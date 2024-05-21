@@ -11,4 +11,3 @@ This type of error happens due to the fact that something in the contract's cons
 | BeaconProxy                 |
 | ERC1967Proxy                |
 | TransparentUpgradeableProxy |
-

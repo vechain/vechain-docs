@@ -1,5 +1,5 @@
 ---
-description: Ethereum virtual machine (EVM) compatibility with the VechainThor blockchain
+description: Ethereum virtual machine (EVM) compatibility with the VeChainThor blockchain
 ---
 
 # EVM Compatibility
@@ -23,6 +23,6 @@ EVM compatibility is important for several reasons:
 * **Network Effects:** EVM compatibility creates network effects, which means that as more blockchain networks become EVM compatible the value and utility of the blockchain ecosystem as a whole increases. This creates a virtuous cycle that attracts more developers and users to the network, which further enhances its value.
 * **Code Reusability:** EVM compatibility allows developers to reuse code and smart contracts across multiple blockchain networks, which reduces development time and costs. This is particularly important for enterprise applications, where there may be multiple blockchain networks involved.
 
-## Vechain EVM Compatibility
+## VeChain EVM Compatibility
 
-Vechain is EVM compatible. Vechain originated as a fork of Ethereum and the EVM and maintains a high level of EVM compatibility despite some modifications that were introduced into vechain to make it more enterprise friendly, scalable and sustainable.
+VeChain is EVM compatible. VeChain originated as a fork of Ethereum and the EVM and maintains a high level of EVM compatibility despite some modifications that were introduced into VeChain to make it more enterprise friendly, scalable and sustainable.

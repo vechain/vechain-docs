@@ -63,7 +63,7 @@ The above code is quite simple, with some details to pay attention to:
 
 #### Back to the User’s side <a href="#back-to-the-user-s-side" id="back-to-the-user-s-side"></a>
 
-Finally, on the user’s side, it can assemble the final compound signature and post the transaction to the vechain network!
+Finally, on the user’s side, it can assemble the final compound signature and post the transaction to the VeChain network!
 
 Let’s continue where we left off from the [2nd tutorial](how-to-integrate-vip-191-ii.md):
 
@@ -102,7 +102,7 @@ fetch(url, {
 })
 ```
 
-The process is quite straightforward, concatenate of user’s signature originSignature and the sponsor’s signature sponsorSignature . Then finally call the POST method to send to our vechain testnet.
+The process is quite straightforward, concatenate of user’s signature originSignature and the sponsor’s signature sponsorSignature . Then finally call the POST method to send to our VeChain testnet.
 
 #### An Example Result <a href="#an-example-result" id="an-example-result"></a>
 
@@ -118,4 +118,4 @@ As we can see from the above picture, the 26.64 VTHO is paid not by the user, bu
 
 Due to the length of the article, this VIP-191 tutorial doesn’t show the full source code from the user’s side and the sponsor’s side. I have included a workable sample of [user.js ](https://gist.github.com/laalaguer/1a7d9f9e0993c83ffcc84b766c3498ae)and [sponsor.js ](https://gist.github.com/laalaguer/cbedc4591a13e5ef6b7e14eb1d1bcaf3)on Github for you to run.
 
-I hope you like this trilogy of tutorials on VIP-191 of vechain. As always, may the force be with you!
+I hope you like this trilogy of tutorials on VIP-191 of VeChain. As always, may the force be with you!

@@ -1,4 +1,4 @@
-# Contracts in vechain
+# Contracts
 
 This document provides a comprehensive guide on constructing contract transactions using the vechain SDK, specifically focusing on deploying smart contracts and calling contract functions. The aim is to furnish developers with the knowledge to seamlessly integrate these transactions into their blockchain applications on vechain.
 
@@ -8,7 +8,7 @@ This document provides a comprehensive guide on constructing contract transactio
 
 Deploying a smart contract is a foundational step in leveraging the vechain blockchain for decentralized applications. This section delves into the process of creating a deployment clause, which is essential for initiating a smart contract on the network.
 
-```typescript { name=contract-deploy, category=example }
+```typescript
 // 1 - Init contract bytecode to deploy
 
 const contractBytecode =
@@ -21,9 +21,7 @@ const clause = clauseBuilder.deployContract(contractBytecode);
 ### Process Breakdown
 
 1. **Clause Construction**: The deployment of a smart contract begins with the construction of a deployment clause. The vechain SDK offers a dedicated function, `clauseBuilder.deployContract`, found within the `@vechain/sdk-core` package, for this purpose.
-
 2. **Smart Contract Bytecode**: The bytecode of the smart contract, contained within the `contractBytecode` variable, encapsulates the compiled contract code that will be deployed to the blockchain.
-
 3. **Invocation**: By invoking the `clauseBuilder.deployContract` function with the contract's bytecode, a clause object is generated. This clause object is a structured representation of the deployment request, ready to be broadcast to the vechain network.
 
 ### Conclusion
@@ -36,7 +34,7 @@ The deployment example elucidates the utilization of the vechain SDK to construc
 
 After deploying a smart contract, interacting with its functions is the next step. This section guides you through the creation of a clause tailored for calling a specific function within a deployed smart contract.
 
-```typescript { name=contract-function-call, category=example }
+```typescript
 // 1 - Init a simple contract ABI
 const contractABI = JSON.stringify([
     {
@@ -82,9 +80,7 @@ const clause = clauseBuilder.functionInteraction(
 ### Process Breakdown
 
 1. **Understanding the ABI**: The ABI (Application Binary Interface) of the smart contract, usually defined in JSON format, describes the contract's functions and their respective parameters. This interface is pivotal for ensuring proper interaction with the contract's functions.
-
 2. **Clause Creation for Function Calls**: Utilizing the `clauseBuilder.functionInteraction` function from the `@vechain/sdk-core` package, a clause is crafted for the specific purpose of invoking a function on the smart contract.
-
 3. **Function Invocation**: In this example, the function `setValue` within the smart contract is invoked with a parameter of `123`. This action demonstrates how to interact with a function, altering the state within the smart contract based on the function's logic.
 
 ### Conclusion
@@ -101,7 +97,7 @@ Vechain allows for the delegation of contract calls, enabling developers to exec
 
 Here is an example of how to delegate a contract call:
 
-```typescript { name=contract-delegation-erc20, category=example }
+```typescript
 // Transferring 10000 tokens to another address with a delegated transaction
 const transferResult = await contract.transact.transfer(
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',

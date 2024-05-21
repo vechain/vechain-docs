@@ -1,10 +1,10 @@
 ---
-description: An introduction and overview of the VechainThor blockchain transaction model.
+description: An introduction and overview of the VeChainThor blockchain transaction model.
 ---
 
 # Transaction Model
 
-VechainThor defines a [transaction ](https://github.com/vechain/thor/blob/master/tx/transaction.go)in Golang as:
+VeChainThor defines a [transaction ](https://github.com/vechain/thor/blob/master/tx/transaction.go)in Golang as:
 
 ```go
 // transaction.go
@@ -31,7 +31,7 @@ Fields within the transaction `body`, $$\Omega$$ , are defined as:
 
 * `ChainTag` – last byte of the genesis block ID which is used to identify a blockchain to prevent the cross-chain replay attack;
 * `BlockRef` - reference to a specific block;
-* `Expiration` – how long, in terms of the number of blocks, the transaction will be allowed to be mined in VechainThor;
+* `Expiration` – how long, in terms of the number of blocks, the transaction will be allowed to be mined in VeChainThor;
 * `Clauses` – an array of _Clause_ objects each of which contains fields `To`, `Value` and `Data` to enable a single transaction to carry multiple tasks issued by the transaction sender;
 * `GasPriceCoef` – coefficient used to calculate the gas price for the transaction.
 * `Gas` – maximum amount of gas allowed to pay for the transaction;
@@ -43,5 +43,5 @@ Fields within the transaction `body`, $$\Omega$$ , are defined as:
 * `Signature` - transaction signature, $$sig = sign(hash(rlp\lbrace\Omega - sig \rbrace), sk))$$,where $$sk$$ is the transaction sender's private key.
 
 {% hint style="info" %}
-Refer to the [meta-transaction-features](meta-transaction-features/ "mention") section for more detail on the unique aspects of transactions within the VechainThor blockchain when compared to other blockchains.
+Refer to the [meta-transaction-features](meta-transaction-features/ "mention") section for more detail on the unique aspects of transactions within the VeChainThor blockchain when compared to other blockchains.
 {% endhint %}

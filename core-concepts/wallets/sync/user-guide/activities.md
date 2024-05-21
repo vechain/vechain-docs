@@ -39,7 +39,7 @@ There are 4 status of transaction :
    2. Click the transaction which you would like to overview
    3. Click transaction ID "<img src="../../../../.gitbook/assets/download (13).png" alt="" data-size="line">0x123456...123456"
 
-**2.  In Insight**
+**2. In Insight**
 
 1. At top right ,click <img src="../../../../.gitbook/assets/download (10).png" alt="" data-size="line"> or <img src="../../../../.gitbook/assets/download (11).png" alt="" data-size="line">
 2. Click the transaction which you would like to overview

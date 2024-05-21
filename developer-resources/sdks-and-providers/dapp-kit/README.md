@@ -1,6 +1,6 @@
 # DApp Kit
 
-The vechain dApp kit is a frontend library designed to make it easy to build dApps on the VechainThor blockchain. This documentation provides a comprehensive guide to using the dApp kit library, including installation, usage instructions, and details about its key features and methods.
+The VeChain dApp kit is a frontend library designed to make it easy to build dApps on the VeChainThor blockchain. This documentation provides a comprehensive guide to using the dApp kit library, including installation, usage instructions, and details about its key features and methods.
 
 ## Repo
 
@@ -33,7 +33,7 @@ you can use both JavaScript and TypeScript
 
 ## Key Features
 
-The vechain dApp kit is designed to make it easy to interact with all VechainThor compatible wallets
+The VeChain dApp kit is designed to make it easy to interact with all VeChainThor compatible wallets
 
 1. **Wallet Management**: Connex was designed with Sync / Sync2 in mind, so this library provides an additional layer on top, making it easier to manage multiple wallets.
 2. **Wallet Selection**: The `@vechain/dapp-kit-ui` library provides multiple components to make it easy to select and connect to a wallet.

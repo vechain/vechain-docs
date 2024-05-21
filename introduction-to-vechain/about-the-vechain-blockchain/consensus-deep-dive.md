@@ -12,11 +12,11 @@ Recall that the underlying design philosophy of our governance model is that:
 
 > _"neither a total centralization nor a total decentralization would be the correct answer, but a compromise from and balance of both would_."
 
-VechainThor implements the PoA consensus algorithm which suits our governance model which states that there would not be anonymous block producer, but a fixed number of known validators (Authority Masternodes) authorized by the steering committee of the Vechain Foundation.
+VeChainThor implements the PoA consensus algorithm which suits our governance model which states that there would not be anonymous block producer, but a fixed number of known validators (Authority Masternodes) authorized by the steering committee of the VeChain Foundation.
 
 > “It takes twenty years to build a reputation and five minutes to ruin it. If you think about that, you’ll do things differently.” – Warren Buffet
 
-To be an Authority Masternode (AM), the individual or entity voluntarily discloses who they are, identity and reputation by extension, to the Vechain Foundation in exchange for the right to validate and produce blocks. Their identity, reputation and financial investment is placed at stake and this acts as an incentive for the AMs to behave correctly and keep the network secure. In VechainThor, each AM has to go through a strict know-your-customer (KYC) procedure and satisfy the minimum requirements set by the Vechain Foundation.
+To be an Authority Masternode (AM), the individual or entity voluntarily discloses who they are, identity and reputation by extension, to the VeChain Foundation in exchange for the right to validate and produce blocks. Their identity, reputation and financial investment is placed at stake and this acts as an incentive for the AMs to behave correctly and keep the network secure. In VeChainThor, each AM has to go through a strict know-your-customer (KYC) procedure and satisfy the minimum requirements set by the VeChain Foundation.
 
 When discussing a consensus algorithm, we must answer the following questions:
 
@@ -26,7 +26,7 @@ When discussing a consensus algorithm, we must answer the following questions:
 
 ## When <a href="#meta-transaction-features" id="meta-transaction-features"></a>
 
-The VechainThor blockchain schedules a new block to be generated once every $$\Delta$$ seconds. We set $$\Delta = 10$$, which is based on our estimation of the usage of VechainThor. Let $$t_{0}$$ be the timestamp of the genesis block. The timestamp of the block with height $$h > 0$$ and $$t_{h}$$,must satisfy $$_h = t_{0} + m\Delta$$ where $$m \in \mathbb{N}^{+}$$ and $$\geqslant h$$.
+The VeChainThor blockchain schedules a new block to be generated once every $$\Delta$$ seconds. We set $$\Delta = 10$$, which is based on our estimation of the usage of VeChainThor. Let $$t_{0}$$ be the timestamp of the genesis block. The timestamp of the block with height $$h > 0$$ and $$t_{h}$$,must satisfy $$_h = t_{0} + m\Delta$$ where $$m \in \mathbb{N}^{+}$$ and $$\geqslant h$$.
 
 ## Who <a href="#meta-transaction-features" id="meta-transaction-features"></a>
 
@@ -36,13 +36,13 @@ $$\gamma(h,t) = DPRP(h,t) =hash(h \circ t)$$
 
 where $$\circ$$ denotes the operation that concatenates two byte arrays.
 
-Let $$A_{B}$$ denote the sorted set of AMs with the “active” status in the state associated with block  $$B$$. Note that on the VechainThor blockchain each AM is given a fixed index number and the numbers are used to sort elements in $$A_{B}$$. To verify whether $$a$$ is the legitimate AM for producing $$B(h,t)$$, we first define
+Let $$A_{B}$$ denote the sorted set of AMs with the “active” status in the state associated with block $$B$$. Note that on the VeChainThor blockchain each AM is given a fixed index number and the numbers are used to sort elements in $$A_{B}$$. To verify whether $$a$$ is the legitimate AM for producing $$B(h,t)$$, we first define
 
 $$A^{a}_{B(h,t)} = sort(A_{PA(Bh,t))} ) \cup a$$
 
 where $$PA(\cdot)$$ returns the parent block. We then compute index $$i^{a}(h,t)$$as:
 
-$$i^{a}(h,t) = \gamma(h,t)  mod \parallel A^{a}_{B(h,t)} \parallel$$
+$$i^{a}(h,t) = \gamma(h,t) mod \parallel A^{a}_{B(h,t)} \parallel$$
 
 AM $$a$$ is the legitimate producer of $$B(h,t)$$ if and only if $$A^{a}_{B(h,t)} [i^{a}(h,t)] = a$$. Note that we put double quotes around the word “active” to emphasize that the status does not directly reflect the physical condition of a certain AM, but merely a status derived from the incoming information from the network.
 

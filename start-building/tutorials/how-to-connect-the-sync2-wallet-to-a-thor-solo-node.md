@@ -1,6 +1,6 @@
 # How to connect the Sync2 wallet to a Thor Solo Node
 
-This tutorial will provide a step by step guide for running a Thor solo node and connecting it to the Sync2 wallet. The Thor solo node is a sandbox development mode for the VechainThor blockchain, that can be started (and is only available) on a single server. It is not publicly accessible and the generated blocks will be lost if the solo node is stopped.
+This tutorial will provide a step by step guide for running a Thor solo node and connecting it to the Sync2 wallet. The Thor solo node is a sandbox development mode for the VeChainThor blockchain, that can be started (and is only available) on a single server. It is not publicly accessible and the generated blocks will be lost if the solo node is stopped.
 
 ## Step 1 : Launch the solo node <a href="#step-1-launch-the-solo-node" id="step-1-launch-the-solo-node"></a>
 
