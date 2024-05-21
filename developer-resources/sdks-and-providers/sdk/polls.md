@@ -1,13 +1,14 @@
-# Polling Mechanisms
+# Polls
 
 ## Synchronous Polling
 
 Synchronous polling mechanisms are implemented to await the fulfillment of specific conditions. Upon the satisfaction of these conditions, the polling process yields the result of the given condition.
 
 ### Monitoring for a New Block Production
+
 This section illustrates the methodology for monitoring the production of a new block. Utilizing synchronous polling, the waitUntil function is employed to efficiently wait for the production of a new block.
 
-```typescript { name=sync-poll-wait-new-block, category=example }
+```typescript
 import { Poll, ThorClient } from '@vechain/sdk-network';
 import { expect } from 'expect';
 
@@ -43,9 +44,10 @@ console.log('New block:', newBlock);
 ```
 
 ### Observing Balance Changes Post-Transfer
+
 Here, we explore the approach to monitor balance changes after a transfer. Synchronous polling leverages the waitUntil function to detect balance changes following a transfer.
 
-```typescript { name=sync-poll-wait-balance-update, category=example }
+```typescript
 import { Poll, ThorClient } from '@vechain/sdk-network';
 import { Hex0x, TransactionHandler } from '@vechain/sdk-core';
 import { expect } from 'expect';
@@ -167,9 +169,10 @@ console.log('New balance of receiver:', newBalanceReceiver);
 Asynchronous polling is utilized for waiting in a non-blocking manner until a specific condition is met or to capture certain events. This type of polling makes use of the Event Emitter pattern, providing notifications when the specified condition or event has been met or emitted.
 
 ### Implementing a Simple Async Poll in a DAPP
+
 This example demonstrates the application of an asynchronous poll for tracking transaction events, allowing for the execution of additional operations concurrently.
 
-```typescript { name=event-poll-dapp, category=example }
+```typescript
 import { Poll, ThorClient } from '@vechain/sdk-network';
 import { expect } from 'expect';
 
@@ -222,7 +225,3 @@ for (const account of accounts) {
 }
 
 ```
-
-
-
-

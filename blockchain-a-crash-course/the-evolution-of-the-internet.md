@@ -6,12 +6,12 @@ description: The evolution from Web1 to Web3.
 
 ## Journey of the Web
 
-| Web 1.0                                               | Web 2.0                              | Web 3.0                                       |
-| ----------------------------------------------------- | ------------------------------------ | --------------------------------------------- |
-| Read only sites - connecting people with information. | Read and write - connecting people.  | Read, write and own - empowering people.      |
-| Static websites                                       | Web applications introduced          | Decentralised applications (dApps) introduced |
-| No user - server interaction.                         | Cloud computing                      | Blockchain architecture integrated.           |
-| Desktop only                                          | Mobile access                        | VR & Metaverse access                         |
+| Web 1.0                                               | Web 2.0                             | Web 3.0                                       |
+| ----------------------------------------------------- | ----------------------------------- | --------------------------------------------- |
+| Read only sites - connecting people with information. | Read and write - connecting people. | Read, write and own - empowering people.      |
+| Static websites                                       | Web applications introduced         | Decentralised applications (dApps) introduced |
+| No user - server interaction.                         | Cloud computing                     | Blockchain architecture integrated.           |
+| Desktop only                                          | Mobile access                       | VR & Metaverse access                         |
 
 ## Web1 - Read Only
 
@@ -39,5 +39,5 @@ Web3 has the potential to create a more decentralized, democratic, and transpare
 
 ## What are the current limitations of Web3
 
-* **Barriers to entry:** As with many nascent technologies, the tools and applications aren't mature enough yet to reach the levels of inclusivity Web3 needs.&#x20;
-* **Lack of regulation:** As much as governments have been proactive in trying to understand blockchains and Web3, tailor made regulations are still lacking.&#x20;
+* **Barriers to entry:** As with many nascent technologies, the tools and applications aren't mature enough yet to reach the levels of inclusivity Web3 needs.
+* **Lack of regulation:** As much as governments have been proactive in trying to understand blockchains and Web3, tailor made regulations are still lacking.

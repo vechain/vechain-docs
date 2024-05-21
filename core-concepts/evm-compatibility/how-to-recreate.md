@@ -19,7 +19,7 @@ git clone git@github.com:OpenZeppelin/openzeppelin-contracts.git
 cd openzeppelin-contracts
 ```
 
-### Install the required Vechain libraries
+### Install the required VeChain libraries
 
 ```bash
 npm install @vechain/hardhat-vechain@0.0.1 --save-exact
@@ -36,7 +36,7 @@ require("@vechain/hardhat-vechain");
 require("@vechain/hardhat-web3");
 ```
 
-Add the vechain network settings
+Add the VeChain network settings
 
 ```javascript
    vechain: {

@@ -25,13 +25,13 @@ Then install the required node modules by running
 npm install
 ```
 
-### Install Vechain's Web3 library
+### Install VeChain's Web3 library
 
 ```bash
 npm i @vechain/web3-providers-connex
 ```
 
-### Install Vechain's Hardhat plugin
+### Install VeChain's Hardhat plugin
 
 ```bash
 npm i @vechain/hardhat-vechain
@@ -40,7 +40,7 @@ npm i @vechain/hardhat-web3
 
 ## Start Thor
 
-To be able to run the tests on Vechain you need Thor installed, which is Vechain's node implementation. We have a detailed guide on how to do that [here](https://github.com/vechain/vechain-docs/blob/main/developer-resources/frameworks-and-ides/hardhat-and-vechain/broken-reference/README.md).
+To be able to run the tests on VeChain you need Thor installed, which is VeChain's node implementation. We have a detailed guide on how to do that [here](https://github.com/vechain/vechain-docs/blob/main/developer-resources/frameworks-and-ides/hardhat-and-vechain/broken-reference/README.md).
 
 ## Running the tests
 

@@ -1,5 +1,5 @@
 ---
-description: the dApp-kit can be used also without the UI
+description: The dApp-kit can be used also without the UI
 ---
 
 # Installation

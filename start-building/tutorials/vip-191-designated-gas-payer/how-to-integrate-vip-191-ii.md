@@ -1,12 +1,12 @@
 # How to Integrate VIP-191 (II)
 
-From the [previous](how-to-integrate-vip-191-i.md) article, we have learned the basic “terminologies” of vechain VIP-191 fee delegation. To summarize, the process can be simply described as below:
+From the [previous](how-to-integrate-vip-191-i.md) article, we have learned the basic “terminologies” of VeChain VIP-191 fee delegation. To summarize, the process can be simply described as below:
 
 1. The “user” creates a transaction body.
 2. The “user” generates a “user signature”.
 3. The transaction is sent to a “sponsor” to get a “sponsor signature”.
 4. The two signatures are combined to forge a “final signature”.
-5. The final transaction is posted to the vechain network.
+5. The final transaction is posted to the VeChain network.
 
 To get an overview, the idea is depicting as below:
 

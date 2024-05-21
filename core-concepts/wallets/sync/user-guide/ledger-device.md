@@ -8,11 +8,11 @@
 * [VeChain Application is latest version(≥1.0.4)](https://support.ledger.com/hc/en-us/articles/360006523674)
 * [Sync is latest version (≥1.2.0)](https://env.vechain.org/)
 
-## Install Vechain Ledger app <a href="#install-vechain-ledger-app" id="install-vechain-ledger-app"></a>
+## Install VeChain Ledger app <a href="#install-vechain-ledger-app" id="install-vechain-ledger-app"></a>
 
 1. Open the Manager in Ledger Live. Connect and unlock your Ledger device.
 2. If asked, allow the manager on your device by pressing the right button.
-3. Find Vechain in the app catalog.
+3. Find VeChain in the app catalog.
 4. Click the Install button of the app.
 5. Follow the instruction when installation window appears.
 

@@ -2,13 +2,13 @@
 
 The tables below provides a summary and detailed information in relation to the number of tests performed, the count of passing tests and the count of failing tests.
 
-To summarize, Vechain achieves a pass rate of 99%, when taking into consideration that 80 of the 102 failing tests are classified as being either justifiable or passable, given some modifications to the tests.
+To summarize, VeChain achieves a pass rate of 99%, when taking into consideration that 80 of the 102 failing tests are classified as being either justifiable or passable, given some modifications to the tests.
 
 You can find detailed analysis of the coverage categories in the pages to follow.
 
 ### Summary Table
 
-<table><thead><tr><th width="307">Category</th><th width="399.3333333333333">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>Justifiable</td><td>Failures that result from the inherent design differences between Vechain and Ethereum.</td><td>73</td></tr><tr><td>Contract Address Prediction</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>14</td></tr><tr><td>Failures in Constructor</td><td>Contract fails in constructor resulting in failure to be deployed.</td><td>7</td></tr><tr><td>Full, with eth_sign implementation</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>4</td></tr><tr><td>Full, with test changes</td><td>Some test modifications had to be added for the tests to pass.</td><td>3</td></tr><tr><td>BadBeaconProxy Address 0x1</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>1</td></tr></tbody></table>
+<table><thead><tr><th width="307">Category</th><th width="399.3333333333333">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>Justifiable</td><td>Failures that result from the inherent design differences between VeChain and Ethereum.</td><td>73</td></tr><tr><td>Contract Address Prediction</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>14</td></tr><tr><td>Failures in Constructor</td><td>Contract fails in constructor resulting in failure to be deployed.</td><td>7</td></tr><tr><td>Full, with eth_sign implementation</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>4</td></tr><tr><td>Full, with test changes</td><td>Some test modifications had to be added for the tests to pass.</td><td>3</td></tr><tr><td>BadBeaconProxy Address 0x1</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a>.</td><td>1</td></tr></tbody></table>
 
 ### Detailed Table
 

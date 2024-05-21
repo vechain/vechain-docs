@@ -1,4 +1,4 @@
-# Vechain & Remix
+# VeChain & Remix
 
 ## Remix-proxy
 

@@ -6,7 +6,7 @@ description: An extension of MPP which offers a more flexible version of fee del
 
 ## Introduction <a href="#designated-gas-payer-vip191-2" id="designated-gas-payer-vip191-2"></a>
 
-The designated gas payer is a standard which has been implemented on the VechainThor blockchain, through VIP-191, which extends the MPP functionality in a more flexible way. VIP-191, allows a transaction sender to seek for an arbitrary party, the gas payer, to pay the transaction fee on the sender's behalf. An example of VIP-191 implementation could be to implement a transaction fee gas payer for users that are performing a particular action such as minting an NFT at an event or awarding the highest points scorer on a game with sponsored transactions.&#x20;
+The designated gas payer is a standard which has been implemented on the VeChainThor blockchain, through VIP-191, which extends the MPP functionality in a more flexible way. VIP-191, allows a transaction sender to seek for an arbitrary party, the gas payer, to pay the transaction fee on the sender's behalf. An example of VIP-191 implementation could be to implement a transaction fee gas payer for users that are performing a particular action such as minting an NFT at an event or awarding the highest points scorer on a game with sponsored transactions.
 
 {% hint style="info" %}
 See [here](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md) for the VIP documentation and implementation relating to VIP-191.
@@ -20,7 +20,7 @@ Before we continue let's define some entities and terminology that that we will 
 
 * client - account that signs the transaction;
 * gas payer - account that acts as the gas payer of the transaction fee;
-* blockchain - the VechainThor blockchain;
+* blockchain - the VeChainThor blockchain;
 
 <figure><img src="../../../../.gitbook/assets/vip191.png" alt=""><figcaption><p>VIP-191 fee delegation flow.</p></figcaption></figure>
 
