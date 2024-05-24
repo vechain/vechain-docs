@@ -4,21 +4,24 @@ description: Thor debug functionalities.
 
 # Debug
 
-The [DebugModule](https://github.com/vechain/vechain-docs/blob/main/developer-resources/sdks-and-providers/packages/network/src/thor-client/debug/debug-module.ts) class encapsulates functionality to debug the VechainThor blockchain.
+The [DebugModule](../packages/network/src/thor-client/debug/debug-module.ts) 
+class encapsulates functionality to debug the VechainThor blockchain.
 
-The module provides methods to interact with the debug end points provided by
+The module provides methods to interact with the debug end points provided by 
 
-* [**Retrieve Storage Range**](debug.md#retrieve-storage-range) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post\_debug\_storage\_range
-* [**Trace Contract Call**](debug.md#trace-contract-call) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post\_debug\_tracers\_call
-* [**Trace Transaction Clause**](debug.md#trace-transaction-clause) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post\_debug\_tracers
+* [**Retrieve Storage Range**](#retrieve-storage-range) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post_debug_storage_range 
+* [**Trace Contract Call**](#trace-contract-call) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post_debug_tracers_call
+* [**Trace Transaction Clause**](#trace-transaction-clause) - https://testnet.vechain.org/doc/swagger-ui/#/Debug/post_debug_tracers
 
 ## Retrieve Storage Range
 
-The `retrieveStorageRange` method provides information about the storage range of an account, including the nextKey which is a string that can be null, and storage which is an object.
+The `retrieveStorageRange` method provides information about the storage range of an account, 
+including the nextKey which is a string that can be null, and storage which is an object.
 
-In this example the `thorClient` connects to the _testnet_ to retrieve the storage range for the coordinates passed as `input` parameter.
+In this example the `thorClient` connects to the *testnet* to retrieve the storage range for the coordinates passed
+as `input` parameter.
 
-```typescript
+```typescript { name=debug-retrieve-storage-range, category=example }
 // 1 - Create thor client for testnet
 const _testnetUrl = 'https://testnet.vechain.org';
 const thorClient = ThorClient.fromUrl(_testnetUrl);
@@ -44,7 +47,6 @@ console.log(result);
 ```
 
 <details>
-
 <summary>The result will show the storage.</summary>
 
 ```json
@@ -94,16 +96,16 @@ console.log(result);
   nextKey: '0x04e9569439bd218fce594dbd705b41f2afe6b6d8abcb9c5aaa5b1a52b7ab7cea'
 }
 ```
-
 </details>
 
 ## Trace Contract Call
 
 The `traceContractCall` traces the contract call execution.
 
-In this example the `thorClient` connects to the _testnet_ to trace the contract at the coordinates specified in the `input` parameter.
+In this example the `thorClient` connects to the *testnet* to trace the contract at the coordinates specified in
+the `input` parameter.
 
-```typescript
+```typescript { name=debug-trace-contract-call, category=example }
 // 1 - Create thor client for testnet
 const _testnetUrl = 'https://testnet.vechain.org';
 const thorClient = ThorClient.fromUrl(_testnetUrl);
@@ -132,7 +134,6 @@ console.log(result);
 ```
 
 <details>
-
 <summary>The result shows the trace, here only the first element is shown.</summary>
 
 ```json
@@ -152,16 +153,17 @@ console.log(result);
   ]
 }
 ```
-
 </details>
 
 ## Trace Transaction Clause
 
-The `traceTransactionClause` method trace the transactions specified in the clause at the coordinates expressed in the `input` parameter.
+The `traceTransactionClause` method trace the transactions specified in the clause at the
+coordinates expressed in the `input` parameter.
 
-In this example the `thorClient` connects to the _testnet_ to trace the clause at the coordinates specified in the `input` parameter.
+In this example the `thorClient` connects to the *testnet* to trace the clause at the coordinates specified in
+the `input` parameter.
 
-```typescript
+```typescript { name=debug-trace-transaction-clause, category=example }
 // 1 - Create thor client for testnet
 const _testnetUrl = 'https://testnet.vechain.org';
 const thorClient = ThorClient.fromUrl(_testnetUrl);
@@ -186,7 +188,6 @@ console.log(result);
 ```
 
 <details>
-
 <summary>The result shows the following.</summary>
 
 ```json
@@ -200,5 +201,4 @@ console.log(result);
   type: 'CALL'
 }
 ```
-
 </details>
