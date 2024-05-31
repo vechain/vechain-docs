@@ -1,5 +1,7 @@
 # Beats
 
+Beats are messages that are sent on each new block, containing tiny bits of data that can be used to detect changes happening on the blockchain. Beats provide as little data as possible to remove the need to load full block and receipt data every time.
+
 ## Connection
 
 The connection is managed using WebSockets, which connect directly to a Vechain node.
@@ -83,3 +85,7 @@ console.log('Data found', bloomUtils.isInBloom(block.bloom, block.k, dataToTest)
 ## Example Project
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-listen-beats?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
+Another example can be found on GitHub using a React Hook that listens and provides state updates when information is found in a new block. For example, transaction IDs or addresses:
+
+[https://github.com/ifavo/example-buy-me-a-coffee/blob/main/src/hooks/useBeats.ts](https://github.com/ifavo/example-buy-me-a-coffee/blob/main/src/hooks/useBeats.ts)
