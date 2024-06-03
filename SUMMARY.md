@@ -113,6 +113,7 @@
         * [Transactions](start-building/tutorials/how-to-use-the-sdk/listen-to-changes/transactions.md)
         * [Blocks](start-building/tutorials/how-to-use-the-sdk/listen-to-changes/blocks.md)
         * [Beats](start-building/tutorials/how-to-use-the-sdk/listen-to-changes/beats.md)
+      * [Build with Hardhat](start-building/tutorials/how-to-use-the-sdk/build-with-hardhat.md)
     * [Example dApps](start-building/tutorials/example-dapps/README.md)
       * [Buy me a Coffee](start-building/tutorials/example-dapps/buy-me-a-coffee.md)
     * [Debug Reverted Transactions](start-building/tutorials/debug-reverted-transactions.md)
