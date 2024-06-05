@@ -5,7 +5,7 @@ The ERC20 token standard is widely used for creating and issuing smart contracts
 
 ### Example
 
-The vechain SDK allows to create a sample ERC20 token with a few lines of code. The example below shows how to create a sample ERC20 token with the name "SampleToken" and symbol "ST" with a total supply of 1000000000000000000000000.
+The VeChain SDK allows to create a sample ERC20 token with a few lines of code. The example below shows how to create a sample ERC20 token with the name "SampleToken" and symbol "ST" with a total supply of 1000000000000000000000000.
 
 #### Compile the contract
 
@@ -27,20 +27,20 @@ contract SampleToken is ERC20 {
 
 #### Deploy the contract
 
-Once the contract is compiled, we can deploy it using the vechain SDK. The following code shows how to deploy the contract:
+Once the contract is compiled, we can deploy it using the VeChain SDK. The following code shows how to deploy the contract:
 
 
 ```typescript { name=contract-create-erc20-token, category=example }
 // Create thor client for solo network
 const _soloUrl = 'http://localhost:8669/';
 const thorSoloClient = ThorClient.fromUrl(_soloUrl);
-const provider = new VechainProvider(
+const provider = new VeChainProvider(
     thorSoloClient,
     new ProviderInternalBaseWallet([deployerAccount])
 );
 const signer = (await provider.getSigner(
     deployerAccount.address
-)) as VechainSigner;
+)) as VeChainSigner;
 
 // Creating the contract factory
 const contractFactory = thorSoloClient.contracts.createContractFactory(
@@ -70,12 +70,12 @@ expect(balance).toEqual([unitsUtils.parseUnits('1', 24)]);
 
 #### Transfer tokens to another address
 
-Once the contract is deployed, we can transfer tokens to another address using the vechain SDK. The following code shows how to transfer 10000 token smallest unit to another address:
+Once the contract is deployed, we can transfer tokens to another address using the VeChain SDK. The following code shows how to transfer 10000 token smallest unit to another address:
 
 ```typescript { name=contract-transfer-erc20-token, category=example }
 const transferResult = await contract.transact.transfer(
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    10000
+    10000n
 );
 
 // Wait for the transfer transaction to complete and obtain its receipt
@@ -101,9 +101,9 @@ For instance, once an ERC20 token contract is deployed, we can filter the Transf
 
 ```typescript { name=contract-event-filter, category=example }
 // Starting from a deployed contract instance, transfer some tokens to a specific address
-const transferResult = await contract.transact.transfer(
+const transferResult = await contractErc20.transact.transfer(
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    10000
+    10000n
 );
 
 // Wait for the transfer transaction to complete and obtain its receipt
@@ -114,7 +114,7 @@ const transactionReceiptTransfer =
 expect(transactionReceiptTransfer.reverted).toEqual(false);
 
 // Check transfer event logs by also passing the destination address
-const transferEvents = await contract.filters
+const transferEvents = await contractErc20.filters
     .Transfer(undefined, '0x9e7911de289c3c856ce7f421034f66b6cde49c39')
     .get();
 

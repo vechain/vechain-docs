@@ -1,12 +1,12 @@
 # Contracts in vechain
 
-This document provides a comprehensive guide on constructing contract transactions using the vechain SDK, specifically focusing on deploying smart contracts and calling contract functions. The aim is to furnish developers with the knowledge to seamlessly integrate these transactions into their blockchain applications on vechain.
+This document provides a comprehensive guide on constructing contract transactions using the VeChain SDK, specifically focusing on deploying smart contracts and calling contract functions. The aim is to furnish developers with the knowledge to seamlessly integrate these transactions into their blockchain applications on vechain.
 
 ## Deploying a Smart Contract
 
 ### Overview
 
-Deploying a smart contract is a foundational step in leveraging the vechain blockchain for decentralized applications. This section delves into the process of creating a deployment clause, which is essential for initiating a smart contract on the network.
+Deploying a smart contract is a foundational step in leveraging the VeChain blockchain for decentralized applications. This section delves into the process of creating a deployment clause, which is essential for initiating a smart contract on the network.
 
 ```typescript { name=contract-deploy, category=example }
 // 1 - Init contract bytecode to deploy
@@ -20,15 +20,15 @@ const clause = clauseBuilder.deployContract(contractBytecode);
 
 ### Process Breakdown
 
-1. **Clause Construction**: The deployment of a smart contract begins with the construction of a deployment clause. The vechain SDK offers a dedicated function, `clauseBuilder.deployContract`, found within the `@vechain/sdk-core` package, for this purpose.
+1. **Clause Construction**: The deployment of a smart contract begins with the construction of a deployment clause. The VeChain SDK offers a dedicated function, `clauseBuilder.deployContract`, found within the `@vechain/sdk-core` package, for this purpose.
 
 2. **Smart Contract Bytecode**: The bytecode of the smart contract, contained within the `contractBytecode` variable, encapsulates the compiled contract code that will be deployed to the blockchain.
 
-3. **Invocation**: By invoking the `clauseBuilder.deployContract` function with the contract's bytecode, a clause object is generated. This clause object is a structured representation of the deployment request, ready to be broadcast to the vechain network.
+3. **Invocation**: By invoking the `clauseBuilder.deployContract` function with the contract's bytecode, a clause object is generated. This clause object is a structured representation of the deployment request, ready to be broadcast to the VeChain network.
 
 ### Conclusion
 
-The deployment example elucidates the utilization of the vechain SDK to construct a deployment clause, a crucial component for deploying smart contracts on the vechain blockchain.
+The deployment example elucidates the utilization of the VeChain SDK to construct a deployment clause, a crucial component for deploying smart contracts on the VeChain blockchain.
 
 ## Calling a Contract Function
 
@@ -38,7 +38,7 @@ After deploying a smart contract, interacting with its functions is the next ste
 
 ```typescript { name=contract-function-call, category=example }
 // 1 - Init a simple contract ABI
-const contractABI = JSON.stringify([
+const contractABI = stringifyData([
     {
         constant: false,
         inputs: [
@@ -89,9 +89,9 @@ const clause = clauseBuilder.functionInteraction(
 
 ### Conclusion
 
-This section highlights the methodology for constructing a clause that facilitates interaction with a deployed smart contract's functions on the vechain network, thereby enabling developers to manipulate and query smart contract states efficiently.
+This section highlights the methodology for constructing a clause that facilitates interaction with a deployed smart contract's functions on the VeChain network, thereby enabling developers to manipulate and query smart contract states efficiently.
 
-This document, designed to be both informative and practical, equips developers with the necessary tools and knowledge to effectively interact with smart contracts on the vechain blockchain, from deployment to function invocation.
+This document, designed to be both informative and practical, equips developers with the necessary tools and knowledge to effectively interact with smart contracts on the VeChain blockchain, from deployment to function invocation.
 
 ## Delegating a Contract Call
 
@@ -103,7 +103,7 @@ Here is an example of how to delegate a contract call:
 
 ```typescript { name=contract-delegation-erc20, category=example }
 const thorSoloClient = ThorClient.fromUrl(_soloUrl);
-const provider = new VechainProvider(
+const provider = new VeChainProvider(
     thorSoloClient,
     new ProviderInternalBaseWallet([deployerAccount], {
         delegator: {
@@ -114,10 +114,10 @@ const provider = new VechainProvider(
 );
 const signer = (await provider.getSigner(
     deployerAccount.address
-)) as VechainSigner;
+)) as VeChainSigner;
 
 // Defining a function for deploying the ERC20 contract
-const setupERC20Contract = async (): Promise<Contract> => {
+const setupERC20Contract = async (): Promise<Contract<typeof VIP180_ABI>> => {
     const contractFactory = thorSoloClient.contracts.createContractFactory(
         VIP180_ABI,
         erc20ContractBytecode,
@@ -137,7 +137,7 @@ const contract = await setupERC20Contract();
 // Transferring 10000 tokens to another address with a delegated transaction
 const transferResult = await contract.transact.transfer(
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    10000
+    10000n
 );
 
 // Wait for the transfer transaction to complete and obtain its receipt
@@ -170,4 +170,42 @@ expect(multipleClausesResult[0]).toEqual([unitsUtils.parseUnits('1', 24)]);
 expect(multipleClausesResult[1]).toEqual(['SampleToken']);
 expect(multipleClausesResult[2]).toEqual(['ST']);
 expect(multipleClausesResult[3]).toEqual([18n]);
+```
+
+
+## Multi-Clause Event filtering
+
+### Overview
+
+VeChain allows developers to filter multiple events from diffent contracts in a single call, enabling efficient event monitoring and processing.
+
+To do so, developers needs the contract address and the event signature.
+
+Here is an example of how to filter multiple events from different contracts:
+
+```typescript { name=contract-event-filter, category=example }
+const contractEventExample = await setupEventExampleContract();
+
+await (await contractEventExample.transact.setValue(3000n)).wait();
+
+const transferCriteria = contractErc20.criteria.Transfer(
+    undefined,
+    '0x9e7911de289c3c856ce7f421034f66b6cde49c39'
+);
+
+const valueCriteria = contractEventExample.criteria.ValueSet();
+
+const events = await thorSoloClient.logs.filterEventLogs({
+    criteriaSet: [transferCriteria, valueCriteria]
+});
+
+// Asserting that I'm filtering a previous transfer event and the new value set event
+expect(events.map((x) => x.decodedData)).toEqual([
+    [
+        '0xF02f557c753edf5fcdCbfE4c1c3a448B3cC84D54',
+        '0x9E7911de289c3c856ce7f421034F66b6Cde49C39',
+        10000n
+    ],
+    ['0xF02f557c753edf5fcdCbfE4c1c3a448B3cC84D54', 3000n]
+]);
 ```
