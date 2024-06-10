@@ -26,13 +26,6 @@ Add a network for TestNet or MainNet:
 
 1. The Hardhat plugin requires `vechain` in the network's name.
 2. Remote accounts are unsupported; therefore, provide account information.
-3. Set `requiredConfirmations` for ignition to 1 to workaround an RPC incompatibility
-
-```typescript
-  ignition: {
-    requiredConfirmations: 1
-  },
-```
 
 ```ts
 vechain_testnet: {

@@ -14,13 +14,109 @@ This example used below will utilize the VTHO contract, which manages Vechain's 
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
 * Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for Vechain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
-## `filterEventLogs(criteria)`
+## `contracts.load(address, abi)`
+
+A contract instance using address and ABI definition provides instant access to logs.
+
+### Create Contract Object
+
+To create a contract object it needs to be created from the thor client:
+
+```javascript
+import { HttpClient, ThorClient } from '@vechain/sdk-network';
+import { ErrorDecoder } from 'ethers-decode-error';
+import energyAbi from './energy.json' assert { type: 'json' };
+
+const thor = new ThorClient(new HttpClient('https://mainnet.vechain.org'));
+const vtho = thor.contracts.load(
+  '0x0000000000000000000000000000456e65726779',
+  energyAbi
+);
+
+```
+
+{% hint style="info" %}
+The Contract-Loader always requires a JSON ABI Definition.
+
+Fragments are not supported.
+{% endhint %}
+
+### `contract.filters.<EventName>()`
+
+The filters provide a simple way to access events in a human-readable way and to populate log requests with the correct criteria.
+
+For example, a filter for all `Transfers` can be created using:
+
+```ts
+const allTransfers = vtho.filters.Transfer()
+const filteredTransfers = vtho.filters.Transfer(<from>, <to>)
+```
+
+Another example filters for all transfers to a specific address:
+
+```ts
+const filteredTransfers = vtho.filters.Transfer(null, <to>)
+```
+
+The parameters are the indexed parameters of the event. Unwanted filters can be skipped by passing null.
+
+### Get Logs
+
+To receive the logs from the blockchain, the built filter object provides a `.get()` function. Calling it will return the list of matching events.
+
+```ts
+const allTransfers = vtho.filters.Transfer()
+const result = await allTransfers.get()
+```
+
+For pagination, there are three optional parameters that allow filtering for a specific range, paginating, and ordering the result set. All options are optional:
+
+```ts
+.get(
+ { unit?: 'block' | 'time', from?: number, to?: number },
+ { offset?: number, limit?: number },
+ 'asc' | 'desc'
+)
+```
+
+### Browse Results
+
+`.get()` returns a list of results because it can support multiple requests as well.
+
+The data is available in both raw and decoded forms:
+
+```ts
+const transfers = vtho.filters
+
+  // pass filters in the order of the input definition for the event
+  // skip values by passing null or undefined
+  .Transfer(null, '0x0000000000000000000000000000456e65726779');
+
+const results = await transfers.get(null, { limit: 2})
+
+results.forEach(result => {
+    result.forEach(log => {
+        // raw log data
+        console.log(log)
+
+        // access to decoded data
+        console.log("Transfer", log.decodedData._from, log.decodedData._to, log.decodedData._value)
+    })
+})
+
+```
+
+### Example Project
+
+{% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filtereventlogs-nmyprl?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
+## `filterRawEventLogs(criteria)`
 
 ### Request Logs
 
 Due to the potentially large amount of log entries, it is essential to implement filtering and pagination mechanisms for efficient data access.
 
-To access and retrieve logs, the `logs.filterEventLogs` function allows filtering based on a specified range and enables pagination by utilizing offset and limits.
+To access and retrieve logs, the `logs.filterRawEventLogs` function allows filtering based on a specified range and enables pagination by utilizing offset and limits.
 
 Illustrated in the following example is the process of retrieving transfer events for VTHO tokens. Initially, the event that requires filtering must be encoded into a byte format.
 
@@ -47,10 +143,10 @@ const encodedTopics = event.encodeFilterTopics([
 ]);
 ```
 
-With the encoded version `logs.filterEventLogs` can be called to return all matching logs:
+With the encoded version `logs.filterRawEventLogs` can be called to return all matching logs:
 
 ```js
-const filteredLogs = await thor.logs.filterEventLogs({
+const filteredLogs = await thor.logs.filterRawEventLogs({
   criteriaSet: [
     // filter by address and topics, empty topics are ignored
     {
@@ -83,4 +179,4 @@ The types of the results are fully documented in the [Event Logs Interface.](htt
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filtereventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filterraweventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
