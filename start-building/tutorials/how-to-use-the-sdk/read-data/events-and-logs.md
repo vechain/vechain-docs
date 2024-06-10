@@ -110,6 +110,37 @@ results.forEach(result => {
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filtereventlogs-nmyprl?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
+### `filterEventLogs()`: Multiple Events in one Request
+
+With `filterEventLogs()`, logs for multiple events can be requested in a single request, improving network performance and simplifying interaction.
+
+For example, requesting VTHO Transfers from and to an address in one request:
+
+```ts
+const results = await thor.logs.filterEventLogs({
+  criteriaSet: [
+    ...vtho.filters.Transfer(ZERO_ADDRESS).criteriaSet, // FROM Zero
+    ...vtho.filters.Transfer(null, ZERO_ADDRESS).criteriaSet, // TO Zero
+  ],
+  range: {
+    unit: 'block',
+    from: 1_000_000,
+    to: 20_000_000,
+  },
+});
+
+results.forEach((result) => {
+  result.forEach((log) => {
+    console.log(
+      'Transfer',
+      log.decodedData._from,
+      log.decodedData._to,
+      log.decodedData._value
+    );
+  });
+});
+```
+
 ## `filterRawEventLogs(criteria)`
 
 ### Request Logs
@@ -180,3 +211,4 @@ The types of the results are fully documented in the [Event Logs Interface.](htt
 ### Example Project
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filterraweventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
