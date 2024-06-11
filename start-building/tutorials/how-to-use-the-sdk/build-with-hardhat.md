@@ -2,7 +2,7 @@
 
 Hardhat is a development environment to compile, deploy, test, and debug your EVM-compatible applications. It helps developers manage and automate the recurring tasks inherent to the process of building smart contracts, as well as easily integrating with various plugins to extend its functionality. With Hardhat, you can write and run tests, script deployments, and interact with your contracts.
 
-Vechain's SDK provides a plugin to instantly enable connectivity.
+VeChain's SDK provides a plugin to instantly enable connectivity.
 
 _The example project is relying on hardhat version 2.22.5 and the project initiated with `npx hardhat init`._
 
@@ -10,7 +10,7 @@ _The example project is relying on hardhat version 2.22.5 and the project initia
 
 ### Install
 
-To add Vechain support, install the plugin:
+To add VeChain support, install the plugin:
 
 ```bash
 npm install --save-dev @vechain/sdk-hardhat-plugin

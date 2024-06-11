@@ -2,7 +2,7 @@
 
 ## Connection
 
-The connection is managed using WebSockets, which connect directly to a Vechain node.
+The connection is managed using WebSockets, which connect directly to a VeChain node.
 
 A simple connection can be established with this snippet:
 
@@ -18,7 +18,7 @@ This will receive all transfers on the blockchain as JSON-encoded strings.
 
 ## Filter Specific Transfers
 
-The Vechain SDK facilitates the construction of filters to retrieve only the desired data by generating a subscription URL with specified parameters. Using the `subscriptions` helper, you can create a custom subscription URL that listens exclusively to the specified event.
+The VeChain SDK facilitates the construction of filters to retrieve only the desired data by generating a subscription URL with specified parameters. Using the `subscriptions` helper, you can create a custom subscription URL that listens exclusively to the specified event.
 
 All options are optional, and a transfer must match all specified criteria:
 

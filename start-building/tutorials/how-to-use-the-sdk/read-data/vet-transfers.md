@@ -2,7 +2,7 @@
 
 ## `filterTransferLogs(criteria)`
 
-The Vechain token `VET` does not have a contract tied to it, so its transfers must be accessed from a different source.
+The VeChain token `VET` does not have a contract tied to it, so its transfers must be accessed from a different source.
 
 Using `logs.filterTransferLogs` gives you access to the transfers, with the same filter options, but the `criteriaSet` is specifically tailored for transfer events.
 

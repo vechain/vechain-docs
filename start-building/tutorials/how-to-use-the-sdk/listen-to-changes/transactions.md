@@ -2,7 +2,7 @@
 
 ## Connection
 
-The connection is managed using WebSockets, which connect directly to a Vechain node.
+The connection is managed using WebSockets, which connect directly to a VeChain node.
 
 A simple connection can be established with this snippet:
 

@@ -1,6 +1,6 @@
 # Listen to Changes
 
-WebSockets provide the ability to receive a stream of all changes on Vechain, reducing the number of network requests that are normally associated with polling data at regular intervals.
+WebSockets provide the ability to receive a stream of all changes on VeChain, reducing the number of network requests that are normally associated with polling data at regular intervals.
 
 The available streams for changes are:
 

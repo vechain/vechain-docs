@@ -2,11 +2,13 @@
 
 ## Buy me a Coffee with dApp-Kit
 
-The outcome of this tutorial is a React application capable of identifying a user's wallet, sending tokens, and verifying the transaction on the Vechain network.
+The outcome of this tutorial is a React application capable of identifying a user's wallet, sending tokens, and verifying the transaction on the VeChain network.
 
 You can open the resulting project on GitHub to check on all steps in parallel while reading each section.
 
 Here is the sequence we are building during this Tutorial:
+
+
 
 ```mermaid
 sequenceDiagram
@@ -50,12 +52,12 @@ App-->>User: show transaction result
 
 ## Preparation
 
-This tutorial is based on a pre-existing React project that has already been configured with widely-used libraries. It will focus on incorporating Vechain-specific modules into this project. Therefore, only information related to Vechain will be covered in this article. It assumes a basic understanding of React, such as managing states and passing props, which will not be explained.
+This tutorial is based on a pre-existing React project that has already been configured with widely-used libraries. It will focus on incorporating VeChain-specific modules into this project. Therefore, only information related to VeChain will be covered in this article. It assumes a basic understanding of React, such as managing states and passing props, which will not be explained.
 
 * **@vechain/dapp-kit-react** - A collection of React hooks and components designed to facilitate the integration of the dApp kit into React applications.
 * **@vechain/dapp-kit-ui** - A set of UI components aimed at simplifying the process of wallet selection and connection.
-* **@vechain/sdk-core** - A library focused on providing features specific to Vechain.
-* **@vechain/sdk-network** - A library created to streamline communication with Vechain nodes.
+* **@vechain/sdk-core** - A library focused on providing features specific to VeChain.
+* **@vechain/sdk-network** - A library created to streamline communication with VeChain nodes.
 
 Install all these modules with npm:
 
@@ -69,7 +71,7 @@ npm install --save @vechain/dapp-kit-react @vechain/dapp-kit-ui @vechain/sdk-cor
 You can read more about the dApp-Kit in their [docs section](https://docs.vechain.org/developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1).
 {% endhint %}
 
-To connect your application to Vechain you will wrap it into a provider that will share a single connection and user authentification globally.
+To connect your application to VeChain you will wrap it into a provider that will share a single connection and user authentification globally.
 
 In our example app, this is done within the [`App.tsx`](https://github.com/ifavo/example-buy-me-a-coffee/blob/main/src/App.tsx).
 

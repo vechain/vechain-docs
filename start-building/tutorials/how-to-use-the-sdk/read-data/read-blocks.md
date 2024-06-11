@@ -1,6 +1,6 @@
 # Read Blocks
 
-A block is a change to the blockchain storage with a batch of changes that happen simultaneously. With Vechain, every \~10s a new block is generated, even if no transaction has been published.
+A block is a change to the blockchain storage with a batch of changes that happen simultaneously. With VeChain, every \~10s a new block is generated, even if no transaction has been published.
 
 The most relevant information for interacting with Blocks includes:
 

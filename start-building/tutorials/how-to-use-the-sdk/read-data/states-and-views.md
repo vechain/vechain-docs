@@ -4,11 +4,11 @@ Smart Contracts have the ability to expose variables and functions for sharing t
 
 ## Example Data
 
-This example used below will utilize the VTHO contract, which manages Vechain's VTHO Token.
+This example used below will utilize the VTHO contract, which manages VeChain's VTHO Token.
 
 * Smart Contract Address: `0x0000000000000000000000000000456e65726779`
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
-* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for Vechain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
+* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
 ## `executeCall(address, fragment, args, opts)`
 

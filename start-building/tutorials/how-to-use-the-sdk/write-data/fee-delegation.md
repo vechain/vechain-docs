@@ -1,6 +1,6 @@
 # Fee Delegation
 
-Gas fees are usually paid by the address that signs the transaction. Vechain's fee delegation allows you to pass on this payment to another wallet, which can either reside as private key in your realm or shielded by a web service.
+Gas fees are usually paid by the address that signs the transaction. VeChain's fee delegation allows you to pass on this payment to another wallet, which can either reside as private key in your realm or shielded by a web service.
 
 To use fee delegation, you can need to:
 

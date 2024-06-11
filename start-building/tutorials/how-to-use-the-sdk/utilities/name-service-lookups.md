@@ -1,6 +1,6 @@
 # Name Service Lookups
 
-The SDK provides programmatic access to the Vechain Name Service (VNS) at [vet.domains](https://vet.domains).
+The SDK provides programmatic access to the VeChain Name Service (VNS) at [vet.domains](https://vet.domains).
 
 Name Services provide the ability to use human-readable names that point to addresses.
 

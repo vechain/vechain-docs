@@ -2,15 +2,15 @@
 
 ## Example Data
 
-This example used below will utilize the VTHO contract, which manages Vechain's VTHO Token.
+This example used below will utilize the VTHO contract, which manages VeChain's VTHO Token.
 
 * Smart Contract Address: `0x0000000000000000000000000000456e65726779`
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
-* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for Vechain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
+* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
 ## Connection
 
-The connection is managed using WebSockets, which connect directly to a Vechain node.
+The connection is managed using WebSockets, which connect directly to a VeChain node.
 
 A simple connection can be established with this snippet:
 
@@ -26,7 +26,7 @@ This will receive all events on the blockchain as JSON-encoded strings.
 
 ## Filter Specific Events
 
-The Vechain SDK assists in constructing filters to retrieve only the desired data by creating a subscription URL with the specified parameters.
+The VeChain SDK assists in constructing filters to retrieve only the desired data by creating a subscription URL with the specified parameters.
 
 A helper utility, `coder`, generates ethers compatible interfaces that can be utilized to construct the encoded filters.
 
