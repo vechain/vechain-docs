@@ -119,6 +119,7 @@
         * [Name Service Lookups](start-building/tutorials/how-to-use-the-sdk/utilities/name-service-lookups.md)
     * [Example dApps](start-building/tutorials/example-dapps/README.md)
       * [Buy me a Coffee](start-building/tutorials/example-dapps/buy-me-a-coffee.md)
+      * [Token Bound Accounts](start-building/tutorials/example-dapps/token-bound-accounts.md)
     * [Debug Reverted Transactions](start-building/tutorials/debug-reverted-transactions.md)
     * [How to verify Address-Ownership](start-building/tutorials/how-to-verify-address-ownership.md)
 * [Developer Resources](developer-resources/README.md)
