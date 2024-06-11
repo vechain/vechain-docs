@@ -21,15 +21,15 @@ An example registry contract is available on GitHub: [ERC6551Registry.sol](https
 During NFT minting, the Registry can be instructed to create a new Account. The account will only be created once:
 
 ```sol
-        IERC6551Registry("0x_<Registry-Deployment>")
-            .createAccount(
-                "0x_<Account-Deployment>",
-                block.chainid,
-                "0x_<NFT-Deployment>",
-                tokenId,
-                salt,
-                ""
-            );
+IERC6551Registry("0x_<Registry-Deployment>")
+    .createAccount(
+        "0x_<Account-Deployment>",
+        block.chainid,
+        "0x_<NFT-Deployment>",
+        tokenId,
+        salt,
+        ""
+    );
 ```
 
 The account creation can also be delayed, to only create it when required.
@@ -39,14 +39,14 @@ The account creation can also be delayed, to only create it when required.
 Using the `account()` function, the same address will always be calculated, allowing you to know an address even before the wallet is deployed.
 
 ```sol
-        IERC6551Registry("0x_<Registry-Deployment>")
-            .account(
-                "0x_<Account-Deployment>",
-                block.chainid,
-                "0x_<NFT-Deployment>",
-                tokenId,
-                salt
-            );
+IERC6551Registry("0x_<Registry-Deployment>")
+    .account(
+        "0x_<Account-Deployment>",
+        block.chainid,
+        "0x_<NFT-Deployment>",
+        tokenId,
+        salt
+    );
 ```
 
 ### Account Interaction
