@@ -136,7 +136,7 @@ Run the following command to compile your contract:
 npx hardhat compile
 ```
 
-https://wizard.openzeppelin.com provides an easy-to-use web interface for generating basic smart contracts.
+[https://wizard.openzeppelin.com](https://wizard.openzeppelin.com) provides an easy-to-use web interface for generating basic smart contracts.
 
 ## Deployment Manager
 
