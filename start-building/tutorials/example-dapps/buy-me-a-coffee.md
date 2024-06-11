@@ -96,11 +96,11 @@ And wrap your content with it:
     </DAppKitProvider>
 ```
 
-Consequently, you will have the capability to utilize functions such as `useWallet()` for user identification or `useConnex()` for interacting with Vechain.
+Consequently, you will have the capability to utilize functions such as `useWallet()` for user identification or `useConnex()` for interacting with VeChain.
 
 ### Integrating `useQuery`
 
-By using [`@tanstack/react-query`](https://tanstack.com/query/latest), we will access vechain nodes directly to retrieve some data from the public infrastructure. Just like with dApp-Kit, you need a provider that enables shared fetch and cache management.
+By using [`@tanstack/react-query`](https://tanstack.com/query/latest), we will access VeChain nodes directly to retrieve some data from the public infrastructure. Just like with dApp-Kit, you need a provider that enables shared fetch and cache management.
 
 Import the Provider and establish a default client configuration:
 
@@ -152,10 +152,10 @@ export default function BuyCoffee() {
 
 ### Select Token from Registry
 
-Vechain curates a public repository of tokens on [GitHub](https://github.com/vechain/token-registry) to streamline token interaction within decentralized applications (dApps).
+VeChain curates a public repository of tokens on [GitHub](https://github.com/vechain/token-registry) to streamline token interaction within decentralized applications (dApps).
 
 {% hint style="info" %}
-Have you published a new Token on Vechain? You are welcome to create a pull request to add it to the public registry!
+Have you published a new Token on VeChain? You are welcome to create a pull request to add it to the public registry!
 {% endhint %}
 
 We will utilize it to dynamically retrieve all recognized tokens within the application and enable the user to purchase a coffee using a token of their choosing.
@@ -201,13 +201,13 @@ In order to show the data, it can be presented in a dropdown menu:
 </>
 ```
 
-We will display `VET` as a blank choice for utilizing Vechain's native token as a payment option if no token has been chosen. The complete component, along with its state management, can be found in the [`src/BuyCoffee/SelectToken.tsx` file on GitHub](https://github.com/ifavo/example-buy-me-a-coffee/blob/main/src/BuyCoffee/SelectToken.tsx).
+We will display `VET` as a blank choice for utilizing VeChain's native token as a payment option if no token has been chosen. The complete component, along with its state management, can be found in the [`src/BuyCoffee/SelectToken.tsx` file on GitHub](https://github.com/ifavo/example-buy-me-a-coffee/blob/main/src/BuyCoffee/SelectToken.tsx).
 
 ### Read Token Balance
 
 To assist users in determining the amount to send, we will retrieve the VET or Token balance of the currently signed-in user.
 
-Utilizing `useConnex()` and `useWallet()`, we will request the account details and present the outcome in a user-friendly manner using `unitsUtil`, a utility function from the Vechain SDK:
+Utilizing `useConnex()` and `useWallet()`, we will request the account details and present the outcome in a user-friendly manner using `unitsUtil`, a utility function from the VeChain SDK:
 
 ```js
 // import hooks
@@ -285,7 +285,7 @@ const clauses = [
 ];
 ```
 
-A valuable feature of Vechain Wallets is their ability to include comments, which explain individual clauses or entire transactions to the user.
+A valuable feature of VeChain Wallets is their ability to include comments, which explain individual clauses or entire transactions to the user.
 
 By adding a `comment` attribute to the clause object, Wallets will display it alongside each clause for the user.
 
@@ -293,7 +293,7 @@ By adding a `comment` attribute to the clause object, Wallets will display it al
 
 Function calls on the Blockchain are executed by sending a transaction, which incurs a VTHO charge for each action based on the associated workload. To verify its identity, a transaction must be signed with the sender's private key.
 
-After setting up the `DAppKitProvider`, we can use the `useConnex()` hook to connect to Vechain.
+After setting up the `DAppKitProvider`, we can use the `useConnex()` hook to connect to VeChain.
 
 To have the user sign and send a transaction, we use `await connex.vendor.sign('tx', clauses).request()`.
 
@@ -301,16 +301,16 @@ Here's what happens during this process:
 
 1. `sign('tx', clauses)` creates a transaction object with the specified clauses, using the blockchain settings from `DAppKitProvider`.
 2. `request()` asks the user's wallet to get the user's signature for the transaction. This function is async, because it will wait until the wallet interaction is completed.
-3. The wallet shows the transaction details to the user. If the user agrees and signs it, the transaction is forwarded to a Vechain node.
-4. The Vechain node confirms the transaction by returning a transaction ID. This ID can be used to track the transaction's status.
+3. The wallet shows the transaction details to the user. If the user agrees and signs it, the transaction is forwarded to a VeChain node.
+4. The VeChain node confirms the transaction by returning a transaction ID. This ID can be used to track the transaction's status.
 
 ### Track Transaction Status
 
 By utilizing the transaction ID, progress can be monitored through a request for a receipt.
 
-By using the `useQuery()` function, an updated receipt will be retrieved at regular intervals. Given that new blocks are inclued into Vechain approximately every 10 seconds, a transaction is typically included after that time.
+By using the `useQuery()` function, an updated receipt will be retrieved at regular intervals. Given that new blocks are inclued into VeChain approximately every 10 seconds, a transaction is typically included after that time.
 
-Utilizing a public node as a direct method offers an alternative way of connecting to Vechain. Each node offers a public JSON API, which allows for retrieving raw data.
+Utilizing a public node as a direct method offers an alternative way of connecting to VeChain. Each node offers a public JSON API, which allows for retrieving raw data.
 
 ```tsx
 import type { TransactionReceipt } from '@vechain/sdk-network';
@@ -342,11 +342,11 @@ A React component displaying status for the user can be found in the sample proj
 
 ## Proof of Concept Completed
 
-The preceding sections have shown a rudimentary application that communicates with Vechain:
+The preceding sections have shown a rudimentary application that communicates with VeChain:
 
-* It outlined the process of establishing Vechain Connectivity within a React Application.
+* It outlined the process of establishing VeChain Connectivity within a React Application.
 * Demonstrated how to identify a user's wallet address.
-* Utilized the public token registry to show a list Vechain Tokens.
+* Utilized the public token registry to show a list VeChain Tokens.
 * Interact with the Blockchain to read an accounts balance or call a contract function and read its reply.
 * Creating transactions to send VET or other ecosystem tokens.
 * Monitored the status of a transaction to confirm its completion.
