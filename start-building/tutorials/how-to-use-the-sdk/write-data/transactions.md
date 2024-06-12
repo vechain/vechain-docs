@@ -13,7 +13,7 @@ To send a transaction you will need to do multiple steps:
 5. Sign the transaction
 6. Send the transaction to the network
 
-### Collection Function Calls in Clauses
+### Collecting Function Calls in Clauses
 
 The instructions for executing a function on the blockchain needs to be encoded in a certain way. There are different functions to help create the right format, one is the `clauseBuilder` that will in this example call `increment()` on the given address:
 
@@ -47,7 +47,7 @@ If you expect your contracts to have different results based on the sender, you 
 Once you have instructions + costs, you'll wrap them together into a transaction object with buildTransactionBody.
 
 ```javascript
-const tx = await thor.transactions.buildTransactionBody(
+const txBody = await thor.transactions.buildTransactionBody(
   clauses,
   gasResult.totalGas
 );
@@ -59,10 +59,62 @@ There are [several options](https://tsdocs.dev/docs/@vechain/sdk-network/latest/
 
 ### Sign Transaction
 
-Once a transaction is built, it needs to be signed by an entity that will execute all the code. This also makes the origin verifiable:
+Once a transaction is built, it needs to be signed by an entity that will execute all the code. This also makes the origin verifiable.
+
+It is a four step process, of getting a signer first:
+
+#### Get Signer
+
+```typescript
+const wallet = new ProviderInternalBaseWallet(
+  [{ privateKey, address: senderAddress }]
+);
+
+const provider = new VeChainProvider(
+  // Thor client used by the provider
+  thorClient,
+
+  // Internal wallet used by the provider (needed to call the getSigner() method)
+  wallet,
+
+  // Enable fee delegation
+  false
+);
+
+const signer = await provider.getSigner(senderAddress);
+```
+
+#### Sign Transaction
+
+And using the signer to sign the transaction:
 
 ```javascript
-const signedTx = await thor.transactions.signTransaction(tx, privateKey);
+const rawSignedTx = await signer.signTransaction(tx, privateKey);
+```
+
+#### Build Signed Transaction Object
+
+`signTransaction` returns the fully signed transaction that can already be published using a POST request to the /transactions endpoint of a VeChain node:
+
+```typescript
+await fetch(`${nodeUrl}/transactions`, {
+  method: 'POST',
+  headers: {
+    'content-type': 'application/json',
+  },
+  body: JSON.stringify({
+    raw: rawSignedTx,
+  }),
+})
+```
+
+For submission by SDK, the raw hex string needs to be restored into a transaction object:
+
+```typescript
+const signedTx = TransactionHandler.decode(
+  Buffer.from(rawSignedTx.slice(2), 'hex'),
+  true
+);
 ```
 
 ### Send Transaction

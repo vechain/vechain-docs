@@ -19,19 +19,25 @@ const tx = await thor.transactions.buildTransactionBody(clauses, gas,
 
 ## Sign with Fee Delegation
 
-To get the fee delegator involved, you'll pass either `delegatorPrivateKey` or `delegatorUrl` to the options when calling `signTransaction`:
+To get the fee delegator involved, you'll pass either `delegatorPrivateKey` or `delegatorUrl` to the signing wallet:
 
 ```js
-const sponsoredByUrl = await thor.transactions.signTransaction(
-  tx,
-  senderAccount.privateKey,
-  { delegatorUrl: 'https://sponsor-testnet.vechain.energy/by/90'}
+const walletWithUrlSponsor = new ProviderInternalBaseWallet(
+  [{ privateKey, address: senderAddress }],
+  {
+    delegator: {
+      delegatorUrl: 'https://sponsor-testnet.vechain.energy/by/90',
+    },
+  }
 );
 
-const sponsoredByKey = await thor.transactions.signTransaction(
-  tx,
-  senderAccount.privateKey,
-  { delegatorPrivateKey: delegatorAccount.privateKey }
+const walletWithAccountSponsor = new ProviderInternalBaseWallet(
+  [{ privateKey, address: senderAddress }],
+  {
+    delegator: {
+      delegatorPrivateKey: delegatorAccount.privateKey,
+    },
+  }
 );
 ```
 
@@ -46,7 +52,9 @@ To shield your private key for paying gas fees into a backend service, you can s
 The process requires you to rebuilt a transaction object from a hex encoded version:
 
 ```javascript
-const transactionToSign = TransactionHandler.decode(req.body.raw);
+const transactionToSign = TransactionHandler.decode(
+  Buffer.from(req.body.raw.slice(2), 'hex')
+);
 ```
 
 Afterwards a unique hash is calculated for the given transaction, only valid if a specific origin will sign it:
@@ -55,10 +63,12 @@ Afterwards a unique hash is calculated for the given transaction, only valid if 
 const delegatedHash = transactionToSign.getSignatureHash(req.body.origin);
 ```
 
-The resulting hash is signed and then returned for further processing on the client side:
+The resulting hash is signed and then returned as hex string for further processing on the client side:
 
 ```javascript
-const signature = secp256k1.sign(delegatedHash, delegatorPrivateKe
+const signature = `0x${Buffer.from(
+    secp256k1.sign(delegatedHash, delegatorPrivateKey)
+  ).toString('hex')}`;
 ```
 
 ### Example Project
