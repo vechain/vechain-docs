@@ -120,6 +120,7 @@
     * [Example dApps](start-building/tutorials/example-dapps/README.md)
       * [Buy me a Coffee](start-building/tutorials/example-dapps/buy-me-a-coffee.md)
       * [Token Bound Accounts](start-building/tutorials/example-dapps/token-bound-accounts.md)
+      * [PWA with Privy and Account Abstraction](start-building/tutorials/example-dapps/pwa-with-privy-and-account-abstraction.md)
     * [Debug Reverted Transactions](start-building/tutorials/debug-reverted-transactions.md)
     * [How to verify Address-Ownership](start-building/tutorials/how-to-verify-address-ownership.md)
 * [Developer Resources](developer-resources/README.md)
