@@ -151,7 +151,7 @@ ref: [connex API - transaction signing service](../../developer-resources/sdks-a
 
 **Prerequisites**:
 
-1. Need to know the _**Base gas price**_ from [params](broken-reference) contract
+1. Need to know the _**Base gas price**_ from [params](https://github.com/vechain/vechain-docs/blob/main/start-building/tutorials/broken-reference/README.md) contract
 2. According to [transaction calculation](../../core-concepts/transactions/transaction-calculation.md)
    * we need to calculate the _**intrinsic gas**_
    * we need to know the _**vm gasUsed**_ (aka. virtual machine execution cost)

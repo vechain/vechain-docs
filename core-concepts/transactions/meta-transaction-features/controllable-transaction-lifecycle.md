@@ -1,5 +1,5 @@
 ---
-description: Configure your transaction lifecycle on the VechainThor blockchain.
+description: Configure your transaction lifecycle on the VeChainThor blockchain.
 ---
 
 # Controllable Transaction Lifecycle

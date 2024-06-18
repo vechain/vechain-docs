@@ -1,14 +1,14 @@
 ---
-description: A guideline on how to purchase vechain assets.
+description: A guideline on how to purchase VeChain assets.
 ---
 
-# Acquire Vechain Assets
+# Acquire VeChain Assets
 
 ## How do I buy VET & VTHO?
 
 ### Centralized Exchange
 
-Vechain's tokens are available to purchase on multiple notable centralised exchanges including Coinbase, Binance and Crypto.com. A centralised exchange acts as an intermediary between buyers and sellers. Each centralized exchange has its own sign up process but generally, in order to purchase VET/VTHO a user will:
+VeChain's tokens are available to purchase on multiple notable centralised exchanges including Coinbase, Binance and Crypto.com. A centralised exchange acts as an intermediary between buyers and sellers. Each centralized exchange has its own sign up process but generally, in order to purchase VET/VTHO a user will:
 
 * Create an account.
 * Complete the KYC process.
@@ -41,7 +41,7 @@ There is a well-known saying within the blockchain industry that was popularized
 What does he mean by the saying? Essentially, as long as you do not own and manage the private keys that control your crytocurrency, you are exposed to counterparty risk. By entrusting a third party to manage your cryptocurrency, a centralized exchange, you trust they will secure your cryptocurrency effectively while also act in good faith and not using your cryptocurrency for their own gain.
 
 {% hint style="danger" %}
-Vechain nor any of it's affliates will ever request you to share your private key.\
+VeChain nor any of it's affliates will ever request you to share your private key.\
 \
 Never share your private key, this will most likely result in a loss of assets.
 {% endhint %}

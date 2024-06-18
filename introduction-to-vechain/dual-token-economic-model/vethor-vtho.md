@@ -4,11 +4,11 @@ description: Vechain's transaction / gas token.
 
 # VeThor (VTHO)
 
-<table><thead><tr><th width="258.27956989247315">VTHO</th><th></th></tr></thead><tbody><tr><td>Type</td><td><a href="https://github.com/vechain/VIPs/blob/master/vips/VIP-180.md">VIP180</a></td></tr><tr><td>Token contract address</td><td>0x0000000000000000000000000000456E65726779</td></tr><tr><td>Precision</td><td>18 decimal places</td></tr><tr><td>Supply</td><td>VTHO is the energy or the cost of carrying out the payment and smart contract transactions on the VechainThor blockchain.</td></tr><tr><td>Consumption</td><td>70% of the transaction fee paid in VTHO in each block is burned and the remaining 30% is rewarded to the Authority Masternode which produces the block.</td></tr></tbody></table>
+<table><thead><tr><th width="258.27956989247315">VTHO</th><th></th></tr></thead><tbody><tr><td>Type</td><td><a href="https://github.com/vechain/VIPs/blob/master/vips/VIP-180.md">VIP180</a></td></tr><tr><td>Token contract address</td><td>0x0000000000000000000000000000456E65726779</td></tr><tr><td>Precision</td><td>18 decimal places</td></tr><tr><td>Supply</td><td>VTHO is the energy or the cost of carrying out the payment and smart contract transactions on the VeChainThor blockchain.</td></tr><tr><td>Consumption</td><td>70% of the transaction fee paid in VTHO in each block is burned and the remaining 30% is rewarded to the Authority Masternode which produces the block.</td></tr></tbody></table>
 
 ## What is a VIP180 token?
 
-VIP180 is an implemented improvement proposal which defined a fungible token standard in vechain. VIP180 is a superset of the ERC20 standard on the Ethereum blockchain and is the most used fungible standard used across all blockchains. VTHO is the energy token used to power VechainThor. Transactions will be paid in VTHO and Authority Masternodes are paid in VTHO for producing blocks, securing and maintaining the chain.
+VIP180 is an implemented improvement proposal which defined a fungible token standard in VeChain. VIP180 is a superset of the ERC20 standard on the Ethereum blockchain and is the most used fungible standard used across all blockchains. VTHO is the energy token used to power VeChainThor. Transactions will be paid in VTHO and Authority Masternodes are paid in VTHO for producing blocks, securing and maintaining the chain.
 
 ## Does VTHO have a max supply?
 
@@ -16,11 +16,11 @@ No, unlike VET, VTHO does not have a max supply. VTHO supply is governed by the 
 
 ## Why are VTHO burned?
 
-Burning is when a fraction of the tokens are sent to a wallet without a private key, thus rendering the tokens irrecoverable as they cannot be moved from the wallet. Tokens are burned to attempt to control the supply of a token which in turn will control the market value. This mechanism allows vechain to be reactive to the amount of demand on the network. If the network witnesses greater adoption, the parameters can be reduced to allow for more VTHO to be circulated.
+Burning is when a fraction of the tokens are sent to a wallet without a private key, thus rendering the tokens irrecoverable as they cannot be moved from the wallet. Tokens are burned to attempt to control the supply of a token which in turn will control the market value. This mechanism allows VeChain to be reactive to the amount of demand on the network. If the network witnesses greater adoption, the parameters can be reduced to allow for more VTHO to be circulated.
 
 ## Do I earn VTHO?
 
-Yes, by holding VET in a wallet, you can earn VTHO. Holding VET generates VTHO automatically, it is built into the protocol. Unlike many other blockchains, vechain users are not burdened with the task of staking with nodes to earn rewards.
+Yes, by holding VET in a wallet, you can earn VTHO. Holding VET generates VTHO automatically, it is built into the protocol. Unlike many other blockchains, VeChain users are not burdened with the task of staking with nodes to earn rewards.
 
 ## VTHO generation formula
 

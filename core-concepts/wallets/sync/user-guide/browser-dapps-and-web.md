@@ -21,7 +21,7 @@ There are three colors show the network status :
 
 ### Connect to a Node <a href="#connect-to-a-node" id="connect-to-a-node"></a>
 
-1.  Click on the network ,at left of the address bar(it shown the network MAIN/TEST/SOLO/UNKNOWN)&#x20;
+1.  Click on the network ,at left of the address bar(it shown the network MAIN/TEST/SOLO/UNKNOWN)
 
     <figure><img src="../../../../.gitbook/assets/address-bar.a15ff370.png" alt=""><figcaption></figcaption></figure>
 2. Select the node you would like to connect
@@ -30,7 +30,7 @@ For more information about node management, please visit [here](settings.md#node
 
 ### Go to dApps or Websites <a href="#go-to-dapps-or-websites" id="go-to-dapps-or-websites"></a>
 
-1.  At the top center, input the website/dApps name or URL in the address bar&#x20;
+1.  At the top center, input the website/dApps name or URL in the address bar
 
     <figure><img src="../../../../.gitbook/assets/address-bar.a15ff370.png" alt=""><figcaption></figcaption></figure>
 2. Pick a suggestions/recently visited, or press Return/Enter to go directly to the address you typed.

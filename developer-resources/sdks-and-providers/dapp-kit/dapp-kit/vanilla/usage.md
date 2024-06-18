@@ -1,5 +1,5 @@
 ---
-description: Using the vechain dApp kit UI components
+description: Using the VeChain dApp kit UI components
 ---
 
 # Usage

@@ -1,5 +1,5 @@
 ---
-description: You are in the right place to start your journey with vechain dApps
+description: You are in the right place to start your journey with VeChain dApps
 ---
 
 # Getting Started
@@ -26,7 +26,7 @@ Outline the functionality, user interface, and features of your dApp.
 
 Develop smart contracts using Solidity that define the logic of your dApp.
 
-Our [Remix plugin](frameworks-and-ides/vechain-and-remix/) and [Hardhat plugin](frameworks-and-ides/hardhat-and-vechain/) allow our vechain community to use Remix and Hardhat when developing and deploying smart contracts on vechain.
+Our [Remix plugin](frameworks-and-ides/vechain-and-remix/) and [Hardhat plugin](frameworks-and-ides/hardhat-and-vechain/) allow our VeChain community to use Remix and Hardhat when developing and deploying smart contracts on VeChain.
 
 Use our [Built-in Contracts](built-in-contracts.md) to enhance your smart contract.
 
@@ -34,11 +34,11 @@ Use our [Built-in Contracts](built-in-contracts.md) to enhance your smart contra
 
 Create a user interface for your dApp using JavaScript, HTML, and CSS.
 
-Easily create a login button with vechain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/) with a seamless DevEx, it will handle the login logic to connect with all vechain wallets.
+Easily create a login button with VeChain wallets using the [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/) with a seamless DevEx, it will handle the login logic to connect with all VeChain wallets.
 
-Use the [SDK](./sdks-and-providers/sdk/README.md) to streamline blockchain development on the VechainThor platform. The SDK offers a wealth of functionalities, including transaction management, certificate handling, cryptographic operations and  smart contract deployment. By utilizing the vechain SDK, developers can build sophisticated dApps with ease, leveraging its comprehensive suite of tools to create secure, scalable, and feature-rich solutions on the VechainThor blockchain.
+Use the [SDK](sdks-and-providers/sdk/) to streamline blockchain development on the VeChainThor platform. The SDK offers a wealth of functionalities, including transaction management, certificate handling, cryptographic operations and smart contract deployment. By utilizing the VeChain SDK, developers can build sophisticated dApps with ease, leveraging its comprehensive suite of tools to create secure, scalable, and feature-rich solutions on the VeChainThor blockchain.
 
-Check our mainnet and testnet [node endpoints](nodes.md), a gateway to interacting with the VechainThor blockchain.
+Check our mainnet and testnet [node endpoints](nodes.md), a gateway to interacting with the VeChainThor blockchain.
 
 #### 4. **Testing**
 
@@ -50,4 +50,4 @@ Use [Devpal](sdks-and-providers/devpal.md), a set of tools to help your developm
 
 Let us know about your dApp!
 
-After you create the dApp, you can submit it in the [Vechain App Hub Repo](https://github.com/vechain/app-hub#vechain-app-hub---submit-form) to let it be visible in the [Vechain App Hub](https://apps.vechain.org/#all)
+After you create the dApp, you can submit it in the [VeChain App Hub Repo](https://github.com/vechain/app-hub#vechain-app-hub---submit-form) to let it be visible in the [VeChain App Hub](https://apps.vechain.org/#all)

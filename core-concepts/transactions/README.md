@@ -1,5 +1,5 @@
 ---
-description: Learn about vechain's novel transaction features.
+description: Learn about VeChain's novel transaction features.
 layout:
   title:
     visible: true
@@ -15,9 +15,9 @@ layout:
 
 # Transactions
 
-## What is a transaction in vechain?&#x20;
+## What is a transaction in VeChain?
 
-A transaction, similar to any blockchain network, refers to an action or event that involves the transfer or modification of data within the blockchain.&#x20;
+A transaction, similar to any blockchain network, refers to an action or event that involves the transfer or modification of data within the blockchain.
 
 By executing a transaction a blockchain can: transfer a digital token from one address to another; deploy a smart contract on the blockchain or trigger the execution of a smart contract.
 

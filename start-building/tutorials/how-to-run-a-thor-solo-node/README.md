@@ -1,6 +1,6 @@
 ---
 description: >-
-  A thor solo node is a VechainThor blockchain node running in a sandbox
+  A thor solo node is a VeChainThor blockchain node running in a sandbox
   development mode.
 ---
 
@@ -41,7 +41,7 @@ Thor supports multiple command-line options which you can see by running:
 
 The most important ones for us are the following:
 
-* `--api-cors '*'`  comma separated list of domains to accept cross origin requests to API
+* `--api-cors '*'` comma separated list of domains to accept cross origin requests to API
 * `--api-addr value` API service listening address (default: "localhost:8669")
 * `--api-call-gas-limit value` limit contract call gas (default: 50000000)
 * `--api-backtrace-limit value` limit the distance between 'position' and best block for subscriptions APIs (default: 1000)
@@ -108,15 +108,11 @@ To run the node in solo mode which is what we need for development purposes use 
 {% hint style="info" %}
 Thor can also be run with a test or main network by passing the command
 
-`--network test | main`&#x20;
-
-
+`--network test | main`
 
 A custom network can also be created by passing the command
 
 `--network <custom-net-genesis.json>`
-
-
 
 An example genesis config file can be found at [genesis/example.json](https://raw.githubusercontent.com/vechain/thor/master/genesis/example.json).
 {% endhint %}

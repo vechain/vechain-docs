@@ -1,5 +1,5 @@
 ---
-description: An introduction and overview of the VechainThor blockchain block model.
+description: An introduction and overview of the VeChainThor blockchain block model.
 ---
 
 # Block Model

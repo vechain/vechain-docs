@@ -21,9 +21,6 @@ BIP-39 provides several benefits:
  - **Security**: By generating private keys from a mnemonic phrase, users can securely back up and restore their wallets. As long as the mnemonic phrase is kept secure, users can recover their funds even if their original device is lost or damaged.
 
 ```typescript { name=bip39, category=example }
-import { mnemonic } from '@vechain/sdk-core';
-import { expect } from 'expect';
-
 // 1 - Generate BIP39 mnemonic words, default to 12 words (128bit strength)
 
 const randomMnemonic = mnemonic.generate();
@@ -36,12 +33,8 @@ console.log('Mnemonic words', randomMnemonic);
 // Defined for VET at https://github.com/satoshilabs/slips/blob/master/slip-0044.md
 const privateKey = mnemonic.derivePrivateKey(randomMnemonic);
 
-console.log(privateKey.toString('hex'));
+console.log(Hex.of(privateKey));
 // ...SOME PRIVATE KEY...
-
-// In recovery process, validation is recommended
-expect(mnemonic.validate(randomMnemonic)).toBeTruthy();
-
 ```
 
 ### BIP-32
@@ -55,9 +48,6 @@ This hierarchy provides several advantages, including:
  - **Privacy**: HD wallets provide improved privacy by generating a new public key for each transaction. This prevents observers from linking multiple transactions to a single wallet address.
 
 ```typescript { name=bip32, category=example }
-import { HDNode, mnemonic } from '@vechain/sdk-core';
-import { expect } from 'expect';
-
 // 1 - Generate BIP39 mnemonic words, default to 12 words (128bit strength)
 
 const randomMnemonic = mnemonic.generate();
@@ -72,17 +62,17 @@ const hdnode = HDNode.fromMnemonic(randomMnemonic);
 // 3 - Derive 5 child private keys
 
 for (let i = 0; i < 5; i++) {
-    const child = hdnode.derive(i);
-    console.log(`children ${i}`, child.address);
+    const child = hdnode.deriveChild(i);
+    console.log(
+        `children ${i} address`,
+        addressUtils.fromPublicKey(child.publicKey)
+    );
+    console.log(`children ${i} private key`, child.privateKey);
     // children 0 0x...
     // children 1 0x...
     // ...
     // children 4 0x...
 }
-
-// In the recovery process, validation is recommended
-expect(mnemonic.validate(randomMnemonic)).toBeTruthy();
-
 ```
 
 ### Extended Public Key (xpub)
@@ -98,48 +88,40 @@ In the context of hierarchical deterministic wallets, an HDNode instance represe
 Generating an HDNode instance from an extended public key (xpub) allows developers to derive child public keys for purposes such as address generation, transaction monitoring, or building hierarchical structures within the wallet. This functionality is particularly useful in scenarios where the private keys are stored securely offline, and only public keys are exposed to the network for enhanced security.
 
 ```typescript { name=pubkey, category=example }
-import { HDNode } from '@vechain/sdk-core';
-
 // 1 - Create HD node from xpub (extended private key) and chain code
 
-const xpub = Buffer.from(
-    '04dc40b4324626eb393dbf77b6930e915dcca6297b42508adb743674a8ad5c69a046010f801a62cb945a6cb137a050cefaba0572429fc4afc57df825bfca2f219a',
-    'hex'
+const xpub = utils.hexToBytes(
+    '04dc40b4324626eb393dbf77b6930e915dcca6297b42508adb743674a8ad5c69a046010f801a62cb945a6cb137a050cefaba0572429fc4afc57df825bfca2f219a'
 );
 
-const chainCode = Buffer.from(
-    '105da5578eb3228655a8abe70bf4c317e525c7f7bb333634f5b7d1f70e111a33',
-    'hex'
+const chainCode = utils.hexToBytes(
+    '105da5578eb3228655a8abe70bf4c317e525c7f7bb333634f5b7d1f70e111a33'
 );
 
 // 2 - Create BIP32 HD node from xpub
 
-const hdnode = HDNode.fromPublicKey(xpub, chainCode);
+const hdnode = HDNode.fromPublicKey(Buffer.from(xpub), Buffer.from(chainCode));
 
 // 3 - Derive 5 child public keys
 
 for (let i = 0; i < 5; i++) {
-    const child = hdnode.derive(i);
+    const child = hdnode.deriveChild(i);
 
-    console.log(`children ${i}`, child.address);
+    console.log(`children ${i}`, addressUtils.fromPublicKey(child.publicKey));
     // children 0 0x...
     // children 1 0x...
     // ...
     // children 4 0x...
 }
-
 ```
 
 ## Keystore
 
 On the other hand, Keystore is employed for encrypting private keys in accordance with the Ethereum standard. By using Keystore, the private keys can be securely encrypted to prevent unauthorized access or exposure.
 
-Through the use of mnemonics and keystore, vechain SDK ensures secure and user-friendly account handling. Mnemonics allow for easy generation of private keys, while keystore provides an additional layer of protection by encrypting the private keys in a standardized manner as per Ethereum's security practices. These functionalities collectively contribute to a robust and secure approach to managing accounts within the Thor ecosystem.
+Through the use of mnemonics and keystore, VeChainSDK ensures secure and user-friendly account handling. Mnemonics allow for easy generation of private keys, while keystore provides an additional layer of protection by encrypting the private keys in a standardized manner as per Ethereum's security practices. These functionalities collectively contribute to a robust and secure approach to managing accounts within the Thor ecosystem.
 
 ```typescript { name=keystore, category=example }
-import { keystore, secp256k1 } from '@vechain/sdk-core';
-import { expect } from 'expect';
-
 // 1 - Create private key using Secp256k1
 
 const privateKey = secp256k1.generatePrivateKey();
@@ -152,22 +134,28 @@ const privateKey = secp256k1.generatePrivateKey();
 
 // 2 - Encrypt/decrypt private key using Ethereum's keystore scheme
 
+// @NOTE the password should not be represented as a string,
+// the Ethereum canonical representation to of password used in
+// keystore encryption is UTF-8 NFKC.
 const keyStorePassword = 'your password';
-const newKeyStore = await keystore.encrypt(privateKey, keyStorePassword);
 
-// 3 - Throw for wrong password
+const newKeyStore = await keystore.encrypt(
+    Buffer.from(privateKey),
+    keyStorePassword
+);
+
+// @NOTE the `encrypt` function wipes private key and password after use.
+
+// 3 - Throw the wrong password
 
 const recoveredPrivateKey = await keystore.decrypt(
     newKeyStore,
     keyStorePassword
 );
 
+// @NOTE the `decrypt`` function wipes private key and password after use.
+
 console.log(recoveredPrivateKey.privateKey.toString());
 // 0x...
-
-// Roughly check keystore format
-expect(keystore.isValid(newKeyStore)).toBeTruthy();
-// Key store ok true
-
 ```
 

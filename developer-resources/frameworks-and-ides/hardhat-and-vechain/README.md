@@ -1,8 +1,8 @@
-# Hardhat & Vechain
+# Hardhat & VeChain
 
 Hardhat is a development environment for Ethereum software. It consists of different components for editing, compiling, debugging and deploying your smart contracts and decentralized applications (dApps), all of which work together to create a complete development environment.
 
-Our Hardhat plugin allows our vechain community to use Hardhat when developing smart contracts and dApps on vechain.
+Our Hardhat plugin allows our VeChain community to use Hardhat when developing smart contracts and dApps on VeChain.
 
 {% hint style="info" %}
 A [link](https://hardhat.org/) to the Hardhat website.

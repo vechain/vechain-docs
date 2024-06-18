@@ -2,7 +2,7 @@
 
 ## Description
 
-These types of errors are comprised of the common errors between the Vechain tests and the same tests being run on Ganache. We consider these errors justified since they also exist in Ganache.
+These types of errors are comprised of the common errors between the VeChain tests and the same tests being run on Ganache. We consider these errors justified since they also exist in Ganache.
 
 ## Contracts Affected
 
