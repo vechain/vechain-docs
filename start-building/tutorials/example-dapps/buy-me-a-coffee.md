@@ -4,7 +4,7 @@
 
 The outcome of this tutorial is a React application capable of identifying a user's wallet, sending tokens, and verifying the transaction on the VeChain network.
 
-You can open the resulting project on GitHub to check on all steps in parallel while reading each section.
+You can open the resulting project on [GitHub](https://github.com/ifavo/example-buy-me-a-coffee) to check on all steps in parallel while reading each section:
 
 Here is the sequence we are building during this Tutorial:
 
@@ -308,7 +308,7 @@ Here's what happens during this process:
 
 By utilizing the transaction ID, progress can be monitored through a request for a receipt.
 
-By using the `useQuery()` function, an updated receipt will be retrieved at regular intervals. Given that new blocks are inclued into VeChain approximately every 10 seconds, a transaction is typically included after that time.
+By using the `useQuery()` function, an updated receipt will be retrieved at regular intervals. Given that new blocks are included into VeChain approximately every 10 seconds, a transaction is typically included after that time.
 
 Utilizing a public node as a direct method offers an alternative way of connecting to VeChain. Each node offers a public JSON API, which allows for retrieving raw data.
 
