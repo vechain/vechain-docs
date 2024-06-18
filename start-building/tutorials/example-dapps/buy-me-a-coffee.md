@@ -4,7 +4,7 @@
 
 The outcome of this tutorial is a React application capable of identifying a user's wallet, sending tokens, and verifying the transaction on the VeChain network.
 
-You can open the resulting project on GitHub to check on all steps in parallel while reading each section.
+You can open the resulting project on [GitHub](https://github.com/ifavo/example-buy-me-a-coffee) to check on all steps in parallel while reading each section:
 
 Here is the sequence we are building during this Tutorial:
 
