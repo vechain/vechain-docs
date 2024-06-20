@@ -104,4 +104,3 @@ catch (err) {
 
 {% embed url="https://stackblitz.com/edit/vechain-sdk-certificate-sign?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
-### Sign in with Vechain using dApp-Kit
