@@ -19,5 +19,5 @@ See a full list of the publicly available VeChainThor nodes in the Developer Res
 {% endhint %}
 
 {% hint style="info" %}
-Interested in operating a public Thor node, here's a link to the public repo [https://github.com/vechain/thor](https://github.com/vechain/thor), and a link to a tutorial on how to run a local Thor node [how-to-run-a-thor-solo-node](../../start-building/tutorials/how-to-run-a-thor-solo-node/ "mention").
+Interested in operating a public Thor node, here's a link to the public repo [https://github.com/vechain/thor](https://github.com/vechain/thor), and a link to a tutorial on how to run a local Thor node [how-to-run-a-thor-solo-node](../../start-building/how-to-run-a-thor-solo-node/ "mention").
 {% endhint %}

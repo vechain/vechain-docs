@@ -17,7 +17,7 @@ VORJ is not intended and has not been optimized for mobile device usage.
 VORJ has several offerings:
 
 * VORJ offers a range of fungible and non-fungible (NFT) smart contract templates. VORJ implements and offers the secure and battle tested [OpenZeppelin smart contracts](https://github.com/OpenZeppelin/openzeppelin-contracts).
-* The VORJ application programmable interface (API) offers various endpoints providing up to date and easily consumable VeChainThor information. View the available endpoints [here](https://api.vorj.app/main/docs/static/index.html).
+* The VORJ application programmable interface (API) offers various endpoints providing up to date and easily consumable VeChainThor information. View the available endpoints [here](https://api.vorj.app/main/v2/docs).
 * VORJ offers an application programmable interface (API) to emit transactions throughout the VeChainThor blockchain network.
 * VORJ offers an application programmable interface (API) to emit contracts throughout the VeChainThor blockchain network.
 
