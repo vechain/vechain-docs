@@ -15,7 +15,7 @@ The implementation of account abstraction is work in progress. Hence, this mater
 Account abstraction enhances the functionality of existing smart contract wallets, which make blockchain accounts programmable. The name, account abstraction, refers to the logic of removing the signing of transactions from the account and abstracting it out. Smart contract wallets offer a better user experience and improved security. Smart contract wallets are expected to be the approach for normalising and onboarding vast amounts of users from Web2 into Web3.
 
 {% hint style="info" %}
-For hands on experience with account abstraction and Thor Solo see our [account-abstraction.md](../../start-building/tutorials/account-abstraction.md "mention") guide.
+For hands on experience with account abstraction and Thor Solo see our [account-abstraction.md](../../start-building/account-abstraction.md "mention") guide.
 {% endhint %}
 
 ## Introduction

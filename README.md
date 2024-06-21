@@ -41,7 +41,7 @@ Some core blockchain concepts with specific details and information relating to 
 
 A collection of tutorials and guides to get your started building on the VeChainThor blockchain.
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Tutorials</td><td><a href="start-building/tutorials/">tutorials</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Tutorials</td><td><a href="start-building/">start-building</a></td></tr></tbody></table>
 
 ## Developer Resources
 
