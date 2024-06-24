@@ -1,4 +1,4 @@
-# VeChain & Remix
+# Remix
 
 [Remix](https://remix-project.org/) is a comprehensive, web-based integrated development environment (IDE) for smart contract creation and deployment. It caters to developers of all skill levels, serving as both a powerful toolset for the entire contract development lifecycle and an educational platform for learning and experimenting with Ethereum-based technologies.
 
