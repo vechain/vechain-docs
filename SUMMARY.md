@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to VeChain - blockchain for our better world](README.md)
+* [Welcome to VeChain](README.md)
 * [Blockchain: A crash course](blockchain-a-crash-course/README.md)
   * [Introduction to blockchain](blockchain-a-crash-course/introduction-to-blockchain.md)
   * [Introduction to digital property](blockchain-a-crash-course/introduction-to-digital-property.md)
@@ -116,7 +116,6 @@
   * [How to verify Address-Ownership](start-building/how-to-verify-address-ownership/README.md)
     * [Next.js Session Verification](start-building/how-to-verify-address-ownership/next.js-session-verification.md)
   * [Debug Reverted Transactions](start-building/debug-reverted-transactions.md)
-  * [Useful tips for building a dApp by using Connex](start-building/useful-tips-for-building-a-dapp-by-using-connex.md)
   * [Account Abstraction](start-building/account-abstraction.md)
   * [How to connect the Sync2 wallet to a Thor Solo Node](start-building/how-to-connect-the-sync2-wallet-to-a-thor-solo-node.md)
   * [VIP-191: Designated Gas Payer](start-building/vip-191-designated-gas-payer/README.md)

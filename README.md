@@ -13,7 +13,7 @@ layout:
     visible: false
 ---
 
-# Welcome to VeChain - blockchain for our better world
+# Welcome to VeChain
 
 ## Begin your journey with vechain
 
