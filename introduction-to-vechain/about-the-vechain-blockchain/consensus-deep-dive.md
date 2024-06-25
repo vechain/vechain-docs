@@ -4,17 +4,15 @@ description: A deeper dive into our PoA consensus mechanism.
 
 # Consensus Deep Dive
 
-## Proof of Authorithy (PoA)
+## Proof of Authority (PoA)
 
-One of the biggest decisions when designing a public blockchain network is about designing the consensus algorithm. The protocol not only dictates how blockchain participants agree on how the blockchain grows but embodies the governance model imposed upon the network.
-
-Recall that the underlying design philosophy of our governance model is that:
+Designing a consensus algorithm for a public blockchain network is a critical decision that influences how participants agree on the blockchain's growth and embodies the governance model of the network. VeChainThor implements the PoA consensus algorithm, aligning with our governance philosophy:
 
 > _"neither a total centralization nor a total decentralization would be the correct answer, but a compromise from and balance of both would_."
 
 VeChainThor implements the PoA consensus algorithm which suits our governance model which states that there would not be anonymous block producer, but a fixed number of known validators (Authority Masternodes) authorized by the steering committee of the VeChain Foundation.
 
-> “It takes twenty years to build a reputation and five minutes to ruin it. If you think about that, you’ll do things differently.” – Warren Buffet
+> “It takes twenty years to build a reputation and five minutes to ruin it. If you think about that, you’ll do things differently.” – Warren Buffett
 
 To be an Authority Masternode (AM), the individual or entity voluntarily discloses who they are, identity and reputation by extension, to the VeChain Foundation in exchange for the right to validate and produce blocks. Their identity, reputation and financial investment is placed at stake and this acts as an incentive for the AMs to behave correctly and keep the network secure. In VeChainThor, each AM has to go through a strict know-your-customer (KYC) procedure and satisfy the minimum requirements set by the VeChain Foundation.
 

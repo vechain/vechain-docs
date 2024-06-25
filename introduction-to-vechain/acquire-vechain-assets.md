@@ -1,14 +1,14 @@
 ---
-description: A guideline on how to purchase VeChain assets.
+description: A comprehensive guide to acquiring VeChain assets.
 ---
 
-# Acquire VeChain Assets
+# Acquiring VeChain Assets
 
-## How do I buy VET & VTHO?
+## HHow to Purchase VET & VTHO
 
 ### Centralized Exchange
 
-VeChain's tokens are available to purchase on multiple notable centralised exchanges including Coinbase, Binance and Crypto.com. A centralised exchange acts as an intermediary between buyers and sellers. Each centralized exchange has its own sign up process but generally, in order to purchase VET/VTHO a user will:
+VeChain tokens (VET & VTHO) are available on several prominent centralized exchanges, including Coinbase, Binance, and Crypto.com. These exchanges act as intermediaries between buyers and sellers. To purchase VET/VTHO on a CEX:
 
 * Create an account.
 * Complete the KYC process.
@@ -34,14 +34,32 @@ Another way to purchase the VET token is to use a virtual currency platform such
 * Provide debit or credit card details.
 * Place your order.
 
-## Should I withdraw my VET & VTHO from a CEX?
+## The Importance of Self-Custody
 
-There is a well-known saying within the blockchain industry that was popularized by Andreas Antonopoulos: "Not your keys, not your bitcoin". Although Andreas referenced bitcoin, this saying is true for any cryptocurrency.
+A popular adage in the blockchain industry, coined by Andreas Antonopoulos, states: "Not your keys, not your coins." This principle applies to all cryptocurrencies, including VeChain assets.
 
-What does he mean by the saying? Essentially, as long as you do not own and manage the private keys that control your crytocurrency, you are exposed to counterparty risk. By entrusting a third party to manage your cryptocurrency, a centralized exchange, you trust they will secure your cryptocurrency effectively while also act in good faith and not using your cryptocurrency for their own gain.
+### Why Self-Custody Matters
+
+When you store your assets on a centralized exchange, you're exposed to counterparty risk. By entrusting a third party with your cryptocurrency, you're relying on their security measures and ethical practices. Self-custody, where you control your private keys, eliminates these risks.
+
+Benefits of self-custody:
+* Full control over your assets
+* Reduced risk of exchange hacks or insolvency
+* Privacy and anonymity
+* Independence from third-party policies
 
 {% hint style="danger" %}
-VeChain nor any of it's affliates will ever request you to share your private key.\
+VeChain and its affiliates will never ask for your private key.\
 \
-Never share your private key, this will most likely result in a loss of assets.
+Never share your private key with anyone; doing so will likely result in loss of assets.
 {% endhint %}
+
+## Steps to Secure Your VeChain Assets
+
+* Choose a reputable VeChain-compatible wallet (hardware or software)
+* Set up your wallet following the provider's instructions
+* Transfer your VET and VTHO from the exchange to your personal wallet
+* Safely store your recovery phrase and private keys
+* Regularly update your wallet software and follow the best security practices
+
+By following these guidelines, you can securely acquire and manage your VeChain assets, minimizing risks and maximizing control over your investments in the VeChain ecosystem.
