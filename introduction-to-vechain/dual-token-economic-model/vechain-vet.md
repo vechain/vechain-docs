@@ -4,11 +4,11 @@ description: Understanding VeChain's utility token, VET
 
 # VeChain Token (VET)
 
-| VET Characteristics          | Details              |
-| ---------------------------- | -------------------- |
-| Type                         | Native Coin          |
-| Precision                    | 18 decimal places    |
-| Total supply                 | 86,712,634,466       |
+| VET Characteristics | Details           |
+|---------------------|-------------------|
+| Type                | Native Coin       |
+| Precision           | 18 decimal places |
+| Total supply        | 86,712,634,466    |
 
 ## Native Coin: The Backbone of VeChainThor
 

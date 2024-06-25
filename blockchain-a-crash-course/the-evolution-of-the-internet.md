@@ -1,5 +1,5 @@
 ---
-description: The evolution from Web1 to Web3: A paradigm shift in internet technology.
+description: The evolution from Web1 to Web3, a paradigm shift in internet technology.
 ---
 
 # The evolution of the internet
@@ -7,7 +7,7 @@ description: The evolution from Web1 to Web3: A paradigm shift in internet techn
 ## Journey of the Web
 
 | Web 1.0                                               | Web 2.0                             | Web 3.0                                       |
-| ----------------------------------------------------- | ----------------------------------- | --------------------------------------------- |
+|-------------------------------------------------------|-------------------------------------|-----------------------------------------------|
 | Read only sites - connecting people with information. | Read and write - connecting people. | Read, write and own - empowering people.      |
 | Static websites                                       | Web applications introduced         | Decentralised applications (dApps) introduced |
 | No user - server interaction.                         | Cloud computing                     | Blockchain architecture integrated.           |
@@ -29,7 +29,7 @@ Web3 represents the emerging internet generation, built on decentralized, peer-t
 
 Web3 promises a more decentralized, democratic, and transparent internet:
 
-* **Decentralization**: The most signification benefit of Web3 is that it is decentalized, meaning that there is no central authority or control over the network. This makes it more resistant to censorship, hacking and other forms of attacks, which is particularly important for protecting user data and privacy.
+* **Decentralization**: The most signification benefit of Web3 is that it is decentralized, meaning that there is no central authority or control over the network. This makes it more resistant to censorship, hacking and other forms of attacks, which is particularly important for protecting user data and privacy.
 * **Trust and Transparency**: Web3 relies on blockchain technology and smart contracts, which are transparent and tamper-proof. This means that users can trust the data and information from the network, without having to rely on intermediaries or third-party authorities.
 * **Interoperability**: Web3 is designed to be interoperable, meaning that different blockchain networks can communicate and interact with each other. This allows for the creation of dApps that can leverage the capabilities of multiple blockchains.
 * **Ownership and Control**: With Web3, users have greater ownership and control over their data and digital assets. This is because the decentralized architecture of the network eliminates the need for intermediaries, which often retain control and ownership over user data and assets in traditional Web2 applications.

@@ -28,7 +28,7 @@ For a deeper understanding of our sustainability vision, please refer to our [Wh
 
 Blockchain technology has the potential to contribute significantly to the sustainability revolution in several ways:
 
-* **Collective Governance & Decision Making**: Blockchain enables inclusive and transparent decision-making through decentralized autonomous organizations (DAOs). Instead of top down decisions, blockchains can offer more equitable decisions to questions that impact us all.
+* **Collective Governance & Decision-Making**: Blockchain enables inclusive and transparent decision-making through decentralized autonomous organizations (DAOs). Instead of top down decisions, blockchains can offer more equitable decisions to questions that impact us all.
 * **Tokenisation & Incentivization**: Blockchain allows for digital tokens representing assets like carbon credits, encouraging sustainable practices. The ability to configure financial incentives, big and small, will accelerate compliance by rewarding stakeholders.
 * **Transparency & Accountability**: Blockchain's transparent and immutable nature allows for the creation of a tamper-proof and an auditable record of transactions and data. Ensuring communities and societies can guarantee all actors and stakeholders are contributing.
 * **Traceability**: Blockchain enables end-to-end traceability, verifying the origin and sustainability of goods, combating issues like illegal logging and human rights abuses.

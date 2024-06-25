@@ -60,6 +60,6 @@ Never share your private key with anyone; doing so will likely result in loss of
 * Set up your wallet following the provider's instructions
 * Transfer your VET and VTHO from the exchange to your personal wallet
 * Safely store your recovery phrase and private keys
-* Regularly update your wallet software and follow best security practices
+* Regularly update your wallet software and follow the best security practices
 
 By following these guidelines, you can securely acquire and manage your VeChain assets, minimizing risks and maximizing control over your investments in the VeChain ecosystem.

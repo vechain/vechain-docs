@@ -27,7 +27,7 @@ The VeChainThor blockchain is engineered for mass adoption, offering several key
 
 * **Scalability**: Innovative transaction model supporting asynchronous operations and transaction lifecycle dependencies.
 * **Cost Predictability**: Unique dual-token model ensures stable transaction fees during high-demand periods.
-* **Sustainable Consensus: Proof of Authority (PoA) mechanism provides security and scalability with a minimal carbon footprint.
+* **Sustainable Consensus**: Proof of Authority (PoA) mechanism provides security and scalability with a minimal carbon footprint.
 * **Fee Delegation**: Enables sponsor accounts to cover transaction fees, lowering barriers to entry for new users.
 * **Robust Security**: Zero reported hacks of the PoA consensus mechanism since inception.
 * **High Reliability**: Uninterrupted operation since the genesis block in 2018.

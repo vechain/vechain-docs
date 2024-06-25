@@ -10,7 +10,7 @@ VeChainThor is the layer 1 blockchain which powers the VeChain ecosystem. VeChai
 
 Since it went live, the time when the genesis block was mined, in June 2018, the blockchain has been 100% online with zero downtime. VeChainThor is an extremely fast and efficient blockchain, producing blocks, on average, every 10 seconds and all the while only consuming a fraction of the energy other blockchains require to complete the same task. In fact, VeChain’s energy consumption is equal to just 0.04% of other blockchains.
 
-The VeChainThor blockchain is not built from scratch. It expands upon some of the essential building blocks of the Ethereum blockchain and provides innovative technical solutions that are powered by our novel governance and economic models, which, we believe, will push forward broader blockchain adoption and the creation of new business ecosystems with more efficiency and trust. VeChainThor is packed with technical features that are tailor made to meet the needs of individuals and enterprises.
+The VeChainThor blockchain is not built from scratch. It expands upon some of the essential building blocks of the Ethereum blockchain and provides innovative technical solutions that are powered by our novel governance and economic models, which, we believe, will push forward broader blockchain adoption and the creation of new business ecosystems with more efficiency and trust. VeChainThor is packed with technical features that are tailor-made to meet the needs of individuals and enterprises.
 
 ## VeChainThor's Consensus Mechanism: Proof of Authority (PoA)
 

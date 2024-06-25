@@ -14,7 +14,7 @@ VeChain leverages on-chain governance to enable stakeholders, or its governing b
 
 VeChain's on-chain governance process consists of three phases:
 
-* **Decision Making:** First phase where decisions on executing certain on-chain actions are made. Decisions are obtained through voting. Voting can be conducted either on-chain via a voting contract or off-chain within the governing body.
+* **Decision-Making:** First phase where decisions on executing certain on-chain actions are made. Decisions are obtained through voting. Voting can be conducted either on-chain via a voting contract or off-chain within the governing body.
 * **Authorization:** Second phase where a voted on-chain action is proposed to the governing body for final approval. Each proposal has to be approved by a majority of the members of the governing body.
 * **Execution:** Final phase of on-chain governance. Once a proposal has been approved by the required majority, anyone can trigger the execution of the on-chain action defined in the proposal.
 
