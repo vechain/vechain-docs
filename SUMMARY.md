@@ -184,7 +184,7 @@
       * [API Specification](developer-resources/sdks-and-providers/connex/api-specification.md)
   * [Frameworks & IDEs](developer-resources/frameworks-and-ides/README.md)
     * [Hardhat](developer-resources/frameworks-and-ides/hardhat/README.md)
-      * [Hardhat Sample Project (Ethers)](developer-resources/frameworks-and-ides/hardhat/hardhat.md)
+      * [Hardhat](developer-resources/frameworks-and-ides/hardhat/hardhat.md)
     * [Remix](developer-resources/frameworks-and-ides/remix/README.md)
       * [Remix](developer-resources/frameworks-and-ides/remix/remix.md)
   * [Built-in Contracts](developer-resources/built-in-contracts.md)
