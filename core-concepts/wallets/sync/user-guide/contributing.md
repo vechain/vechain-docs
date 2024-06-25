@@ -2,7 +2,7 @@
 
 ## Contributing <a href="#contributing" id="contributing"></a>
 
-Thanks you so much for considering to help out with the documentation! We welcome contributions from anyone on the internet, and are grateful for even the smallest of improvement!
+Thank you so much for considering to help out with the documentation! We welcome contributions from anyone on the internet, and are grateful for even the smallest of improvement!
 
 Please fork, fix, commit and send a pull request for the maintainers to review and merge into the main code base.
 
@@ -14,7 +14,7 @@ When you "Fork" the project, GitHub will make a copy of the project that is enti
 
 Please check the following:
 
-* Code must be adhere to the official Go Formatting guidelines.
+* Code must adhere to the official Go Formatting guidelines.
 * Get the branch up to date, by merging in any recent changes from the master branch.
 
 ### Making the pull request <a href="#making-the-pull-request" id="making-the-pull-request"></a>

@@ -14,7 +14,7 @@ Sync releases updates from time to time. Install the update version for feature,
 
 1. At top right, click <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAALtJREFUaN7t1jEKwkAURdGrdlrFZcT1mN3YuAoXIVmIlY2QLVhZxUrQIlbBDARmGAbv6ZKB/P+KDA8kSf9skei7FdAA9fe5A1rgXkKACjgAm9H7J3AEHjGHLRMEaH4sD7AG9rGHpQhQB852JQQIeZcQoAuc3UoI0DL8sGM9cI49bJUgQA9cGG6jLfACrsCJyDeQJLvQ5PJ2oZwB7EK5A9iF5rALSYWzC00sbxfKGcAulDuAXWgOu5AkqWgfHD423xLS/bIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDEtMTRUMDI6NTc6MjQrMDA6MDAV2juNAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAxLTE0VDAyOjU3OjI0KzAwOjAwZIeDMQAAACh0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vdG1wL21hZ2ljay1VYjFzVjRNcm821ZwAAAAASUVORK5CYII=" alt="" data-size="line">
 2. Click **Settings**
-3. In **Auto Update** section, Click **CHECK** at the right side
+3. In **Auto Update** section, Click **CHECK** on the right side
 4. If there is a new released, it will automatically download the latest version
 5. When the download is completed , click **Quit and Install** to finish the update
 
@@ -27,7 +27,7 @@ Sync releases updates from time to time. Install the update version for feature,
 
 1. At top right, click <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAALtJREFUaN7t1jEKwkAURdGrdlrFZcT1mN3YuAoXIVmIlY2QLVhZxUrQIlbBDARmGAbv6ZKB/P+KDA8kSf9skei7FdAA9fe5A1rgXkKACjgAm9H7J3AEHjGHLRMEaH4sD7AG9rGHpQhQB852JQQIeZcQoAuc3UoI0DL8sGM9cI49bJUgQA9cGG6jLfACrsCJyDeQJLvQ5PJ2oZwB7EK5A9iF5rALSYWzC00sbxfKGcAulDuAXWgOu5AkqWgfHD423xLS/bIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDEtMTRUMDI6NTc6MjQrMDA6MDAV2juNAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAxLTE0VDAyOjU3OjI0KzAwOjAwZIeDMQAAACh0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vdG1wL21hZ2ljay1VYjFzVjRNcm821ZwAAAAASUVORK5CYII=" alt="" data-size="line">
 2. Click **Settings**
-3. In **Blockchain Explorer** section, Click **Drop-down list** at the right side.
+3. In **Blockchain Explorer** section, Click **Drop-down list** on the right side.
 4. Set **VeChain Explorer** / **Insight** as default
 
 ## Node Management <a href="#node-management" id="node-management"></a>

@@ -39,13 +39,13 @@
 
 1. **Ledger device: INS\_NOT\_SUPPORTED (0x6d00).**
    * Ensuring your device runs the latest firmware version.
-   * Reinstalling the apps on your device so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
+   * Reinstalling the apps on your device, so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
 2. **Ledger device: INCORRECT\_DATA (0x6a80).**
    * In VeChain App Setting ,set **Contract data** to **Yes**
    * In VeChain App Setting ,set **Multi-clause** to **Yes**
 3. **Sync: Unable to connect your device, please retry.**
    * Close other applications (Ledger apps, crypto wallets, Geth, Parity, Mist, Bitcoin Core, etc).
-   * Turn OFF VPN and anti-virus temporarily. If that works, make sure to whitelist Sync.
+   * Turn OFF VPN and antivirus temporarily. If that works, make sure to whitelist Sync.
    * Change the USB cable if possible. Try removing any dongles or docks you're using.
    * Try different USB ports.
    * Restart your computer.

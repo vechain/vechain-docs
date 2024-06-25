@@ -24,7 +24,7 @@ TBAs allow ERC-721 and ERC-1155 tokens to have their own smart contract account 
 
 * **Identity**: Individuals can utilise a TBA enabled NFT as their on-chain identity.
 * **Metaverse**: By utilising a TBA enabled NFT as their on-chain identity the user can enter and interact in the metaverse as their NFT avatar.
-* **Membership / DAO Management**: Soul bound tokens, rewards or proof of participation (PoP) tokens are sent to the decentalized autonomous organization (DAO) TBA NFT instead of a user account.
+* **Membership / DAO Management**: Soul bound tokens, rewards or proof of participation (PoP) tokens are sent to the decentralized autonomous organization (DAO) TBA NFT instead of a user account.
 * **Composability**: A TBA can be an inventory system holding different types of digital assets. For example, you could equip an NFT with different clothing or accessories which could provide your NFT with different abilities.
 * **Gaming**: Your TBA enabled NFT holds your in game assets. You can customise your NFT with different gear or equipment giving it different capabilities or abilities.
 

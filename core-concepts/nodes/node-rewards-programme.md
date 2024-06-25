@@ -39,7 +39,7 @@ The VeChainThor X-Node bonus pool size is 5bln VET. This allocated VET is locked
 
 ### X-Node Bonus VTHO Reward Claiming
 
-An X-Node owner can claim their bonus VTHO reward at any time by claiming from the smart contract. VTHO bonus reward claims are disbursed hourly through multi-task transfers (MTT). Claiming rewards costs 40 VTHO from the claimed reward to cover transfer costs. VTHO claims are processed and credited within an hour. If you were an X-Node holder who disposed of the node, you still have the option to claim any unclaimed VTHO. The calculation for VTHO staking rewards is available [here](https://vechainstats.com/vtho-calculator/).
+An X-Node owner can claim their bonus VTHO reward at any time by claiming from the smart contract. VTHO bonus reward claims are disbursed hourly through multitask transfers (MTT). Claiming rewards costs 40 VTHO from the claimed reward to cover transfer costs. VTHO claims are processed and credited within an hour. If you were an X-Node holder who disposed of the node, you still have the option to claim any unclaimed VTHO. The calculation for VTHO staking rewards is available [here](https://vechainstats.com/vtho-calculator/).
 
 ### Node Upgrades and Downgrades
 

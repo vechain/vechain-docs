@@ -30,7 +30,7 @@ Need some testnet funds, use our faucet, [https://faucet.vecha.in](https://fauce
 If you have testnet VET and need to convert some to testnet VTHO use [https://energy.outofgas.io/#/](https://energy.outofgas.io/#/)
 {% endhint %}
 
-**Community support:** A key to a blockchain network functioning lies in incentivisation. Stakeholders, miners or nodes, support consensus and get rewarded for their time. Although the rewards paid to these stakeholders in the testnet should mirror mainnet, the rewards are worthless in a finacial sense. Therefore, often the community support the maintenance of the testnet without directly receiving a reward. In the long run, the usability of a blockchain depends on having a well maintained testnet for builders.
+**Community support:** A key to a blockchain network functioning lies in incentivisation. Stakeholders, miners or nodes, support consensus and get rewarded for their time. Although the rewards paid to these stakeholders in the testnet should mirror mainnet, the rewards are worthless in a financial sense. Therefore, often the community support the maintenance of the testnet without directly receiving a reward. In the long run, the usability of a blockchain depends on having a well maintained testnet for builders.
 
 ## What can't I validate on testnet?
 

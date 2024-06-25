@@ -29,7 +29,7 @@ You can visit [Faucet](https://faucet.vecha.in/)
 ### **Main Processor(ONLY Available in Dev Mode)**
 
 1. Move your cursor to tab area
-2. Right click the mouse
+2. Right-click the mouse
 3. Click "**Inspect Element**"
 
 ### **Web Content**

@@ -6,7 +6,7 @@ description: An essential tool which enhances the readability of the blockchain.
 
 ## What is a block explorer?
 
-A block explorer is an online tool that enables you to search for real-time and historical information about a blockchain, including data related to blocks, transactions, addresses and more. It is commonplace for blockchian wallets to link to a reputable block explorer once a user transaction has been executed. This process provides a user with a second level of validation, where they can instantly validate the status of a transaction, executed from a wallet, on a trusted, independent tool.
+A block explorer is an online tool that enables you to search for real-time and historical information about a blockchain, including data related to blocks, transactions, addresses and more. It is commonplace for blockchain wallets to link to a reputable block explorer once a user transaction has been executed. This process provides a user with a second level of validation, where they can instantly validate the status of a transaction, executed from a wallet, on a trusted, independent tool.
 
 It's not uncommon to have multiple tools satisfying the same requirement in blockchain ecosystems. In fact, as explorers play such a critical role in making blockchain data accessible to everyone, having multiple tools is actually a good thing.
 
