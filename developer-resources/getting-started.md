@@ -26,7 +26,7 @@ Outline the functionality, user interface, and features of your dApp.
 
 Develop smart contracts using Solidity that define the logic of your dApp.
 
-Our [Remix plugin](frameworks-and-ides/remix/) and [Hardhat plugin](frameworks-and-ides/hardhat/) allow our VeChain community to use Remix and Hardhat when developing and deploying smart contracts on VeChain.
+Our [Remix plugin](frameworks-and-ides/remix/) and [Hardhat plugin](frameworks-and-ides/Hardhat/) allow our VeChain community to use Remix and Hardhat when developing and deploying smart contracts on VeChain.
 
 Use our [Built-in Contracts](built-in-contracts.md) to enhance your smart contract.
 
