@@ -35,14 +35,14 @@ npx hardhat
     solidity: {
         compilers: [
         {
-            version: '0.8.17', // Specify the first Solidity version
+            version: '0.8.20', // Specify the first Solidity version
             settings: {
                 // Additional compiler settings for this version
                 optimizer: {
                     enabled: true,
                     runs: 200
                 },
-                evmVersion: 'london' // EVM version (e.g., "byzantium", "constantinople", "petersburg", "istanbul", "berlin", "london")
+                evmVersion: 'paris' // EVM version (e.g., "byzantium", "constantinople", "petersburg", "istanbul", "berlin", "london")
             }
         },
         ]
@@ -69,6 +69,51 @@ npx hardhat
     } satisfies HttpNetworkConfig,
     }
     };
+    ```
+
+### Networks
+
+> VechainThor is currently up-to-date with the EVM's `paris` hard fork,
+> set [evmVersion](https://docs.soliditylang.org/en/latest/using-the-compiler.html#setting-the-evm-version-to-target)
+> to `paris` if you are using solidity compiler version `0.8.20` or above.
+
+ - VeChain mainnet:
+
+    ``` typescript
+    vechain_mainnet: {
+        // Mainnet
+        url: 'https://mainnet.vechain.org',
+        accounts: [
+            '7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158'
+        ],
+        debug: false,
+        delegator: undefined,
+        gas: 'auto',
+        gasPrice: 'auto',
+        gasMultiplier: 1,
+        timeout: 20000,
+        httpHeaders: {}
+    } satisfies HttpNetworkConfig
+    ```
+
+ - VeChain solo network:
+
+    ``` typescript
+    vechain_solo: {
+        // Thor solo network
+        url: 'http://localhost:8669',
+        accounts: [
+            '7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158'
+        ],
+        debug: false,
+        enableDelegation: false,
+        delegator: undefined,
+        gas: 'auto',
+        gasPrice: 'auto',
+        gasMultiplier: 1,
+        timeout: 20000,
+        httpHeaders: {}
+    } satisfies HttpNetworkConfig
     ```
 
 ## Example Usage
