@@ -1,25 +1,55 @@
 ---
-description: VeChain's utility token.
+description: Understanding VeChain's utility token, VET
 ---
 
-# VeChain (VET)
+# VeChain Token (VET)
 
-| VET          | Text              |
-| ------------ | ----------------- |
-| Type         | Native Coin       |
-| Precision    | 18 decimal places |
-| Total supply | 86,712,634,466    |
+| VET Characteristics          | Details              |
+| ---------------------------- | -------------------- |
+| Type                         | Native Coin          |
+| Precision                    | 18 decimal places    |
+| Total supply                 | 86,712,634,466       |
 
-## What is a Native Coin?
+## Native Coin: The Backbone of VeChainThor
 
-A native coin, in the context of a blockchain, refers to the primary cryptocurrency or digital asset that is native to a specific blockchain network. It is usually the fundamental unit of value and serves various purposes within the blockchain ecosystem.
+A native coin is the primary cryptocurrency inherent to a specific blockchain network. As VeChainThor's native coin, VET serves as the fundamental unit of value and plays multiple crucial roles within the ecosystem:
 
-Native coins are designed to be used within the specific blockchain network and are often used as a medium of exchange, store of value, or as a utility token to access and interact with the network's features and services.
+* **Medium of Exchange**: Facilitates value transfer within the network.
+* **Store of Value**: Acts as a digital asset that can appreciate or depreciate in value.
+* **Utility Token**: Enables access to various features and services on the VeChainThor blockchain.
+* **Governance Mechanism**: VET holders can participate in network governance decisions.
 
-## Why does VET have 18 decimal places?
+## VET's High Divisibility: 18 Decimal Places
 
-One of the differentiating factors between cryptocurrencies and fiat currencies is divisibility. VET can be broken down into multiple subunits, the smallest being 1 wei and there are 1,000,000,000,000,000,000 wei per VET. One of the main advantages of divisibility within VeChain, is that micropayments can be facilitated far easier than with traditional fiat currencies. Incentivization through micropayments, coupled with many other features, makes VeChain very suitable network to support the advancement of sustainability goals.
+VET's high divisibility, with 18 decimal places, offers several advantages:
 
-## What is a total supply and is it fixed?
+* **Micropayments**: Enables extremely small transactions, crucial for many blockchain applications.
+* **Precision**: Allows for exact value representation in various use cases.
+* **Scalability**: Supports a wide range of transaction sizes, from tiny micropayments to large transfers.
+* **Future-proofing**: Provides room for value appreciation without limiting usability.
 
-The total supply, or max supply, is the maximum amount of a cryptocurrency that will ever exist in the lifetime of the blockchain. It is analogous to the fully diluted shares in the stock market. When a cryptocurrency states a total supply, then that value should be fixed and should not change. A fixed, total supply enhances transparency and predictability thus providing clarity to users and investors, allowing them to assess the potential value and long-term viability of the cryptocurrency.
+The smallest unit of VET, similar to Bitcoin's satoshi, is called 'wei':
+1 VET = 1,000,000,000,000,000,000 wei (10^18 wei).
+
+This high divisibility makes VET particularly suitable for:
+
+* Internet of Things (IoT) applications
+* Micro-incentivization in sustainability initiatives
+* Precise value allocation in complex supply chain scenarios
+
+## Total Supply: Fixed at 86,712,634,466 VET
+
+The total supply of VET is fixed, meaning no new tokens will ever be created. This fixed supply model offers several benefits:
+
+* **Scarcity**: Creates a deflationary aspect to the token economics.
+* **Predictability**: Allows for more accurate long-term economic modeling.
+* **Transparency**: Provides clarity to users and investors about the token's distribution.
+* **Value Proposition**: Can potentially drive value appreciation as demand increases against a fixed supply.
+
+## Implications of a Fixed Supply
+
+* **Long-term Value**: As adoption grows, the fixed supply could lead to appreciation in VET's value.
+* **Economic Stability**: Prevents inflationary pressures that come with an ever-increasing supply.
+* **Trust**: Builds confidence among users and investors due to the predictable token economics.
+
+By combining high divisibility with a fixed total supply, VET is designed to serve as a versatile and sustainable utility token within the VeChainThor ecosystem. This design supports a wide range of applications, from microtransactions in IoT devices to large-scale enterprise solutions, while maintaining a stable and predictable economic model.

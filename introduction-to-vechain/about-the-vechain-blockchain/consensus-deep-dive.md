@@ -6,9 +6,7 @@ description: A deeper dive into our PoA consensus mechanism.
 
 ## Proof of Authorithy (PoA)
 
-One of the biggest decisions when designing a public blockchain network is about designing the consensus algorithm. The protocol not only dictates how blockchain participants agree on how the blockchain grows but embodies the governance model imposed upon the network.
-
-Recall that the underlying design philosophy of our governance model is that:
+Designing a consensus algorithm for a public blockchain network is a critical decision that influences how participants agree on the blockchain's growth and embodies the governance model of the network. VeChainThor implements the PoA consensus algorithm, aligning with our governance philosophy:
 
 > _"neither a total centralization nor a total decentralization would be the correct answer, but a compromise from and balance of both would_."
 
