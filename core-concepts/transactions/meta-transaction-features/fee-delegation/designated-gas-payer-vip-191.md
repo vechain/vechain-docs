@@ -16,7 +16,7 @@ See [here](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md) for the 
 
 The protocol requires that both the transaction sender and the fee delegation gas payer put their digital signatures in the transaction. In order for the fee delegation to be activated the sender needs to opt into using VIP-191. Once the transaction is accepted and executed, the transaction fee will be deducted from the gas payer's VTHO balance.
 
-Before we continue let's define some entities and terminology that that we will use as we continue our journey of understanding the VIP-191 standard:
+Before we continue let's define some entities and terminology that we will use as we continue our journey of understanding the VIP-191 standard:
 
 * client - account that signs the transaction;
 * gas payer - account that acts as the gas payer of the transaction fee;
@@ -24,9 +24,9 @@ Before we continue let's define some entities and terminology that that we will 
 
 <figure><img src="../../../../.gitbook/assets/vip191.png" alt=""><figcaption><p>VIP-191 fee delegation flow.</p></figcaption></figure>
 
-The above figure shows the decision-making flow within VIP-191. When it comes to the question of who pays for the transaction fees, first the client will send an unsigned transaction to the gas payer which will determine if the client is permitted to avail of the gas payer's VTHO sponsorship. Gas payer's are configurable to ensure that a gas payer's services are only used for their intended fee delegation purpose, see the [VIP-191 standard](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md#example-usage) for further implementation detail. If the client's transaction meets the gas payer's criteria the gas payer will return a signature to the client who will then add the gas payer's signature and the client's signature to the transaction. The transaction will be submitted to the blockchain and the transaction fee will be paid by the gas payer.
+The above figure shows the decision-making flow within VIP-191. When it comes to the question of who pays for the transaction fees, first the client will send an unsigned transaction to the gas payer which will determine if the client is permitted to avail of the gas payer's VTHO sponsorship. Gas payers are configurable to ensure that a gas payer's services are only used for their intended fee delegation purpose, see the [VIP-191 standard](https://github.com/vechain/VIPs/blob/master/vips/VIP-191.md#example-usage) for further implementation detail. If the client's transaction meets the gas payer's criteria the gas payer will return a signature to the client who will then add the gas payer's signature and the client's signature to the transaction. The transaction will be submitted to the blockchain and the transaction fee will be paid by the gas payer.
 
-As an example, let's assume there is a marketplace which has enabled VIP-191 and a user is making a purchase. The route of who is going to pay the transaction fee is such. If the user is on the list of user accounts who's fees can be delegated through the marketplace VIP-191 gas payer and the marketplace gas payer has a sufficient VTHO balance and is online the transaction fee will be paid by the gas payer. Otherwise, if the gas payer is offline or the gas payer has insufficient VTHO balance the transaction will fail.
+As an example, let's assume there is a marketplace which has enabled VIP-191 and a user is making a purchase. The route of who is going to pay the transaction fee is such. If the user is on the list of user accounts whose fees can be delegated through the marketplace VIP-191 gas payer and the marketplace gas payer has a sufficient VTHO balance and is online the transaction fee will be paid by the gas payer. Otherwise, if the gas payer is offline or the gas payer has insufficient VTHO balance the transaction will fail.
 
 ### Transaction Model Extension <a href="#tx-model-extension" id="tx-model-extension"></a>
 

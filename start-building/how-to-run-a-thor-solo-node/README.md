@@ -41,7 +41,7 @@ Thor supports multiple command-line options which you can see by running:
 
 The most important ones for us are the following:
 
-* `--api-cors '*'` comma separated list of domains to accept cross origin requests to API
+* `--api-cors '*'` comma separated list of domains to accept cross-origin requests to API
 * `--api-addr value` API service listening address (default: "localhost:8669")
 * `--api-call-gas-limit value` limit contract call gas (default: 50000000)
 * `--api-backtrace-limit value` limit the distance between 'position' and best block for subscriptions APIs (default: 1000)
@@ -138,5 +138,5 @@ This will launch a solo node with the following configuration:
 
 * On a localhost using port 8669
 * Using the latest release of thor solo
-* Accepting all cross origin requests
+* Accepting all cross-origin requests
 * Allowing all remote connections

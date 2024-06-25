@@ -15,18 +15,18 @@ A blockchain wallet consists of two primary components: a public address and a p
 On the other hand, the private key is a secret cryptographic code that grants ownership and access to the funds stored in the wallet. A private key is like the pin to your credit card, it should be kept secure and never shared with anyone, as it enables control over the associated cryptocurrency assets.
 
 {% hint style="danger" %}
-VeChain nor any of it's affliates will ever request you to share your private key.\
+VeChain nor any of its affiliates will ever request you to share your private key.\
 \
 Never share your private key, this will most likely result in a loss of assets.
 {% endhint %}
 
 ### What are the different types of wallets and what are their use cases?
 
-Wallets come in an wide variety of different implementations so it's important to research and choose a reputable wallet provider that aligns with your security preferences and cryptocurrency needs. Generally, a user makes a tradeoff between security and convenience when choosing a wallet.
+Wallets come in a wide variety of different implementations, so it's important to research and choose a reputable wallet provider that aligns with your security preferences and cryptocurrency needs. Generally, a user makes a tradeoff between security and convenience when choosing a wallet.
 
 In fact, its good practice to have multiple wallets for different use cases. We do this in the real world when dealing with fiat money, we have a wallet with some cash, a credit account in a bank to easily withdraw from and a savings account, which requires more effort and time to access funds. The below table defines some of the configurations a wallet can come in.
 
-<table><thead><tr><th>Type</th><th width="326">Description</th><th width="139">Secure</th><th>Convienient</th></tr></thead><tbody><tr><td>Self-custody</td><td>Wallet provider doesn't manage PK.</td><td>High</td><td>Medium</td></tr><tr><td>Custodian</td><td>Manages PK for a user.</td><td>Low</td><td>High</td></tr><tr><td>Cold wallet</td><td>Wallet is not connected to the internet.</td><td>High</td><td>Low</td></tr><tr><td>Hot wallet</td><td>Wallet is connected to the internet.</td><td>Low</td><td>High</td></tr><tr><td>Web wallet</td><td>A wallet in a web browser.</td><td>Low</td><td>High</td></tr><tr><td>Software wallet</td><td>A downloadable application to use on laptop, phone or tablet.</td><td>Medium</td><td>Medium</td></tr><tr><td>Hardware wallet</td><td>A physical device designed to securely store PKs.</td><td>High</td><td>Low</td></tr><tr><td>Paper wallet</td><td>Printing a public address and PK on a physical piece of paper.</td><td>High</td><td>Low</td></tr></tbody></table>
+<table><thead><tr><th>Type</th><th width="326">Description</th><th width="139">Secure</th><th>Convenient</th></tr></thead><tbody><tr><td>Self-custody</td><td>Wallet provider doesn't manage PK.</td><td>High</td><td>Medium</td></tr><tr><td>Custodian</td><td>Manages PK for a user.</td><td>Low</td><td>High</td></tr><tr><td>Cold wallet</td><td>Wallet is not connected to the internet.</td><td>High</td><td>Low</td></tr><tr><td>Hot wallet</td><td>Wallet is connected to the internet.</td><td>Low</td><td>High</td></tr><tr><td>Web wallet</td><td>A wallet in a web browser.</td><td>Low</td><td>High</td></tr><tr><td>Software wallet</td><td>A downloadable application to use on laptop, phone or tablet.</td><td>Medium</td><td>Medium</td></tr><tr><td>Hardware wallet</td><td>A physical device designed to securely store PKs.</td><td>High</td><td>Low</td></tr><tr><td>Paper wallet</td><td>Printing a public address and PK on a physical piece of paper.</td><td>High</td><td>Low</td></tr></tbody></table>
 
 **\*PK:** Private Key
 
@@ -36,7 +36,7 @@ The above entries are not mutually exclusive, for example, VeChain's new VeWorld
 
 A seed phrase is private key encoded in a human-readable format which typically consists of 12 or 24 randomly chosen words from a predefined word list. The seed phrase is a backup mechanism that allows users to restore their wallet and access their funds by generating the private keys. These words are generated using cryptographic algorithms that ensure they are unique and provide sufficient entropy to secure the private keys.
 
-It is crucial to keep the seed phrase secure and confidential because anyone who possesses it can regenerate the private keys and gain access to the associated funds, irregardless of whether they are using the same wallet you currently use. It is recommended to store the seed phrase in a safe and offline location, such as writing it down on a piece of paper and keeping it in a secure place like a safe deposit box. Experts also advise storage in multiple locations, to protect yourself from a natural disaster destroying the paper the phrase is written on.
+It is crucial to keep the seed phrase secure and confidential because anyone who possesses it can regenerate the private keys and gain access to the associated funds, regardless of whether they are using the same wallet you currently use. It is recommended to store the seed phrase in a safe and offline location, such as writing it down on a piece of paper and keeping it in a secure place like a safe deposit box. Experts also advise storage in multiple locations, to protect yourself from a natural disaster destroying the paper the phrase is written on.
 
 {% hint style="danger" %}
 VeChain nor any of it's affliates will ever request you to share your seed phrase.\

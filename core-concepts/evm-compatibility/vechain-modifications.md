@@ -12,9 +12,9 @@ The purpose of this document is to explore and explain the main modifications im
 
 > Some quick notes;
 >
-> * VeChain is a modified hardfork of Ethereum
+> * VeChain is a modified hard fork of Ethereum
 > * EVM compatible, forked from 1.8 Constantinople
-> * Target Solidity complier is Istanbul
+> * Target Solidity compiler is Istanbul
 
 ## Two Token Design
 
@@ -132,7 +132,7 @@ Note that in the previous example we are using the default seed that is hard-cod
 
 ### Transaction Dependency <a href="#transaction-dependency" id="transaction-dependency"></a>
 
-[Transaction dependency](../transactions/meta-transaction-features/transaction-dependency.md) is a feature of VeChain that enables the ordering of transactions at the consensus level. To implement this feature, use the `DependsOn` field in the transaction structure which stores the id of the transaction that the current transaction depends on. Note that the `DependsOn` transaction has to be included in a block in order for our transaction to go through, which is what enforces the ordering of transactions. To use this feature using `web3-providers-connex` you have to construct the raw transaction manually and populate the `DependsOn` field. In the previous example this field was set to null but you can easily change it to the id of any transaction that is included in a block.
+[Transaction dependency](../transactions/meta-transaction-features/transaction-dependency.md) is a feature of VeChain that enables the ordering of transactions at the consensus level. To implement this feature, use the `DependsOn` field in the transaction structure which stores the id of the transaction that the current transaction depends on. Note that the `DependsOn` transaction has to be included in a block in order for our transaction to go through, which is what enforces the ordering of transactions. To use this feature using `web3-providers-connex` you have to construct the raw transaction manually and populate the `DependsOn` field. In the previous example this field was set to null, but you can easily change it to the id of any transaction that is included in a block.
 
 ### Transaction life-cycle Control
 
@@ -146,10 +146,10 @@ Another notable difference in design between VeChain and Ethereum is the use of 
 
 VeChain uses a hash approach to compute an unsigned transaction nonce which is determined by the transaction sender. Transaction uniqueness is achieved by defining the transaction nonce as a 64-bit unsigned integer that is determined by the transaction sender. Given a transaction, it computes two hashes, the hash of the recursive length prefix (RLP) encoded transaction data without the signature and the hash of the previously computed hash concatenated with the sender's account address. Whereas, Ethereum uses an incrementing nonce, which is determined by the number of transactions the account has sent so far.
 
-This minor difference has a big impact. The uniqueness of a transaction is completely dependent on its content and whether or not it will be processed by the network is purely determined by whether the transaction id has existed on-chain, rather than by the state status of the sender's account, it's nonce, as well as all the pending transactions from that account. This greatly simplifies the developers job for interacting with the blockchain and handling transaction failures.
+This minor difference has a big impact. The uniqueness of a transaction is completely dependent on its content and whether it will be processed by the network is purely determined by whether the transaction id has existed on-chain, rather than by the state status of the sender's account, it's nonce, as well as all the pending transactions from that account. This greatly simplifies the developers job for interacting with the blockchain and handling transaction failures.
 
 > Getting Started: VeChain Testnet
 >
-> * Get the latest VeChain brower based wallet, [VeWorld](https://www.veworld.net/).
+> * Get the latest VeChain browser based wallet, [VeWorld](https://www.veworld.net/).
 > * Get some testnet assets, `VET` and `VTHO`, through the [faucet](https://faucet.vecha.in/).
 > * Use the [energy station](https://energy.outofgas.io/#/) if you need to convert `VET` to `VTHO` or vice verse.

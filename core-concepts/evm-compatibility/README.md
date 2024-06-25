@@ -6,7 +6,7 @@ description: Ethereum virtual machine (EVM) compatibility with the VeChainThor b
 
 ## What is Ethereum?
 
-Ethereum was the first programmable blockchain. Ethereum programability is achieved through the Ethereum Virtual Machine (EVM). Before Ethereum the only use case for blockchain was the Bitcoin blockchain and the use of it's native asset bitcoin as a form of digital money. The creation of Ethereum and the introduction of programability extended the use case of blockchain technology beyond digital money into use cases such as decentralized financial services (DeFi), games, social networks, the creation of non-fungible tokens (NFTs) and other applications that respect your privacy and cannot censor you.
+Ethereum was the first programmable blockchain. Ethereum programability is achieved through the Ethereum Virtual Machine (EVM). Before Ethereum the only use case for blockchain was the Bitcoin blockchain and the use of its native asset bitcoin as a form of digital money. The creation of Ethereum and the introduction of programability extended the use case of blockchain technology beyond digital money into use cases such as decentralized financial services (DeFi), games, social networks, the creation of non-fungible tokens (NFTs) and other applications that respect your privacy and cannot censor you.
 
 ## What is the EVM?
 

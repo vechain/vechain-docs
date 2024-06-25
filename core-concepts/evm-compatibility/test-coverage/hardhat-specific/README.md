@@ -1,4 +1,4 @@
-# Harhat specific
+# Hardhat specific
 
 ## Description
 

@@ -25,7 +25,7 @@ The VeChainThor blockchain offers two protocols for implementing fee delegation,
 
 ## Multi-Party Payment (MPP) <a href="#multi-party-payment-prototype" id="multi-party-payment-prototype"></a>
 
-MPP is a native protocol on the VeChainThor blockchain. MPP enables the sender of a transaction to request that a sponsor or the receiver of the transaction pays the transaction fee on the senders behalf. MPP is a fee delegation approach which is implemented on the smart contract level. This means that data must be written on-chain, which comes at a cost. It is more cost effective to use the MPP protocol for frequent interactions between users and a decentralized application (dApp). An example of MPP implementation could be a marketplace or game which has opted to pay for all users transaction fees.
+MPP is a native protocol on the VeChainThor blockchain. MPP enables the sender of a transaction to request that a sponsor or the receiver of the transaction pays the transaction fee on the senders' behalf. MPP is a fee delegation approach which is implemented on the smart contract level. This means that data must be written on-chain, which comes at a cost. It is more cost-effective to use the MPP protocol for frequent interactions between users and a decentralized application (dApp). An example of MPP implementation could be a marketplace or game which has opted to pay for all users transaction fees.
 
 ## Designated Gas Payer (VIP-191) <a href="#designated-gas-payer-vip191" id="designated-gas-payer-vip191"></a>
 
@@ -39,7 +39,7 @@ The MPP implementation is at a smart contract level and thus comes with a cost. 
 
 VIP-191 is a more flexible fee delegation approach which moves the fee delegation feature from the smart contract to the transaction itself. A user when sending a transaction can provide a sponsor who will sponsor the transaction fee on the sender's behalf. However, VIP-191 requires that both the transaction sender and sponsor are both online for the transaction to be completed. This is not the case for MPP as it is implemented at a smart contract level.
 
-Both fee delegation protocols have their specific use cases and it is up to the developer to determine which fee delegation protocol best suits their needs. Please read the following articles and subsequent documents for deeper information on both fee delegation protocols.
+Both fee delegation protocols have their specific use cases, and it is up to the developer to determine which fee delegation protocol best suits their needs. Please read the following articles and subsequent documents for deeper information on both fee delegation protocols.
 
 {% hint style="info" %}
 Some useful articles to read on this subject include:

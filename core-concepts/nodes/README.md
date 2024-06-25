@@ -32,7 +32,7 @@ Both VeChain Economic and X-Node programs attempt to increase stability in the V
 
 ### Full Nodes
 
-Full nodes can be deployed by anybody by running an instance of the VeChainThor node software and they support the network in a few fundamental ways. Full nodes are configured to be interacted with and are constantly injecting new transactions into the network for AMs to build into blocks. Full nodes also enable people to query the VeChainThor blockchain and get the blockchain data from the chain to other systems to be processed. They also increase resiliency as they have a complete copy of the blockchain history stored.
+Full nodes can be deployed by anybody by running an instance of the VeChainThor node software, and they support the network in a few fundamental ways. Full nodes are configured to be interacted with and are constantly injecting new transactions into the network for AMs to build into blocks. Full nodes also enable people to query the VeChainThor blockchain and get the blockchain data from the chain to other systems to be processed. They also increase resiliency as they have a complete copy of the blockchain history stored.
 
 {% hint style="info" %}
 See a full list of the publicly available VeChainThor nodes in the Developer Resource article [nodes.md](../../developer-resources/nodes.md "mention")

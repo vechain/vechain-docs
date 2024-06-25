@@ -21,7 +21,7 @@ There are three colors show the network status :
 
 ### Connect to a Node <a href="#connect-to-a-node" id="connect-to-a-node"></a>
 
-1.  Click on the network ,at left of the address bar(it shown the network MAIN/TEST/SOLO/UNKNOWN)
+1.  Click on the network, at left of the address bar(it is shown the network MAIN/TEST/SOLO/UNKNOWN)
 
     <figure><img src="../../../../.gitbook/assets/address-bar.a15ff370.png" alt=""><figcaption></figcaption></figure>
 2. Select the node you would like to connect
@@ -56,4 +56,4 @@ At the top of the window, next to the last tab on the right, click <img src="dat
   1. Move-over your pointer to the shortcut which you want to edit
   2. Click the <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAAbJJREFUaN7tmLtOwzAYRg8UJGDjMvAGXRiYGbogIXFJQQXxCjwASDwGgom+ABNCgnKfmJlYEIiFsWJignaDIQFKSOw09W8HyWdpUyv2d2LXSX7weDwel/Rp2ieBGlAGhnKOsSEpMKAJvw2MSAbolX5FW81y+HlgD1hHvzK+Uc1A2WL4KrAYfZ8FBoED4KMXgfial1rLCx3hv6hEn1oJ1RKyxQPQSvi9AqzpTnYpMAeMA8/AborETFEFVoBVYFMjcVVEgSrhjkMUfguYiCR2gPeorQFc6jorKdqC2PGpgfDL/P3DDgPTwB3QBJ6AF+AiS4c2Z6BKuOMkEZ+J66yd2hJIuvJxxoCpbju2IaC68p0cAzdFEwjQX3mAE+A8zwCSAgGwlDH8Wd5BpASshJcSsBZeQsBqeFA/jUqFb2QMX48dJz4Nm5qBbsKbuKMbFXAW3pSAs/CmBJyFtyEgGl5aQDy8pICV8GDmPiBaedNRhKqEF/jXeAHXqHahNr/ro3Xc0UprUM3Ao8PAce7zCBzxUyVzyRtwmNZY0px4C4wS1mxMvvxkoU1YrdsHXi2P7fF4PBn5BOBNSNWfcrNDAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTEyLTI0VDA2OjAxOjIyKzAwOjAwSHk6jwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0xMi0yNFQwNjowMToyMiswMDowMDkkgjMAAAAodEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL3RtcC9tYWdpY2stNHh2N2pPdm+yGjEtAAAAAElFTkSuQmCC" alt="" data-size="line"> at top right
   3. Input the name which you would like to name the shortcut
-  4. Click **SAVE** to finished the editing.
+  4. Click **SAVE** to finish the editing.

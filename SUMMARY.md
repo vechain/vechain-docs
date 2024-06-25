@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to VeChain - blockchain for our better world](README.md)
+* [Welcome to VeChain](README.md)
 * [Blockchain: A crash course](blockchain-a-crash-course/README.md)
   * [Introduction to blockchain](blockchain-a-crash-course/introduction-to-blockchain.md)
   * [Introduction to digital property](blockchain-a-crash-course/introduction-to-digital-property.md)
@@ -65,9 +65,9 @@
     * [Test Coverage](core-concepts/evm-compatibility/test-coverage/README.md)
       * [Gas model](core-concepts/evm-compatibility/test-coverage/gas-model.md)
       * [Raw transaction](core-concepts/evm-compatibility/test-coverage/raw-transaction.md)
-      * [Harhat specific](core-concepts/evm-compatibility/test-coverage/harhat-specific/README.md)
-        * [Ganache failures](core-concepts/evm-compatibility/test-coverage/harhat-specific/ganache-failures.md)
-        * [evm\_increaseTime](core-concepts/evm-compatibility/test-coverage/harhat-specific/evm\_increasetime.md)
+      * [hardhat specific](core-concepts/evm-compatibility/test-coverage/hardhat-specific/README.md)
+        * [Ganache failures](core-concepts/evm-compatibility/test-coverage/hardhat-specific/ganache-failures.md)
+        * [evm\_increaseTime](core-concepts/evm-compatibility/test-coverage/hardhat-specific/evm\_increasetime.md)
       * [Failures in constructor](core-concepts/evm-compatibility/test-coverage/failures-in-constructor.md)
       * [eth\_sign](core-concepts/evm-compatibility/test-coverage/eth\_sign.md)
       * [Contract address prediction](core-concepts/evm-compatibility/test-coverage/contract-address-prediction.md)
