@@ -13,9 +13,9 @@ layout:
     visible: false
 ---
 
-# Welcome to VeChain - blockchain for our better world
+# Welcome to VeChain
 
-## Begin your journey with vechain
+## Begin your journey with VeChain
 
 <table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Blockchain Basics</td><td><a href="blockchain-a-crash-course/introduction-to-blockchain.md">introduction-to-blockchain.md</a></td></tr><tr><td align="center">VeChain Intro</td><td><a href="introduction-to-vechain/">introduction-to-vechain</a></td></tr><tr><td align="center">Core Concepts</td><td><a href="core-concepts/">core-concepts</a></td></tr><tr><td align="center">Start Building</td><td><a href="start-building/">start-building</a></td></tr><tr><td align="center">Developer Resources</td><td><a href="developer-resources/">developer-resources</a></td></tr><tr><td align="center">How to Contribute</td><td><a href="how-to-contribute.md">how-to-contribute.md</a></td></tr></tbody></table>
 

@@ -2,12 +2,12 @@
 
 ## Description
 
-These errors are justifiable as they occur due to VeChain and Ethereum having different gas models and the tests being designed with Ethereum's gas model in mind. When these transactions are performed on VeChain the maximum amount of gas set by the test is exceed, hence the failure. The tests are passable when the tests are modified to account for a higher maximum amount of gas.
+These errors are justifiable as they occur due to VeChain and Ethereum having different gas models and the tests being designed with Ethereum's gas model in mind. When these transactions are performed on VeChain the maximum amount of gas set by the test is exceeded, hence the failure. The tests are passable when the tests are modified to account for a higher maximum amount of gas.
 
 ## Contracts Affected
 
 | Contract Name                  |
-| ------------------------------ |
+|--------------------------------|
 | ERC165                         |
 | ERC165Storage                  |
 | AccessControl                  |
