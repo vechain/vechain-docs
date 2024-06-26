@@ -14,5 +14,5 @@ contract BadBeaconNotContract {
 ## Contracts Affected
 
 | Contract Name |
-| ------------- |
+|---------------|
 | BeaconProxy   |

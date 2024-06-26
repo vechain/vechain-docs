@@ -15,14 +15,14 @@ The implementation of account abstraction is work in progress. Hence, this mater
 Account abstraction enhances the functionality of existing smart contract wallets, which make blockchain accounts programmable. The name, account abstraction, refers to the logic of removing the signing of transactions from the account and abstracting it out. Smart contract wallets offer a better user experience and improved security. Smart contract wallets are expected to be the approach for normalising and onboarding vast amounts of users from Web2 into Web3.
 
 {% hint style="info" %}
-For hands on experience with account abstraction and Thor Solo see our [account-abstraction.md](../../start-building/tutorials/account-abstraction.md "mention") guide.
+For hands-on experience with account abstraction and Thor Solo see our [account-abstraction.md](../../start-building/account-abstraction.md "mention") guide.
 {% endhint %}
 
 ## Introduction
 
 Account abstraction is a new approach to make blockchain accounts programmable through smart contract wallets. To understand account abstraction we must first understand how users currently interact with a blockchain.
 
-Currently, all interactions on all blockchains, including vechain, are initiated through an externally owned account (EOA). EOAs are wallets owned by users and operated manually from outside the blockchain. They are controlled and managed through a public-private key pair. Whoever owns the private key owns the assets stored in the EOA. The most crucial part of an EOA is its seed phrase. The seed phrase is a set of random words, usually 24, that is generated when the EOA is being setup. This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature on a transaction proving to the blockchain that the user has initiated the transaction from their account. Examples of EOAs are Coinbase Wallet and MetaMask.
+Currently, all interactions on all blockchains, including VeChain, are initiated through an externally owned account (EOA). EOAs are wallets owned by users and operated manually from outside the blockchain. They are controlled and managed through a public-private key pair. Whoever owns the private key owns the assets stored in the EOA. The most crucial part of an EOA is its seed phrase. The seed phrase is a set of random words, usually 24, that is generated when the EOA is being setup. This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature on a transaction proving to the blockchain that the user has initiated the transaction from their account. Examples of EOAs are Coinbase Wallet and MetaMask.
 
 The EOA design is inflexible, lacks programmability, provides a poor user experience and makes the user vulnerable to attack through poor private key management. Account abstraction offers a solution to these restrictions.
 
@@ -54,7 +54,7 @@ Account abstraction introduces several new participants. These participants can 
 Account abstraction introduces several new smart contracts. These smart contracts and their roles are briefly described below:
 
 1. **EntryPoint Contract:** A singleton entry point smart contract that handles the verification and execution of bundles of UserOperations.
-2. **Account Factory Contract:** A non uniform smart contract that is used to create Account contracts on a given blockchain network.
+2. **Account Factory Contract:** A non-uniform smart contract that is used to create Account contracts on a given blockchain network.
 3. **Account Contract:** A smart contract that represents the user's account on a given blockchain network.
 4. **Paymaster Contract:** An optional contract that is deployed by individuals which facilitates the sponsorship of transaction fees.
 

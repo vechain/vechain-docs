@@ -9,17 +9,17 @@ Thor DevKit provides comprehensive support for handling transactions. Developers
 To break ti down:
 
 1. **Initializing a Transaction**: Developers can create a transaction by specifying the necessary details in the transaction body. This includes setting the chain tag, block reference, expiration, gas price coefficient, gas limit, and other relevant transaction parameters.
-2. **Adding Clauses**: Clauses are the individual actions that the transaction will perform on the VechainThor blockchain. Each clause contains information such as the recipient's address, the amount of VET to be transferred, and additional data, if required.
+2. **Adding Clauses**: Clauses are the individual actions that the transaction will perform on the VeChainThor blockchain. Each clause contains information such as the recipient's address, the amount of VET to be transferred, and additional data, if required.
 3. **Signing the Transaction**: After assembling the transaction body with the appropriate clauses, developers can sign the transaction using their private key. Signing the transaction ensures its authenticity and prevents tampering during transmission.
 
-While Thor DevKit is responsible for the offline part of transaction handling, it does **NOT** directly handle broadcasting the transaction to the VechainThor network.&#x20;
+While Thor DevKit is responsible for the offline part of transaction handling, it does **NOT** directly handle broadcasting the transaction to the VeChainThor network.
 
 For this purpose, developers have two options:
 
-* **Connex**: Connex is a JavaScript library provided by vechain that allows developers to interact with the VechainThor blockchain and broadcast transactions directly from the browser or a VechainThor decentralized application (dApp). It provides a convenient way to connect to the network and submit transactions online.
-* **REST API with a Thor Node**: Developers can also use the REST API provided by a Thor node to send signed transactions to the VechainThor blockchain. By sending the transaction data to a running Thor node's REST API, the transaction can be broadcast to the network and executed on the blockchain.
+* **Connex**: Connex is a JavaScript library provided by VeChain that allows developers to interact with the VeChainThor blockchain and broadcast transactions directly from the browser or a VeChainThor decentralized application (dApp). It provides a convenient way to connect to the network and submit transactions online.
+* **REST API with a Thor Node**: Developers can also use the REST API provided by a Thor node to send signed transactions to the VeChainThor blockchain. By sending the transaction data to a running Thor node's REST API, the transaction can be broadcast to the network and executed on the blockchain.
 
-By using Thor DevKit in combination with Connex or the Thor node's REST API, developers can perform both the offline and online parts of the transaction process, enabling them to create and execute secure and reliable transactions on the VechainThor blockchain.
+By using Thor DevKit in combination with Connex or the Thor node's REST API, developers can perform both the offline and online parts of the transaction process, enabling them to create and execute secure and reliable transactions on the VeChainThor blockchain.
 
 ```javascript
 import { Transaction, secp256k1, mnemonic } from 'thor-devkit'

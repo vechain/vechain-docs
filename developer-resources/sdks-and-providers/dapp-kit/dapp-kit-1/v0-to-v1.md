@@ -16,7 +16,7 @@ We cleaned and simplified the naming conventions.
 
 we changed the component name
 
-&#x20;`ConnectButtonWithModal` -> `WalletButton`
+`ConnectButtonWithModal` -> `WalletButton`
 
 ### Vanilla
 
@@ -26,7 +26,7 @@ we changed the component name
 
 ### Configuration
 
-these are the added configurations for the  DappKitUI.configure function:
+these are the added configurations for the DappKitUI.configure function:
 
 ```typescript
 // OPTIONAL: theme variables (check theme variables section)

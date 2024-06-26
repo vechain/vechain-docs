@@ -15,7 +15,7 @@ layout:
 
 # Usage
 
-In the subsequent sections, we will adopt a "Learn by Doing" approach to delve into the main functionalities of thor-devkit.js, a powerful library designed for interacting with the VechainThor blockchain. We believe that practical examples, supplemented with relevant theoretical explanations, will enable a more comprehensive grasp of the library's capabilities.
+In the subsequent sections, we will adopt a "Learn by Doing" approach to delve into the main functionalities of thor-devkit.js, a powerful library designed for interacting with the VeChainThor blockchain. We believe that practical examples, supplemented with relevant theoretical explanations, will enable a more comprehensive grasp of the library's capabilities.
 
 Each section will not only showcase code snippets but also incorporate essential theoretical notions to help you better comprehend the underlying concepts and principles. These theoretical explanations will lay the foundation for a deeper understanding of how thor-devkit.js operates and how it can be effectively utilised in real-world applications.
 

@@ -2,7 +2,7 @@
 
 ## Description
 
-`ERC1820` is a contract that is considered a special case since it requires a few modifications in order to work on Vechain. It is used by `ERC777` so failure in `ERC1820` inevitably results in failure in `ERC777` also. The changes required for `ERC1820` were the following:
+`ERC1820` is a contract that is considered a special case since it requires a few modifications in order to work on VeChain. It is used by `ERC777` so failure in `ERC1820` inevitably results in failure in `ERC777` also. The changes required for `ERC1820` were the following:
 
 1. Chain-tag
 2. Contract address passed in constructor
@@ -20,7 +20,7 @@ We generated the `ERC1820_REGISTRY_DEPLOY_TX` by using the following [test](http
 
 ### Contract address passed in constructor
 
-The last change that we needed to do is in `ERC777SenderRecipientMock.sol` and `ERC777.sol` respectively. In both cases we changed the line that instantiates `IERC1820Registry` by changing to the correct contract address.&#x20;
+The last change that we needed to do is in `ERC777SenderRecipientMock.sol` and `ERC777.sol` respectively. In both cases we changed the line that instantiates `IERC1820Registry` by changing to the correct contract address.
 
 ```javascript
 IERC1820Registry private _erc1820 = IERC1820Registry(0xb02A08775234755Be24Ba32dA95Cf4509CFcEe86);
@@ -35,7 +35,7 @@ With these changes one can deploy `ERC1820` on thor.
 ## Contracts Affected
 
 | Contract Name           |
-| ----------------------- |
+|-------------------------|
 | ERC777                  |
 | ERC777PresetFixedSupply |
 | ERC1820Implementer      |

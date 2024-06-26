@@ -1,9 +1,9 @@
 # Methodology
 
-OpenZeppelin smart contracts play a crucial role in the world of decentralized applications and blockchain development. To prove the OpenZeppelin smart contract compatibility with the VechainThor blockchain the OpenZeppelin tests were performed using the Hardhat development environment and a custom plugin specifically designed to connect to the VechainThor Node.&#x20;
+OpenZeppelin smart contracts play a crucial role in the world of decentralized applications and blockchain development. To prove the OpenZeppelin smart contract compatibility with the VeChainThor blockchain the OpenZeppelin tests were performed using the Hardhat development environment and a custom plugin specifically designed to connect to the VeChainThor Node.
 
 {% hint style="info" %}
-The provider's functionality currently being used can be found in&#x20;
+The provider's functionality currently being used can be found in
 
 [https://github.com/vechain/web3-providers-connex](https://github.com/vechain/web3-providers-connex)
 {% endhint %}

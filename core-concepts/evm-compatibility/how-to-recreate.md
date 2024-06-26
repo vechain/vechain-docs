@@ -8,7 +8,7 @@ description: >-
 
 ## Run a Thor Solo Node
 
-Use the tutorial [how-to-run-a-thor-solo-node](../../start-building/tutorials/how-to-run-a-thor-solo-node/ "mention") to start up a thor solo node.
+Use the tutorial [how-to-run-a-thor-solo-node](../../start-building/how-to-run-a-thor-solo-node/ "mention") to start up a thor solo node.
 
 ## Configure a Development Environment
 
@@ -19,7 +19,7 @@ git clone git@github.com:OpenZeppelin/openzeppelin-contracts.git
 cd openzeppelin-contracts
 ```
 
-### Install the required Vechain libraries
+### Install the required VeChain libraries
 
 ```bash
 npm install @vechain/hardhat-vechain@0.0.1 --save-exact
@@ -36,7 +36,7 @@ require("@vechain/hardhat-vechain");
 require("@vechain/hardhat-web3");
 ```
 
-Add the vechain network settings
+Add the VeChain network settings
 
 ```javascript
    vechain: {

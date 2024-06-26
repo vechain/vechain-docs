@@ -7,7 +7,7 @@
 There are two major types of signing contents:
 
 | Type        | Purpose                                       |
-| ----------- | --------------------------------------------- |
+|-------------|-----------------------------------------------|
 | Transaction | **Create** / **Transfer** / **Contract Call** |
 | Certificate | **Identification** / **Agreement**            |
 
@@ -22,7 +22,7 @@ Sync2 would not provide the list of your address unless you sign the certificate
 Sync allows users to choose your browser to interact with dApp. Therefore, It is a behaviour that the browser requesting Sync2 as a signature provider. Once Sync2 receives the signing content, please verify the below contents to continue the signing process.
 
 * **From**： It shows the requested dApp URL
-* **Type**: It show the requested type of singing (Transaction / Certificate )
+* **Type**: It shows the requested type of singing (Transaction / Certificate )
 * **Purpose**: If it's a singing request of the certificate, it indicates the purpose of Identification or Agreement
 * **Summary**: Description of transaction
 * **Network**: If there's no network appear, it means that the transaction is mainnet based. Otherwise, it will show the network identifier at the upper right
@@ -49,7 +49,7 @@ Sync will check several things before the user signing.
 2. Check if there is an error occur during the compute in VM (virtual machine).
 3. Check the content is valid
 
-If there's an error, you can see there is a warning box above the adjustment area. Pay attention to transaction details before signing. Note that errors may cause the transaction to revert, or may deduct your VTHO due to it costs the VM to computed the transaction. Secondly, it will ask your permission to continue to sign the transaction before the authenticator.
+If there's an error, you can see there is a warning box above the adjustment area. Pay attention to transaction details before signing. Note that errors may cause the transaction to revert, or may deduct your VTHO due to it costs the VM to compute the transaction. Secondly, it will ask your permission to continue to sign the transaction before the authenticator.
 
 #### **Change signer**
 
