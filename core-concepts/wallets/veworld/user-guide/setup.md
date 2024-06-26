@@ -23,13 +23,3 @@ For all Chromium-based Browsers, you can visit the [Chrome Web Store](https://ch
 {% endtab %}
 
 {% endtabs %}
-
-## Backup wallet <a href="#backup-wallet" id="backup-wallet"></a>
-
-Once the wallet is created, we recommend you backup it immediately.
-
-The mnemonic words store all the information needed at any point in time to recover your wallet.
-
-{% hint style="info" %}
-The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
-{% endhint %}

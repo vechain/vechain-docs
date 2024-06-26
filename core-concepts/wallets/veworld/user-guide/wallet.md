@@ -29,10 +29,14 @@ The process to create a wallet is similar, the following sections will cover the
 **Steps for a new wallet:**
 
 1. Tap the **Create new wallet** button
-2. Read and store your mnemonic
-3. Mark the checkbox that states you saved your mnemonic safely
-4. Pass the quiz with the 3 words from your mnemonic
 {% endtab %}
+
+
+{% hint style="warning" %}
+Once the wallet is created, we recommend you backup it immediately.
+The mnemonic words store all the information needed at any point in time to recover your wallet.
+The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
+{% endhint %}
 
 {% tab title="Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                                                                |
