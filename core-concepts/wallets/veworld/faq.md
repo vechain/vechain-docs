@@ -32,7 +32,7 @@ You can do this by selecting 'Send' on the home page, then selecting which token
 Always take extra care when sending tokens and ensure the address you're sending to is correct. Transactions on the blockchain are permanent and coins sent to the wrong address cannot be recovered.
 {% endhint %}
 
-## FantasHow can I add or remove tokens from my home page?
+## How can I add or remove tokens from my home page?
 On the mobile app, tap the pen icon next to "Your Tokens" on the homepage. Scroll through or search for tokens and tap the one you want to add. To remove tokens, simply tap them again.
 
 On the browser extension, go to the homepage and scroll down to "Manage Tokens." Click it, then use the search box to find or browse tokens. Click the token you want to add. To remove tokens, click the bin icon next to the token you want to delete.
