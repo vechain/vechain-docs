@@ -1,5 +1,19 @@
-# Setup
+---
+description: How to setup VeWorld
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
+# Setup
 
 ## Install the application <a href="#install" id="install"></a>
 

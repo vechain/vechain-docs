@@ -1,5 +1,19 @@
-# FAQ
+---
+description: FAQ on VeWorld
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
+# FAQ
 
 ## Can I buy tokens directly on VeWorld?
 While you can't buy directly on VeWorld, we do have third-party purchasing options integrated in the app. You can do this by selecting the Buy button on your home page. This will take you to another screen that will show you options for purchasing.
