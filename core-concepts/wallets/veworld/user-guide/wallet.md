@@ -31,13 +31,6 @@ The process to create a wallet is similar, the following sections will cover the
 1. Tap the **Create new wallet** button
 {% endtab %}
 
-
-{% hint style="warning" %}
-Once the wallet is created, we recommend you backup it immediately.
-The mnemonic words store all the information needed at any point in time to recover your wallet.
-The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
-{% endhint %}
-
 {% tab title="Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -53,6 +46,13 @@ The mnemonic must be stored in a secure place, preferably offline. The mnemonic 
 6. Click the **GO TO HOMEPAGE** button
 {% endtab %}
 {% endtabs %}
+
+{% hint style="warning" %}
+Once the wallet is created, we recommend you backup it immediately.
+The mnemonic words store all the information needed at any point in time to recover your wallet.
+The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
+{% endhint %}
+
 
 ## Import a wallet
 
