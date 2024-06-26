@@ -1,3 +1,0 @@
-# ACTIVITIES
-
-TODO
