@@ -31,7 +31,7 @@ The process to create a wallet is similar, the following sections will cover the
 1. Tap the **Create new wallet** button
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                      | Add a new one                                                                                                                                                                                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | <p>The first time you install the extension you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Select <strong>Manage Wallets</strong></li><li>Click the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
@@ -49,7 +49,9 @@ The process to create a wallet is similar, the following sections will cover the
 
 {% hint style="warning" %}
 Once the wallet is created, we recommend you backup it immediately.
+
 The mnemonic words store all the information needed at any point in time to recover your wallet.
+
 The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
 {% endhint %}
 
@@ -83,7 +85,7 @@ Steps for importing a local wallet from a **keystore file**:
 3. Paste the content of your saved keystore file and then tap **VERIFY** button
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
@@ -132,7 +134,7 @@ Steps for importing a Ledger wallet:
 6. Tap the **GO TO YOUR WALLET** button
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 | Fresh Start                                                                                                                                                                                                                                                                                                                                               | Add a new one                                                                                                                                                                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <p>The first time you install the app you should:</p><ol><li>Follow and complete or skip the <em>welcome wizard</em></li><li>Type your favorite password twice and then click the <strong>CONFIRM</strong> button</li><li>Protect your wallet by choosing your favorite method (FaceId, Fingerprint or password)</li><li>Follow the steps below</li></ol> | <p>If you already have a wallet on VeWorld, and you want to create a new one:</p><ol><li>From your dashboard tap the top-right 3-dots icon <img src="../../../../.gitbook/assets/veworld/more_vert.svg" alt=""></li><li>Tap the <strong>Add Wallet</strong> button</li><li>Follow the steps below</li></ol> |
@@ -160,7 +162,7 @@ Steps for importing an observable wallet:
 5. Paste the desired address, then tap **IMPORT** button
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 Not available yet on the Extension.
 {% endtab %}
 {% endtabs %}
@@ -180,7 +182,7 @@ Steps for exporting a local wallet:
 7. Read or copy to clipboard your mnemonic
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 Steps for exporting a local wallet:
 
 1. Click the bottom right icon ![](../../../../.gitbook/assets/veworld/settings.svg) to **Settings** page
@@ -228,7 +230,7 @@ Remove a wallet
 * Confirm by tapping the **Remove Wallet** button
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 Change the order of your wallets: not available on Extension.
 
 Rename a wallet

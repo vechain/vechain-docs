@@ -30,7 +30,7 @@ If you cannot access a marketplace, you can find the latest APK on [veworld.com]
 
 {% endtab %}
 
-{% tab title="Extension" %}
+{% tab title="Browser Extension" %}
 
 For all Chromium-based Browsers, you can visit the [Chrome Web Store](https://chromewebstore.google.com/detail/veworld/ffondjhiilhjpmfakjbejdgbemolaaho?utm_source=docs_vechain&utm_medium=website&utm_campaign=vechain_communication)
 
