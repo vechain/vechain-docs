@@ -198,6 +198,12 @@ Steps for exporting a local wallet:
 
 With VeWorld you can handle multiple wallets and multiple accounts.
 
+{% hint style="info" %}
+Acconts of the same wallet share the same mnemonic.
+Different wallets have different mnemonic.
+{% endhint %}
+
+
 Feel free to self-organize your wallets as you prefer.
 
 {% tabs %}
