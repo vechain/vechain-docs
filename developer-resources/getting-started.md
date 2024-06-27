@@ -16,6 +16,16 @@ Before you start developing your dApp, ensure you have the following prerequisit
 * Development experience with languages like Solidity (for smart contracts) and JavaScript (for front-end development)
 * A [wallet](../core-concepts/wallets/) for testing purposes
 
+## Begin by using a template
+
+We have created templates to help you start building a fully-fledged VeChain dApp.
+
+To view them, run this command:
+
+```bash
+npm create vechain
+```
+
 ## Steps
 
 #### 1. Design your dApp
@@ -26,7 +36,7 @@ Outline the functionality, user interface, and features of your dApp.
 
 Develop smart contracts using Solidity that define the logic of your dApp.
 
-Our [Remix plugin](broken-reference) and [Hardhat plugin](frameworks-and-ides/hardhat/) allow our VeChain community to use Remix and Hardhat when developing and deploying smart contracts on VeChain.
+Our [Remix plugin](frameworks-and-ides/remix.md) and [Hardhat plugin](frameworks-and-ides/hardhat/) allow our VeChain community to use Remix and Hardhat when developing and deploying smart contracts on VeChain.
 
 Use our [Built-in Contracts](built-in-contracts.md) to enhance your smart contract.
 
