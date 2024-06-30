@@ -4,7 +4,7 @@ description: A comprehensive guide to acquiring VeChain assets.
 
 # Acquiring VeChain Assets
 
-## HHow to Purchase VET & VTHO
+## How to Purchase VET & VTHO
 
 ### Centralized Exchange
 
