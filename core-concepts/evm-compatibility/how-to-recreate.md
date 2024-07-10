@@ -10,7 +10,7 @@ description: >-
 
 Use the tutorial [how-to-run-a-thor-solo-node](../../start-building/how-to-run-a-thor-solo-node/ "mention") to start up a thor solo node.
 
-## Configure a Development Environment
+## Configure a Development Environment (OZ4)
 
 ### Clone openzeppelin-contracts
 
@@ -54,6 +54,15 @@ Add the VeChain network settings
     },
 ```
 
+## Configure a Development Environment (OZ5)
+
+### Clone openzeppelin-contracts
+
+```bash
+git clone -b thor-compatibility git@github.com:vechain/openzeppelin-contracts.git
+cd openzeppelin-contracts
+```
+
 ## Run the OpenZeppelin Tests
 
 Assuming you have cloned OpenZeppelin and are running thor locally in solo mode we can now move on to running the OpenZeppelin tests. First navigate to the appropriate directory.
@@ -73,5 +82,18 @@ npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
 ```bash
 npx hardhat test --network vechain
 ```
+or in case of OZ5
+```bash
+npm run test:solo
+```
 
-After running a given number of tests a `*.csv` file with the results of the tests will appear under openzeppelin-contracts folder.
+### Run all tests in a specific directory (OZ5)
+```bash
+npm run test:solo:dir <dir_relative_path>
+```
+
+### Expectation
+- [OZ4] After running a given number of tests a `*.csv` file with the results of the tests will appear under openzeppelin-contracts folder;
+- [OZ5] All tests are expected to pass as is.
+
+### OpenZeppelin v5
