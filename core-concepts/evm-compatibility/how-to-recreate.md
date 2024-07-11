@@ -63,6 +63,12 @@ git clone -b thor-compatibility git@github.com:vechain/openzeppelin-contracts.gi
 cd openzeppelin-contracts
 ```
 
+### Run thor solo
+When running the custom fork you need to increase the gas limit.
+```bash
+bin/thor solo --on-demand --gas-limit 10000000000
+```
+
 ## Run the OpenZeppelin Tests
 
 Assuming you have cloned OpenZeppelin and are running thor locally in solo mode we can now move on to running the OpenZeppelin tests. First navigate to the appropriate directory.
@@ -95,5 +101,3 @@ npm run test:solo:dir <dir_relative_path>
 ### Expectation
 - [OZ4] After running a given number of tests a `*.csv` file with the results of the tests will appear under openzeppelin-contracts folder;
 - [OZ5] All tests are expected to pass as is.
-
-### OpenZeppelin v5
