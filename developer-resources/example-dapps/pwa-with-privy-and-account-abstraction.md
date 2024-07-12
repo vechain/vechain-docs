@@ -227,7 +227,7 @@ NEXT_PUBLIC_DELEGATOR_URL=https://sponsor-testnet.vechain.energy/by/90
 
 * `NEXT_PUBLIC_AA_FACTORY` is the address of the previously deployed `SimpleAccountFactory`
 * `NEXT_PUBLIC_NODE_URL` is the link to the VeChain network to use.
-* `NEXT_PUBLIC_DELEGATOR_URL` is a fee delegation service, that will pay the VTHO gas fees. Visit [vechain.energy](https://vechain.energy) to create one or [build one yourself](https://favo.gitbook.io/docs.vechain.org/start-building/tutorials/how-to-build-on-vechain/write-data/fee-delegation).
+* `NEXT_PUBLIC_DELEGATOR_URL` is a fee delegation service, that will pay the VTHO gas fees. Visit [vechain.energy](https://vechain.energy) to create one or [build one yourself](https://favo.gitbook.io/docs.vechain.org/how-to-run-a-node/tutorials/how-to-build-on-vechain/write-data/fee-delegation).
 
 ### Install VeChain Dependencies
 
