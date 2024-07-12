@@ -13,7 +13,7 @@ A blockchain testnet is a testing environment where developers and users can exp
 In order to interact with the testnet you either have to run a node yourself and send requests to the node to access the blockchain, or alternatively, you would need to identify a public node, who's job it is to add transactions to the network and return with data from the network, and direct requests there. There are several community run nodes as well as third party services who operate nodes.
 
 {% hint style="info" %}
-See a full list of the publicly available VeChainThor nodes in the Developer Resource article [nodes.md](../../developer-resources/nodes.md "mention")
+See a full list of the publicly available VeChainThor nodes in the Developer Resource article [nodes.md](../../start-building/nodes.md "mention")
 {% endhint %}
 
 ## What are some key characteristics of testnets?
