@@ -4,60 +4,57 @@ description: >-
   development mode.
 ---
 
-# How to run a Thor Solo Node
+# Running a Thor Solo Node: Your Gateway to VeChainThor Development
 
-The official Thor repo is available [here](https://github.com/vechain/thor) and provides more detail and information than this tutorial provides.
-
-Thor Solo always spins up the same ten accounts. Both VET and VTHO are generated on these addresses in the genesis block. A list of all ten accounts is shown when Thor Solo is started.
+A [Thor] (https://github.com/vechain/thor) Solo Node is a powerful tool for developers, offering a sandbox environment to interact with the VeChainThor blockchain. This guide will walk you through the setup and operation of your own Thor Solo Node, enabling you to test and develop applications in a controlled setting.
 
 ## Prerequisites
 
-Thor requires `Go` 1.17+ and `C` compiler to build. To install `Go`, follow this [link](https://golang.org/doc/install).
+Before we begin, ensure you have:
 
-## Installation
+* `Go` 1.17+ installed
+* A `C` compiler
+* Git
 
-The first step is to clone the repository
+## Installation Process
+
+Clone the Thor repository:
 
 ```bash
 git clone https://github.com/vechain/thor
 ```
 
-Assuming you have Golang and a C compiler installed navigate to the directory and build Thor:
+Navigate to the Thor directory and build:
 
 ```bash
 cd thor
 make
 ```
 
-Assuming there were no errors, a `thor` binary will appear under the `bin` directory.
+Upon successful compilation, you'll find the `thor` binary in the `bin` directory.
 
-## Command-line options
+## Key Command-line Options
 
-Thor supports multiple command-line options which you can see by running:
+Explore Thor's capabilities with `./bin/thor -h`. Essential options include:
 
-```bash
-./bin/thor -h
-```
+* `--api-cors '*'`: Accept cross-origin requests from any domain.
+* `--api-addr value`: Set API service listening address (default: "localhost:8669").
+* `--api-call-gas-limit value`: Limit contract call gas (default: 50000000).
+* `--verbosity value` log verbosity (0-9) (default: 3).
 
-The most important ones for us are the following:
+## Advanced Configuration
 
-* `--api-cors '*'` comma separated list of domains to accept cross-origin requests to API
-* `--api-addr value` API service listening address (default: "localhost:8669")
-* `--api-call-gas-limit value` limit contract call gas (default: 50000000)
-* `--api-backtrace-limit value` limit the distance between 'position' and best block for subscriptions APIs (default: 1000)
-* `--verbosity value` log verbosity (0-9) (default: 3)
+### Sub-Commands for Enhanced Control
 
-### Sub-Commands
-
-Thor offers several sub-commands to manage the way that the node operates and stores the blockchain data.
+Thor offers versatile sub-commands:
 
 ```bash
-./bin/thor solo --on-demand            # create new block when there is pending transaction
-./bin/thor solo --persist              # save blockchain data to disk (default to memory)
-./bin/thor solo --persist --on-demand  # two options can work together
+./bin/thor solo --on-demand            # Create new blocks for pending transactions
+./bin/thor solo --persist              # Save blockchain data to disk
+./bin/thor solo --persist --on-demand  # The two options can work together
 ```
 
-### Enable Remote Connections
+### Enabling Remote Access
 
 If you are not running Thor on the same host as the development environment then you need to provide an API listening address using the `--api-addr` command-line option. For example to make Thor accept any remote connection:
 
@@ -65,7 +62,7 @@ If you are not running Thor on the same host as the development environment then
 ./bin/thor solo --on-demand --api-addr 0.0.0.0:8669
 ```
 
-### Higher Verbosity
+### Debugging with Increased Verbosity
 
 The default verbosity option in Thor (3) might not be providing enough information for debugging. Using the `--verbosity` command-line option, we can increase the amount of information Thor prints in stdout. For example:
 
@@ -74,22 +71,28 @@ The default verbosity option in Thor (3) might not be providing enough informati
 
 ### Master Key Management
 
-Thor offers several sub-commands to manage the master key of the node. Using the `master-key` command-line option, allows the user to interact with the master key on the node.
+Secure your node with master key commands:
 
 ```bash
-# print the master address
+# View master address
 ./bin/thor master-key
 
-# export master key to keystore
+# Export master key to keystore
 ./bin/thor master-key --export > keystore.json
 
-# import master key from keystore
+# Import master key from keystore
 cat keystore.json | ./bin/thor master-key --import
 ```
 
-## Restful API
+## RESTful API: A Developer's Playground
 
-One notable feature of Thor is that it provides a RESTful API as well as the typical RPC interface. The API can be accessed via the browser using:
+Thor's RESTful API offers a user-friendly interface for blockchain interaction. Access the Stoplight UI at:
+
+```bash
+http://127.0.0.1:8669/doc/stoplight-ui/
+```
+
+Or the Swagger UI at:
 
 ```bash
 http://127.0.0.1:8669/doc/swagger-ui/
@@ -97,7 +100,7 @@ http://127.0.0.1:8669/doc/swagger-ui/
 
 If Thor is running on a different host, make sure you use the IP of said host as well as the `--api-addr` command-line option when running Thor.
 
-## Running
+## Launching Your Solo Node
 
 To run the node in solo mode which is what we need for development purposes use the following:
 
@@ -126,17 +129,21 @@ The below command runs thor solo allowing all remote connections. Remove the arg
 <pre class="language-bash"><code class="lang-bash"><strong>./bin/thor solo --on-demand --api-addr 0.0.0.0:8669 --gas-limit 10000000000000 --api-call-gas-li
 </strong></code></pre>
 
-## Docker
+## Docker: Containerized Convenience
 
-You can also run a solo node as a docker container with the following command.
+Prefer Docker? Run your solo node with:
 
 ```bash
 docker run -p 127.0.0.1:8669:8669 vechain/thor:latest solo --api-cors '*' --api-addr 0.0.0.0:8669
 ```
 
-This will launch a solo node with the following configuration:
+This sets up a containerized node with:
 
-* On a localhost using port 8669
-* Using the latest release of thor solo
-* Accepting all cross-origin requests
-* Allowing all remote connections
+* Localhost access on port 8669
+* Latest Thor Solo release
+* Unrestricted cross-origin requests
+* Remote connection capability
+
+## Conclusion
+
+With your Thor Solo Node up and running, you're ready to dive into VeChainThor development. This powerful tool provides a flexible, controlled environment for building and testing blockchain applications. Happy coding!
