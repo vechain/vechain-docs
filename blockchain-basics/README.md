@@ -13,7 +13,7 @@ layout:
     visible: false
 ---
 
-# Blockchain: A crash course
+# Blockchain Basics
 
 This concise guide offers a fundamental introduction to blockchain technology. We'll explore the core concepts, key features, and potential applications of this revolutionary distributed ledger system. By the end of this overview, you'll have a solid grasp of how blockchains work and why they're transforming various industries beyond just cryptocurrency.
 
