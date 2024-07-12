@@ -74,4 +74,50 @@ npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
 npx hardhat test --network vechain
 ```
 
-After running a given number of tests a `*.csv` file with the results of the tests will appear under openzeppelin-contracts folder.
+## Running VeChain custom fork
+This section explains how to run the custom tests adapted to run on VeChainThor blockchain. This fork is based on [OpenZeppelin version 5](https://github.com/OpenZeppelin/openzeppelin-contracts/releases/tag/v5.0.2).
+
+### Clone openzeppelin-contracts
+
+```bash
+git clone -b thor-compatibility git@github.com:vechain/openzeppelin-contracts.git
+cd openzeppelin-contracts
+```
+
+### Run thor solo
+When running the custom fork you need to increase the gas limit.
+```bash
+bin/thor solo --on-demand --gas-limit 10000000000
+```
+
+## Run the OpenZeppelin Tests
+
+Assuming you have cloned OpenZeppelin and are running thor locally in solo mode we can now move on to running the OpenZeppelin tests. First navigate to the appropriate directory.
+
+```bash
+cd openzeppelin-contracts
+```
+
+### Run a single test
+
+```bash
+npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
+```
+
+### Run all tests
+
+```bash
+npx hardhat test --network vechain
+```
+or in case of OZ5
+```bash
+npm run test:solo
+```
+
+### Run all tests in a specific directory (OZ5)
+```bash
+npm run test:solo:dir <dir_relative_path>
+```
+
+### Results
+All the tests in the custom fork are expected to pass.
