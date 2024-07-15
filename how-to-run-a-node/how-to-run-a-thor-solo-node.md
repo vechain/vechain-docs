@@ -64,7 +64,7 @@ If Thor node is not running on the same machine of the development environment, 
 
 ### Debugging with Increased Verbosity
 
-The default verbosity option in Thor (3) might not be providing enough information for debugging. Using the `--verbosity` command-line option, we can increase the amount of information Thor prints in stdout. For example:
+The default verbosity option in Thor (3) might not be providing enough debug information. Using the `--verbosity` command-line option, you can increase the amount of information Thor prints out in stdout. For example:
 
 <pre class="language-bash"><code class="lang-bash"><strong>./bin/thor solo --on-demand --verbosity 4
 </strong></code></pre>
