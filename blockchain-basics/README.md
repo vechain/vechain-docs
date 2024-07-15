@@ -15,7 +15,7 @@ layout:
 
 # Blockchain Basics: Unraveling the Digital Revolution
 
-Blockchain is an immense subject, depending on the level of detail, explaining could require from few seconds up to months. 
+Blockchain is a vast and complex subject. Depending on the depth of explanation desired, it can range from a brief overview taking just minutes to an in-depth study requiring months to fully grasp its intricacies and implications.
 With a short introduction, we would like to scratch the surface of the transformative world of blockchain technology and mention why we speak of Web3. 
 Even if groundbreaking applications are a reality, and distributed ledger system are reshaping our digital landscape, we want to enroll you to become a pioneer of what still remains uncovered, hoping that you will choose VeChain as your home.
 
