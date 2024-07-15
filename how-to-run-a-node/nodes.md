@@ -6,7 +6,7 @@ description: RESTful API to access the VeChainThor blockchain
 
 ## Overview
 
-VeChain nodes serve as the critical access points to the VeChainThor blockchain, employing a RESTful API communication approach known as the Thorest API. This modern interface facilitates seamless interaction with the blockchain, enabling developers and users to harness its full potential.
+In the previous chapters, we described some scenarios in which for a dapp can be convenient to use a local node or a public node. Regardless of the choice, the interface for interacting with VeChainThor blockchain are the RESTful APIs specifically designed known as the Thorest API. This modern interface facilitates seamless interaction with the blockchain, enabling developers and users to harness its full potential.
 
 ## Thorest API: Powering Blockchain Communication
 
