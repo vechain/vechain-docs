@@ -16,7 +16,12 @@ For the latest information of each of the available endpoints please use the fol
 
 ## Monitoring Node Health
 
-To ensure optimal performance and reliability, VeChain Energy offers a dedicated status page for node health monitoring. Check it at [https://nodes.status.vechain.energy/](https://nodes.status.vechain.energy/).
+VeChain prioritizes network performance and reliability. To support this, two key resources are available for node health monitoring:
+
+* Official VeChain Status Page: [https://status.vechain.org/](https://status.vechain.org/).
+* VeChain Energy Status Page: [https://nodes.status.vechain.energy/](https://nodes.status.vechain.energy/).
+
+These dashboards provide real-time insights into node health, network stability, and overall ecosystem performance. Regular checks can help users and developers ensure optimal connectivity and stay informed about the network's status.
 
 ## Mainnet Nodes
 
