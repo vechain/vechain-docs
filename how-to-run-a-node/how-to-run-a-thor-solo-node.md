@@ -131,7 +131,7 @@ The below command runs thor solo allowing all remote connections. Remove the arg
 
 ## Docker: Containerized Convenience
 
-Prefer Docker? Run your solo node with:
+The most convenient way can be to use a Docker container. You can run your solo node as follows:
 
 ```bash
 docker run -p 127.0.0.1:8669:8669 vechain/thor:latest solo --api-cors '*' --api-addr 0.0.0.0:8669
