@@ -6,7 +6,7 @@ description: RESTful API to access the VeChainThor blockchain
 
 ## Overview
 
-In the previous chapters, we described some scenarios in which for a dapp can be convenient to use a local node or a public node. Regardless of the choice, the interface for interacting with VeChainThor blockchain are the RESTful APIs specifically designed known as the Thorest API. This modern interface facilitates seamless interaction with the blockchain, enabling developers and users to harness its full potential.
+In previous chapters, we discussed some scenarios where it can be convenient for a dApp to use a local or public node. Regardless of the choice, the interface for interacting with VeChainThor blockchain are the RESTful APIs specifically designed known as the Thorest API. This modern interface facilitates seamless interaction with the blockchain, enabling developers and users to harness its full potential.
 
 ## Thorest API: Powering Blockchain Communication
 
@@ -18,7 +18,7 @@ For the latest information of each of the available endpoints please use the fol
 
 VeChain prioritizes network performance and reliability. To support this, two key resources are available for node health monitoring:
 
-* Official VeChain Status Page: [https://status.vechain.org/](https://status.vechain.org/) (filters: [https://mainnet.status.vechain.org](https://mainnet.status.vechain.org), [https://testnet.status.vechain.org](https://testnet.status.vechain.org)).
+* Official VeChain Status Page: [https://status.vechain.org/](https://status.vechain.org/), with the following filters: [https://mainnet.status.vechain.org](https://mainnet.status.vechain.org), [https://testnet.status.vechain.org](https://testnet.status.vechain.org).
 * VeChain Energy Status Page: [https://nodes.status.vechain.energy/](https://nodes.status.vechain.energy/).
 
 These dashboards provide real-time insights into node health, network stability, and overall ecosystem performance. Regular checks can help users and developers ensure optimal connectivity and stay informed about the network's status.
