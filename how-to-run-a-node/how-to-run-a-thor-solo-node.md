@@ -98,7 +98,7 @@ Or the Swagger UI at:
 http://127.0.0.1:8669/doc/swagger-ui/
 ```
 
-If Thor is running on a different host, make sure you use the IP of said host as well as the `--api-addr` command-line option when running Thor.
+If Thor is running on a different host, make sure to run it using the IP of said host instead of the localhost, as well as the `--api-addr` command-line option.
 
 ## Launching Your Solo Node
 
