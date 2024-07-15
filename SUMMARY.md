@@ -1,10 +1,10 @@
 # Table of contents
 
 * [Welcome to VeChain](README.md)
-* [Blockchain: A crash course](blockchain-a-crash-course/README.md)
-  * [Introduction to blockchain](blockchain-a-crash-course/introduction-to-blockchain.md)
-  * [Introduction to digital property](blockchain-a-crash-course/introduction-to-digital-property.md)
-  * [The evolution of the internet](blockchain-a-crash-course/the-evolution-of-the-internet.md)
+* [Blockchain Basics](blockchain-basics/README.md)
+  * [Introduction to blockchain](blockchain-basics/introduction-to-blockchain.md)
+  * [Introduction to digital property](blockchain-basics/introduction-to-digital-property.md)
+  * [The evolution of the internet](blockchain-basics/the-evolution-of-the-internet.md)
 * [Introduction to VeChain](introduction-to-vechain/README.md)
   * [About the VeChain blockchain](introduction-to-vechain/about-the-vechain-blockchain/README.md)
     * [Consensus Deep Dive](introduction-to-vechain/about-the-vechain-blockchain/consensus-deep-dive.md)
