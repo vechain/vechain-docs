@@ -56,7 +56,7 @@ Thor offers versatile sub-commands:
 
 ### Enabling Remote Access
 
-If you are not running Thor on the same host as the development environment then you need to provide an API listening address using the `--api-addr` command-line option. For example to make Thor accept any remote connection:
+If Thor node is not running on the same machine of the development environment, then you need to provide an API listening address using the `--api-addr` command-line option. For example, to make Thor accept any remote connection:
 
 ```bash
 ./bin/thor solo --on-demand --api-addr 0.0.0.0:8669
