@@ -41,7 +41,7 @@ Some core blockchain concepts with specific details and information relating to 
 
 A collection of tutorials and guides to get you started with running nodes on the VeChainThor blockchain.
 
-<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Tutorials</td><td><a href="how-to-run-a-node/">how-to-run-a-node</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Nodes</td><td><a href="how-to-run-a-node/nodes.md">nodes.md</a></td></tr><tr><td align="center">How to run a Thor Solo Node</td><td><a href="how-to-run-a-node/how-to-run-a-thor-solo-node.md">how-to-run-a-thor-solo-node.md</a></td></tr><tr><td align="center">Custom Network</td><td><a href="how-to-run-a-node/custom-network.md">custom-network.md</a></td></tr><tr><td align="center">Connect Sync2 to a Thor Solo Node</td><td><a href="how-to-run-a-node/connect-sync2-to-thor.md">connect-sync2-to-thor.md</a></td></tr></tbody></table>
 
 ## Developer Resources
 
