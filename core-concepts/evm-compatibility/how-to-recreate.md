@@ -8,7 +8,7 @@ description: >-
 
 ## Run a Thor Solo Node
 
-Use the tutorial [how-to-run-a-thor-solo-node](../../how-to-run-a-node/how-to-run-a-thor-solo-node/ "mention") to start up a thor solo node.
+Use the tutorial [how-to-run-a-thor-solo-node](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention") to start up a thor solo node.
 
 ## Configure a Development Environment
 
