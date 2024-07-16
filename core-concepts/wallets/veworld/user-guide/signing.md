@@ -1,3 +1,18 @@
+---
+description: How to sign a transaction on veworld
+layout:
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Signing
 
 ## Content type <a href="#content-type" id="content-type"></a>
