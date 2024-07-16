@@ -24,3 +24,5 @@ Mastering VeChainThor nodes opens up a world of possibilities in blockchain deve
 
 By leveraging the power of nodes, the flexibility of the Thorest API, and the development-friendly environment of Thor Solo, you're well-equipped to innovate on the VeChainThor blockchain. Happy building!
 
+<table data-view="cards"><thead><tr><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Nodes</td><td><a href="nodes.md">nodes.md</a></td></tr><tr><td align="center">How to run a Thor Solo Node</td><td><a href="how-to-run-a-thor-solo-node.md">how-to-run-a-thor-solo-node.md</a></td></tr><tr><td align="center">Custom Network</td><td><a href="custom-network.md">custom-network.md</a></td></tr><tr><td align="center">Connect Sync2 to a Thor Solo Node</td><td><a href="connect-sync2-to-thor.md">connect-sync2-to-thor.md</a></td></tr></tbody></table>
+
