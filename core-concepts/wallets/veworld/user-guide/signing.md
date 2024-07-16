@@ -1,5 +1,5 @@
 ---
-description: How to sign a transaction on veworld
+description: How to sign a transaction on VeWorld
 layout:
   title:
     visible: true
@@ -51,6 +51,30 @@ Steps for creating a transaction:
 5. Select the amount of tokens you want to send to, then click **Next** button
 6. Select the delegation model you want, then click the **Sign & Send** button
 7. Authenticate with your password, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
+{% endtab %}
+{% endtabs %}
+
+## Create a NFT Transaction
+
+{% tabs %}
+{% tab title="Mobile" %}
+
+1. Go to NFTs and choose the NFT you would like to send
+2. Tap **Send** button
+3. Enter or select the address you want to send tokens, then tap **Next** button
+4. Select the delegation model you want
+5. Select the priority for this transaction. It will change the amount of gas fee cost
+6. Check the detailsm, then tap **Confirm** button
+7. Authenticate with your security method, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
+{% endtab %}
+
+{% tab title="Browser Extension" %}
+
+1. Go to NFTs and choose the NFT you would like to send
+2. Click **Send NFT** button
+3. Paste or select the destination address, then click **Send NFT** button
+4. Select the delegation model you want, then click the **Sign & Send** button
+5. Authenticate with your password, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
 {% endtab %}
 {% endtabs %}
 
