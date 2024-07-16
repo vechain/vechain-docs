@@ -73,10 +73,9 @@ npx hardhat
     }
     };
     ```
+> **Notice**: At the date of writing, VeChainThor EVM is aligned with Ethereum's at the `paris` hard fork. Set the [evmVersion](https://docs.soliditylang.org/en/latest/using-the-compiler.html#setting-the-evm-version-to-target) to `paris` if you are using solidity compiler version `0.8.20` or above.  
 
 ### Networks
-
-> VechainThor is currently up-to-date with the EVM's `paris` hard fork, set [evmVersion](https://docs.soliditylang.org/en/latest/using-the-compiler.html#setting-the-evm-version-to-target) to `paris` if you are using solidity compiler version `0.8.20` or above.
 
 *   VeChain mainnet:
 
