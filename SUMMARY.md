@@ -41,6 +41,7 @@
       * [User Guide](core-concepts/wallets/veworld/user-guide/README.md)
         * [Setup](core-concepts/wallets/veworld/user-guide/setup.md)
         * [Wallet](core-concepts/wallets/veworld/user-guide/wallet.md)
+        * [Signing](core-concepts/wallets/veworld/user-guide/signing.md)
       * [FAQ](core-concepts/wallets/veworld/faq.md)
     * [Sync2](core-concepts/wallets/sync2/README.md)
       * [User Guide](core-concepts/wallets/sync2/user-guide/README.md)
