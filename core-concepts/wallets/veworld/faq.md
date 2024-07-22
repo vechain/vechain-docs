@@ -17,4 +17,4 @@ layout:
 
 On our support portal you can read a completed list of FAQs and open all your tickets.
 
-Visit (https://support.veworld.com/support/home)[our customer support portal].
+Visit [https://support.veworld.com/support/home](our customer support portal).
