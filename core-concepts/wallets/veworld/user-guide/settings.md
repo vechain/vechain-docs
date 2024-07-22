@@ -38,92 +38,75 @@ To watch your history you should:
 
 {% tab title="Browser Extension" %}
 
-## Browser Extension Settings
+## General
 
-### General
-
-#### Conversion Currency
-
+**Conversion Currency**
 You can choose amongst the supported FIAT currencies (EUR, USD)
 
-#### Hide tokens without balance
-
+**Hide tokens without balance**
 If a selected token has no balance, it won't get displayed on the dashboard.
 
-#### Enable DEV mode
-
+**Enable DEV mode**
 You will be able to execute transactions even when warnings would block you from doing so. A failing reason will be shown after the transaction fails.
 
-#### Theme
-
+**Theme**
 You can choose dark or light theme, or to follow your system configuration.
 
-#### State Logs
-
+**State Logs**
 State logs contain your public account addresses and sent transactions.
 You can download log file for diagnosis purposes
 
-#### Reset
-
+**Reset**
 You can hard reset your wallet, and clear all your local data.
 This action cannot be reverted.
 
-### Transaction
+## Transaction
 
-#### Default delegation
-
+**Default delegation**
 You can select the default delegation for your transactions.
 
-#### Delegations URLs
-
+**Delegations URLs**
 You can create a shortlist of delegation urls you could choose easily from.
 
-### Networks
+## Networks
 
-#### Select
-
+**Select**
 You can choose between Mainnet or Testnet.
 You could also add a custome node for developing purposes.
 
-#### Indicators
-
+**Indicators**
 Display an indicator when transacting on another network
 
-#### Conversion
-
+**Conversion**
 Show fiat exchange rates when on other networks
 
-### Contacts
+## Contacts
 
 You can manage a list of favourite contacts, to make the trasaction creation process easier.
 
-### Security and Privacy
+## Security and Privacy
 
-#### Password authorisation for transactions
-
+**Password authorisation for transactions**
 Require the extension password when performing transactions with local wallets
 
-#### Change Password
-
+**Change Password**
 You can change your local password
 
-#### Backup mnemonic
-
+**Backup mnemonic**
 You can export a local wallet, by typing your password.
 
-#### Analytics tracking
+**Analytics tracking**
 
 You can allow or block the tracking of your wallet. No personal data are collected.
 
-### Connected Applications
-
+**Connected Applications**
 You can see and manage the list of DApps you interacted with.
 
-### About VeWorld
+## About VeWorld
 
 Here you can see the release number of your current version.
 
-### Bug Report
+## Bug Report
 
 You can open a ticket for an issue or suggestions.
 
