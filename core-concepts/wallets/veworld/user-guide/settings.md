@@ -19,20 +19,64 @@ layout:
 
 {% tab title="Mobile" %} 
 
-To watch your history you should:
+## General
 
-1. Go to your Dashboard
-2. Tap the History button
-3. You'll see a list of activies (some of them are onchain, some aren't)
-4. Tap one of them to read more
-5. In each details you'll see:
-  - From and To Address
-  - Datetime of creation
-  - Value (which and how many tokens)
-  - Transaction ID (you can also copy it in your clipboard)
-  - Blocknumber
-  - Network
-  - Button to read details of that transaction in the Blockexplorer
+**Conversion Currency**
+
+You can choose amongst the supported FIAT currencies (EUR, USD)
+
+**Theme**
+
+You can choose dark or light theme, or to follow your system configuration.
+
+**Reset**
+
+You can hard reset your wallet, and clear all your local data.
+This action cannot be reverted.
+
+## Transaction
+
+**Default delegation**
+
+You can select the default delegation for your transactions.
+
+**Delegations URLs**
+
+You can create a shortlist of delegation urls you could choose easily from.
+
+## Networks
+
+**Select**
+
+You can choose between Mainnet or Testnet.
+You could also add a custome node for developing purposes.
+
+## Contacts
+
+You can manage a list of favourite contacts, to make the trasaction creation process easier.
+
+## Security and Privacy
+
+**Security Method**
+
+You can choose your favourite security method.
+Downgrade the level of security is not allowed.
+
+**Backup mnemonic**
+
+You can export a local wallet, by typing your password.
+
+## Connected Applications**
+
+You can see and manage the list of DApps you interacted with.
+
+## About VeWorld
+
+Here you can see:
+- the release number of your current version.
+- The Official Website
+- our privacy policy
+- Bug Report
 
 {% endtab %}
 
