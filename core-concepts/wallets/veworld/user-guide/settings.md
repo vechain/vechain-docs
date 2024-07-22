@@ -74,9 +74,9 @@ You can see and manage the list of DApps you interacted with.
 
 Here you can see:
 - the release number of your current version.
-- The Official Website
-- our privacy policy
-- Bug Report
+- the Official Website
+- the privacy policy
+- the help platform
 
 {% endtab %}
 
