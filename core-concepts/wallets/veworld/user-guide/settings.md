@@ -15,56 +15,118 @@ layout:
 
 # Settings
 
-<figure><img src="../../../../.gitbook/assets/settings.d31d71f9 (1).png" alt=""><figcaption></figcaption></figure>
+{% tabs %}
 
-## Switch Language <a href="#switch-language" id="switch-language"></a>
+{% tab title="Mobile" %} 
 
-1. Click **Language**
-2. Choose your language from the list
-3. Click to set your preferred language
+To watch your history you should:
 
-## Change Password <a href="#change-password" id="change-password"></a>
+1. Go to your Dashboard
+2. Tap the History button
+3. You'll see a list of activies (some of them are onchain, some aren't)
+4. Tap one of them to read more
+5. In each details you'll see:
+  - From and To Address
+  - Datetime of creation
+  - Value (which and how many tokens)
+  - Transaction ID (you can also copy it in your clipboard)
+  - Blocknumber
+  - Network
+  - Button to read details of that transaction in the Blockexplorer
 
-1. Click **Password**
-2. Enter your password to authorise the password setup
-3. Enter your new password
-4. Enter your password again for confirmation
+{% endtab %}
 
-## Biometric Authentication (Mobile only) <a href="#biometric-authentication" id="biometric-authentication"></a>
+{% tab title="Browser Extension" %}
 
-1. Click **Biometric Authentication**
-2. Enter your password
-3. Biometric verification
+## Browser Extension Settings
 
-Following scenario required your biometric authentication
+### General
 
-1. Wallet action(remove, backup, generate, import)
-2. General(change password, enable biometric authentication)
-3. Signing a Transaction or certificate
+#### Conversion Currency
 
-## Token List <a href="#token-list" id="token-list"></a>
+You can choose amongst the supported FIAT currencies (EUR, USD)
 
-1. Click **Tokens**
-2. Choose the token from the token list
-3. Toggle on to enable
+#### Hide tokens without balance
 
-## Nodes Management <a href="#nodes-management" id="nodes-management"></a>
+If a selected token has no balance, it won't get displayed on the dashboard.
 
-Nodes are the primary communication bridge of the blockchain. If the default node's connection speed in your region is not ideal, you can manage it in the following ways.
+#### Enable DEV mode
 
-### Add node <a href="#add-node" id="add-node"></a>
+You will be able to execute transactions even when warnings would block you from doing so. A failing reason will be shown after the transaction fails.
 
-1. Click **Node**
-2. Click ![](../../../../.gitbook/assets/add\_circle\_outline.svg) at upper right
-3. Enter the node's url with `http` or `https`
-4. Click **Add** to add node
+#### Theme
 
-### Change Node <a href="#change-node" id="change-node"></a>
+You can choose dark or light theme, or to follow your system configuration.
 
-1. Choose the node from the node list
-2. Click to set your preferred node
+#### State Logs
 
-### Delete Node <a href="#delete-node" id="delete-node"></a>
+State logs contain your public account addresses and sent transactions.
+You can download log file for diagnosis purposes
 
-1. Choose the node from the node list
-2. Click <img src="../../../../.gitbook/assets/Screenshot 2023-08-17 at 16.45.39.png" alt="" data-size="line"> to delete the node
+#### Reset
+
+You can hard reset your wallet, and clear all your local data.
+This action cannot be reverted.
+
+### Transaction
+
+#### Default delegation
+
+You can select the default delegation for your transactions.
+
+#### Delegations URLs
+
+You can create a shortlist of delegation urls you could choose easily from.
+
+### Networks
+
+#### Select
+
+You can choose between Mainnet or Testnet.
+You could also add a custome node for developing purposes.
+
+#### Indicators
+
+Display an indicator when transacting on another network
+
+#### Conversion
+
+Show fiat exchange rates when on other networks
+
+### Contacts
+
+You can manage a list of favourite contacts, to make the trasaction creation process easier.
+
+### Security and Privacy
+
+#### Password authorisation for transactions
+
+Require the extension password when performing transactions with local wallets
+
+#### Change Password
+
+You can change your local password
+
+#### Backup mnemonic
+
+You can export a local wallet, by typing your password.
+
+#### Analytics tracking
+
+You can allow or block the tracking of your wallet. No personal data are collected.
+
+### Connected Applications
+
+You can see and manage the list of DApps you interacted with.
+
+### About VeWorld
+
+Here you can see the release number of your current version.
+
+### Bug Report
+
+You can open a ticket for an issue or suggestions.
+
+{% endtab %}
+
+{% endtabs %}
