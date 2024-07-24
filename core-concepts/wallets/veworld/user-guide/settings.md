@@ -49,7 +49,7 @@ You can create a shortlist of delegation urls you could choose easily from.
 **Select**
 
 You can choose between Mainnet or Testnet.
-You could also add a custome node for developing purposes.
+You could also use a custom node.
 
 ## Contacts
 
