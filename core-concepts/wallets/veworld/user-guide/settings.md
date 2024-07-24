@@ -94,7 +94,7 @@ If your balance of a selected token is zero, it won't get it displayed on the da
 
 **Enable DEV mode**
 
-You will be able to execute transactions even when warnings would block you from doing so. A failing reason will be shown after the transaction fails.
+You can execute transactions even when warnings would block you from doing so. A failing reason will be shown after the transaction fails.
 
 **Theme**
 
