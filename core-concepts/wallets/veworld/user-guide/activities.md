@@ -38,7 +38,7 @@ To see your history you should:
 
 {% tab title="Browser Extension" %}
 
-To watch your history you should:
+To see your history you should:
 
 1. Go to your Dashboard
 2. Click the History button
