@@ -96,7 +96,7 @@ Steps for creating a transaction:
 
 1. Open in your browser your desired DApp
 2. Connect your VeWorld wallet
-3. If it's the first time that you interact with that DAp, you'll be asked to sign a certificate
+3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
 4. You can check the details, then click "Sign"
 
 {% endtab %}
