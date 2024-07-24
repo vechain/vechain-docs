@@ -47,7 +47,7 @@ Steps for creating a transaction:
 1. Go to Dashboard
 2. Tap **Send** button
 3. Choose the asset you would like to send (VET, VTHO or a custom token you own), then click **Next** button
-4. Paste the address or vedomain you want to send tokens to
+4. Paste the address or vetdomain you want to send tokens to
 5. Select the amount of tokens you want to send to, then click **Next** button
 6. Select the delegation model you want, then click the **Sign & Send** button
 7. Authenticate with your password, and wait for the confirm screen. You may see a link to the block explorer for the transaction details.
