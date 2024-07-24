@@ -64,7 +64,7 @@ Downgrading the level of security is not allowed.
 
 **Backup mnemonic**
 
-You can export a local wallet, by typing your password.
+You can export a local wallet; your password will be required.
 
 ## Connected Applications**
 
