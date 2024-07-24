@@ -15,6 +15,6 @@ layout:
 
 # FAQ
 
-On our support portal you can read a completed list of FAQs and open all your tickets.
+The FAQ section was moved to the VeWorld support portal. If you landed here looking for help, and you don't find the answer to your problem, in the same portal you can submit a new ticket.
 
 Visit [our customer support portal](https://support.veworld.com/support/home) .
