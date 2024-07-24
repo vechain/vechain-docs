@@ -27,7 +27,7 @@ You can choose among the supported FIAT currencies (EUR, USD)
 
 **Theme**
 
-You can choose dark or light theme, or to follow your system configuration.
+You can anytime switch between the dark or light theme, or just use your device settings.
 
 **Reset**
 
