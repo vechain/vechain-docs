@@ -34,6 +34,11 @@ You can anytime switch between the dark or light theme, or just use your device 
 You can hard reset your wallet, and clear all your local data.
 This action cannot be reverted.
 
+{% hint style="warning" %}
+If you are going to reset your wallet without your backups properly saved, you'll loose access to all your assets.
+{% endhint %}
+
+
 ## Transaction
 
 **Default delegation**
@@ -113,8 +118,6 @@ This action cannot be reverted.
 {% hint style="warning" %}
 If you are going to reset your wallet without your backups properly saved, you'll loose access to all your assets.
 {% endhint %}
-
-
 
 
 ## Transaction
