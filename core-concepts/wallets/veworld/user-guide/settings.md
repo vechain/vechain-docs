@@ -98,7 +98,7 @@ You will be able to execute transactions even when warnings would block you from
 
 **Theme**
 
-You can choose dark or light theme, or to follow your system configuration.
+You can anytime switch between the dark or light theme, or just use your device settings.
 
 **State Logs**
 
