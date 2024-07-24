@@ -64,7 +64,7 @@ Steps for creating a transaction:
 3. Enter or select the address you want to send tokens, then tap **Next** button
 4. Select the delegation model you want
 5. Select the priority for this transaction. It will change the fee you are paying
-6. Check the detailsm, then tap **Confirm** button
+6. Check the details, then tap **Confirm** button
 7. Authenticate with your security method, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
 {% endtab %}
 
