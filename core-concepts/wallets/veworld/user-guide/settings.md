@@ -60,7 +60,7 @@ You can manage a list of favourite contacts, to make the trasaction creation pro
 **Security Method**
 
 You can choose your favorite security method.
-Downgrade the level of security is not allowed.
+Downgrading the level of security is not allowed.
 
 **Backup mnemonic**
 
