@@ -74,7 +74,7 @@ Steps for creating a transaction:
 2. Click **Send NFT** button
 3. Paste or select the destination address, then click **Send NFT** button
 4. Select the delegation model you want, then click the **Sign & Send** button
-5. Authenticate with your password, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
+5. Authenticate with your password, and wait for the confirm screen. You may see a link to the block explorer for the transaction details.
 {% endtab %}
 {% endtabs %}
 
