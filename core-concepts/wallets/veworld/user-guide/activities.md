@@ -19,7 +19,7 @@ layout:
 
 {% tab title="Mobile" %} 
 
-To watch your history you should:
+To see your history you should:
 
 1. Go to your Dashboard
 2. Tap the History button
