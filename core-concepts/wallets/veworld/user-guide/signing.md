@@ -85,7 +85,7 @@ Steps for creating a transaction:
 
 1. Go to the **Discovery section** and go to your desired DApp
 2. Connect your VeWorld wallet
-3. If it's the first time that you interact with that DAp, you'll be asked to sign a certificate
+3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
 4. Select the account you want to connect with, then tap **Connect**
 5. You can check the details, then click "Sign"
 6. Authenticate with your security method, and you'll be redirect to the DApp
