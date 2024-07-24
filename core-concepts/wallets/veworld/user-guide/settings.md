@@ -23,7 +23,7 @@ layout:
 
 **Conversion Currency**
 
-You can choose amongst the supported FIAT currencies (EUR, USD)
+You can choose among the supported FIAT currencies (EUR, USD)
 
 **Theme**
 
