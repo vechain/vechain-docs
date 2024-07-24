@@ -103,7 +103,7 @@ Steps for creating a transaction:
 {% endtabs %}
 
 {% hint style="info" %}
-These kind of transactions are stored in your wallet history only.
+Signing a certificate doesn't result in a transaction. Such operations are stored in your wallet history only.
 There will be no trace onchain so that you don't need to pay any gas fees to approve them.
 {% endhint %}
 
