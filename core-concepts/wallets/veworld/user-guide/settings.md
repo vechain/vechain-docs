@@ -103,7 +103,7 @@ You can anytime switch between the dark or light theme, or just use your device 
 **State Logs**
 
 State logs contain your public account addresses and sent transactions.
-You can download log file for diagnosis purposes
+You can download log file for diagnosis purposes.
 
 **Reset**
 
