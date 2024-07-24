@@ -151,7 +151,7 @@ You can change your local password
 
 **Backup mnemonic**
 
-You can export a local wallet, by typing your password.
+You can export a local wallet; your password will be required.
 
 **Analytics tracking**
 
