@@ -90,7 +90,7 @@ You can choose among the supported FIAT currencies (EUR, USD)
 
 **Hide tokens without balance**
 
-If a selected token has no balance, it won't get displayed on the dashboard.
+If your balance of a selected token is zero, it won't get it displayed on the dashboard.
 
 **Enable DEV mode**
 
