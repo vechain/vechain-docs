@@ -50,7 +50,7 @@ Steps for creating a transaction:
 4. Paste the address or vedomain you want to send tokens to
 5. Select the amount of tokens you want to send to, then click **Next** button
 6. Select the delegation model you want, then click the **Sign & Send** button
-7. Authenticate with your password, and wait for the confirm screen. You may see a link to the transaction detail in the blockexplorer.
+7. Authenticate with your password, and wait for the confirm screen. You may see a link to the block explorer for the transaction details.
 {% endtab %}
 {% endtabs %}
 
