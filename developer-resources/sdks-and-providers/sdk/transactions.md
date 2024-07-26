@@ -15,7 +15,7 @@ To break it down:
 ## Example: Signing and Decoding
 In this example a simple transaction with a single clause is created, signed, encoded and then decoded
 
-```typescript { name=sign_decode, category=example }
+```typescript { name=sign-decode, category=example }
 // 1 - Define clauses
 
 const clauses: TransactionClause[] = [
@@ -65,7 +65,7 @@ const decodedTx = TransactionHandler.decode(encodedRaw, true);
 In VeChainThor blockchain a transaction can be composed of multiple clauses. \
 Clauses allow to send multiple payloads to different recipients within a single transaction.
 
-```typescript { name=multiple_clauses, category=example }
+```typescript { name=multiple-clauses, category=example }
 // 1 - Define multiple clauses
 
 const clauses: TransactionClause[] = [
@@ -119,7 +119,7 @@ const decodedTx = TransactionHandler.decode(encodedRaw, true);
 ## Example: Fee Delegation
 Fee delegation is a feature on the VeChainThor blockchain which enables the transaction sender to request another entity, a sponsor, to pay for the transaction fee on the sender's behalf.
 
-```typescript { name=fee_delegation, category=example }
+```typescript { name=fee-delegation, category=example }
 // Sender account with private key
 const senderAccount = {
     privateKey:
@@ -128,8 +128,7 @@ const senderAccount = {
 };
 
 // 1 - Create thor client for solo network
-const _soloUrl = 'http://localhost:8669/';
-const thorSoloClient = ThorClient.fromUrl(_soloUrl, {
+const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL, {
     isPollingEnabled: false
 });
 
@@ -193,7 +192,7 @@ const decodedTx = TransactionHandler.decode(encodedRaw, true);
 ## Example: BlockRef and Expiration
 Using the _BlockRef_ and _Expiration_ fields a transaction can be set to be processed or expired by a particular block. _BlockRef_ should match the first eight bytes of the ID of the block. The sum of _BlockRef_ and _Expiration_ defines the height of the last block that the transaction can be included.
 
-```typescript { name=blockref_expiration, category=example }
+```typescript { name=blockref-expiration, category=example }
 // 1 - Define clauses
 
 const clauses: TransactionClause[] = [
@@ -239,7 +238,7 @@ const decodedTx = TransactionHandler.decode(encodedRaw, true);
 ## Example: Transaction Dependency
 A transaction can be set to only be processed after another transaction, therefore defining an execution order for transactions. The _DependsOn_ field is the Id of the transaction on which the current transaction depends on. If the transaction does not depend on others _DependsOn_ can be set to _null_
 
-```typescript { name=tx_dependency, category=example }
+```typescript { name=tx-dependency, category=example }
 // 1 - Define transaction clauses
 
 const txAClauses: TransactionClause[] = [
@@ -326,8 +325,7 @@ Note - the result of a transaction might be different depending on the state(blo
 // And we demonstrate (1) how we can check the expected gas cost and (2) whether the transaction is successful
 
 // 1 - Create thor client for solo network
-const _soloUrl = 'http://localhost:8669';
-const thorSoloClient = ThorClient.fromUrl(_soloUrl);
+const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
 
 // 2(a) - create the transaction for a VET transfer
 const transaction1 = {
@@ -384,11 +382,12 @@ In the following complete examples, we will explore the entire lifecycle of a Ve
 1. **No Delegation (Signing Only with an Origin Private Key)**: In this scenario, we'll demonstrate the basic process of creating a transaction, signing it with the origin private key, and sending it to the VeChainThor blockchain without involving fee delegation.
 
 ```typescript { name=full-flow-no-delegator, category=example }
+import { expect } from 'expect';
+
 // START_SNIPPET: FullFlowNoDelegatorSnippet
 
 // 1 - Create the thor client
-const _soloUrl = 'http://localhost:8669/';
-const thorSoloClient = ThorClient.fromUrl(_soloUrl, {
+const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL, {
     isPollingEnabled: false
 });
 
@@ -469,11 +468,12 @@ const txReceipt = await thorSoloClient.transactions.waitForTransaction(
 2. **Delegation with Private Key**: Here, we'll extend the previous example by incorporating fee delegation. The transaction sender will delegate the transaction fee payment to another entity (delegator), and we'll guide you through the steps of building, signing, and sending such a transaction.
 
 ```typescript { name=full-flow-delegator-private-key, category=example }
+import { expect } from 'expect';
+
 // START_SNIPPET: FullFlowDelegatorPrivateKeySnippet
 
 // 1 - Create the thor client
-const _soloUrl = 'http://localhost:8669/';
-const thorSoloClient = ThorClient.fromUrl(_soloUrl, {
+const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL, {
     isPollingEnabled: false
 });
 
@@ -573,11 +573,12 @@ const txReceipt = await thorSoloClient.transactions.waitForTransaction(
 3. **Delegation with URL**: This example will showcase the use of a delegation URL for fee delegation. The sender will specify a delegation URL in the `signTransaction` options, allowing a designated sponsor to pay the transaction fee. We'll cover the full process, from building clauses to verifying the transaction on-chain.
 
 ```typescript { name=full-flow-delegator-url, category=example }
+import { expect } from 'expect';
+
 // START_SNIPPET: FullFlowDelegatorUrlSnippet
 
 // 1 - Create the thor client
-const _testnetUrl = 'https://testnet.vechain.org/';
-const thorClient = ThorClient.fromUrl(_testnetUrl, {
+const thorClient = ThorClient.fromUrl(TESTNET_URL, {
     isPollingEnabled: false
 });
 
@@ -683,7 +684,7 @@ By examining these complete examples, developers can gain a comprehensive unders
 # Errors handling on transactions
 You can find the transaction revert reason by using `getRevertReason` method with the transaction hash.
 
-```typescript { name=revert_reason, category=example }
+```typescript { name=revert-reason, category=example }
 // Define transaction id's
 const transactionHash =
     '0x0a5177fb83346bb6ff7ca8408889f0c99f44b2b1b5c8bf6f0eb53c4b2e81d98d';
@@ -695,3 +696,26 @@ console.log(revertReason);
 ```
 
 This method will return the revert reason of the transaction if it failed, otherwise it will return `null`.
+
+### Decoding revert reason when simulating a transaction
+Even when using the `simulateTransaction` method you can find the revert reason.
+
+```typescript { name=revert-reason-with-simulation, category=example }
+const simulatedTx: TransactionSimulationResult[] =
+    await thorSoloClient.transactions.simulateTransaction([
+        {
+            to: '0x0000000000000000000000000000456e65726779',
+            value: '0',
+            data: coder.encodeFunctionInput(energy_abi, 'transfer', [
+                '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
+                unitsUtils.parseVET('1000000000')
+            ])
+        }
+    ]);
+
+const revertReason = await thorSoloClient.transactions.decodeRevertReason(
+    simulatedTx[0].data
+);
+```
+
+In this case there is only a `TransactionSimulationResult`, so no need to loop.
