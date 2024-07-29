@@ -37,7 +37,7 @@ console.log("Genesis Block:", genesisBlock.number, genesisBlock.id);
 
 You can test the above snippet here:
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-connect?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/connect?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 {% hint style="info" %}
 The `ThorClient` provides a multitude of properties with access to all relevant functionality on VeChain. You can find examples and details about all of them in the [Thor Client docs](../../../developer-resources/sdks-and-providers/sdk/thor-client.md).
