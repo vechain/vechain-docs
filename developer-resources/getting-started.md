@@ -24,6 +24,17 @@ Jump-start your development with our pre-built templates:
 npm create vechain-dapp
 ```
 
+or
+
+```bash
+yarn create vechain-dapp
+```
+
+or
+
+<pre class="language-bash"><code class="lang-bash"><strong>npx create-vechain-dapp@latest
+</strong></code></pre>
+
 ## Development Roadmap
 
 #### 1. Design your dApp
