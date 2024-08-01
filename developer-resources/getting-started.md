@@ -2,7 +2,7 @@
 description: Your gateway to developing VeChain dApps
 ---
 
-# Getting Started with VeChain dApps
+# Getting Started
 
 ## What is a dApp?
 
@@ -21,8 +21,19 @@ Before diving into dApp development, ensure you have:
 Jump-start your development with our pre-built templates:
 
 ```bash
-npm create vechain
+npm create vechain-dapp
 ```
+
+or
+
+```bash
+yarn create vechain-dapp
+```
+
+or
+
+<pre class="language-bash"><code class="lang-bash"><strong>npx create-vechain-dapp@latest
+</strong></code></pre>
 
 ## Development Roadmap
 
