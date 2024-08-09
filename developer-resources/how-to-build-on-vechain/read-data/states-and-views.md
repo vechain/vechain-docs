@@ -77,7 +77,7 @@ If the transaction encounters an error, the method call will also throw an error
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-executecontractcall?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/contracts-executecall?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 ## contracts.load(address, abi)
 
@@ -133,4 +133,4 @@ console.log('Balance Past', balancePast);
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-contractloader-read?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-contract.load?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}

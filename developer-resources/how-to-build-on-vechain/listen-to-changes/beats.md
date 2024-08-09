@@ -84,7 +84,7 @@ console.log('Data found', bloomUtils.isInBloom(block.bloom, block.k, dataToTest)
 
 ## Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-listen-beats?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/listen-beats?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 Another example can be found on GitHub using a React Hook that listens and provides state updates when information is found in a new block. For example, transaction IDs or addresses:
 

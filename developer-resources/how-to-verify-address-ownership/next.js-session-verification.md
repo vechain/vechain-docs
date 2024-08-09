@@ -162,4 +162,4 @@ export default function handler(
 
 A Next.js example is available on StackBlitz:
 
-[https://stackblitz.com/edit/nextjs-dappkit-certificate?file=pages%2Fapi%2Fverify.ts](https://stackblitz.com/edit/nextjs-dappkit-certificate?file=pages%2Fapi%2Fverify.ts)
+[https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/nextjs-dappkit-certificate?file=pages%2Fapi%2Fverify.ts](https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/nextjs-dappkit-certificate?file=pages%2Fapi%2Fverify.ts)

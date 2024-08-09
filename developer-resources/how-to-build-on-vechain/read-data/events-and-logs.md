@@ -108,7 +108,7 @@ results.forEach(result => {
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filtereventlogs-nmyprl?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-logs-contract.load?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 ### `filterEventLogs()`: Multiple Events in one Request
 
@@ -210,5 +210,5 @@ The types of the results are fully documented in the [Event Logs Interface.](htt
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-sdk-read-logs-filterraweventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-logs-filterraweventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
