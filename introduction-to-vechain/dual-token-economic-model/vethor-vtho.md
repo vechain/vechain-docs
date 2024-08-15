@@ -2,7 +2,7 @@
 description: Understanding VeChain's transaction/gas token, VTHO
 ---
 
-# VeThor Token (VTHO)
+# VeThor (VTHO)
 
 <table><thead><tr><th width="258.27956989247315">VTHO Characteristics</th><th>Details</th></tr></thead><tbody><tr><td>Type</td><td><a href="https://github.com/vechain/VIPs/blob/master/vips/VIP-180.md">VIP180</a></td></tr><tr><td>Token contract address</td><td>0x0000000000000000000000000000456E65726779</td></tr><tr><td>Precision</td><td>18 decimal places</td></tr><tr><td>Supply</td><td>VTHO is the energy or the cost of carrying out the payment and smart contract transactions on the VeChainThor blockchain.</td></tr><tr><td>Consumption</td><td>70% of the transaction fee paid in VTHO in each block is burned and the remaining 30% is rewarded to the Authority Masternode which produces the block.</td></tr></tbody></table>
 

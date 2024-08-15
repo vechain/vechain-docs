@@ -1,10 +1,10 @@
-# How to connect the Sync2 wallet to a Thor Solo Node
+# Connect Sync2 to a Thor Solo Node
 
 This tutorial will provide a step by step guide for running a Thor solo node and connecting it to the Sync2 wallet. The Thor solo node is a sandbox development mode for the VeChainThor blockchain, that can be started (and is only available) on a single server. It is not publicly accessible and the generated blocks will be lost if the solo node is stopped.
 
 ## Step 1 : Launch the solo node <a href="#step-1-launch-the-solo-node" id="step-1-launch-the-solo-node"></a>
 
-Run Thor solo with the following docker command or follow the [how-to-run-a-thor-solo-node](how-to-run-a-thor-solo-node/ "mention") tutorial.
+Run Thor solo with the following docker command or follow the [how-to-run-a-thor-solo-node.md](how-to-run-a-thor-solo-node.md "mention") tutorial.
 
 ```bash
 docker run -p 127.0.0.1:8669:8669 vechain/thor:latest solo --api-cors '*' --api-addr 0.0.0.0:8669
@@ -25,24 +25,24 @@ The main advantage and purpose of Sync2 is the massive simplification of dApps a
 
 ### Get Sync2 <a href="#get-sync2" id="get-sync2"></a>
 
-Follow the instructions here [sync2](../../core-concepts/wallets/sync2/ "mention") to download and install the Sync2 wallet.
+Follow the instructions here [sync2](../core-concepts/wallets/sync2/ "mention") to download and install the Sync2 wallet.
 
 ### Connect Sync2 to solo node <a href="#connect-sync2-to-solo-node" id="connect-sync2-to-solo-node"></a>
 
 #### **Step1: Add node**
 
-1. Click the ![](../../.gitbook/assets/menu.svg)icon, in the top left hand corner.
+1. Click the ![](../.gitbook/assets/menu.svg)icon, in the top left hand corner.
 2. Click **Settings**.
 3. Click **Nodes**.
-4. Click the ![](../../.gitbook/assets/add\_circle\_outline.svg) icon, in the upper right hand corner.
+4. Click the ![](../.gitbook/assets/add\_circle\_outline.svg) icon, in the upper right hand corner.
 5. Enter the node's url `http:localhost:8669.`
 6. Click **Add** to add node.
 
 #### **Step2: Import the solo built-in wallet**
 
-1. Click upper left ![](../../.gitbook/assets/menu.svg) icon, in the top left hand corner, to open the wallet list.
-2. Click the ![](../../.gitbook/assets/add\_circle\_outline.svg)icon to create a new wallet.
-3. Click upper right ![](../../.gitbook/assets/more\_horiz.svg) icon.
+1. Click upper left ![](../.gitbook/assets/menu.svg) icon, in the top left hand corner, to open the wallet list.
+2. Click the ![](../.gitbook/assets/add\_circle\_outline.svg)icon to create a new wallet.
+3. Click upper right ![](../.gitbook/assets/more\_horiz.svg) icon.
 4. Select **Private.**
 5. Click **Import.**
 6. Enter the mnemonic words for the Thor solo node built-in wallet.
@@ -59,7 +59,7 @@ Do not use the above mnemonic phrase to secure mainnet assets. The funds will no
 
 7. Enter your password to authorize the import
 
-Congrats! You have successfully connected to a Thor solo node with the Sync2 wallet, and you can now deploy/integrate by using [inspector ](https://inspector.vecha.in/)or you can check out the [useful-tips-for-building-a-dapp-by-using-connex.md](useful-tips-for-building-a-dapp-by-using-connex.md "mention").
+Congrats! You have successfully connected to a Thor solo node with the Sync2 wallet, and you can now deploy/integrate by using [inspector ](https://inspector.vecha.in/)or you can check out the [Broken link](broken-reference "mention").
 
 ### Step 3: Launch Devpal <a href="#step-3-launch-devpal" id="step-3-launch-devpal"></a>
 

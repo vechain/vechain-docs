@@ -21,5 +21,5 @@ As good as Thor solo nodes are for initial testing, we would always recommend th
 * **Scalability & Performance:** Testing on a Thor solo node limits your ability to assess the scalability and performance of your dApp. In a decentralised network, the load is distributed among multiple nodes, and the performance of your dApp may vary depending on network size and activity.
 
 {% hint style="info" %}
-If you'd like to understand more about practically working with a Thor solo node, see [how-to-run-a-thor-solo-node](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention")
+If you'd like to understand more about practically working with a Thor solo node, see [how-to-run-a-thor-solo-node.md](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention")
 {% endhint %}

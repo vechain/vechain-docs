@@ -110,7 +110,7 @@ Fragments are not supported.
 
 ### Read Functions
 
-Function calls are encapsulated within a sub-object named `read`. This enables calling the contract for variable content, viewing functions, or performing simple transaction simulations.&#x20;
+Function calls are encapsulated within a sub-object named `read`. This enables calling the contract for variable content, viewing functions, or performing simple transaction simulations.
 
 ```javascript
 await vtho.read.name() // returns the name

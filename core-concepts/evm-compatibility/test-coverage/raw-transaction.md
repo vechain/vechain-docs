@@ -35,7 +35,7 @@ With these changes one can deploy `ERC1820` on thor.
 ## Contracts Affected
 
 | Contract Name           |
-|-------------------------|
+| ----------------------- |
 | ERC777                  |
 | ERC777PresetFixedSupply |
 | ERC1820Implementer      |

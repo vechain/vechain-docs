@@ -2,7 +2,7 @@
 description: An overview of digital property types and their blockchain implementation.
 ---
 
-# Digital Property: The New Frontier of Ownership
+# Introduction to digital property
 
 ## Redefining Property in the Digital Age
 

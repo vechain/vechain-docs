@@ -28,9 +28,9 @@ However, as all Authority Masternodes have their identities and reputations at s
 
 VeChain continuously evolves the VeChainThor blockchain to meet emerging needs:
 
- * Regular protocol upgrades
- * Research into scaling solutions
- * Exploration of cross-chain interoperability
- * Ongoing security enhancements
+* Regular protocol upgrades
+* Research into scaling solutions
+* Exploration of cross-chain interoperability
+* Ongoing security enhancements
 
 By combining enterprise-grade performance with innovative features and a focus on sustainability, VeChainThor positions itself as a leading blockchain solution for businesses and individuals alike. Its unique consensus mechanism and tailored features provide a robust foundation for the next generation of blockchain applications and ecosystem growth.

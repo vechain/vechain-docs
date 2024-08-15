@@ -24,7 +24,7 @@ It is important to emphasise that the bloom filter's design is intentionally eng
 
 By employing bloom filters in this manner, the VeChainThor blockchain significantly reduces the computational burden associated with address and block lookup operations, resulting in improved responsiveness and heightened scalability. This, in turn, positively impacts the overall user experience and facilitates seamless integration with various applications and services built on the blockchain platform.
 
-```typescript { name=bloom, category=example }
+```typescript
 // 1 - Get best value of k (bits per key)
 
 const k = bloom.calculateK(100);

@@ -47,7 +47,7 @@ An example result is:
 ## Bloom Filter
 
 {% hint style="info" %}
-[You can find more information about the Bloom Filter in another section of the documentation.](../../../../developer-resources/sdks-and-providers/sdk/bloom-filter.md)
+[You can find more information about the Bloom Filter in another section of the documentation.](../../sdks-and-providers/sdk/bloom-filter.md)
 {% endhint %}
 
 It enables the verification of interactions involving a specific address, potentially eliminating the need for further transaction or block lookups if the block lacks information related to that address.

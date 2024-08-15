@@ -14,6 +14,6 @@ Unfortunately, VeChain's `web3-providers-connex` library does not yet support ge
 ## Contracts Affected
 
 | Contract Name              |
-|----------------------------|
+| -------------------------- |
 | GovernorTimelockCompound   |
 | GovernorCompatibilityBravo |

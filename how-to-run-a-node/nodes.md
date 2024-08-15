@@ -2,7 +2,7 @@
 description: RESTful API to access the VeChainThor blockchain
 ---
 
-# VeChainThor Nodes: Your Gateway to Blockchain Interaction
+# Nodes
 
 ## Overview
 

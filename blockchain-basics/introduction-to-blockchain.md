@@ -1,8 +1,10 @@
 ---
-description: A concise guide to the essence, mechanics, applications, and significance of blockchain technology.
+description: >-
+  A concise guide to the essence, mechanics, applications, and significance of
+  blockchain technology.
 ---
 
-# Blockchain: Unraveling the Digital Revolution
+# Introduction to blockchain
 
 ## Defining Blockchain
 

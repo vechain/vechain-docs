@@ -2,7 +2,7 @@
 description: A comprehensive guide to acquiring VeChain assets.
 ---
 
-# Acquiring VeChain Assets
+# Acquire VeChain Assets
 
 ## How to Purchase VET & VTHO
 
@@ -43,6 +43,7 @@ A popular adage in the blockchain industry, coined by Andreas Antonopoulos, stat
 When you store your assets on a centralized exchange, you're exposed to counterparty risk. By entrusting a third party with your cryptocurrency, you're relying on their security measures and ethical practices. Self-custody, where you control your private keys, eliminates these risks.
 
 Benefits of self-custody:
+
 * Full control over your assets
 * Reduced risk of exchange hacks or insolvency
 * Privacy and anonymity

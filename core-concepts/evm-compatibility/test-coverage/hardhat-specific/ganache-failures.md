@@ -7,7 +7,7 @@ These types of errors are comprised of the common errors between the VeChain tes
 ## Contracts Affected
 
 | Contract Name      |
-|--------------------|
+| ------------------ |
 | DoubleEndedQueue   |
 | CrossChainEnabled  |
 | ERC20Votes         |

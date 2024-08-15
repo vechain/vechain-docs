@@ -2,7 +2,7 @@
 description: Understanding VeChain's innovative dual-token economic model.
 ---
 
-# VeChain's Dual-Token Economic Model
+# Dual-Token Economic Model
 
 ## Blockchain Token Economic Models: An Overview
 

@@ -20,7 +20,7 @@ layout:
 There are two major types of signing contents:
 
 | Type        | Purpose                                       |
-|-------------|-----------------------------------------------|
+| ----------- | --------------------------------------------- |
 | Transaction | **Create** / **Transfer** / **Contract Call** |
 | Certificate | **Identification** / **Agreement**            |
 
@@ -58,7 +58,6 @@ Steps for creating a transaction:
 
 {% tabs %}
 {% tab title="Mobile" %}
-
 1. Go to NFTs and choose the NFT you would like to send
 2. Tap **Send** button
 3. Enter or select the address you want to send tokens, then tap **Next** button
@@ -69,7 +68,6 @@ Steps for creating a transaction:
 {% endtab %}
 
 {% tab title="Browser Extension" %}
-
 1. Go to NFTs and choose the NFT you would like to send
 2. Click **Send NFT** button
 3. Paste or select the destination address, then click **Send NFT** button
@@ -82,28 +80,22 @@ Steps for creating a transaction:
 
 {% tabs %}
 {% tab title="Mobile" %}
-
 1. Go to the **Discovery section** and go to your desired DApp
 2. Connect your VeWorld wallet
 3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
 4. Select the account you want to connect with, then tap **Connect**
 5. You can check the details, then click "Sign"
 6. Authenticate with your security method, and you'll be redirect to the DApp
-
 {% endtab %}
 
 {% tab title="Browser Extension" %}
-
 1. Open in your browser your desired DApp
 2. Connect your VeWorld wallet
 3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
 4. You can check the details, then click "Sign"
-
 {% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
-Signing a certificate doesn't result in a transaction. Such operations are stored in your wallet history only.
-There will be no trace onchain so that you don't need to pay any gas fees to approve them.
+Signing a certificate doesn't result in a transaction. Such operations are stored in your wallet history only. There will be no trace onchain so that you don't need to pay any gas fees to approve them.
 {% endhint %}
-

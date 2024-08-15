@@ -7,7 +7,7 @@ These errors are justifiable as they occur due to VeChain and Ethereum having di
 ## Contracts Affected
 
 | Contract Name                  |
-|--------------------------------|
+| ------------------------------ |
 | ERC165                         |
 | ERC165Storage                  |
 | AccessControl                  |

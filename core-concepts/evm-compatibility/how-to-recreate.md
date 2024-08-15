@@ -8,7 +8,7 @@ description: >-
 
 ## Run a Thor Solo Node
 
-Use the tutorial [how-to-run-a-thor-solo-node](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention") to start up a thor solo node.
+Use the tutorial [how-to-run-a-thor-solo-node.md](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention") to start up a thor solo node.
 
 ## Configure a Development Environment
 
@@ -75,6 +75,7 @@ npx hardhat test --network vechain
 ```
 
 ## Running VeChain custom fork
+
 This section explains how to run the custom tests adapted to run on VeChainThor blockchain. This fork is based on [OpenZeppelin version 5](https://github.com/OpenZeppelin/openzeppelin-contracts/releases/tag/v5.0.2).
 
 ### Clone openzeppelin-contracts
@@ -85,7 +86,9 @@ cd openzeppelin-contracts
 ```
 
 ### Run thor solo
+
 When running the custom fork you need to increase the gas limit.
+
 ```bash
 bin/thor solo --on-demand --gas-limit 10000000000
 ```
@@ -109,15 +112,19 @@ npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
 ```bash
 npx hardhat test --network vechain
 ```
+
 or in case of OZ5
+
 ```bash
 npm run test:solo
 ```
 
 ### Run all tests in a specific directory (OZ5)
+
 ```bash
 npm run test:solo:dir <dir_relative_path>
 ```
 
 ### Results
+
 All the tests in the custom fork are expected to pass.

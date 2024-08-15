@@ -127,7 +127,7 @@ const sendTransactionResult = await thor.transactions.sendTransaction(signedTx);
 
 ### Wait for Results
 
-`sendTransaction`  returns a transaction id that can be used to track the status of the newly published transaction. `waitForTransaction` will resolve with the full receipt as soon as the result is available:
+`sendTransaction` returns a transaction id that can be used to track the status of the newly published transaction. `waitForTransaction` will resolve with the full receipt as soon as the result is available:
 
 ```javascript
 const txReceipt = await thor.transactions.waitForTransaction(

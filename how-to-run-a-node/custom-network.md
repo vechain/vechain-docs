@@ -8,7 +8,7 @@ To start your own custom network, you need to manually configure the genesis fil
 2. Thor version ≥ [v1.0.7](https://github.com/vechain/thor/releases/tag/v1.0.7)
 
 {% hint style="info" %}
-Running a custom network requires prior knowledge of the [built-in-contracts.md](../../../developer-resources/built-in-contracts.md "mention")and [#proof-of-authorithy-poa](../../../introduction-to-vechain/about-the-vechain-blockchain/consensus-deep-dive.md#proof-of-authorithy-poa "mention")
+Running a custom network requires prior knowledge of the [built-in-contracts.md](../developer-resources/built-in-contracts.md "mention")and [#proof-of-authorithy-poa](../introduction-to-vechain/about-the-vechain-blockchain/consensus-deep-dive.md#proof-of-authorithy-poa "mention")
 {% endhint %}
 
 ## Configure Your Genesis File <a href="#configure-your-genesis-file" id="configure-your-genesis-file"></a>

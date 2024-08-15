@@ -7,7 +7,7 @@
 ## Contracts Affected
 
 | Contract Name           |
-|-------------------------|
+| ----------------------- |
 | GovernorTimelockControl |
 | TimelockController      |
 | TokenTimelock           |

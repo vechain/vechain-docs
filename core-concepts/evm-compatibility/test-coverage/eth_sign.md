@@ -101,5 +101,5 @@ const net = new SimpleNet("http://127.0.0.1:8669");
 ## Contracts Affected
 
 | Contract Name    |
-|------------------|
+| ---------------- |
 | SignatureChecker |

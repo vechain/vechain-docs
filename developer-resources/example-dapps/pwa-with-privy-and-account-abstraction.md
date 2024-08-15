@@ -257,8 +257,7 @@ The hook internally performs the following steps:
 
 The visualized process is:
 
-```mermaid
-sequenceDiagram
+{% @mermaid/diagram content="sequenceDiagram
     participant User
     participant App
     participant Privy
@@ -283,8 +282,7 @@ sequenceDiagram
 
     useVeChainAccount->>+SimpleAccount: executeWithAuthorization(.., to, value, data, signature)
     SimpleAccount-->Blockchain: execute to.abi(args)
-    useVeChainAccount-->>-User: confirm tx
-```
+    useVeChainAccount-->>-User: confirm tx" %}
 
 #### Add `VeChainAccountProvider`
 

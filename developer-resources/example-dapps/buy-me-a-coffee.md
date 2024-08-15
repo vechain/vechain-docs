@@ -8,10 +8,7 @@ You can open the resulting project on [GitHub](https://github.com/ifavo/example-
 
 Here is the sequence we are building during this Tutorial:
 
-
-
-```mermaid
-sequenceDiagram
+{% @mermaid/diagram content="sequenceDiagram
 participant User
 participant Wallet
 participant App
@@ -47,8 +44,7 @@ loop until transaction is confirmed
   Blockchain-->>App: pending, successful, or failed
 end
 
-App-->>User: show transaction result
-```
+App-->>User: show transaction result" %}
 
 ## Preparation
 

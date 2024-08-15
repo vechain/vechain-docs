@@ -7,7 +7,7 @@ description: The evolution from Web1 to Web3, a paradigm shift in internet techn
 ## Journey of the Web
 
 | Era    | Web 1.0                       | Web 2.0                             | Web 3.0                                  |
-|--------|-------------------------------|-------------------------------------|------------------------------------------|
+| ------ | ----------------------------- | ----------------------------------- | ---------------------------------------- |
 | Focus  | Read-only: Information Access | Read-write: Social Interaction      | Read-write-own: User Empowerment         |
 | Design | Static websites               | Dynamic Web Applications            | Decentralized Applications (dApps)       |
 | Model  | One-way Information Flow      | Cloud Computing, User Participation | Blockchain Integration, Decentralization |

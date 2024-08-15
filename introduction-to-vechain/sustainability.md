@@ -2,7 +2,7 @@
 description: VeChain's role in fostering global sustainability.
 ---
 
-# Sustainability and VeChain
+# Sustainability
 
 ## VeChain's Approach to Global Sustainability
 

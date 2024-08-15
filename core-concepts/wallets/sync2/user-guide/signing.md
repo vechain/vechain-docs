@@ -7,7 +7,7 @@
 There are two major types of signing contents:
 
 | Type        | Purpose                                       |
-|-------------|-----------------------------------------------|
+| ----------- | --------------------------------------------- |
 | Transaction | **Create** / **Transfer** / **Contract Call** |
 | Certificate | **Identification** / **Agreement**            |
 

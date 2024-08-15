@@ -52,7 +52,7 @@ To propose changes to the documentation directly, you can submit a pull request.
 
 Remember to keep your fork synchronized with the original repository to avoid conflicts. You can do this by adding the original repository as a remote and pulling from it regularly:
 
-``` bash
+```bash
 git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPOSITORY.git
 git fetch upstream
 git merge upstream/master
