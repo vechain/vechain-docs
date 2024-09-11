@@ -43,7 +43,7 @@ const body: TransactionBody = {
 };
 
 // Create private key
-const privateKey = secp256k1.generatePrivateKey();
+const privateKey = await secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -98,7 +98,7 @@ const body: TransactionBody = {
 };
 
 // Create private key
-const privateKey = secp256k1.generatePrivateKey();
+const privateKey = await secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -165,12 +165,12 @@ const body: TransactionBody = {
 
 // 4 - Create private keys of sender and delegate
 
-const nodeDelegate = HDNode.fromMnemonic(mnemonic.generate());
+const nodeDelegate = HDNode.fromMnemonic(Mnemonic.of());
 const delegatorPrivateKey = nodeDelegate.privateKey;
 
 // 5 - Get address of delegate
 
-const delegatorAddress = addressUtils.fromPublicKey(nodeDelegate.publicKey);
+const delegatorAddress = Address.ofPublicKey(nodeDelegate.publicKey).toString();
 
 // 6 - Sign transaction as sender and delegate
 
@@ -217,7 +217,7 @@ const body: TransactionBody = {
 
 // 3 - Create private key
 
-const privateKey = secp256k1.generatePrivateKey();
+const privateKey = await secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -283,7 +283,7 @@ const txBBody: TransactionBody = {
 };
 
 // Define the senders private key
-const senderPrivateKey = secp256k1.generatePrivateKey();
+const senderPrivateKey = await secp256k1.generatePrivateKey();
 
 // To define transaction B as dependant on transaction A
 // We need to sign transaction A, and then get its Id
