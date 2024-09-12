@@ -54,7 +54,7 @@ So you can run the rpc-proxy with:
 - `-a, --accounts <accounts>`: The accounts (private keys) that the proxy server will use to sign transactions. It is a
   space-separated list of private keys.
     - -e.g.- `npx rpc-proxy -a "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
-    OR `rpc-proxy --accounts "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
+    OR `npx rpc-proxy --accounts "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
 
 - `-m, --mnemonic <mnemonic>`: The mnemonic that the proxy server will use to sign transactions.
 - `-mc, --mnemonicCount <mnemonicCount>`: The number of accounts to derive from the mnemonic.
@@ -69,10 +69,10 @@ So you can run the rpc-proxy with:
 - `-e, --enableDelegation`: Whether to enable delegation.
 - `-dp, --delegatorPrivateKey <delegatorPrivateKey>`: The private key of the delegator.
 - `-du, --delegatorUrl <delegatorUrl>`: The URL of the delegator.
-    - -e.g.- `rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
-      OR `rpc-proxy --enableDelegation --delegatorPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
-    - -e.g.- `rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...`
-      OR `rpc-proxy --enableDelegation --delegatorUrl https://sponsor-testnet.vechain.energy/by/...`
+    - -e.g.- `npx rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+      OR `npx rpc-proxy --enableDelegation --delegatorPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+    - -e.g.- `npx rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...`
+      OR `npx rpc-proxy --enableDelegation --delegatorUrl https://sponsor-testnet.vechain.energy/by/...`
     - **NOTE**: --delegatorPrivateKey and --delegatorUrl are mutually exclusive.
     - **NOTE**: if --enableDelegation is used, --delegatorPrivateKey OR --delegatorUrl MUST be used.
 
