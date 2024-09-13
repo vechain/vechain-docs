@@ -24,7 +24,7 @@ By default, the proxy is configured to be used with a solo node running on your 
 ## CLI Options
 
 With rpc-proxy, you can use the following CLI options.
-Cli options override the configuration file.
+CLI options override the configuration file.
 So you can run the rpc-proxy with:
 
 - a configuration file with the default values and override them with the cli options
@@ -33,9 +33,9 @@ So you can run the rpc-proxy with:
 - a custom configuration file and override some values with the cli options
     - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json -p 8545 -v ...`
 
-### Cli options list
+### CLI options list
 
-#### Give the configuration file
+#### Provide the configuration file
 
 - `-c, --configurationFile <config>`: The path to the configuration file.
     - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json` OR `rpc-proxy --configurationFile custom-config.json`
@@ -49,7 +49,7 @@ So you can run the rpc-proxy with:
 - `-v, --verbose`: Whether to enable verbose logging.
     - -e.g.- `npx rpc-proxy -v` OR `rpc-proxy --verbose`
 
-#### Give the accounts
+#### Provide the accounts
 
 - `-a, --accounts <accounts>`: The accounts (private keys) that the proxy server will use to sign transactions. It is a
   space-separated list of private keys.
