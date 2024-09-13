@@ -6,7 +6,8 @@ Our VeChain integration with Remix enables our community to leverage this robust
 
 ## RPC Proxy
 
-The RPC Proxy is designed to bridge the gap between Thor's RESTful API and Ethereum's JSON-RPC, enabling seamless interaction with the VeChainThor blockchain through RPC calls. It is particularly useful for integrating with tools such as the Remix IDE, allowing developers to leverage familiar Ethereum development environments while working on VeChain projects.
+The RPC Proxy is designed to bridge the gap between Thor's RESTful API and Ethereum's JSON-RPC, enabling seamless
+interaction with the VeChainThor blockchain through RPC calls. It is particularly useful for integrating with tools such as the Remix IDE.
 
 ## Installation
 
@@ -16,7 +17,66 @@ To install the RPC proxy, use the following command:
 yarn add @vechain/sdk-rpc-proxy
 ```
 
-## Configuration
+By default, the proxy is configured to be used with a solo node running on your local machine. There are two options if you want to change the default behavior, or use a custom configuration:
+ - Create a config.json file and pass it to the command when launching the RPC Proxy.
+ - Use CLI options.
+
+## CLI Options
+
+With rpc-proxy, you can use the following CLI options.
+CLI options override the configuration file.
+So you can run the rpc-proxy with:
+
+- a configuration file with the default values and override them with the cli options
+    - -e.g.- `npx rpc-proxy -p 8545 -v ...`
+
+- a custom configuration file and override some values with the cli options
+    - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json -p 8545 -v ...`
+
+### CLI options list
+
+#### Provide the configuration file
+
+- `-c, --configurationFile <config>`: The path to the configuration file.
+    - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json` OR `rpc-proxy --configurationFile custom-config.json`
+
+- `-p, --port <port>`: The port on which the proxy server will run.
+    - -e.g.- `npx rpc-proxy -p 8545` OR `rpc-proxy --port 8545`
+
+- `-u, --url <url>`: The URL of the VeChain Thor node.
+    - -e.g.- `npx rpc-proxy -u http://testnet.vechain.org` OR `rpc-proxy --url http://testnet.vechain.org`
+
+- `-v, --verbose`: Whether to enable verbose logging.
+    - -e.g.- `npx rpc-proxy -v` OR `rpc-proxy --verbose`
+
+#### Provide the accounts
+
+- `-a, --accounts <accounts>`: The accounts (private keys) that the proxy server will use to sign transactions. It is a
+  space-separated list of private keys.
+    - -e.g.- `npx rpc-proxy -a "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
+    OR `npx rpc-proxy --accounts "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
+
+- `-m, --mnemonic <mnemonic>`: The mnemonic that the proxy server will use to sign transactions.
+- `-mc, --mnemonicCount <mnemonicCount>`: The number of accounts to derive from the mnemonic.
+- `-mi, --mnemonicInitialIndex <mnemonicInitialIndex>`: The index from which to start deriving accounts from the
+  mnemonic.
+    - -e.g.- `npx rpc-proxy -m "denial kitchen pet squirrel other broom bar gas better priority spoil cross" -mc 10 -mi 1`
+      OR `npx rpc-proxy --mnemonic "denial kitchen pet squirrel other broom bar gas better priority spoil cross" --mnemonicCount 10 --mnemonicInitialIndex 1`
+    - **NOTE**: --mnemonic, --mnemonicCount, and --mnemonicInitialIndex MUST be used together.
+
+#### Use delegation
+
+- `-e, --enableDelegation`: Whether to enable delegation.
+- `-dp, --delegatorPrivateKey <delegatorPrivateKey>`: The private key of the delegator.
+- `-du, --delegatorUrl <delegatorUrl>`: The URL of the delegator.
+    - -e.g.- `npx rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+      OR `npx rpc-proxy --enableDelegation --delegatorPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+    - -e.g.- `npx rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...`
+      OR `npx rpc-proxy --enableDelegation --delegatorUrl https://sponsor-testnet.vechain.energy/by/...`
+    - **NOTE**: --delegatorPrivateKey and --delegatorUrl are mutually exclusive.
+    - **NOTE**: if --enableDelegation is used, --delegatorPrivateKey OR --delegatorUrl MUST be used.
+
+## Configuration file
 
 Create a `config.json` with your desired settings. The configuration file includes the following fields:
 
@@ -26,6 +86,18 @@ Create a `config.json` with your desired settings. The configuration file includ
 * `verbose`: Wheter to enable verbose logging.
 * `debug`: Whether to enable debug mode.
 * `enableDelegation`: Whether to enable delegation.
+
+After creating your configuration file, run the proxy using one of the following commands:
+
+```bash
+rpc-proxy -c <json config file>
+```
+
+Or:
+
+```bash
+rpc-proxy --configurationFile <json config file>
+```
 
 ### Example Configuration
 
@@ -45,20 +117,6 @@ Create a `config.json` with your desired settings. The configuration file includ
 If you are launching the RPC Proxy with the provided example configuration, make sure to have Thor running locally in solo mode. Find out more about Thors different options and how to build it [here](https://github.com/vechain/thor).
 
 If you want to use VeChain `testnet` or `mainnet` use the following urls: `https://testnet.vechain.org/` or `https://mainnet.vechain.org/`. and remember also to change the `accounts` field by passing the correct account you want to use.
-
-## Running the Proxy
-
-After creating your configuration file, run the proxy using one of the following commands:
-
-```bash
-rpc-proxy -c <json config file>
-```
-
-Or:
-
-```bash
-rpc-proxy --config <json config file>
-```
 
 ## Connecting with Remix IDE
 
