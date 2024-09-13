@@ -4,7 +4,11 @@ description: Transactions related functions.
 
 # Transactions
 
-Vechain SDK provides comprehensive support for handling transactions. Developers can initialize a transaction by assembling the transaction body, adding clauses, and finally signing and sending the transaction. 
+The VeChain SDK provides comprehensive support for handling transactions. Developers can initialize a transaction by assembling the transaction body, adding clauses, and finally signing and sending the transaction. 
+
+> ⚠️ **Warning:**
+> All the examples listed below refer to low level transaction building. The VeChain SDK provides built-in methods to sign and send transactions. Please refer to the contracts section for more information.
+
 
 To break it down:
 
@@ -43,7 +47,7 @@ const body: TransactionBody = {
 };
 
 // Create private key
-const privateKey = await secp256k1.generatePrivateKey();
+const privateKey = await Secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -62,8 +66,8 @@ const decodedTx = TransactionHandler.decode(encodedRaw, true);
 ```
 
 ## Example: Multiple Clauses
-In VeChainThor blockchain a transaction can be composed of multiple clauses. \
-Clauses allow to send multiple payloads to different recipients within a single transaction.
+On the VeChainThor blockchain a transaction can be composed of multiple clauses. \
+Clauses are a feature of the VeChainThor blockchain that increase the scalability of the blockchain by enabling the sending of multiple payloads to different recipients within a single transaction.
 
 ```typescript { name=multiple-clauses, category=example }
 // 1 - Define multiple clauses
@@ -98,7 +102,7 @@ const body: TransactionBody = {
 };
 
 // Create private key
-const privateKey = await secp256k1.generatePrivateKey();
+const privateKey = await Secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -165,7 +169,7 @@ const body: TransactionBody = {
 
 // 4 - Create private keys of sender and delegate
 
-const nodeDelegate = HDNode.fromMnemonic(Mnemonic.of());
+const nodeDelegate = HDKey.fromMnemonic(Mnemonic.of());
 const delegatorPrivateKey = nodeDelegate.privateKey;
 
 // 5 - Get address of delegate
@@ -217,7 +221,7 @@ const body: TransactionBody = {
 
 // 3 - Create private key
 
-const privateKey = await secp256k1.generatePrivateKey();
+const privateKey = await Secp256k1.generatePrivateKey();
 
 // 4 - Sign transaction
 
@@ -283,7 +287,7 @@ const txBBody: TransactionBody = {
 };
 
 // Define the senders private key
-const senderPrivateKey = await secp256k1.generatePrivateKey();
+const senderPrivateKey = await Secp256k1.generatePrivateKey();
 
 // To define transaction B as dependant on transaction A
 // We need to sign transaction A, and then get its Id
