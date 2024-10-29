@@ -47,9 +47,9 @@ const vechainWalletKitOptions: DAppKitOptions = {
     onSourceClick={source => void}
     // OPTIONAL: every wallet has a connection certificate, but wallet connect doesn't connect with a certificate, it uses a session; if required, with this option, we will force the user to sign a certificate after he finishes the connection with wallet connect
     requireCertificate=false;
-    // OPTIONAL: certificate to be signed during the login, otherwise a standard one will be used
+    // OPTIONAL: you can optionally provide a certificate to be signed during the login, otherwise a standard one will be used
     connectionCertificate={defaultContract}
-    //OPTIONAL: you can choose witch wallet to be allowed between 'wallet-connect', 'veworld', 'sync2' or 'sync'. default: all
+    // OPTIONAL: you can choose which wallets to allow in your application between 'wallet-connect', 'veworld', 'sync2' or 'sync'. Default: all
     allowedWallets={[ 'veworld', 'wallet-connect' ]}
 };
 
@@ -130,7 +130,7 @@ const state: WalletManagerState = wallet.state
 #### WalletManagerState:
 
 * `account` - the address of the connected wallet. Null if not connected
-* `accountDomain` - the  account vechain domain if present
+* `accountDomain` - the .vet domain account (VeChain domains) if present
 * `isAccountDomainLoading` - whether the account domain is loading
 * `source` - the source of the currently selected wallet. Null if not selected
 * `connectionCertificate` - certificate signed during connection

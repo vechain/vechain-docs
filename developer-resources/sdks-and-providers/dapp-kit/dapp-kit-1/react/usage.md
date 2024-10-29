@@ -51,9 +51,9 @@ const walletConnectOptions: WalletConnectOptions = {
             onSourceClick={source => void}
             // OPTIONAL: every wallet has a connection certificate, but wallet connect doesn't connect with a certificate, it uses a session; if required, with this option, we will force the user to sign a certificate after he finishes the connection with wallet connect
             requireCertificate=false
-            // OPTIONAL: certificate to be signed during the login, otherwise a standard one will be used
+            // OPTIONAL: you can optionally provide a certificate to be signed during the login, otherwise a standard one will be used
             connectionCertificate={defaultContract}
-            //OPTIONAL: you can choose witch wallet to be allowed between 'wallet-connect', 'veworld', 'sync2' or 'sync'. default: all
+            // OPTIONAL: you can choose which wallets to allow in your application between 'wallet-connect', 'veworld', 'sync2' or 'sync'. Default: all
 <strong>            allowedWallets={[ 'veworld', 'wallet-connect' ]}
 </strong>        >
         &#x3C;App />
@@ -104,7 +104,7 @@ const MyComponent: React.FC = () => {
   const {
     // The current connected account
     account,
-    // The account vechain domain if present
+    // the .vet domain account (VeChain domains) if present
     accountDomain,
     // Whether the account domain is loading
     isAccountDomainLoading,
@@ -172,7 +172,7 @@ const MyComponent = () => {
 
 #### useVechianDomain
 
-This hook can fetch a vechain domain from an address and an address from a vechian domain.
+This hook can fetch a Vechain domain from an address and an address from a Vechian domain.
 
 ```typescript
 import { useVechainDomain } from '@vechain/dapp-kit-react';
