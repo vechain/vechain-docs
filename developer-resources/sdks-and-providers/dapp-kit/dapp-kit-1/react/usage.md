@@ -25,9 +25,8 @@ const walletConnectOptions: WalletConnectOptions = {
 
 <pre class="language-tsx" data-overflow="wrap"><code class="lang-tsx">import { DAppKitProvider } from '@vechain/dapp-kit-react';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-    &#x3C;React.StrictMode>
-        &#x3C;DAppKitProvider
+ return (
+      &#x3C;DAppKitProvider
             // REQUIRED: The URL of the node you want to connect to
             nodeUrl={'https://testnet.vechain.org/'}
             // OPTIONAL: Required if you're not connecting to the main net
@@ -57,9 +56,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             //OPTIONAL: you can choose witch wallet to be allowed between 'wallet-connect', 'veworld', 'sync2' or 'sync'. default: all
 <strong>            allowedWallets={[ 'veworld', 'wallet-connect' ]}
 </strong>        >
-            &#x3C;App />
-        &#x3C;/DAppKitProvider>
-    &#x3C;/React.StrictMode>,
+        &#x3C;App />
+    &#x3C;/DAppKitProvider>
 );
 </code></pre>
 
