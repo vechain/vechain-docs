@@ -13,7 +13,7 @@ Vechain SDK provides functionality to interact with smart contracts on the VeCha
 ```typescript { name=abi, category=example }
 // 1 - Create a simple function to encode into ABI
 
-const simpleAbiFunction = new abi.Function({
+const simpleAbiFunction = new ABIFunction({
     constant: false,
     inputs: [
         {
@@ -43,17 +43,17 @@ const simpleAbiFunction = new abi.Function({
 
 // 2 - Encode function
 
-const encodedFunction = simpleAbiFunction.encodeInput([1, 'foo']);
+const encodedFunction = simpleAbiFunction.encodeData([1, 'foo']).toString();
 ```
 
 ## Contract
 
-The contract interface is used to provide a higher level of abstraction to allow direct interaction with a smart contract. To create a contract interface is necessary to have a compatible smart contract ABI.VeChain SDK provides a full implementation of the Contract interface as well as some methods to encode directly a specific fragment of the smart contract (until now only functions and events fragments are supported). Encoding and decoding are based on the ABI one.
+The contract interface is used to provide a higher level of abstraction to allow direct interaction with a smart contract. To create a contract interface is necessary to have a compatible smart contract ABI.VeChain SDK provides a full implementation of the Contract interface as well as some methods to encode directly a specific ABI item of the smart contract (until now only function and event ABIs are supported). Encoding and decoding are based on the ABI one.
 
 ```typescript { name=contract, category=example }
 // 1 - Create a new function
 
-const contractABI = stringifyData([
+const contractABI = [
     {
         constant: false,
         inputs: [
@@ -82,14 +82,18 @@ const contractABI = stringifyData([
         stateMutability: 'view',
         type: 'function'
     }
-]);
+] as const;
 
 // 2 - Encode the function input, ready to be used to send a tx
-const encodedData = coder.encodeFunctionInput(contractABI, 'setValue', [123]);
+const encodedData = ABIContract.ofAbi(contractABI).encodeFunctionInput(
+    'setValue',
+    [123]
+);
 
 // 3 - Decode the function input data
 const decodedData = String(
-    coder.decodeFunctionInput(contractABI, 'setValue', encodedData)[0]
+    ABIContract.ofAbi(contractABI).decodeFunctionInput('setValue', encodedData)
+        .args[0]
 ); // decode the function input data
 ```
 
@@ -105,9 +109,9 @@ By supporting ABI and RLP encoding handling, VeChainSDK equips developers with t
 const profile = {
     name: 'clause',
     kind: [
-        { name: 'to', kind: new RLP_CODER.OptionalFixedHexBlobKind(20) },
-        { name: 'value', kind: new RLP_CODER.NumericKind(32) },
-        { name: 'data', kind: new RLP_CODER.HexBlobKind() }
+        { name: 'to', kind: new OptionalFixedHexBlobKind(20) },
+        { name: 'value', kind: new NumericKind(32) },
+        { name: 'data', kind: new HexBlobKind() }
     ]
 };
 
@@ -119,12 +123,10 @@ const clause = {
     data: '0x'
 };
 
-// 3 - RLP_CODER Instance to encode and decode
-
-const rlp = new RLP_CODER.Profiler(profile);
+// 3 - RLPProfiler Instance to encode and decode
 
 // Encoding and Decoding
-const data = rlp.encodeObject(clause);
-const obj = rlp.decodeObject(data);
+const data = RLPProfiler.ofObject(clause, profile).encoded;
+const obj = RLPProfiler.ofObjectEncoded(data, profile).object;
 ```
 

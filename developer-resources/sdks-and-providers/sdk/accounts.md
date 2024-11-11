@@ -31,7 +31,7 @@ console.log('Mnemonic words', randomMnemonic);
 // 2 - Derive private key from mnemonic words according to BIP32, using the path `m/44'/818'/0'/0`.
 
 // Defined for VET at https://github.com/satoshilabs/slips/blob/master/slip-0044.md
-const privateKey = mnemonic.derivePrivateKey(randomMnemonic);
+const privateKey = Mnemonic.toPrivateKey(randomMnemonic);
 
 console.log(Hex.of(privateKey).toString());
 // ...SOME PRIVATE KEY...
@@ -145,10 +145,7 @@ const privateKey = await Secp256k1.generatePrivateKey();
 // keystore encryption is UTF-8 NFKC.
 const keyStorePassword = 'your password';
 
-const newKeyStore = await keystore.encrypt(
-    Buffer.from(privateKey),
-    keyStorePassword
-);
+const newKeyStore = await keystore.encrypt(privateKey, keyStorePassword);
 
 // @NOTE the `encrypt` function wipes private key and password after use.
 
