@@ -4,7 +4,7 @@ description: Thor-client
 
 # Thor-client
 
-The Thor-client serves as an interface to interact with the VeChain Thor blockchain. This client streamlines the interaction with the blockchain by providing a set of methods specifically tailored to retrieve information from various endpoints. By encapsulating the intricacies of the underlying communication with the VeChainThor network, developers can easily integrate this client into their applications. Whether fetching details about specific blocks, querying transaction information, or accessing other blockchain-related data, the thor-client simplifies the process, enabling efficient and straightforward integration with the VeChainThor network through RESTful API calls.
+The Thor-client serves as an interface to interact with the VeChainThor blockchain. This client streamlines the interaction with the blockchain by providing a set of methods specifically tailored to retrieve information from various endpoints. By encapsulating the intricacies of the underlying communication with the VeChainThor network, developers can easily integrate this client into their applications. Whether fetching details about specific blocks, querying transaction information, or accessing other blockchain-related data, the thor-client simplifies the process, enabling efficient and straightforward integration with the VeChainThor network through RESTful API calls.
 
 ## Initialization
 
@@ -12,11 +12,11 @@ To initialize a Thor client, there are two straightforward methods. The first in
 
 ```typescript { name=initialize, category=example }
 // First way to initialize thor client
-const httpClient = new HttpClient(TESTNET_URL);
+const httpClient = new SimpleHttpClient(TESTNET_URL);
 const thorClient = new ThorClient(httpClient);
 
 // Second way to initialize thor client
-const thorClient2 = ThorClient.fromUrl(TESTNET_URL);
+const thorClient2 = ThorClient.at(TESTNET_URL);
 ```
 
 ## Accounts
@@ -26,24 +26,23 @@ The Thor-client extends its functionality to provide seamless access to account-
 ```typescript { name=accounts, category=example }
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.fromUrl(TESTNET_URL);
+const thorClient = ThorClient.at(TESTNET_URL);
 
 // 2 - Get account details
 
+const accountAddress = Address.of('0x5034aa590125b64023a0262112b98d72e3c8e40e');
+
 // Account details
-const accountDetails = await thorClient.accounts.getAccount(
-    '0x5034aa590125b64023a0262112b98d72e3c8e40e'
-);
+const accountDetails = await thorClient.accounts.getAccount(accountAddress);
 
 // Account code
-const accountCode = await thorClient.accounts.getBytecode(
-    '0x5034aa590125b64023a0262112b98d72e3c8e40e'
-);
+const accountCode = await thorClient.accounts.getBytecode(accountAddress);
 
 // Get account storage
+const position = ThorId.of(1);
 const accountStorage = await thorClient.accounts.getStorageAt(
-    '0x5034aa590125b64023a0262112b98d72e3c8e40e',
-    '0x0000000000000000000000000000000000000000000000000000000000000001'
+    accountAddress,
+    position
 );
 ```
 
@@ -70,7 +69,7 @@ The Thor-client facilitates easy interaction with blocks on the VeChainThor netw
 ```typescript { name=blocks, category=example }
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.fromUrl(TESTNET_URL);
+const thorClient = ThorClient.at(TESTNET_URL);
 
 // 2 - Get block details
 
@@ -110,7 +109,7 @@ The Thor-client extends its capabilities to efficiently filter and retrieve even
 ```typescript { name=logs, category=example }
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.fromUrl(TESTNET_URL);
+const thorClient = ThorClient.at(TESTNET_URL);
 
 // 2 - Filter event logs based on the provided criteria. (EXAMPLE 1)
 
@@ -189,7 +188,7 @@ The Thor-client allows developers to interact with nodes on the VeChainThor netw
 ```typescript { name=nodes, category=example }
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.fromUrl(TESTNET_URL);
+const thorClient = ThorClient.at(TESTNET_URL);
 
 // 2 - Retrieves connected peers of a node
 
@@ -198,7 +197,7 @@ const peerNodes = await thorClient.nodes.getNodes();
 
 In this example, the code initializes a Thor client for the VeChainThor testnet network and utilizes the `getNodes` method to retrieve information about connected peers.
 
- - `getNodes(): Promise<ConnectedPeer | null>`
+ - `getNodes(): Promise<ConnectedPeer[]>`
 
 The `getNodes` method simplifies the process of obtaining details about connected peers of a node in the VeChainThor network. The method returns information about the connected peers, allowing developers to monitor and analyze the network's node connectivity.
 
@@ -216,7 +215,7 @@ const senderAccount = {
 
 // 1 - Create thor client for solo network
 
-const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
+const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
 
 // 2 - Get latest block
 
@@ -225,9 +224,9 @@ const latestBlock = await thorSoloClient.blocks.getBestBlockCompressed();
 // 3 - Create clauses
 
 const clauses = [
-    clauseBuilder.transferVET(
-        '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-        unitsUtils.parseVET('10000')
+    Clause.transferVET(
+        Address.of('0x9e7911de289c3c856ce7f421034f66b6cde49c39'),
+        VET.of(10000)
     )
 ];
 
@@ -252,19 +251,18 @@ const transactionBody = {
 
 // 5 - Normal signature (NO delegation)
 
-const rawNormalSigned = TransactionHandler.sign(
-    transactionBody,
-    Buffer.from(senderAccount.privateKey, 'hex')
+const rawNormalSigned = Transaction.of(transactionBody).sign(
+    HexUInt.of(senderAccount.privateKey).bytes
 ).encoded;
 
 // 6 - Send transaction
 
 const send = await thorSoloClient.transactions.sendRawTransaction(
-    `0x${rawNormalSigned.toString('hex')}`
+    HexUInt.of(rawNormalSigned).toString()
 );
 expect(send).toBeDefined();
 expect(send).toHaveProperty('id');
-expect(Hex.isValid0x(send.id)).toBe(true);
+expect(HexUInt.isValid0x(send.id)).toBe(true);
 
 // 7 - Get transaction details and receipt
 
@@ -320,7 +318,7 @@ const delegateAccount = {
 
 // 1 - Create thor client for solo network
 
-const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
+const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
 
 // 2 - Get latest block
 
@@ -329,10 +327,10 @@ const latestBlock = await thorSoloClient.blocks.getBestBlockCompressed();
 // 3 - Create transaction clauses
 
 const clauses = [
-    clauseBuilder.transferVET(
-        '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-        unitsUtils.parseVET('10000')
-    )
+    Clause.transferVET(
+        Address.of('0x9e7911de289c3c856ce7f421034f66b6cde49c39'),
+        VET.of('10000')
+    ) as TransactionClause
 ];
 
 // Get gas estimate
@@ -359,20 +357,21 @@ const delegatedTransactionBody = {
 
 // 5 - Normal signature and delegation signature
 
-const rawDelegatedSigned = TransactionHandler.signWithDelegator(
-    delegatedTransactionBody,
-    Buffer.from(senderAccount.privateKey, 'hex'),
-    Buffer.from(delegateAccount.privateKey, 'hex')
+const rawDelegatedSigned = Transaction.of(
+    delegatedTransactionBody
+).signWithDelegator(
+    HexUInt.of(senderAccount.privateKey).bytes,
+    HexUInt.of(delegateAccount.privateKey).bytes
 ).encoded;
 
 // 6 - Send transaction
 
 const send = await thorSoloClient.transactions.sendRawTransaction(
-    `0x${rawDelegatedSigned.toString('hex')}`
+    HexUInt.of(rawDelegatedSigned).toString()
 );
 expect(send).toBeDefined();
 expect(send).toHaveProperty('id');
-expect(Hex.isValid0x(send.id)).toBe(true);
+expect(HexUInt.isValid0x(send.id)).toBe(true);
 
 // 7 - Get transaction details and receipt
 
@@ -396,7 +395,7 @@ The `gasPadding` option adds a safety margin to estimated gas costs. It allows d
 
 ```typescript { name=gas, category=example }
 // 1 - Create thor client for solo network
-const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
+const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
 
 // 2- Init transaction
 
@@ -406,21 +405,19 @@ const latestBlock = await thorSoloClient.blocks.getBestBlockCompressed();
 // 2.2 - Transaction sender and receiver
 const senderAccount = {
     address: '0x2669514f9fe96bc7301177ba774d3da8a06cace4',
-    privateKey: Buffer.from(
-        'ea5383ac1f9e625220039a4afac6a7f868bf1ad4f48ce3a1dd78bd214ee4ace5',
-        'hex'
-    )
+    privateKey: HexUInt.of(
+        'ea5383ac1f9e625220039a4afac6a7f868bf1ad4f48ce3a1dd78bd214ee4ace5'
+    ).bytes
 };
 
 const receiverAccount = {
     address: '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    privateKey: Buffer.from(
-        '1758771c54938e977518e4ff1c297aca882f6598891df503030734532efa790e',
-        'hex'
-    )
+    privateKey: HexUInt.of(
+        '1758771c54938e977518e4ff1c297aca882f6598891df503030734532efa790e'
+    ).bytes
 };
 
-// 2 - Create transaction clauses and calcolate gas
+// 2 - Create transaction clauses and compute gas
 const clauses = [
     {
         to: receiverAccount.address,
@@ -455,15 +452,14 @@ const transactionBody = {
 };
 
 // 5 - Sign transaction
-const rawNormalSigned = TransactionHandler.sign(
-    transactionBody,
+const rawNormalSigned = Transaction.of(transactionBody).sign(
     senderAccount.privateKey
 ).encoded;
 
 // 6 - Send transaction
 
 const send = await thorSoloClient.transactions.sendRawTransaction(
-    `0x${rawNormalSigned.toString('hex')}`
+    HexUInt.of(rawNormalSigned).toString()
 );
 
 // 7 - Get transaction details and receipt

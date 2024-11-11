@@ -17,23 +17,30 @@ VeChain uses clauses to interact with smart contracts. A clause is a single oper
 The following example shows you how to build clauses to transfer the two main token of VeChain, the token VET and the energy token VTHO (the one used to pay for transaction fees)
 
 ```typescript { name=contract-clauses, category=example }
-import { clauseBuilder, VTHO_ADDRESS } from '@vechain/sdk-core';
+import {
+    Address,
+    Clause,
+    Units,
+    VET,
+    VTHO,
+    VTHO_ADDRESS
+} from '@vechain/sdk-core';
 
 // build some example clauses
 
 // 1. Transfer vet
 
-const transferVetClause = clauseBuilder.transferVET(
-    '0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54',
-    300n
+const transferVetClause = Clause.transferVET(
+    Address.of('0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54'),
+    VET.of(300n, Units.wei)
 );
 
 // 2. Transfer VTHO
 
-const transferVTHOClause = clauseBuilder.transferToken(
-    VTHO_ADDRESS,
-    '0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54',
-    300n
+const transferVTHOClause = Clause.transferToken(
+    Address.of(VTHO_ADDRESS),
+    Address.of('0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54'),
+    VTHO.of(300n, Units.wei)
 );
 
 ```
@@ -49,11 +56,12 @@ const transferVTHOClause = clauseBuilder.transferToken(
 ```typescript { name=contract-deploy, category=example }
 // 1 - Init contract bytecode to deploy
 
-const contractBytecode =
-    '0x608060405234801561000f575f80fd5b506101438061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610034575f3560e01c806360fe47b1146100385780636d4ce63c14610054575b5f80fd5b610052600480360381019061004d91906100ba565b610072565b005b61005c61007b565b60405161006991906100f4565b60405180910390f35b805f8190555050565b5f8054905090565b5f80fd5b5f819050919050565b61009981610087565b81146100a3575f80fd5b50565b5f813590506100b481610090565b92915050565b5f602082840312156100cf576100ce610083565b5b5f6100dc848285016100a6565b91505092915050565b6100ee81610087565b82525050565b5f6020820190506101075f8301846100e5565b9291505056fea2646970667358221220427ff5682ef89b62b910bb1286c1028d32283512122854159ad59f1c71fb6d8764736f6c63430008160033';
+const contractBytecode = HexUInt.of(
+    '0x608060405234801561000f575f80fd5b506101438061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610034575f3560e01c806360fe47b1146100385780636d4ce63c14610054575b5f80fd5b610052600480360381019061004d91906100ba565b610072565b005b61005c61007b565b60405161006991906100f4565b60405180910390f35b805f8190555050565b5f8054905090565b5f80fd5b5f819050919050565b61009981610087565b81146100a3575f80fd5b50565b5f813590506100b481610090565b92915050565b5f602082840312156100cf576100ce610083565b5b5f6100dc848285016100a6565b91505092915050565b6100ee81610087565b82525050565b5f6020820190506101075f8301846100e5565b9291505056fea2646970667358221220427ff5682ef89b62b910bb1286c1028d32283512122854159ad59f1c71fb6d8764736f6c63430008160033'
+);
 
 // 2 - Create a clause to deploy the contract
-const clause = clauseBuilder.deployContract(contractBytecode);
+const clause = Clause.deployContract(contractBytecode);
 ```
 
 ### Calling a Contract Function Clause
@@ -98,11 +106,9 @@ const contractABI = [
 ] as const;
 
 // 2 - Create a clause to call setValue(123)
-const clause = clauseBuilder.functionInteraction(
-    '0x7567d83b7b8d80addcb281a71d54fc7b3364ffed', // just a sample deployed contract address
-    coder
-        .createInterface(contractABI)
-        .getFunction('setValue') as FunctionFragment,
+const clause = Clause.callFunction(
+    Address.of('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed'), // just a sample deployed contract address
+    ABIContract.ofAbi(contractABI).getFunction('setValue'),
     [123]
 );
 ```
@@ -113,7 +119,7 @@ or you can load the contract using the thor client and then you can build the cl
 ```typescript { name=contract-function-call, category=example }
 // 1 - Build the thor client and load the contract
 
-const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
+const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
 
 const contract = thorSoloClient.contracts.load(
     '0x7567d83b7b8d80addcb281a71d54fc7b3364ffed',
@@ -143,10 +149,34 @@ const multipleClausesResult =
         contract.clause.decimals()
     ]);
 
-expect(multipleClausesResult[0]).toEqual([unitsUtils.parseUnits('1', 24)]);
-expect(multipleClausesResult[1]).toEqual(['SampleToken']);
-expect(multipleClausesResult[2]).toEqual(['ST']);
-expect(multipleClausesResult[3]).toEqual([18n]);
+expect(multipleClausesResult[0]).toEqual({
+    success: true,
+    result: {
+        plain: expectedBalance,
+        array: [expectedBalance]
+    }
+});
+expect(multipleClausesResult[1]).toEqual({
+    success: true,
+    result: {
+        plain: 'SampleToken',
+        array: ['SampleToken']
+    }
+});
+expect(multipleClausesResult[2]).toEqual({
+    success: true,
+    result: {
+        plain: 'ST',
+        array: ['ST']
+    }
+});
+expect(multipleClausesResult[3]).toEqual({
+    success: true,
+    result: {
+        plain: 18,
+        array: [18]
+    }
+});
 ```
 
 > ⚠️ **Warning:**
@@ -160,12 +190,10 @@ Add comments to operations when using wallets, helping users understand transact
 ```typescript { name=contract-transfer-erc20-token, category=example }
 // Transfer tokens to another address with a comment
 
-const decimals = await contract.read.decimals();
-
 await contract.transact.transfer(
     { comment: 'Transferring 100 ERC20 tokens' },
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    unitsUtils.parseUnits('100', decimals[0] as bigint)
+    Units.parseEther('100').bi
 );
 ```
 
@@ -178,7 +206,7 @@ You can specify revisions (`best` or `finalized`) for read functions, similar to
 VeChain supports delegated contract calls where fees are paid by the delegator.
 
 ```typescript { name=contract-delegation-erc20, category=example }
-const thorSoloClient = ThorClient.fromUrl(THOR_SOLO_URL);
+const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
 const provider = new VeChainProvider(
     thorSoloClient,
     new ProviderInternalBaseWallet([deployerAccount], {

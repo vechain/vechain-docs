@@ -4,7 +4,7 @@
 
 The VeChain Provider is a powerful tool designed to interact with the VeChain blockchain seamlessly. This documentation outlines the features, usage, and configuration of the VeChain Provider and its companion, the Hardhat Provider.
 
-##VeChain Provider
+## VeChain Provider
 
 The VeChain Provider is our core provider, offering direct interaction with the VeChain blockchain. It extends EventEmitter and implements EIP1193ProviderMessage for efficient event handling and message passing.
 
@@ -30,7 +30,7 @@ To use the VeChain Provider in your project, follow these steps:
 Example:
 ```typescript { name=vechain-provider, category=example }
 // 1 - Create thor client for testnet
-const thorClient = ThorClient.fromUrl(TESTNET_URL);
+const thorClient = ThorClient.at(TESTNET_URL);
 
 // 2 - Init provider
 const provider = new VeChainProvider(thorClient);
@@ -68,6 +68,7 @@ To use the Hardhat Provider in your project, follow these steps:
  - Start interacting with the VeChain blockchain using the available methods provided by the HardhatVeChainProvider.
 
 Example:
+
 ```typescript { name=vechain-hardhat-provider, category=example }
 // 1 - Init provider
 const provider = new HardhatVeChainProvider(
