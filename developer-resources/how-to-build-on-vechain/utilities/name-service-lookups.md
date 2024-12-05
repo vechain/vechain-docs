@@ -12,7 +12,7 @@ After importing and connecting the ThorClient, `resolveName` and `resolveNames` 
 
 ```ts
 import { ThorClient, vnsUtils } from '@vechain/sdk-network';
-const thor = ThorClient.fromUrl('https://mainnet.vechain.org');
+const thor = ThorClient.at('https://mainnet.vechain.org');
 
 console.log('resolveName', await vnsUtils.resolveName(thor, 'test.vet'));
 console.log('resolveNames', await vnsUtils.resolveNames(thor, ['test.vet']));
@@ -28,7 +28,7 @@ After importing and connecting the ThorClient, `lookupAddress` and `lookupAddres
 
 ```ts
 import { ThorClient, vnsUtils } from '@vechain/sdk-network';
-const thor = ThorClient.fromUrl('https://mainnet.vechain.org');
+const thor = ThorClient.at('https://mainnet.vechain.org');
 
 console.log(
   'lookupAddress',
