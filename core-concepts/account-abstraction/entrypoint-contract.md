@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-The EntryPoint contract is a singleton contract that acts as a "guard" or "entry point" to account abstraction. Bundlers that receive signed UserOperations pass them to the EntryPoint contract in the `handleOps` public method. The EntryPoint contract then uses the Account contract to verify the `signature` of the UserOperation, which could include any additional arbitrary logic, and if valid proceeds to execute it on chain. A more detailed step-by-step process of the EntryPoint role can be found below.
+The EntryPoint contract is a core component of account abstraction, serving as a "global trusted singleton" that processes UserOperations. Bundlers submit these UserOperations to the `handleOps` method of the EntryPoint contract, which verifies their validity and executes them on-chain through the respective Account contracts. This ensures a secure and seamless flow of transactions while supporting advanced features like social recovery and multi-signature wallets.
 
 ## Role
 
