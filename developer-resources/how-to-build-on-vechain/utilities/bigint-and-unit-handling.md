@@ -10,7 +10,7 @@ For example, reading the balance of VTHO and turning it into a readable version:
 
 ```ts
 import { ThorClient, Contract } from '@vechain/sdk-network';
-const thor = ThorClient.fromUrl('https://mainnet.vechain.org');
+const thor = ThorClient.at('https://mainnet.vechain.org');
 
 const contract = new Contract('0x0000000000000000000000000000456e65726779', [
   'function balanceOf(address _owner) returns (uint256)',
