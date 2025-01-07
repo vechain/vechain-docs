@@ -8,7 +8,7 @@ description: >-
 
 ## Overview
 
-A Bundler plays a crucial role in the account abstraction ecosystem by continuously monitoring a public mempool for UserOperations created by user. Its primary responsibility is to collect these UserOperations, bundle them together, and pass them to the EntryPoint contract for execution.
+A Bundler plays a crucial role in the account abstraction architecture. Its primary responsibility is to collect these UserOperations from a public mempool, bundle them together, and pass them to the EntryPoint contract for execution.
 
 The `EntryPoint contract` serves as a "global trusted singleton," meaning it is a single, universally trusted smart contract within the blockchain ecosystem. This contract handles incoming transactions, validates them, and manages the execution of UserOperations. The Bundler acts as the intermediary between users and the EntryPoint contract, ensuring UserOperations are properly packaged and processed.
 
