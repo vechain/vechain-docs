@@ -39,7 +39,7 @@ EOAs come with several drawbacks:
 
 ### The Solution: Account Abstraction
 
-Smart contract wallets offer an improved user experience by abstracting the signing of transactions which will offer a dramatic increase in the user experience. Abstracting away the necessity to sign each and every transaction combined with features such as trusted sessions and batch transactions will transform the blockchain user experience.
+Smart contract wallets offer an improved user experience by abstracting the signing of transactions which will offer a dramatic increase in the user experience. Abstracting away the necessity to sign each and every transaction combined with features such as trusted sessions, social recovery and batch transactions will transform the blockchain user experience.
 
 Smart contract wallets also offer improved security through the ability to flexibly incorporate account recovery methods. Security improvements such as multisig authorization, sharing account security across devices or individuals and the use of whitelists to protect users accounts, just to name a few potential candidates.
 
