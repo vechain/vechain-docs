@@ -14,7 +14,7 @@ The implementation of account abstraction is work in progress. The details provi
 Account abstraction transforms traditional blockchain wallets by making them programmable through smart contract wallets. It abstracts the transaction-signing process, significantly enhancing user experience and security. This innovation aims to onboard a broader audience from Web2 to Web3 by normalizing blockchain interactions.
 
 {% hint style="info" %}
-For hands on exploration of account abstraction and Thor Solo, refer to our [account-abstraction.md](../../start-building/tutorials/account-abstraction.md "mention") guide.
+For hands-on exploration of account abstraction, refer to our [account-abstraction.md](../../start-building/tutorials/account-abstraction.md "mention") guide.
 {% endhint %}
 
 ## Introduction
