@@ -33,7 +33,7 @@ This seed phrase is used to generate the private key, which is then used to sign
 
 EOAs come with several drawbacks:
 
- * Inflexibility and lack of programmability.
+ * Lack of programmability/flexibility.
  * Poor user experience due to manual transaction signing.
  * Security vulnerabilities stemming from private key mismanagement.
 
