@@ -35,7 +35,7 @@ EOAs come with several drawbacks:
 
  * Lack of programmability/flexibility.
  * Poor user experience due to manual transaction signing.
- * Security vulnerabilities stemming from private key mismanagement.
+ * Security risks due to the private key being unique point of failure with no recourse.
 
 ### The Solution: Account Abstraction
 
