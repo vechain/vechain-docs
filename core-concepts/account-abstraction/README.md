@@ -23,7 +23,11 @@ Account abstraction is a new approach to make blockchain accounts programmable t
 
 ### Traditional Blockchain Interaction: Externally Owned Accounts (EOAs)
 
-Currently, all interactions on all blockchains, including VeChain, are initiated through an externally owned account (EOA). EOAs are wallets managed manually by users outside the blockchain. They are controlled and managed through a public-private key pair. Possession of the private key grants control over the wallet’s assets. The most crucial part of an EOA is its seed phrase. The seed phrase is a set of random words, usually 24, that is generated when the EOA is being setup. Losing this seed phrase can result in permanent loss of access. This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature on a transaction proving to the blockchain that the user has initiated the transaction from their account. Examples of EOAs are Coinbase Wallet and MetaMask.
+Most of the interaction with a blockchain, including VeChain, are initiated by externally owned account (EOA) through non-custodial wallets. People need to sign a transaction with their private key to spend their money. Possession of the private key grants control over the wallet’s assets, that once lost can't be recovered. 
+Since it was error prone to write down a long hex string, a mnemonic seed phrase (mnemonic in brief) is usually the information that needs to be stored off-line in a safe location. 
+A mnemonic is a set of words representing a random point on a cryptographic curve, usually 12 or 24, from which the key pair can be derived. The EOA will be created at the first usage. 
+Just like with the pure private key, losing this seed phrase can result in permanent loss of access. 
+This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature proving to the blockchain that the user has initiated the transaction from its account. Examples of non-custodial wallets are VeWorld and MetaMask.
 
 ### Limitations of EOAs
 
