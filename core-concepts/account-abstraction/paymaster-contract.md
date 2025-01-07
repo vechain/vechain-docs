@@ -9,9 +9,17 @@ description: >-
 
 ## Overview
 
-A Paymaster, another optional entity in the account abstraction flow, is a contract designed to sponsor user transactions based on specific criteria. Typically, users pay their own transactions fees. However, by filling the `paymasterAndData` field in their UserOperation, users can opt for a Paymaster to sponsor their transactions.
+The Paymaster is an optional but significant component in the account abstraction flow. It acts as a sponsor for user transactions under specific conditions. Traditionally, users are required to pay transaction fees using the blockchain’s native token. However, by leveraging the `paymasterAndData` field in a UserOperation, users can designate a Paymaster to cover these fees on their behalf.
 
-Sponsorship of transactions comes in two forms. The Paymaster can opt to pay the gas fee for a user transaction or the Paymaster can accept a different token, perhaps a stablecoin, and pay the fee on the users behalf in the blockchains required gas fee token. Both of these approaches will contribute towards an enhanced user experience by either abstracting gas fees entirely or removing the requirement of a user having to hold or fund a smart contract wallet with the blockchain native currency.
+## Sponsorship Models
+
+A Paymaster can support transactions in two primary ways:
+
+1. **Gas Fee Sponsorship**: The Paymaster directly pays the gas fees for a user transaction, abstracting the fee payment process entirely.
+
+2. **Alternative Token Payment**: The Paymaster accepts payment in an alternate token (e.g., stablecoins) and then converts it to the native gas token to pay the transaction fee.
+
+These mechanisms enhance the user experience by removing the requirement for users to hold native tokens or by simplifying the fee payment process.
 
 ## Role
 
