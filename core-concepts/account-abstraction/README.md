@@ -76,7 +76,7 @@ Account abstraction introduces several new smart contracts. These smart contract
 
 Account abstraction introduces a new data structure:
 
-* **UserOperation:** A data object representing a user’s intent to perform a blockchain transaction. It includes details like transaction type, associated smart contracts, and execution logic. A UserOperation is sent from a User via a Client to a Bundler. The Bundler then converts the UserOperation into a transaction.
+* **UserOperation:** A data object representing a user’s intent to perform a blockchain transaction with the smart account wallet. It includes the code to deploy the account if not yet onchain, data that should be executed, and a proof of ownership (usually a signature to be verified). A UserOperation is sent from a User via a Client into the alternative mempool through a specific RPC server, where it is collected by a Bundler. The Bundler then converts a UserOperation into a transaction.
 
 ### ERC-4337 Workflow Overview
 
