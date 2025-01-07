@@ -19,7 +19,7 @@ The Account Factory contract plays a crucial role in the lifecycle of a UserOper
 
 ## Implementation
 
-Each Account Factory contract is independently deployed and configured, tailored to the specific requirements of the associated Account contract. Smart contract wallet providers may implement distinct features to offer competitive advantages.
+Each Account Factory contract is independently deployed. Each smart contract wallet provider may create their own Account Factory tailored to their specific requirements. The Smart Account contract that gets deployed may also be different.
 
 ### Example: SimpleAccountFactory Interface
 
