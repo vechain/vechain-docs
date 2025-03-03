@@ -18,7 +18,7 @@ Before diving into dApp development, ensure you have:
 
 ## Quick Start with VeChain Templates
 
-Jump-start your development with our pre-built templates:
+Jump-start your development with our [pre-built templates](https://www.npmjs.com/package/create-vechain-dapp):
 
 ```bash
 npm create vechain-dapp
@@ -45,7 +45,7 @@ Outline your dApp's functionality, user interface, and key features.
 
 Create Solidity smart contracts to define your dApp's core logic.
 
-* Utilize our [Remix plugin](frameworks-and-ides/remix.md) or [Hardhat plugin](frameworks-and-ides/hardhat/) for a seamless development experience.
+* Utilize our [Remix plugin](frameworks-and-ides/remix.md) or [Hardhat plugin](https://github.com/vechain/vechain-docs/blob/main/developer-resources/frameworks-and-ides/hardhat/README.md) for a seamless development experience.
 * Leverage [Built-in Contracts](built-in-contracts.md) to enhance functionality.
 
 #### 3. **Build the Front-End**
