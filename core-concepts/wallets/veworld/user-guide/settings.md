@@ -69,7 +69,6 @@ VeWorld is now a multi-language wallet and language preferences can be set in th
 
 🚨 **Dev Alert**
 
-To create a more immersive and consistent experience for the user, when opening a dapp from VeWorld mobile, we have implemented a way to provide the current language the user has selected in VeWorld to the dapp. There are two ways to get this info and you should use one or another if your app is SSR or not.
 To create a more immersive and consistent user experience, when opening a dApp from VeWorld mobile, we have implemented a way to provide the current language preference of VeWorld to the dApp. There are two ways to retrieve this information, depending on whether your app is **server-side rendered (SSR)** or **client-side rendered (CSR, non-SSR)**.
 
 **Server side rendered (SSR) Apps**
