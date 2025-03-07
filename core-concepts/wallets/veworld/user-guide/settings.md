@@ -25,9 +25,61 @@ layout:
 
 You can choose among the supported FIAT currencies (EUR, USD)
 
+**Currency Format**  
+
+You can choose how the fiat value of your assets appears in the wallet.  
+
+- **Comma:** Uses a comma as a separator for the decimal value (e.g., 9.999,99).  
+- **Dot:** Uses a dot as a separator for the decimal value (e.g., 9,999.99).  
+- **System:** Uses your device's system settings to automatically set the preference based on your region.  
+
+**Symbol Position**  
+
+You can choose where the €/$ symbol is displayed in relation to the fiat value of your assets.  
+
+- **Before amount:** The symbol appears before the amount (e.g., $9999).  
+- **After amount:** The symbol appears after the amount (e.g., 9999$).  
+
 **Theme**
 
 You can anytime switch between the dark or light theme, or just use your device settings.
+
+**App Language**
+
+VeWorld is now a multi-language wallet and language preferences can be set in the general settings section.
+
+## 🌍 Supported Languages
+- 🇬🇧 English  
+- 🇯🇵 Japanese  
+- 🇻🇳 Vietnamese  
+- 🇩🇪 German  
+- 🇳🇱 Dutch  
+- 🇰🇷 Korean  
+- 🇮🇹 Italian  
+- 🇨🇳 Chinese  
+- 🇸🇪 Swedish  
+- 🇫🇷 French  
+- 🇹🇼 Taiwanese  
+- 🇪🇸 Spanish  
+- 🇹🇷 Turkish  
+- 🇮🇳 Hindi  
+- 🇵🇱 Polish  
+- 🇵🇹 Portuguese  
+- 🇷🇺 Russian  
+
+🚨 **Dev Alert**
+
+To create a more immersive and consistent experience for the user, when opening a dapp from VeWorld mobile, we have implemented a way to provide the current language the user has selected in VeWorld to the dapp. There are two ways to get this info and you should use one or another if your app is SSR or not.
+To create a more immersive and consistent user experience, when opening a dApp from VeWorld mobile, we have implemented a way to provide the current language preference of VeWorld to the dApp. There are two ways to retrieve this information, depending on whether your app is **server-side rendered (SSR)** or **client-side rendered (CSR, non-SSR)**.
+
+**Server side rendered (SSR) Apps**
+
+If your application is SSR, you can obtain the language preference from the `Accept-Language` header. This will provide the current locale set in VeWorld.  
+
+**Client-Side Rendered (CSR) / Frontend Apps (Non-SSR)**
+
+If your application its not SSR, to get access to the current language used in VeWorld you can do it simply using the **injected JavaScript property** that you can get it using window.vechain.acceptLanguage.
+
 
 **Reset**
 
@@ -92,6 +144,36 @@ Here you can see:
 **Conversion Currency**
 
 You can choose among the supported FIAT currencies (EUR, USD)
+
+**Symbol Position**  
+
+You can choose where the €/$ symbol is displayed in relation to the fiat value of your assets.  
+
+- **Before amount:** The symbol appears before the amount (e.g., $9999).  
+- **After amount:** The symbol appears after the amount (e.g., 9999$).  
+
+**App Language**
+
+VeWorld is now a multi-language wallet and language preferences can be set in the general settings section.
+
+## 🌍 Supported Languages
+- 🇬🇧 English  
+- 🇯🇵 Japanese  
+- 🇻🇳 Vietnamese  
+- 🇩🇪 German  
+- 🇳🇱 Dutch  
+- 🇰🇷 Korean  
+- 🇮🇹 Italian  
+- 🇨🇳 Chinese  
+- 🇸🇪 Swedish  
+- 🇫🇷 French  
+- 🇹🇼 Taiwanese  
+- 🇪🇸 Spanish  
+- 🇹🇷 Turkish  
+- 🇮🇳 Hindi  
+- 🇵🇱 Polish  
+- 🇵🇹 Portuguese  
+- 🇷🇺 Russian  
 
 **Hide tokens without balance**
 
