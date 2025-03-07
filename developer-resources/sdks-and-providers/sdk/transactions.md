@@ -74,8 +74,7 @@ const clauses: TransactionClause[] = [
         Address.of('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed'),
         VET.of(10000)
     ) as TransactionClause,
-    Clause.transferToken(
-        Address.of(VTHO_ADDRESS),
+    Clause.transferVTHOToken(
         Address.of('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed'),
         VTHO.of(10000)
     ) as TransactionClause
@@ -164,17 +163,17 @@ const body: TransactionBody = {
 // 4 - Create private keys of sender and delegate
 
 const nodeDelegate = HDKey.fromMnemonic(Mnemonic.of());
-const delegatorPrivateKey = nodeDelegate.privateKey;
+const gasPayerPrivateKey = nodeDelegate.privateKey;
 
 // 5 - Get address of delegate
 
-const delegatorAddress = Address.ofPublicKey(nodeDelegate.publicKey).toString();
+const gasPayerAddress = Address.ofPublicKey(nodeDelegate.publicKey).toString();
 
 // 6 - Sign transaction as sender and delegate
 
-const signedTransaction = Transaction.of(body).signWithDelegator(
+const signedTransaction = Transaction.of(body).signAsSenderAndGasPayer(
     HexUInt.of(senderAccount.privateKey).bytes,
-    HexUInt.of(delegatorPrivateKey).bytes
+    HexUInt.of(gasPayerPrivateKey).bytes
 );
 
 // 7 - Encode transaction
@@ -369,7 +368,7 @@ In the following complete examples, we will explore the entire lifecycle of a Ve
 
 1. **No Delegation (Signing Only with an Origin Private Key)**: In this scenario, we'll demonstrate the basic process of creating a transaction, signing it with the origin private key, and sending it to the VeChainThor blockchain without involving fee delegation.
 
-```typescript { name=full-flow-no-delegator, category=example }
+```typescript { name=full-flow-no-gas-payer, category=example }
 // 1 - Create the thor client
 const thorSoloClient = ThorClient.at(THOR_SOLO_URL, {
     isPollingEnabled: false
@@ -449,9 +448,9 @@ const txReceipt = await thorSoloClient.transactions.waitForTransaction(
 );
 ```
 
-2. **Delegation with Private Key**: Here, we'll extend the previous example by incorporating fee delegation. The transaction sender will delegate the transaction fee payment to another entity (delegator), and we'll guide you through the steps of building, signing, and sending such a transaction.
+2. **Delegation with Private Key**: Here, we'll extend the previous example by incorporating fee delegation. The transaction sender will delegate the transaction fee payment to another entity (gasPayer), and we'll guide you through the steps of building, signing, and sending such a transaction.
 
-```typescript { name=full-flow-delegator-private-key, category=example }
+```typescript { name=full-flow-gas-payer-private-key, category=example }
 // 1 - Create the thor client
 const thorSoloClient = ThorClient.at(THOR_SOLO_URL, {
     isPollingEnabled: false
@@ -464,8 +463,8 @@ const senderAccount: { privateKey: string; address: string } = {
     address: '0x7a28e7361fd10f4f058f9fefc77544349ecff5d6'
 };
 
-// Delegator account with private key
-const delegatorAccount: { privateKey: string; address: string } = {
+// Gas-payer account with private key
+const gasPayerAccount: { privateKey: string; address: string } = {
     privateKey:
         '521b7793c6eb27d137b617627c6b85d57c0aa303380e9ca4e30a30302fbc6676',
     address: '0x062F167A905C1484DE7e75B88EDC7439f82117DE'
@@ -485,8 +484,8 @@ const providerWithDelegationEnabled = new VeChainProvider(
             }
         ],
         {
-            delegator: {
-                delegatorPrivateKey: delegatorAccount.privateKey
+            gasPayer: {
+                gasPayerPrivateKey: gasPayerAccount.privateKey
             }
         }
     ),
@@ -552,7 +551,7 @@ const txReceipt = await thorSoloClient.transactions.waitForTransaction(
 
 3. **Delegation with URL**: This example will showcase the use of a delegation URL for fee delegation. The sender will specify a delegation URL in the `signTransaction` options, allowing a designated sponsor to pay the transaction fee. We'll cover the full process, from building clauses to verifying the transaction on-chain.
 
-```typescript { name=full-flow-delegator-url, category=example }
+```typescript { name=full-flow-gas-payer-service-url, category=example }
 // 1 - Create the thor client
 const thorClient = ThorClient.at(TESTNET_URL, {
     isPollingEnabled: false
@@ -571,8 +570,8 @@ const senderAccount: {
     address: '0x571E3E1fBE342891778151f037967E107fb89bd0'
 };
 
-// Delegator account with private key
-const delegatorAccount = {
+// Gas-payer account with private key
+const gasPayerAccount = {
     URL: 'https://sponsor-testnet.vechain.energy/by/269'
 };
 
@@ -590,8 +589,8 @@ const providerWithDelegationEnabled = new VeChainProvider(
             }
         ],
         {
-            delegator: {
-                delegatorUrl: delegatorAccount.URL
+            gasPayer: {
+                gasPayerServiceUrl: gasPayerAccount.URL
             }
         }
     ),
@@ -697,3 +696,4 @@ const revertReason = thorSoloClient.transactions.decodeRevertReason(
 ```
 
 In this case there is only a `TransactionSimulationResult`, so no need to loop.
+
