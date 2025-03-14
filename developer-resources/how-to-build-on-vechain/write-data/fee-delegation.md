@@ -1,43 +1,45 @@
 # Fee Delegation
 
-Gas fees are usually paid by the address that signs the transaction. VeChain's fee delegation allows you to pass on this payment to another wallet, which can either reside as private key in your realm or shielded by a web service.
+Gas fees are usually paid by the address that signs the transaction.
+VeChain's fee delegation allows you to pass on this payment to another wallet,
+which can either reside as private key in your realm or shielded by a web service.
 
 To use fee delegation, you can need to:
 
 1. Enable it while building the transaction object
-2. Provide information about the delegator during transaction signing
+2. Provide information about the gas-payer during transaction signing
 
 ## Enable Fee Delegation
 
 To enable fee delegation as feature, you need to set `isDelegated` to `true` while building the transaction body:
 
-```js
-const tx = await thor.transactions.buildTransactionBody(clauses, gas,
+```typescript
+const tx = await thor.transactions.buildTransactionBody(clauses, gas.totalGas,
   { isDelegated: true }
 );
 ```
 
 ## Sign with Fee Delegation
 
-To get the fee delegator involved, you'll pass either `delegatorPrivateKey` or `delegatorUrl` to the signing wallet:
+To get the gas-payer involved, you'll pass either `gasPayerPrivateKey` or `gasPayerServiceUrl` to the signing wallet:
 
-```js
+```typescript
 const walletWithUrlSponsor = new ProviderInternalBaseWallet(
-  [{ privateKey, address: senderAddress }],
-  {
-    delegator: {
-      delegatorUrl: 'https://sponsor-testnet.vechain.energy/by/90',
-    },
-  }
+    [{privateKey, address: senderAddress}],
+    {
+        gasPayer: {
+            gasPayerServiceUrl: 'https://sponsor-testnet.vechain.energy/by/90',
+        },
+    }
 );
 
 const walletWithAccountSponsor = new ProviderInternalBaseWallet(
-  [{ privateKey, address: senderAddress }],
-  {
-    delegator: {
-      delegatorPrivateKey: delegatorAccount.privateKey,
-    },
-  }
+    [{privateKey, address: senderAddress}],
+    {
+        gasPayer: {
+            delegatorPrivateKey: delegatorAccount.privateKey,
+        },
+    }
 );
 ```
 
