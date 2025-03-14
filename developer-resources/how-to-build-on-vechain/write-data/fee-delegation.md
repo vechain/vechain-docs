@@ -47,30 +47,29 @@ const walletWithAccountSponsor = new ProviderInternalBaseWallet(
 
 {% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/transaction-execute?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
-## Sign as Delegator Service
+## Sign as Gas-Payer Service
 
-To shield your private key for paying gas fees into a backend service, you can setup a web-service that receives a raw transaction and co-signs it to confirm gas payment (based on [VIP-201](https://github.com/vechain/VIPs/blob/master/vips/VIP-201.md)).
+To shield your private key for paying gas fees into a backend service, you can set up a web-service
+that receives a raw transaction and co-signs it to confirm gas payment (based on [VIP-201](https://github.com/vechain/VIPs/blob/master/vips/VIP-201.md)).
 
-The process requires you to rebuilt a transaction object from a hex encoded version:
+The process requires you to rebuild a transaction object from a hex encoded version:
 
-```javascript
-const transactionToSign = TransactionHandler.decode(
-  Buffer.from(req.body.raw.slice(2), 'hex')
+```typescript
+const transactionToSign = Transaction.decode(
+  HexUInt.of(req.body.raw).bytes
 );
 ```
 
-Afterwards a unique hash is calculated for the given transaction, only valid if a specific origin will sign it:
+Afterward, a unique hash is calculated for the given transaction, only valid if a specific origin will sign it:
 
-```javascript
-const delegatedHash = transactionToSign.getSignatureHash(req.body.origin);
+```typescript
+const delegatedHash = transactionToSign.getTransactionHash(req.body.origin);
 ```
 
 The resulting hash is signed and then returned as hex string for further processing on the client side:
 
-```javascript
-const signature = `0x${Buffer.from(
-    secp256k1.sign(delegatedHash, delegatorPrivateKey)
-  ).toString('hex')}`;
+```typescript
+const signature = HexUInt.of(Secp256k1.sign(delegatedHash, gasPayerPrivateKey)).toString();
 ```
 
 ### Example Project

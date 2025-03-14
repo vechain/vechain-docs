@@ -17,7 +17,7 @@ To send a transaction you will need to do multiple steps:
 
 The instructions for executing a function on the blockchain needs to be encoded in a certain way. There are different functions to help create the right format, one is the `clauseBuilder` that will in this example call `increment()` on the given address:
 
-```javascript
+```typescript
 const clauses = [
   clauseBuilder.functionInteraction(
     '0x8384738c995d49c5b692560ae688fc8b51af1059',
@@ -61,7 +61,7 @@ There are [several options](https://tsdocs.dev/docs/@vechain/sdk-network/latest/
 
 Once a transaction is built, it needs to be signed by an entity that will execute all the code. This also makes the origin verifiable.
 
-It is a four step process, of getting a signer first:
+It is a four steps process, of getting a signer first:
 
 #### Get Signer
 
