@@ -4,13 +4,22 @@ Hardhat is a development environment to compile, deploy, test, and debug your EV
 
 VeChain's SDK provides a plugin to instantly enable connectivity.
 
-_The example project is relying on hardhat version 2.22.5 and the project initiated with `npx hardhat init`._
+_The example project is relying on hardhat version 2.22.15 and the project initiated with `npx hardhat init`._
 
 ## Setup Hardhat
 
-### Install
+### Setup
 
-To add VeChain support, install the plugin:
+To bootstrap a hardhat project:
+
+```shell
+npm install --save-dev hardhat
+npx hardhat init
+```
+
+### Install Hardhat Plugin
+
+To add VeChain support, install the hardhat plugin:
 
 ```bash
 npm install --save-dev @vechain/sdk-hardhat-plugin
@@ -29,57 +38,135 @@ Add a network for TestNet or MainNet:
 1. The Hardhat plugin requires `vechain` in the network's name.
 2. Remote accounts are unsupported; therefore, provide account information.
 
-```ts
-vechain_testnet: {
-    url: "https://testnet.vechain.org",
-    accounts,
+Configure the solidity compile to `Paris` (or version that VeChain is compatible with)
 
-    // optionally use fee delegation to let someone else pay the gas fees
-    // visit vechain.energy for a public fee delegation service
-    delegator: {
-        delegatorUrl: "https://sponsor-testnet.vechain.energy/by/90"
-    },
-    enableDelegation: true,
-},
-
-vechain_mainnet: {
-    url: "https://mainnet.vechain.org",
-    accounts
-},
-```
-
-### Example
-
-A fully functional example configuration:
+A fully functional example configuration with:
+- defined accounts to use
+- fee delegation using vechain energy
+- networks for mainnet, testnet, solo and hardhard
 
 ```ts
-import "@nomicfoundation/hardhat-toolbox"
-import "@vechain/sdk-hardhat-plugin"
+import { type HardhatUserConfig } from 'hardhat/config';
+import '@nomicfoundation/hardhat-toolbox';
+import '@vechain/sdk-hardhat-plugin';
+import { HDKey } from '@vechain/sdk-core';
+import { type HttpNetworkConfig } from 'hardhat/types';
 
-
+// account to use
 const accounts = ['0x2422eb37a0046d42e3c8d05c7d972de7fe1bb805e90b3a0dbc7d12b4d444c634']
 
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.24",
-  networks: {
-    vechain_testnet: {
-      url: "https://testnet.vechain.org",
-      accounts,
 
-      // optionally use fee delegation to let someone else pay the gas fees
-      // visit vechain.energy for a public fee delegation service
-      delegator: {
-        delegatorUrl: "https://sponsor-testnet.vechain.energy/by/90"
-      },
-      enableDelegation: true,
-    },
-    vechain_mainnet: {
-      url: "https://mainnet.vechain.org",
-      accounts
-    },
-  }
+const config: HardhatUserConfig = {
+	solidity: {
+		compilers: [
+			{
+				version: '0.8.20', // Specify the first Solidity version
+				settings: {
+				// Additional compiler settings for this version
+					optimizer: {
+					enabled: true,
+					runs: 200
+					},
+				evmVersion: 'paris'
+				}
+			}
+		]
+	},
+	networks: {
+
+		/**
+		* Example Mainnet configuration
+		* No fee delegation
+		*/
+		vechain_mainnet: {
+			// Mainnet
+			url: 'https://mainnet.vechain.org',
+			accounts,
+			debug: false,
+			gasPayer: undefined,
+			gas: 'auto',
+			gasPrice: 'auto',
+			gasMultiplier: 1,
+			timeout: 20000,
+			httpHeaders: {}
+		} satisfies HttpNetworkConfig,
+
+		/**
+		* Example Testnet configuration
+		* With gasPayer url for fee delegation
+		* Here a mnemonic is used to specify accounts
+		*/
+		vechain_testnet_gas_payer_url: {
+			// Testnet
+			url: 'https://testnet.vechain.org',
+			accounts: {
+				mnemonic:
+					'vivid any call mammal mosquito budget midnight expose spirit approve reject system',
+				path: HDKey.VET_DERIVATION_PATH,
+				count: 3,
+				initialIndex: 0,
+				passphrase: 'vechainthor'
+			},
+			debug: true,
+			gasPayer: {
+				gasPayerServiceUrl:
+					'https://sponsor-testnet.vechain.energy/by/269'
+			},
+			enableDelegation: true,
+			gas: 'auto',
+			gasPrice: 'auto',
+			gasMultiplier: 1,
+			timeout: 20000,
+			httpHeaders: {}
+		} satisfies HttpNetworkConfig,
+
+		/**
+		* Thor solo network configuration
+		* Thor solo can be used for local deployment and testing
+		*/
+		vechain_solo: {
+			// Thor solo network
+			url: 'http://localhost:8669',
+			accounts: [
+			'7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158'
+			],
+			debug: false,
+			enableDelegation: false,
+			gasPayer: undefined,
+			gas: 'auto',
+			gasPrice: 'auto',
+			gasMultiplier: 1,
+			timeout: 20000,
+			httpHeaders: {}
+		} satisfies HttpNetworkConfig,
+
+		/**
+		* Default hardhat network configuration
+		*/
+		hardhat: {
+			accounts: {
+				mnemonic:
+					'vivid any call mammal mosquito budget midnight expose spirit approve reject system',
+				path: HDKey.VET_DERIVATION_PATH,
+				count: 3,
+				initialIndex: 0
+
+			},
+			debug: true,
+			gasPayer: undefined,
+			gas: 'auto',
+			gasPrice: 'auto',
+			gasMultiplier: 1,
+			timeout: 20000,
+			httpHeaders: {}
+
+		}
+
+	}
+
 };
+
+export default config;
 ```
 
 ## OpenZeppelin Contracts
@@ -94,39 +181,32 @@ Install contract libraries and Hardhat helpers:
 npm install --save @openzeppelin/contracts @openzeppelin/contracts-upgradeable @openzeppelin/hardhat-upgrades
 ```
 
-### Configure
 
-Import or require the hardhat plugin in your `hardhat.config.ts` file:
+### Create a ERC20 Token
 
-```ts
-import "@openzeppelin/hardhat-upgrades";
-```
-
-### Test
-
-Create `contracts/MyToken.sol` and save this example:
+Create `contracts/GLDToken.sol` and save this example:
 
 ```sol
+// contracts/GLDToken.sol
 // SPDX-License-Identifier: MIT
-// Compatible with OpenZeppelin Contracts ^5.0.0
-pragma solidity ^0.8.20;
+pragma solidity 0.8.20;
 
-import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-contract MyToken is Initializable, ERC20Upgradeable, AccessControlUpgradeable {
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() {
-        _disableInitializers();
-    }
+// Importing the ERC20 contract from OpenZeppelin
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-    function initialize(address defaultAdmin) initializer public {
-        __ERC20_init("MyToken", "MTK");
-        __AccessControl_init();
+// Defining the GLDToken contract which inherits from ERC20
+contract GLDToken is ERC20 {
 
-        _grantRole(DEFAULT_ADMIN_ROLE, defaultAdmin);
-    }
+	// Constructor to initialize the token with an initial supply
+	// `initialSupply` is the amount of tokens that will be created at deployment
+
+	constructor(uint256 initialSupply) ERC20("Gold", "GLD") {
+
+		// Mint the initial supply of tokens and assign them to the contract deployer
+		_mint(msg.sender, initialSupply);
+
+	}
 }
 ```
 
@@ -138,90 +218,36 @@ npx hardhat compile
 
 [https://wizard.openzeppelin.com](https://wizard.openzeppelin.com) provides an easy-to-use web interface for generating basic smart contracts.
 
-## Deployment Manager
+## Deployment Contract
 
 With [`hardhat-deploy`](https://github.com/wighawag/hardhat-deploy), deployments can be managed automatically without tracking the addresses of deployed contracts or manually upgrading contracts.
-
-### Install
-
-The installation requires installing the following packages:
-
-```bash
-npm install --save-dev @nomicfoundation/hardhat-ethers ethers hardhat-deploy hardhat-deploy-ethers
-```
-
-### Configure
-
-Import or require the plugins in your `hardhat.config.ts` file:
-
-```ts
-import "hardhat-deploy";
-import "hardhat-deploy-ethers";
-```
-
-### Deploy
 
 Create a deployment script in `deploy/MyToken.ts`:
 
 ```ts
-import { HardhatRuntimeEnvironment } from "hardhat/types";
-import type { DeployFunction } from "hardhat-deploy/types";
-import type { MyToken } from "../typechain-types";
+import { ethers } from 'hardhat';
 
-const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
-    const [deployer] = await hre.getUnnamedAccounts()
-    await hre.deployments.deploy("MyToken", {
-        contract: "MyToken",
-        log: true,
-        from: deployer,
-        proxy: {
-            proxyContract: "UUPS",
-            execute: {
-                init: {
-                    methodName: "initialize",
-                    args: [deployer],
-                },
-            },
-        },
-        libraries: {},
-    });
+  
+async function main(): Promise<void> {
+	const erc20Contract = await ethers.deployContract('GLDToken', [100000]);
+	await erc20Contract.waitForDeployment();
+	const address = await erc20Contract.getAddress();
+	console.log(`Gold contract deployed with address: ${address}`);
+}
 
-    // read data from contract
-    const contract = (await hre.ethers.getContract(
-        "MyToken",
-        deployer
-    )) as MyToken;
-
-    // get role identifier
-    const ugpraderRole = await contract.DEFAULT_ADMIN_ROLE();
-
-    // check role
-    if (!(await contract.hasRole(ugpraderRole, deployer))) {
-        console.log("Granting DEFAULT_ADMIN_ROLE");
-
-        // execute a function of the deployed contract
-        // .wait() waits for the receipts and throws if it reverts
-        await (await contract.grantRole(ugpraderRole, deployer)).wait();
-    } else {
-        console.log("Already has DEFAULT_ADMIN_ROLE");
-    }
-
-    // access deployed address
-    const MyToken = await hre.deployments.get("MyToken");
-    console.log("MyToken is available at", MyToken.address);
-};
-
-func.id = "mytoken-upgradeable"; // name your deployment
-func.tags = ["mytoken"]; // tag your deployment, to run certain tags only
-func.dependencies = []; // build a dependency tree based on tags, to run deployments in a certain order
-
-export default func;
+  
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main().catch((error) => {
+	console.error(error);
+	process.exitCode = 1;
+});
 ```
 
-All scripts in `deploy` will be run with:
+To execute the deploy script, specifying the network to deploy to:
 
 ```bash
-npx hardhat deploy --network vechain_testnet
+npx hardhat deploy --network vechain_testnet_gas_payer_url
 ```
 
 If a contract changes, deployment will automatically take place.
@@ -230,5 +256,5 @@ The status of deployments is stored in `deployments/<network name>`. Check out [
 
 ### Example
 
-The above steps are available in an example project on GitHub at [https://github.com/vechain-energy/example-hardhat-project](https://github.com/vechain-energy/example-hardhat-project).
+The above steps are available in an example project with the SDK repository: [Example App](https://github.com/vechain/vechain-sdk-js/tree/main/apps/sdk-hardhat-integration)
 
