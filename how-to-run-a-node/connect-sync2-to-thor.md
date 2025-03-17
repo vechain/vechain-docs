@@ -59,7 +59,7 @@ Do not use the above mnemonic phrase to secure mainnet assets. The funds will no
 
 7. Enter your password to authorize the import
 
-Congrats! You have successfully connected to a Thor solo node with the Sync2 wallet, and you can now deploy/integrate by using [inspector ](https://inspector.vecha.in/)or you can check out the [https://github.com/vechain/vechain-docs/blob/main/how-to-run-a-node/useful-tips-for-building-a-dapp-by-using-connex.md](https://github.com/vechain/vechain-docs/blob/main/how-to-run-a-node/useful-tips-for-building-a-dapp-by-using-connex.md "mention").
+Congrats! You have successfully connected to a Thor solo node with the Sync2 wallet, and you can now deploy/integrate by using [inspector ](https://inspector.vecha.in/)or you can check out the [useful-tips-for-building-a-dapp-by-using-connex.md](https://github.com/vechain/vechain-docs/blob/main/how-to-run-a-node/useful-tips-for-building-a-dapp-by-using-connex.md "mention").
 
 ### Step 3: Launch Devpal <a href="#step-3-launch-devpal" id="step-3-launch-devpal"></a>
 
