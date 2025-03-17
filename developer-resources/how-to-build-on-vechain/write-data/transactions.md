@@ -17,7 +17,7 @@ To send a transaction you will need to do multiple steps:
 
 The instructions for executing a function on the blockchain needs to be encoded in a certain way.
 There are different functions to help create the right format,
-one is the `ABIFunction` that will in this example call `increment()` on the given address:
+one is the `callFunction` that will call `increment`, a function of the smart contract available a the given address:
 
 ```typescript
 const clauses = [
