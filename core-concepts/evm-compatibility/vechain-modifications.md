@@ -71,7 +71,7 @@ type body struct {
 
 In VeChain a single transaction can have multiple tasks / clauses. This feature essentially enables a VeChain transaction to have multiple recipients or multiple contract calls or a mixture of the two. This enables batching multiple operations into one larger transaction with multiple clauses. A detailed view of a clause structure can be found [here](../transactions/meta-transaction-features/clauses-multi-task-transaction.md).
 
-An example of how to use multiple clauses is available [here](https://docs.vechain.org/developer-resources/sdks-and-providers/sdk/transactions#example-multiple-clauses).
+The following code is an example of that, where to send the multi-clause transaction we have used the JSON API `transactions` end-point of a public node.  
 
 ### Transaction Dependency <a href="#transaction-dependency" id="transaction-dependency"></a>
 
