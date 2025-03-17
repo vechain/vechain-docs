@@ -37,7 +37,7 @@ const walletWithAccountSponsor = new ProviderInternalBaseWallet(
     [{privateKey, address: senderAddress}],
     {
         gasPayer: {
-            delegatorPrivateKey: delegatorAccount.privateKey,
+            gasPayerPrivateKey: gasPayerAccount.privateKey,
         },
     }
 );
