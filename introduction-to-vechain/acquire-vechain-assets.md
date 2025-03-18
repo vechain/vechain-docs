@@ -24,15 +24,9 @@ Always double check and confirm the CEX website address to ensure you are using 
 
 ### Virtual Currency Platform
 
-Another way to purchase the VET token is to use a virtual currency platform such as Coinify, https://mycoinify.com/. In order to use Coinify a user will have to:
+Another way to purchase tokens is directly from VeChain's flagship wallet, VeWorld.
 
-* Choose the cryptocurrency to buy - VET only.
-* Provide a quantity to purchase.
-* Create an account.
-* Complete the KYC process.
-* Provide your personal wallet address.
-* Provide debit or credit card details.
-* Place your order.
+By hitting "Buy" you can select among several on-ramp provides.&#x20;
 
 ## The Importance of Self-Custody
 

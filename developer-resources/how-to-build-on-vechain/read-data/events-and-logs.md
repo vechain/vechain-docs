@@ -12,7 +12,7 @@ This example used below will utilize the VTHO contract, which manages VeChain's 
 
 * Smart Contract Address: `0x0000000000000000000000000000456e65726779`
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
-* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
+* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://gitabihub.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
 ## `contracts.load(address, abi)`
 
@@ -20,14 +20,14 @@ A contract instance using address and ABI definition provides instant access to 
 
 ### Create Contract Object
 
-To create a contract object it needs to be created from the thor client:
+To filter events, just like with any other interaction, a contract object needs to be created. It requies to specify a network first, because in general a contract with a specific address only exists on one network
 
 ```javascript
 import { HttpClient, ThorClient } from '@vechain/sdk-network';
 import { ErrorDecoder } from 'ethers-decode-error';
 import energyAbi from './energy.json' assert { type: 'json' };
 
-const thor = new ThorClient(new HttpClient('https://mainnet.vechain.org'));
+const thor = ThorClient.at('https://testnet.vechain.org/'));
 const vtho = thor.contracts.load(
   '0x0000000000000000000000000000456e65726779',
   energyAbi
@@ -41,9 +41,9 @@ The Contract-Loader always requires a JSON ABI Definition.
 Fragments are not supported.
 {% endhint %}
 
-### `contract.filters.<EventName>()`
+### `contract.filters.<EventName>(output)`
 
-The filters provide a simple way to access events in a human-readable way and to populate log requests with the correct criteria.
+The filters provide a simple way to access events in a human-readable way and to populate log requests with the correct criteria. The feature is available for every "event available in the ABI of the contract. In the case of VTHO `Transfers` and `Approvals`, emitted every time a user calls _transfer_ and _approve_ respectively.
 
 For example, a filter for all `Transfers` can be created using:
 
@@ -58,7 +58,14 @@ Another example filters for all transfers to a specific address:
 const filteredTransfers = vtho.filters.Transfer(null, <to>)
 ```
 
-The parameters are the indexed parameters of the event. Unwanted filters can be skipped by passing null.
+`_to` is the second output of the ABI. Unwanted filters needs to be skipped by passing null. \
+There's a third one for the Transfer event, which is `_value`.&#x20;
+
+To filter all transfers of a specific value use:
+
+```typescript
+const filteredTransfers = vtho.filters.Transfer(null, null, <value>)
+```
 
 ### Get Logs
 
@@ -108,7 +115,7 @@ results.forEach(result => {
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-logs-contract.load?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-1puuxszb?ctl=1&embed=1&file=index.mjs&hideExplorer=1&view=editor" %}
 
 ### `filterEventLogs()`: Multiple Events in one Request
 
@@ -152,9 +159,9 @@ To access and retrieve logs, the `logs.filterRawEventLogs` function allows filte
 Illustrated in the following example is the process of retrieving transfer events for VTHO tokens. Initially, the event that requires filtering must be encoded into a byte format.
 
 ```js
-import { abi } from '@vechain/sdk-core';
+import { ABIEvent } from '@vechain/sdk-core';
 
-const event = new abi.Event(
+const event = new ABIEvent(
   'event Transfer(address indexed from, address indexed to, uint256 amount)'
 );
 const encodedTopics = event.encodeFilterTopics([])
@@ -210,4 +217,4 @@ The types of the results are fully documented in the [Event Logs Interface.](htt
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-logs-filterraweventlogs?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-rjc98gta?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}

@@ -8,8 +8,7 @@ Some utility functions can help ease the handling of these numbers, especially w
 
 For example, reading the balance of VTHO and turning it into a readable version:
 
-```ts
-import { ThorClient, Contract } from '@vechain/sdk-network';
+<pre class="language-ts"><code class="lang-ts">import { ThorClient, Contract } from '@vechain/sdk-network';
 const thor = ThorClient.at('https://mainnet.vechain.org');
 
 const contract = new Contract('0x0000000000000000000000000000456e65726779', [
@@ -21,10 +20,12 @@ const [[balance], [decimals]] = await thor.contracts.executeMultipleClausesCall(
   [
     contract.clause.balanceOf('0x0000000000000000000000000000000000000000'),
     contract.clause.decimals(),
-  ]
+    
+<strong>    contract.clause.setValue(123)
+</strong>  ]
 );
 console.log(balance, decimals, '=>', unitsUtils.formatUnits(balance, decimals));
-```
+</code></pre>
 
 Using `unitsUtils.formatUnits(number, decimals)`, the number is turned into a string with the decimal right where a human needs it.
 

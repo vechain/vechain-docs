@@ -6,7 +6,7 @@ description: An in-depth look at the VeChainThor blockchain powering the VeChain
 
 ## VeChainThor: A Layer 1 Blockchain for Enterprise Adoption
 
-VeChainThor is the layer 1 blockchain which powers the VeChain ecosystem. VeChainThor is a public blockchain that is designed for mass adoption of blockchain technology by enterprise users of all sizes and is intended to serve as a foundation for a sustainable and scalable enterprise blockchain ecosystem.
+VeChainThor is the layer 1 blockchain which powers the VeChain ecosystem. VeChainThor is a public blockchain that is designed for mass adoption and is intended to serve as a foundation for a sustainable and scalable blockchain ecosystem.
 
 Since it went live, the time when the genesis block was mined, in June 2018, the blockchain has been 100% online with zero downtime. VeChainThor is an extremely fast and efficient blockchain, producing blocks, on average, every 10 seconds and all the while only consuming a fraction of the energy other blockchains require to complete the same task. In fact, VeChain’s energy consumption is equal to just 0.04% of other blockchains.
 
