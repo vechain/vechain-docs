@@ -8,7 +8,8 @@ Some utility functions can help ease the handling of these numbers, especially w
 
 For example, reading the balance of VTHO and turning it into a readable version:
 
-<pre class="language-ts"><code class="lang-ts">import { ThorClient, Contract } from '@vechain/sdk-network';
+```ts
+import { ThorClient, Contract } from '@vechain/sdk-network';
 const thor = ThorClient.at('https://mainnet.vechain.org');
 
 const contract = new Contract('0x0000000000000000000000000000456e65726779', [

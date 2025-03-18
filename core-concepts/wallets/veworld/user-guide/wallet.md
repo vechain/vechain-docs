@@ -55,7 +55,6 @@ The mnemonic words store all the information needed at any point in time to reco
 The mnemonic must be stored in a secure place, preferably offline. The mnemonic allows you to regain wallet access in a scenario where your device is lost, stolen, or unusable due to any reason.
 {% endhint %}
 
-
 ## Import a wallet
 
 ### Import a local wallet
@@ -256,4 +255,3 @@ Add an account to a wallet
 Remove a wallet: not available on Extension
 {% endtab %}
 {% endtabs %}
-

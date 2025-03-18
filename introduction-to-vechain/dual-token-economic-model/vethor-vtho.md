@@ -8,7 +8,7 @@ description: Understanding VeChain's transaction/gas token, VTHO
 
 ## VIP180: VeChain's Fungible Token Standard
 
-VeChain had implemented an improvement proposal defining a new fungible token standard, VIP180. It was a superset of Ethereum's ERC20 standard, now superseeded. All VIP180 are compatible with the most used ERC20 fungible token standard across blockchains. VTHO, as a VIP180 token, powers the VeChainThor blockchain by:
+VeChain had implemented an improvement proposal defining a new fungible token standard, VIP180. It was a superset of Ethereum's ERC20 standard, now superseded. All VIP180 are compatible with the most used ERC20 fungible token standard across blockchains. VTHO, as a VIP180 token, powers the VeChainThor blockchain by:
 
 * Serving as the fee for transactions and smart contract execution
 * Rewarding Authority Masternodes for block production and network maintenance

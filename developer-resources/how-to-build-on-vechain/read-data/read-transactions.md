@@ -44,8 +44,8 @@ Test it yourself:
 
 Type definition and documentation of all attributes:
 
-* [Transaction Body](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/\_internal\_.TransactionBody.html) & [Transaction Details](https://tsdocs.dev/docs/@vechain/sdk-network/latest/types/network.TransactionDetailNoRaw.html)
-* [Transaction Receipt](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransactionReceipt.html)
+* [Transaction Body](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/_internal_.TransactionBody.html) & [Transaction Clause](https://tsdocs.dev/docs/@vechain/sdk-network/1.0.0/interfaces/_internal_.TransactionClause.html)
+* [Transaction Receipt](https://tsdocs.dev/docs/@vechain/sdk-network/1.0.0/interfaces/TransactionReceipt.html)
 
 The same information is available using the JSON-API:
 

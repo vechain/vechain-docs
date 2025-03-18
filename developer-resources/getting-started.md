@@ -54,7 +54,7 @@ Craft an intuitive user interface using modern web technologies.
 
 * Implement easy wallet login with [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/).
 * Use our comprehensive [SDK](sdks-and-providers/sdk/) for efficient blockchain interactions.
-* Connect to VeChainThor via our [node endpoints](nodes.md).
+* Connect to VeChainThor via our [node endpoints](https://docs.vechain.org/core-concepts/nodes).
 
 #### 4. **Test Thoroughly**
 
