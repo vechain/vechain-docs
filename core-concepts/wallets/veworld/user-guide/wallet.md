@@ -155,7 +155,7 @@ Steps for importing a Ledger wallet:
 {% tab title="Mobile" %}
 Steps for importing an observable wallet:
 
-1. From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
+1. From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account_balance_wallet.svg)
 2. Tap the **Add Wallet** button
 3. Tap the **Observe Wallet** button
 4. Tap **Local wallet**
@@ -210,27 +210,27 @@ Feel free to self-organize your wallets as you prefer.
 {% tab title="Mobile" %}
 Change the order of your wallets
 
-1. From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
-2. Tap the icon order-change ![](../../../../.gitbook/assets/veworld/low\_priority.svg)
+1. From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account_balance_wallet.svg)
+2. Tap the icon order-change ![](../../../../.gitbook/assets/veworld/low_priority.svg)
 3. Move your wallets to your favorite order
 4. Tap the **Save** button
 
 Rename a wallet
 
-* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
+* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account_balance_wallet.svg)
 * Select the wallet by pressing the pencil icon
 * Change the name of your wallet
 
 Add an account to a wallet
 
-* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
+* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account_balance_wallet.svg)
 * Select the wallet
 * Tap the **Add Account** button
 * (optional) Rename it by tapping the name of the new account
 
 Remove a wallet
 
-* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account\_balance\_wallet.svg)
+* From your dashboard tap the top-right wallet icon ![](../../../../.gitbook/assets/veworld/account_balance_wallet.svg)
 * Hold for a second the wallet you want to remove and swipe to the left
 * Press the trash icon
 * Confirm by tapping the **Remove Wallet** button
@@ -241,14 +241,14 @@ Change the order of your wallets: not available on Extension.
 
 Rename a wallet
 
-* From your dashboard click the top-right wallet icon![](../../../../.gitbook/assets/veworld/more\_vert.svg)
+* From your dashboard click the top-right wallet icon![](../../../../.gitbook/assets/veworld/more_vert.svg)
 * Click on **Manage Wallets**
 * Click on the pencil icon of the wallet you want to change
 * Type the new name, then click the **Save Changes** button
 
 Add an account to a wallet
 
-* From your dashboard click the top-right wallet icon![](../../../../.gitbook/assets/veworld/more\_vert.svg)
+* From your dashboard click the top-right wallet icon![](../../../../.gitbook/assets/veworld/more_vert.svg)
 * Click on **Manage Wallets**
 * Click the **Add Account** link close to the desired wallet
 * (optional) Rename the account by clicking the pencil icon

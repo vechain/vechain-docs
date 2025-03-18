@@ -6,7 +6,9 @@ description: Defining a blockchain testnet and it's purposes.
 
 ## What is a blockchain testnet?
 
-A blockchain testnet is a testing environment where developers and users can experiment prior to deploying code to the blockchain production network, refered to as mainnet. Testnets are essentially separate blockchain networks that mirror the functionality of the mainnet but are isolated from it. Testnets in blockchain networks should have identical consensus mechanisms, network infrastructure, blockchain protocol and economic model.
+A testnet is a specialized blockchain used as a testing environment where developers and users can experiment prior to deploying code to a production network (mainnet). Testnets are essentially separate blockchain networks that mirror the functionality of the mainnet but are isolated from it, with the additional difference that testnet assets are worth nothing.&#x20;
+
+Testnets in blockchain networks so usually have identical consensus mechanisms, network infrastructure, blockchain protocol and economic model.
 
 ## How can I access the testnet?
 
