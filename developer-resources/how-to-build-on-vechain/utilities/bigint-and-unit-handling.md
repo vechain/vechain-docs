@@ -64,7 +64,6 @@ console.log(response);
 
 ```
 
-Using `unitsUtils.formatUnits(number, decimals)`, the number is turned into a string with the decimal right where a human needs it.
 
 ## Convert Human Inputs to BigInts
 
@@ -76,3 +75,5 @@ When building user interfaces, numbers are entered as strings and need to be tur
 unitsUtils.parseUnits('5', 18)   // => turns into 5000000000000000000n
 unitsUtils.parseUnits('0.1', 18) // => turns into 100000000000000000n
 ```
+
+Using `unitsUtils.formatUnits(number, decimals)`, the number is turned into a string with the decimal right where a human needs it.
