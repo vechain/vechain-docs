@@ -71,4 +71,3 @@ certificate.sign(privateKey);
 // Verify certificate
 certificate.verify();
 ```
-

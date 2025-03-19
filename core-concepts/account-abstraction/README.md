@@ -1,34 +1,45 @@
 ---
 description: >-
-  Programmable smart contract wallets for a better user experience and improved
-  security.
+  Programmable smart contract wallets for enhanced user experience and security.
 ---
 
 # Account Abstraction
 
 {% hint style="warning" %}
-The implementation of account abstraction is work in progress. Hence, this material is subject to change.
+The implementation of account abstraction is work in progress. The details provided here are subject to change as development progresses.
 {% endhint %}
 
 ## TL;DR
 
-Account abstraction enhances the functionality of existing smart contract wallets, which make blockchain accounts programmable. The name, account abstraction, refers to the logic of removing the signing of transactions from the account and abstracting it out. Smart contract wallets offer a better user experience and improved security. Smart contract wallets are expected to be the approach for normalising and onboarding vast amounts of users from Web2 into Web3.
+Account abstraction transforms traditional blockchain wallets by making them programmable through smart contract wallets. It abstracts the transaction-signing process, significantly enhancing user experience and security. This innovation aims to onboard a broader audience from Web2 to Web3 by normalizing blockchain interactions.
 
 {% hint style="info" %}
-For hands-on experience with account abstraction and Thor Solo see our [account-abstraction.md](../../developer-resources/account-abstraction.md "mention") guide.
+For hands-on exploration of account abstraction, refer to our [account-abstraction.md](../../start-building/tutorials/account-abstraction.md "mention") guide.
 {% endhint %}
 
 ## Introduction
 
-Account abstraction is a new approach to make blockchain accounts programmable through smart contract wallets. To understand account abstraction we must first understand how users currently interact with a blockchain.
+Account abstraction is a new approach to make blockchain accounts programmable through smart contract wallets. To understand its significance, it's essential to grasp how users currently interact with blockchains.
 
-Currently, all interactions on all blockchains, including VeChain, are initiated through an externally owned account (EOA). EOAs are wallets owned by users and operated manually from outside the blockchain. They are controlled and managed through a public-private key pair. Whoever owns the private key owns the assets stored in the EOA. The most crucial part of an EOA is its seed phrase. The seed phrase is a set of random words, usually 24, that is generated when the EOA is being setup. This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature on a transaction proving to the blockchain that the user has initiated the transaction from their account. Examples of EOAs are Coinbase Wallet and MetaMask.
+### Traditional Blockchain Interaction: Externally Owned Accounts (EOAs)
 
-The EOA design is inflexible, lacks programmability, provides a poor user experience and makes the user vulnerable to attack through poor private key management. Account abstraction offers a solution to these restrictions.
+Most of the interaction with a blockchain, including VeChain, are initiated by externally owned account (EOA) through non-custodial wallets. People need to sign a transaction with their private key to spend their money. Possession of the private key grants control over the wallet’s assets, that once lost can't be recovered. 
+Since it was error prone to write down a long hex string, a mnemonic seed phrase (mnemonic in brief) is usually the information that needs to be stored off-line in a safe location. 
+A mnemonic is a set of words representing a random point on a cryptographic curve, usually 12 or 24, from which the key pair can be derived. The EOA will be created at the first usage. 
+Just like with the pure private key, losing this seed phrase can result in permanent loss of access. 
+This seed phrase is used to generate the private key, which is then used to sign transactions. Each and every blockchain transaction requires a signature proving to the blockchain that the user has initiated the transaction from its account. Examples of non-custodial wallets are VeWorld and MetaMask.
 
-## Advantages of Smart Contract Wallets
+### Limitations of EOAs
 
-Smart contract wallets offer an improved user experience by abstracting the signing of transactions which will offer a dramatic increase in the user experience. Abstracting away the necessity to sign each and every transaction combined with features such as trusted sessions and batch transactions will transform the blockchain user experience.
+EOAs come with several drawbacks:
+
+ * Lack of programmability/flexibility.
+ * Poor user experience due to manual transaction signing.
+ * Security risks due to the private key being unique point of failure with no recourse.
+
+### The Solution: Account Abstraction
+
+Smart contract wallets offer an improved user experience by abstracting the signing of transactions which will offer a dramatic increase in the user experience. Abstracting away the necessity to sign each and every transaction combined with features such as trusted sessions, social recovery and batch transactions will transform the blockchain user experience.
 
 Smart contract wallets also offer improved security through the ability to flexibly incorporate account recovery methods. Security improvements such as multisig authorization, sharing account security across devices or individuals and the use of whitelists to protect users accounts, just to name a few potential candidates.
 
@@ -36,35 +47,38 @@ Currently, the user experience and improved security benefits are not natively s
 
 ## How Account Abstraction Works
 
-Account Abstraction is formalized through ERC-4337. If you wish to read more on how it works the following resources are a good starting point:
+Account abstraction formalized through ERC-4337 introduces new participants, contracts, and data structures. If you wish to read more on how it works the following resources are a good starting point:
 
 * [ERC-4337 Documentation](https://www.erc4337.io/docs)
 * [Official ERC-4337 Ethereum Site](https://eips.ethereum.org/EIPS/eip-4337)
 
-### ERC-4337: Actors
+<figure><img src="../../.gitbook/assets/4337-diagram.png" alt=""><figcaption><p>Diagram from <a href="https://www.erc4337.io/docs">erc4337.io/docs</a></p></figcaption></figure>
 
-Account abstraction introduces several new participants. These participants can have smart contracts representing them on chain or an EOA or both. The new participants and their roles are briefly described below:
+### Key Participants
 
-1. **Users**: Individuals/Entities that own EOAs, interact with the Bundler and generate userOperations.
-2. **Bundlers**: Nodes responsible for including UserOperations in a block. They must ensure that earlier transactions in the block don't make any UserOperation fail and must follow the rules specified in the proposal.
-3. **Paymasters**: Deploy the Paymaster contract that facilitates transaction sponsorship, allowing third-party designed mechanisms to pay for transactions. Paymasters enable passive transaction sponsorship. Paymasters are an optional actor and are not a necessity.
+Account abstraction introduces new participants:
 
-### ERC-4337: Contracts
+* **Users**: Individuals/entities owning EOAs that interact with the blockchain through `UserOperations`.
+* **Bundlers**: Nodes that package `UserOperations` from a public mempool into transactions for execution.
+* **Paymasters**: Optional actors that sponsor transaction fees, enabling innovative mechanisms for fee payment.
+* **Aggregators**: Optimize transactions by compressing multiple signatures into one, reducing costs.
+
+### Key Smart Contracts
 
 Account abstraction introduces several new smart contracts. These smart contracts and their roles are briefly described below:
 
-1. **EntryPoint Contract:** A singleton entry point smart contract that handles the verification and execution of bundles of UserOperations.
-2. **Account Factory Contract:** A non-uniform smart contract that is used to create Account contracts on a given blockchain network.
-3. **Account Contract:** A smart contract that represents the user's account on a given blockchain network.
-4. **Paymaster Contract:** An optional contract that is deployed by individuals which facilitates the sponsorship of transaction fees.
+* **EntryPoint Contract:** A central contract that verifies and executes bundled `UserOperations`.
+* **Account Factory Contract:** Responsible for creating smart contract wallets.
+* **Account Contract:** Represents a user’s programmable wallet.
+* **Paymaster Contract:** Optionally facilitates transaction fee sponsorship.
 
-### ERC-4337: Components
+### Key Data Structure
 
-Account abstraction introduces a new data structure which is briefly described below:
+Account abstraction introduces a new data structure:
 
-1. **UserOperation:** The key data structure of account abstraction which represents the Users intent to perform a transaction. A UserOperation is sent from a User via a Client to a Bundler. The Bundler then converts the UserOperation into a transaction.
+* **UserOperation:** A data object representing a user’s intent to perform a blockchain transaction with the smart account wallet. It includes the code to deploy the account if not yet onchain, data that should be executed, and a proof of ownership (usually a signature to be verified). A UserOperation is sent from a User via a Client into the alternative mempool through a specific RPC server, where it is collected by a Bundler. The Bundler then converts a UserOperation into a transaction.
 
-### ERC-4337: Flow Overview
+### ERC-4337 Workflow Overview
 
 There are several participants and smart contracts involved in the account abstraction flow. Ultimately, the objective is to convert UserOperations into transactions through the ERC-4337 standards.
 
@@ -76,4 +90,4 @@ The EntryPoint contract is the smart contract that handles the verification and 
 
 There are some additional actors that we have not yet discussed. The Account Factory contract is a contract that is called when using a wallet for the first time. This is represented in a UserOperation through the `initCode` field which is used to specify the creation of a smart contract wallet. A Paymaster contract is an optional actor that can sponsor gas fees for smart contract wallets. An Aggregator is another actor, which is not represented on the image below, that can be used to compress multiple signature into a single signature with the purpose of minimising transaction fees.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Photo taken from <a href="https://www.erc4337.io/docs/understanding-ERC-4337/architecture">erc4337.io</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4337-architecture.png" alt=""><figcaption><p>Architecture from <a href="https://www.erc4337.io/docs/understanding-ERC-4337/architecture">erc4337.io/docs</a></p></figcaption></figure>

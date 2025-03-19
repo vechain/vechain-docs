@@ -15,7 +15,7 @@ If it is a Ledger wallet, you can identify the wallet by the presence of the <im
 ### Generate <a href="#generate" id="generate"></a>
 
 1. Click upper left ![](../../../../.gitbook/assets/menu.svg) to open wallet list
-2. Click the upper area ![](../../../../.gitbook/assets/add\_circle\_outline.svg) to new wallet page
+2. Click the upper area ![](../../../../.gitbook/assets/add_circle_outline.svg) to new wallet page
 3. Click **Generate**
 4. Verification
    1. Password: Enter your password to authorize the generation
@@ -32,7 +32,7 @@ Desktop - Right click the **Generate**
 ### Import <a href="#import" id="import"></a>
 
 1. Click upper left ![](../../../../.gitbook/assets/menu.svg) to open wallet list
-2. Click the upper area ![](../../../../.gitbook/assets/add\_circle\_outline.svg) to new wallet page
+2. Click the upper area ![](../../../../.gitbook/assets/add_circle_outline.svg) to new wallet page
 3. Click **Import**
 4. Enter your mnemonic words
 5. Enter your password to authorize the import
@@ -40,7 +40,7 @@ Desktop - Right click the **Generate**
 ### Link Ledger device <a href="#link-ledger-device" id="link-ledger-device"></a>
 
 1. Click upper left ![](../../../../.gitbook/assets/menu.svg) to open wallet list
-2. Click the upper area ![](../../../../.gitbook/assets/add\_circle\_outline.svg) to new wallet page
+2. Click the upper area ![](../../../../.gitbook/assets/add_circle_outline.svg) to new wallet page
 3. Click **Link Now**
 4. Connect and unlocked your Ledger device
 5. Click **Link**
@@ -56,8 +56,8 @@ Before adding the custom network wallet, you need to [#add-node](settings.md#add
 {% endhint %}
 
 1. Click upper left ![](../../../../.gitbook/assets/menu.svg) to open wallet list
-2. Click the upper area ![](../../../../.gitbook/assets/add\_circle\_outline.svg) to open the new wallet page
-3. Click upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
+2. Click the upper area ![](../../../../.gitbook/assets/add_circle_outline.svg) to open the new wallet page
+3. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
 4. Select **Private**
 5. Click **Import** / **Generate**
 
@@ -67,7 +67,7 @@ The mnemonic words store all the information that is needed at any point in time
 
 1. Click **Backup Now** on the banner
 2. Backup manually
-   1. Click on upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
+   1. Click on upper right ![](../../../../.gitbook/assets/more_horiz.svg)
    2. Click **Backup**
 
 {% hint style="info" %}
@@ -80,13 +80,14 @@ The mnemonic words store all the information that is needed at any point in time
 Wallet name is the identifier to help you easily tell the wallet.
 
 1. Click upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
+1. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
 2. Click **Rename**
 3. Enter the name of your wallet
 4. Click **Confirm**
 
 ## Delete wallet <a href="#delete-wallet" id="delete-wallet"></a>
 
-1. Click upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
+1. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
 2. Click **Delete**
 3. Follow the instructions to continue the deletion
 4. Click **Delete**
@@ -94,7 +95,7 @@ Wallet name is the identifier to help you easily tell the wallet.
 
 ## Create new address <a href="#create-new-address" id="create-new-address"></a>
 
-1. Click upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
+1. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
 2. Click **New Address**
 
 {% hint style="info" %}
@@ -107,7 +108,7 @@ A user is limited to a maximum of 10 addresses.
 
 ### Add assets <a href="#add-assets" id="add-assets"></a>
 
-1. Click middle right ![](../../../../.gitbook/assets/control\_point\_duplicate.svg)
+1. Click middle right ![](../../../../.gitbook/assets/control_point_duplicate.svg)
 2. Choose the token from the token list
 3. Toggle on to enable
 
@@ -124,4 +125,4 @@ A user is limited to a maximum of 10 addresses.
 ### Receive asset <a href="#receive-asset" id="receive-asset"></a>
 
 1. At the upper right
-2. Click ![](../../../../.gitbook/assets/qr\_code.svg) to view the QR Code or copy address
+2. Click ![](../../../../.gitbook/assets/qr_code.svg) to view the QR Code or copy address

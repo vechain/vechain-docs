@@ -2,13 +2,13 @@
 description: Thor-client
 ---
 
-# Thor-client
+# ThorClient
 
-The Thor-client serves as an interface to interact with the VeChainThor blockchain. This client streamlines the interaction with the blockchain by providing a set of methods specifically tailored to retrieve information from various endpoints. By encapsulating the intricacies of the underlying communication with the VeChainThor network, developers can easily integrate this client into their applications. Whether fetching details about specific blocks, querying transaction information, or accessing other blockchain-related data, the thor-client simplifies the process, enabling efficient and straightforward integration with the VeChainThor network through RESTful API calls.
+The ThorClient serves as an interface to interact with the VeChainThor blockchain. This client streamlines the interaction with the blockchain by providing a set of methods specifically tailored to retrieve information from various endpoints. By encapsulating the intricacies of the underlying communication with the VeChainThor network, developers can easily integrate this client into their applications. Whether fetching details about specific blocks, querying transaction information, or accessing other blockchain-related data, the thor-client simplifies the process, enabling efficient and straightforward integration with the VeChainThor network through RESTful API calls.
 
 ## Initialization
 
-To initialize a Thor client, there are two straightforward methods. The first involves creating an HTTP client with the desired network URL, then passing it to ThorClient. Alternatively, the ThorClient can be directly initialized from the network URL. The choice between them depends on whether you prefer a two-step setup with explicit HTTP client configuration or a more concise, one-step initialization.
+To initialize a ThorClient, there are two straightforward methods. The first involves creating an HTTP client with the desired network URL, then passing it to ThorClient. Alternatively, the ThorClient can be directly initialized from the network URL. The choice between them depends on whether you prefer a two-step setup with explicit HTTP client configuration or a more concise, one-step initialization.
 
 ```typescript { name=initialize, category=example }
 // First way to initialize thor client
