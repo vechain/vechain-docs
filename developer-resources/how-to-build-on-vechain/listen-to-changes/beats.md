@@ -55,10 +55,18 @@ It enables the verification of interactions involving a specific address, potent
 The `bloomUtils` offer a straightforward test function to determine whether an address has had interactions within a block:
 
 ```js
-import { bloomUtils } from '@vechain/sdk-core'
+import WebSocket from 'ws';
+import { Address, BloomFilter } from '@vechain/sdk-core'
+const ws = new WebSocket('wss://mainnet.vechain.org/subscriptions/beat2');
 
-const addressToTest = '0x0000000000000000000000000000000000000000'
-console.log('Interaction found', bloomUtils.isAddressInBloom(block.bloom, block.k, addressToTest))
+ws.onmessage = (message) => {
+    console.log('New block', message.data);
+    const block = JSON.parse(message.data as any);
+    const bloom = BloomFilter.of(block.bloom).build();
+
+    const addressToTest = '0x0000000000000000000000000000000000000000';
+    console.log('Have there been any interactions ?', bloom.contains(Address.of(addressToTest)));
+}
 ```
 
 The bloom filter is used for testing and includes:
@@ -75,12 +83,6 @@ The bloom filter is used for testing and includes:
 For more details on the implementation, you can view the [node's code on GitHub](https://github.com/vechain/thor/blob/d847c4683469a8ccffb4e472ca7449059b3ceefc/api/subscriptions/beat2_reader.go#L29-L90).
 {% endhint %}
 
-`bloomUtils.isInBloom` provides an additional filter to check for the presence of non-address data, such as numbers emitted within events. It can also be used to check for the VTHO contract, whose address is a special one because its the bytes32-encoded version of the word "Energy" (`0x456e65726779`).
-
-```javascript
-const dataToTest = "0x456e65726779"
-console.log('Data found', bloomUtils.isInBloom(block.bloom, block.k, dataToTest))
-```
 
 ## Example Project
 

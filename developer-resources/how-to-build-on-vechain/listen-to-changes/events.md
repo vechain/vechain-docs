@@ -26,33 +26,12 @@ This will receive all events on the blockchain as JSON-encoded strings.
 
 ## Filter Specific Events
 
-The VeChain SDK assists in constructing filters to retrieve only the desired data by creating a subscription URL with the specified parameters.
-
-A helper utility, `coder`, generates ethers compatible interfaces that can be utilized to construct the encoded filters.
-
-The following snippet demonstrates how to set up the interface:
-
-```js
-import { coder } from '@vechain/sdk-core';
-
-// create an interface for the contract events to listen
-const contractInterface = coder.createInterface([
-  'event Transfer (address indexed from, address indexed to, uint256 value)',
-]);
-```
-
-Once the interface is available, it can be used to obtain encoded event information:
-
-```js
-contractInterface.getEvent('Transfer')
-```
-
 Using the `subscriptions` helper, a custom subscription URL can be built that listens only to the specified event:
 
 ```js
 const wsUrl = subscriptions.getEventSubscriptionUrl(
   'https://mainnet.vechain.org',
-  contractInterface.getEvent('Transfer')
+  "event Transfer(address indexed from, address indexed to, uint256 value)"
 );
 ```
 
@@ -67,7 +46,7 @@ For instance, to filter all transfers originating from a specific address, you w
 ```js
 const wsUrl = subscriptions.getEventSubscriptionUrl(
   'https://mainnet.vechain.org',
-  contractInterface.getEvent('Transfer'),
+  "event Transfer(address indexed from, address indexed to, uint256 value)",
   ['0x0000000000000000000000000000456e65726779']
 );
 ```
@@ -77,7 +56,7 @@ To filter for all transfers to a specific address, provide only the second value
 ```js
 const wsUrl = subscriptions.getEventSubscriptionUrl(
   'https://mainnet.vechain.org',
-  contractInterface.getEvent('Transfer'),
+  "event Transfer(address indexed from, address indexed to, uint256 value)",
   [null, '0x0000000000000000000000000000456e65726779']
 );
 ```
@@ -95,7 +74,7 @@ For example, to listen exclusively for VTHO transfers from the VTHO contract at 
 ```js
 const wsUrl = subscriptions.getEventSubscriptionUrl(
   'https://mainnet.vechain.org',
-  contractInterface.getEvent('Transfer'),
+  "event Transfer(address indexed from, address indexed to, uint256 value)",
   [],
   { address: '0x0000000000000000000000000000456e65726779' }
 );
@@ -116,21 +95,54 @@ The events are received as JSON-encoded strings. These strings must be parsed an
 Using the contract interface defined earlier, you can decode these events with the `parseLog()` function:
 
 ```js
+import WebSocket from "ws";
+import { ABIContract } from "@vechain/sdk-core";
+import { subscriptions } from "@vechain/sdk-network";
+
+const ws = new WebSocket(
+  subscriptions.getEventSubscriptionUrl(
+    "https://mainnet.vechain.org",
+    "event Transfer(address indexed from, address indexed to, uint256 value)",
+    [],
+    {
+        address: "0x0000000000000000000000000000456e65726779"
+    }
+  )
+);
+
 ws.onmessage = (message) => {
-  // data is received as text and needs to be converted into an object first
-  console.log('Received data', message.data);
-  const eventLog = JSON.parse(message.data);
+    console.log(message.data);
+  const eventData = JSON.parse(message.data as any);
 
-  const decoded = contractInterface.parseLog(eventLog);
-  if (!decoded || decoded?.name !== 'Transfer') {
-    throw new Error('Unknown Event');
+  // Ensure topics is an array of strings
+  const topics = Array.isArray(eventData.topics)
+    ? eventData.topics.map(String)
+    : [String(eventData.topics)];
+
+  // Ensure data is a single hex string
+  const data = Array.isArray(eventData.data)
+    ? eventData.data.map(String).join("")
+    : String(eventData.data) || "0x";
+
+  const abiContract = new ABIContract([
+    {
+      type: "event",
+      name: "Transfer",
+      inputs: [
+        { type: "address", name: "from", indexed: true },
+        { type: "address", name: "to", indexed: true },
+        { type: "uint256", name: "value", indexed: false },
+      ],
+    },
+  ]);
+
+  const decoded = abiContract.parseLog<"Transfer">(data, topics);
+
+  if (!decoded || decoded.eventName !== "Transfer") {
+    throw new Error("Transfer event not detected");
   }
+};
 
-  // decoded.args will have the following attributes:
-  // decoded.args.from, decoded.args.to, decoded.args.value
-  // and
-  // decoded.args[0], decoded.args[1], decoded.args[2]
-}
 ```
 
 {% hint style="info" %}
