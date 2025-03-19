@@ -28,7 +28,7 @@ VET's high divisibility, with 18 decimal places, offers several advantages:
 * **Scalability**: Supports a wide range of transaction sizes, from tiny micropayments to large transfers.
 * **Future-proofing**: Provides room for value appreciation without limiting usability.
 
-The smallest unit of VET, similar to Bitcoin's satoshi, is called 'wei':
+The smallest unit of VET, similar to Bitcoin's Satoshi, and just like in Ethereum, is called 'wei':
 1 VET = 1,000,000,000,000,000,000 wei (10^18 wei).
 
 This high divisibility makes VET particularly suitable for:

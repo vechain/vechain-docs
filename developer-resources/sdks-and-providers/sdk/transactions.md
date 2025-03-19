@@ -696,4 +696,3 @@ const revertReason = thorSoloClient.transactions.decodeRevertReason(
 ```
 
 In this case there is only a `TransactionSimulationResult`, so no need to loop.
-

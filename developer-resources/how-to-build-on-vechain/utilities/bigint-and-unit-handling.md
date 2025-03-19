@@ -64,7 +64,6 @@ console.log(response);
 
 ```
 
-
 ## Convert Human Inputs to BigInts
 
 When building user interfaces, numbers are entered as strings and need to be turned into BigInts for interaction with the blockchain.

@@ -40,12 +40,12 @@ console.log(txReceipt);
 
 Test it yourself:
 
-{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-transaction?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-gqgresdy?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 Type definition and documentation of all attributes:
 
-* [Transaction Body](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/\_internal\_.TransactionBody.html) & [Transaction Details](https://tsdocs.dev/docs/@vechain/sdk-network/latest/types/network.TransactionDetailNoRaw.html)
-* [Transaction Receipt](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransactionReceipt.html)
+* [Transaction Body](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/_internal_.TransactionBody.html) & [Transaction Clause](https://tsdocs.dev/docs/@vechain/sdk-network/1.0.0/interfaces/_internal_.TransactionClause.html)
+* [Transaction Receipt](https://tsdocs.dev/docs/@vechain/sdk-network/1.0.0/interfaces/TransactionReceipt.html)
 
 The same information is available using the JSON-API:
 

@@ -10,4 +10,4 @@ Implementation of account abstraction is still a work in progress. Hence, this m
 
 A full end to end demo of account abstraction on the VeChainThor blockchain is available [here](https://github.com/vechain/account-abstraction-demo).
 
-For more information regarding account abstraction refer to [account-abstraction](../../core-concepts/account-abstraction/ "mention").
+For more information regarding account abstraction refer to [account-abstraction](../core-concepts/account-abstraction/README.md "mention").

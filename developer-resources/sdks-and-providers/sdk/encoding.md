@@ -129,4 +129,3 @@ const clause = {
 const data = RLPProfiler.ofObject(clause, profile).encoded;
 const obj = RLPProfiler.ofObjectEncoded(data, profile).object;
 ```
-
