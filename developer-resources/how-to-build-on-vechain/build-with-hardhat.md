@@ -257,4 +257,3 @@ The status of deployments is stored in `deployments/<network name>`. Check out [
 ### Example
 
 The above steps are available in an example project with the SDK repository: [Example App](https://github.com/vechain/vechain-sdk-js/tree/main/apps/sdk-hardhat-integration)
-
