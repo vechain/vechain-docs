@@ -231,4 +231,3 @@ The status of deployments is stored in `deployments/<network name>`. Check out [
 ### Example
 
 The above steps are available in an example project on GitHub at [https://github.com/vechain-energy/example-hardhat-project](https://github.com/vechain-energy/example-hardhat-project).
-

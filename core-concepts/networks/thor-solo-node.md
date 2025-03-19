@@ -6,7 +6,7 @@ description: An introduction to the Thor solo node and its purpose.
 
 ## What is Thor solo node?
 
-Running a solo node in blockchains refers to operating a single node that independently maintains and validates the entire blockchain network. In other words, a solo node does not rely on other nodes for validation and verification of transactions and blocks. Instead, it performs all the necessary tasks on its own. Therefore, running a Thor solo node is essentially running the VeChainThor node software but not connecting it to other network participants in mainnet or testnet.
+Running a solo node refers to operating a new and independent blockchain locally. In other words, a solo node does not rely on other nodes for validation and verification of transactions and blocks. Instead, it performs all the necessary tasks on its own. Therefore, running a Thor solo node is essentially running the VeChainThor node software but not connecting it to other network participants in mainnet or testnet.
 
 ### When should I run a Thor solo node?
 

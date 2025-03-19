@@ -20,12 +20,12 @@ A fourth parameter is optional and allows user to provide the options for execut
 
 ### Without Parameters
 
-For example, if you want to access a basic variable name from a contract, such as the name of the VTHO contract, you can utilize the code snippet below:
+To get the value stored for the variable `name` from the contract, the VTHO token name in this case, you can use the code below:
 
 ```js
 const thor = ThorClient.at('https://mainnet.vechain.org');
-// it is the contract ABI of the energy contract mentioned above
-const contractABI = [
+// it is the ABI of the energy contract mentioned above
+const contractABI = new ABIcontract ([
     {
         "constant": true,
         "inputs": [],
@@ -282,14 +282,14 @@ const contractABI = [
         "name": "Approval",
         "type": "event"
     }
-];
+]);
 
 const name = await thor.contracts.executeCall(
     '0x0000000000000000000000000000456e65726779', 
-    ABIContract.ofAbi(contractABI).getFunction('name'), 
+    contractABI.getFunction('name'), 
     []
 );
-console.log('Name', name);
+console.log('Name', name.result.plain);
 ```
 
 ### With Parameters
@@ -299,10 +299,10 @@ When calling a function with parameters, the parameters should be passed as a li
 ```js
 const balanceNow = await thor.contracts.executeCall(
     '0x0000000000000000000000000000456e65726779', 
-    ABIContract.ofAbi(contractABI).getFunction('balanceOf'), 
+    contractABI.getFunction('balanceOf'), 
     ['0x0000000000000000000000000000000000000000']
 );
-console.log('Balance Now', balanceNow);
+console.log('Balance Now', balanceNow.result.plain / 1000000000000000000n);
 ```
 
 ### Historical Data
@@ -312,11 +312,11 @@ To retrieve data from a previous block, you can specify the block number or id b
 ```js
 const balancePast = await thor.contracts.executeCall(
     '0x0000000000000000000000000000456e65726779', 
-    ABIContract.ofAbi(contractABI).getFunction('balanceOf'), 
+    contractABI.getFunction('balanceOf'), 
     ['0x0000000000000000000000000000000000000000'], 
     { revision: "12345678" }
 );
-console.log('Balance Past', balancePast);
+console.log('Balance Past', balancePast.result.plain / 1000000000000000000n);
 ```
 
 ### Simulate Transaction
@@ -326,20 +326,22 @@ If a function could change the state, it would require a transaction. To check t
 ```js
 const transfer = await thor.contracts.executeCall(
     '0x0000000000000000000000000000456e65726779', 
-    ABIContract.ofAbi(contractABI).getFunction('transfer'), 
+    contractABI.getFunction('transfer'), 
     ['0x0000000000000000000000000000456e65726779', '1'], 
     {
         caller: '0x0000000000000000000000000000000000000000',
     }
 );
-console.log('Transfer Test', transfer);
+console.log('Transfer Test', transfer.result.plain);
 ```
 
 If the transaction encounters an error, the method call will also throw an error which needs to be handled appropriately.
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/contracts-executecall?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
+
+{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-f5zzyjdv?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 ## contracts.load(address, abi)
 

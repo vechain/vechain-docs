@@ -73,4 +73,3 @@ const signature = Secp256k1.sign(hash.bytes, privateKey);
 console.log('Signature:', Hex.of(signature).toString());
 // Signature: ...SOME_SIGNATURE...
 ```
-
