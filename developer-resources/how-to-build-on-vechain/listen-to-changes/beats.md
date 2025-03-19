@@ -47,7 +47,7 @@ An example result is:
 ## Bloom Filter
 
 {% hint style="info" %}
-[You can find more information about the Bloom Filter in another section of the documentation.](../../../../developer-resources/sdks-and-providers/sdk/bloom-filter.md)
+[You can find more information about the Bloom Filter in another section of the documentation.](../../sdks-and-providers/sdk/bloom-filter.md)
 {% endhint %}
 
 It enables the verification of interactions involving a specific address, potentially eliminating the need for further transaction or block lookups if the block lacks information related to that address.
@@ -72,7 +72,7 @@ The bloom filter is used for testing and includes:
 * The beneficiary of the block
 
 {% hint style="info" %}
-For more details on the implementation, you can view the [node's code on GitHub](https://github.com/vechain/thor/blob/d847c4683469a8ccffb4e472ca7449059b3ceefc/api/subscriptions/beat2\_reader.go#L29-L90).
+For more details on the implementation, you can view the [node's code on GitHub](https://github.com/vechain/thor/blob/d847c4683469a8ccffb4e472ca7449059b3ceefc/api/subscriptions/beat2_reader.go#L29-L90).
 {% endhint %}
 
 `bloomUtils.isInBloom` provides an additional filter to check for the presence of non-address data, such as numbers emitted within events. It can also be used to check for the VTHO contract, whose address is a special one because its the bytes32-encoded version of the word "Energy" (`0x456e65726779`).

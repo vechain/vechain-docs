@@ -58,7 +58,6 @@ Steps for creating a transaction:
 
 {% tabs %}
 {% tab title="Mobile" %}
-
 1. Go to NFTs and choose the NFT you would like to send
 2. Tap **Send** button
 3. Enter or select the address you want to send tokens, then tap **Next** button
@@ -69,7 +68,6 @@ Steps for creating a transaction:
 {% endtab %}
 
 {% tab title="Browser Extension" %}
-
 1. Go to NFTs and choose the NFT you would like to send
 2. Click **Send NFT** button
 3. Paste or select the destination address, then click **Send NFT** button
@@ -82,7 +80,6 @@ Steps for creating a transaction:
 
 {% tabs %}
 {% tab title="Mobile" %}
-
 1. Go to the **Discovery section** and go to your desired DApp
 2. Connect your VeWorld wallet
 3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
@@ -98,7 +95,6 @@ Steps for creating a transaction:
 2. Connect your VeWorld wallet
 3. If it's the first time that you interact with that DApp, you'll be asked to sign a certificate
 4. You can check the details, then click "Sign"
-
 {% endtab %}
 {% endtabs %}
 

@@ -1,4 +1,4 @@
-# VeChain Contracts Interaction
+# Contracts Interaction on VeChain
 
 The following sections provide detailed information on interacting with VeChain smart contracts using the VeChain SDK.
 
@@ -129,7 +129,6 @@ const contract = thorSoloClient.contracts.load(
 const setValueClause = contract.clause.setValue(123);
 ```
 
-
 ## Multi-Clause Contract Interaction
 
 Now that we have seen how to build clauses, let's see how to send it to the blockchain. VeChain allows multiple clauses in a single transaction, enabling interactions with multiple contracts or operations.
@@ -247,4 +246,3 @@ const transactionReceiptTransfer = await transferResult.wait();
 // Asserting that the transaction has not been reverted
 expect(transactionReceiptTransfer.reverted).toEqual(false);
 ```
-

@@ -161,4 +161,3 @@ const recoveredPrivateKey = await keystore.decrypt(
 console.log(recoveredPrivateKey.privateKey.toString());
 // 0x...
 ```
-

@@ -8,8 +8,6 @@ You can open the resulting project on [GitHub](https://github.com/ifavo/example-
 
 Here is the sequence we are building during this Tutorial:
 
-
-
 ```mermaid
 sequenceDiagram
 participant User
