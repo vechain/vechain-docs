@@ -21,10 +21,12 @@ const [[balance], [decimals]] = await thor.contracts.executeMultipleClausesCall(
   [
     contract.clause.balanceOf('0x0000000000000000000000000000000000000000'),
     contract.clause.decimals(),
-  ]
+    
+<strong>    contract.clause.setValue(123)
+</strong>  ]
 );
 console.log(balance, decimals, '=>', unitsUtils.formatUnits(balance, decimals));
-```
+</code></pre>
 
 Using `unitsUtils.formatUnits(number, decimals)`, the number is turned into a string with the decimal right where a human needs it.
 

@@ -6,8 +6,7 @@ Our VeChain integration with Remix enables our community to leverage this robust
 
 ## RPC Proxy
 
-The RPC Proxy is designed to bridge the gap between Thor's RESTful API and Ethereum's JSON-RPC, enabling seamless
-interaction with the VeChainThor blockchain through RPC calls. It is particularly useful for integrating with tools such as the Remix IDE.
+The RPC Proxy is designed to bridge the gap between Thor's RESTful API and Ethereum's JSON-RPC, enabling seamless interaction with the VeChainThor blockchain through RPC calls. It is particularly useful for integrating with tools such as the Remix IDE.
 
 ## Installation
 
@@ -18,20 +17,18 @@ yarn add @vechain/sdk-rpc-proxy
 ```
 
 By default, the proxy is configured to be used with a solo node running on your local machine. There are two options if you want to change the default behavior, or use a custom configuration:
- - Create a config.json file and pass it to the command when launching the RPC Proxy.
- - Use CLI options.
+
+* Create a config.json file and pass it to the command when launching the RPC Proxy.
+* Use CLI options.
 
 ## CLI Options
 
-With rpc-proxy, you can use the following CLI options.
-CLI options override the configuration file.
-So you can run the rpc-proxy with:
+With rpc-proxy, you can use the following CLI options. CLI options override the configuration file. So you can run the rpc-proxy with:
 
-- a configuration file with the default values and override them with the cli options
-    - -e.g.- `npx rpc-proxy -p 8545 -v ...`
-
-- a custom configuration file and override some values with the cli options
-    - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json -p 8545 -v ...`
+* a configuration file with the default values and override them with the cli options
+  * -e.g.- `npx rpc-proxy -p 8545 -v ...`
+* a custom configuration file and override some values with the cli options
+  * -e.g.- `npx rpc-proxy -c /path/of/custom-config.json -p 8545 -v ...`
 
 ### CLI options list
 
@@ -67,14 +64,14 @@ So you can run the rpc-proxy with:
 #### Use delegation
 
 - `-e, --enableDelegation`: Whether to enable delegation.
-- `-dp, --delegatorPrivateKey <delegatorPrivateKey>`: The private key of the delegator.
-- `-du, --delegatorUrl <delegatorUrl>`: The URL of the delegator.
+- `-dp, --gasPayerPrivateKey <gasPayerPrivateKey>`: The private key of the gasPayer.
+- `-du, --gasPayerUrl <gasPayerUrl>`: The URL of the gasPayer.
     - -e.g.- `npx rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
-      OR `npx rpc-proxy --enableDelegation --delegatorPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+      OR `npx rpc-proxy --enableDelegation --gasPayerPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
     - -e.g.- `npx rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...`
-      OR `npx rpc-proxy --enableDelegation --delegatorUrl https://sponsor-testnet.vechain.energy/by/...`
-    - **NOTE**: --delegatorPrivateKey and --delegatorUrl are mutually exclusive.
-    - **NOTE**: if --enableDelegation is used, --delegatorPrivateKey OR --delegatorUrl MUST be used.
+      OR `npx rpc-proxy --enableDelegation --gasPayerUrl https://sponsor-testnet.vechain.energy/by/...`
+    - **NOTE**: --gasPayerPrivateKey and --gasPayerUrl are mutually exclusive.
+    - **NOTE**: if --enableDelegation is used, --gasPayerPrivateKey OR --gasPayerUrl MUST be used.
 
 ## Configuration file
 
