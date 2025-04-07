@@ -171,7 +171,7 @@
         * [Certificates](developer-resources/sdks-and-providers/thor-devkit/usage/certificates.md)
         * [Bloom Filter](developer-resources/sdks-and-providers/thor-devkit/usage/bloom-filter.md)
     * [DApp Kit](developer-resources/sdks-and-providers/dapp-kit/README.md)
-     * [v2](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/README.md)
+      * [v2](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/README.md)
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/installation.md)
         * [React](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/react/README.md)
           * [Installation](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/react/installation.md)
