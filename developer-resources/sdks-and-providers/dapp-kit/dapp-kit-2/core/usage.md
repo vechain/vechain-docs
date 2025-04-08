@@ -25,10 +25,6 @@ const walletConnectOptions: WalletConnectOptions = {
 
 ### 2. Initialise the `DAppKit` instance
 
-{% hint style="info" %}
-For more information on using connex, please refer to the [Connex documentation](../../../connex/).
-{% endhint %}
-
 ```typescript
 import { DAppKit } from '@vechain/dapp-kit';
 
@@ -57,10 +53,8 @@ const {thor, vendor, wallet} = new DAppKit({
 
 ## Wallet Manager
 
-The wallet manager is the layer provided on top of `connex` . It can be created following the usage above.
-
 ```typescript
-const {wallet, thor, connex} = new DAppKit(...)
+const {wallet, thor} = new DAppKit(...)
 ```
 
 ***

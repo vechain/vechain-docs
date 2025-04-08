@@ -171,7 +171,7 @@ const MyComponent = () => {
 };
 ```
 
-#### useVechianDomain
+#### useVechainDomain
 
 This hook can fetch a Vechain domain from an address and an address from a Vechian domain.
 
