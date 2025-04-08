@@ -184,7 +184,6 @@
           * [Usage](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/core/usage.md)
         * [Theme Variables](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/theme.md)
         * [i18n](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/i18n.md)
-        * [Node Polyfills](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-2/node-polyfills.md)
       * [v1](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/README.md)
         * [Installation](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/installation.md)
         * [React](developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/react/README.md)

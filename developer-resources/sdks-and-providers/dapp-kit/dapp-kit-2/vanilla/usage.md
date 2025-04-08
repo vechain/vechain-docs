@@ -7,7 +7,7 @@ description: Using the VeChain dApp kit UI components
 ### Initialization
 
 <pre class="language-typescript"><code class="lang-typescript">import { DAppKitUI } from '@vechain/dapp-kit-ui';
-import type { DAppKitOptions, WalletConnectOptions } from '@vechain/dapp-kit-ui';
+import type { WalletConnectOptions, DAppKitUIOptions  } from '@vechain/dapp-kit-ui'; 
 
 const walletConnectOptions: WalletConnectOptions = {
 <strong>     // Create your project here: https://cloud.walletconnect.com/sign-up
@@ -22,11 +22,9 @@ const walletConnectOptions: WalletConnectOptions = {
     },
 };
 
-const vechainWalletKitOptions: DAppKitOptions = {
+const vechainWalletKitOptions: DAppKitUIOptions = {
     // Required - The URL of the node to connect to
     node: 'https://testnet.vechain.org/', 
-    // Optional - "main" | "test" | Connex.Thor.Block
-    network: 'test', 
     // Optional - Wallet connect options
     walletConnectOptions, 
     // Optional - Defaults to false. If true, the account and source will be persisted in local storage

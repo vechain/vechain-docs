@@ -25,7 +25,6 @@ const styles: CustomizedStyle = {
 
 const vechainDAppKitOptions: DAppKitUIOptions = {
     node: 'https://testnet.vechain.org/',
-    genesis: 'test',
     themeVariables: {
         '--vdk-color-dark-primary': '#404040',
         '--vdk-color-dark-primary-hover': '#454545',
