@@ -47,7 +47,7 @@ Fields within the `headerBody`, $$\Gamma$$, are defined as:
 * `Beneficiary` - the address assigned by the block generator to receive reward (in VTHO)
 * `GasUsed` - the actual amount of gas used within the block
 * `BaseFee` - the mandatory minimum fee required for including a transaction within the block
-* `TotalScore` - the accumulated witness number of the chain branch headed by the block. See [#meta-transaction-features-3](../../introduction-to-vechain/about-the-vechain-blockchain/consensus-deep-dive.md#meta-transaction-features-3 "mention") for more detail.
+* `TotalScore` - the accumulated witness number of the chain branch headed by the block. See [trunk](../../introduction-to-vechain/about-the-vechain-blockchain/consensus-deep-dive.md#meta-transaction-features-3 "mention") for more detail.
 * `TxsRoot` - root hash of the transaction in the payload
 * `StateRoot` - root hash for the global state after applying changes in this block
 * `ReceiptsRoot` - hash of the transaction receipts trie
