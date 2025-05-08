@@ -19,20 +19,19 @@ type Header struct {
 }
 
 type headerBody struct {
-	ParentID    thor.Bytes32
-	Timestamp   uint64
-	GasLimit    uint64
-	Beneficiary thor.Address
-
-	GasUsed    uint64
-	BaseFee    *big.Int
-	TotalScore uint64
-
+	ParentID     thor.Bytes32
+	Timestamp    uint64
+	GasLimit     uint64
+	Beneficiary  thor.Address
+	GasUsed      uint64
+	BaseFee      *big.Int
+	TotalScore   uint64
 	TxsRoot      thor.Bytes32
 	StateRoot    thor.Bytes32
 	ReceiptsRoot thor.Bytes32
-
-	Signature []byte
+	Signature    []byte
+	Alpha        []byte
+	COM          bool
 }
 
 type Transactions []*Transaction
@@ -41,7 +40,7 @@ type Transactions []*Transaction
 
 Fields within the `headerBody`, $$\Gamma$$, are defined as:
 
-* `ParentID` - the ID of the parent block.
+* `ParentID` - the ID of the parent block
 * `Timestamp` - the block time
 * `GasLimit` - the maximum amount of gas that all transactions inside the block are allowed to consume
 * `Beneficiary` - the address assigned by the block generator to receive reward (in VTHO)
@@ -52,6 +51,8 @@ Fields within the `headerBody`, $$\Gamma$$, are defined as:
 * `StateRoot` - root hash for the global state after applying changes in this block
 * `ReceiptsRoot` - hash of the transaction receipts trie
 * `Signature` - signature of block builder
+* `Alpha` - the alpha in the header
+* `COM` - a boolean indicating whether the packer votes COM
 
 The block ID (`thor.Bytes32`) can be computed as:
 
