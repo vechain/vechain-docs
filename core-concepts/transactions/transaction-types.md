@@ -12,4 +12,4 @@ Transactions with a type `0x51` are dynamic fee transactions that are introduced
 
 ## Legacy Transactions
 
-Transactions with a type [`0xc0`, `0xfe`] are legacy transactions that use the transaction format that existed before typed transactions were introduced with [VIP-252](https://github.com/vechain/VIPs/blob/master/vips/VIP-252.md). This transaction model uses a fixed-fee model.
+Transactions with a starting byte in the range [`0x7f`, `0xfe`] are considered legacy transactions that use the transaction format that existed before typed transactions were introduced with [VIP-252](https://github.com/vechain/VIPs/blob/master/vips/VIP-252.md). This transaction model uses a fixed-fee model.
