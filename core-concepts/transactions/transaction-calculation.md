@@ -26,7 +26,7 @@ $$g_{total} = g0 + \sum_i(g_{type}^i+g_{data}^i+g_{vm}^i)$$
 
 ## Transaction Types
 
-With the introduction of typed transactions, see [VIP-252](https://github.com/vechain/VIPs/blob/master/vips/VIP-252.md), the VeChainThor blockchain has become more extensible and forward compatible by enabling support for the introduction of new transaction types while ensuring backward compatibility with existing transactions. Currently there are two types of transaction on the VeChainThor blockchain. Legacy transactions with a type [`0xc0`, `0xfe`] use the transaction format that existed before typed transactions. Dynamic fee transactions with a type `0x51` are dynamic fee transactions that are introduced with [VIP-251](https://github.com/vechain/VIPs/blob/master/vips/VIP-251.md). Both transactions has separate pricing mechanisms.
+With the introduction of typed transactions, see [VIP-252](https://github.com/vechain/VIPs/blob/master/vips/VIP-252.md), the VeChainThor blockchain has become more extensible and forward compatible by enabling support for the introduction of new transaction types while ensuring backward compatibility with existing transactions. Currently there are two types of transaction on the VeChainThor blockchain. Transactions with a starting byte in the range [`0x7f`, `0xfe`] are considered legacy transactions, which use the transaction format that existed before typed transactions. Dynamic fee transactions with a type `0x51` are dynamic fee transactions that are introduced with [VIP-251](https://github.com/vechain/VIPs/blob/master/vips/VIP-251.md). Both transactions has separate pricing mechanisms.
 
 ### Dynamic Fee Transactions
 
