@@ -51,8 +51,8 @@ Fields within the `headerBody`, $$\Gamma$$, are defined as:
 * `StateRoot` - root hash for the global state after applying changes in this block
 * `ReceiptsRoot` - hash of the transaction receipts trie
 * `Signature` - signature of block builder
-* `Alpha` - the alpha in the header
-* `COM` - a boolean indicating whether the packer votes COM
+* `Alpha` - an input into the Verifiable Random Function (VRF)
+* `COM` - a boolean indicating whether the packer votes commit
 
 The block ID (`thor.Bytes32`) can be computed as:
 
