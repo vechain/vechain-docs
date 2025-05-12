@@ -35,7 +35,7 @@ Fields within the transaction `body`, $$\Omega$$ , are defined as:
 * `BlockRef` - reference to a specific block
 * `Expiration` – how long, in terms of the number of blocks, the transaction will be allowed to be mined in VeChainThor
 * `Clauses` – an array of _Clause_ objects each of which contains fields `To`, `Value` and `Data` to enable a single transaction to carry multiple tasks issued by the transaction sender
-* `GasPriceCoef` – coefficient used to calculate the gas price for the transaction
+* `GasPriceCoef` – coefficient used to calculate the gas price for legacy transactions
 * `Gas` – maximum amount of gas allowed to pay for the transaction
 * `MaxFeePerGas` - the absolute maximum to pay per unit of gas
 * `MaxPriorityFeePerGas` - the absolute maximum tip to pay per unit of gas directly to the proposer
