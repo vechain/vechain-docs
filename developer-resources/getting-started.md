@@ -53,6 +53,7 @@ Create Solidity smart contracts to define your dApp's core logic.
 Craft an intuitive user interface using modern web technologies.
 
 * Implement easy wallet login with [dappKit](sdks-and-providers/dapp-kit/dapp-kit-1/).
+* Add social login and get many hooks and features with [VeChain-kit](sdks-and-providers/vechain-kit/).
 * Use our comprehensive [SDK](sdks-and-providers/sdk/) for efficient blockchain interactions.
 * Connect to VeChainThor via our [node endpoints](https://docs.vechain.org/core-concepts/nodes).
 
