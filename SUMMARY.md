@@ -210,6 +210,7 @@
           * [Usage](developer-resources/sdks-and-providers/dapp-kit/dapp-kit/vanilla/usage.md)
         * [Styles (UI)](developer-resources/sdks-and-providers/dapp-kit/dapp-kit/theme.md)
         * [i18n](developer-resources/sdks-and-providers/dapp-kit/dapp-kit/i18n.md)
+    * [VeChain Kit](developer-resources/sdks-and-providers/vechain-kit/README.md)
     * [DevPal](developer-resources/sdks-and-providers/devpal.md)
     * [Web3-Providers-Connex](developer-resources/sdks-and-providers/web3-providers-connex/README.md)
       * [Installation](developer-resources/sdks-and-providers/web3-providers-connex/installation.md)
