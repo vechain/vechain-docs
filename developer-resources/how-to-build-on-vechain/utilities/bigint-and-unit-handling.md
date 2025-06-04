@@ -9,7 +9,7 @@ Some utility functions can help ease the handling of these numbers, especially w
 For example, reading the balance of VTHO and turning it into a readable version:
 
 ```ts
-// Example 1: simulate multicall 
+// Example 1: multicall 
 import { ThorClient, TESTNET_URL } from '@vechain/sdk-network';
 import { ERC20_ABI} from '@vechain/sdk-core'
 
@@ -23,44 +23,7 @@ clauses.push(contract.clause.decimals());
 
 const response = await thor.contracts.executeMultipleClausesCall(clauses);
 
-console.log(response);
-
-// Example 2: execute multicall (with signer)
-import { ThorClient, TESTNET_URL, Contract, VeChainAbstractSigner , VeChainProvider, ProviderInternalBaseWallet } from '@vechain/sdk-network';
-import { HexUInt , ERC20_ABI} from '@vechain/sdk-core'
-
-const thor = ThorClient.at(TESTNET_URL+'/');
-const contract = thor.contracts.load('0x0000000000000000000000000000456e65726779', ERC20_ABI );
-
-const senderAccount = {
-  privateKey:
-      'f9fc826b63a35413541d92d2bfb6661128cd5075fcdca583446d20c59994ba26',
-  address: '0x7a28e7361fd10f4f058f9fefc77544349ecff5d6'
-};
-
-let clauses = [];
-
-clauses.push(contract.clause.balanceOf('0x0000000000000000000000000000456e65726779'));
-clauses.push(contract.clause.decimals());
-
-// Create the provider
-const provider = new VeChainProvider(
-  // Thor client used by the provider
-  thor,
-  // Wallets used by the provider
-  new ProviderInternalBaseWallet([
-      {
-          privateKey: HexUInt.of(senderAccount.privateKey).bytes,
-          address: senderAccount.address
-      }
-  ]),
-  false
-);
-
-const signer = await provider.getSigner(senderAccount.address);
-
-const response = await thor.contracts.executeMultipleClausesTransaction(clauses, signer);
-console.log(response);
+console.log("Balance:", Number(response[0].result.plain)/(10**Number(response[1].result.plain)), "VTHO");
 
 ```
 

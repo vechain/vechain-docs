@@ -16,13 +16,13 @@ The VeChainThor blockchain is not built from scratch. It expands upon some of th
 
 Consensus is the process by which a blockchain network agrees on the validity of a transaction or block. In a blockchain network, transactions are grouped together in blocks, and these blocks are linked together in a blockchain. Consensus is needed to ensure that all participants in the network agree on the current state of the blockchain. Consensus occurs each time a new block gets appended to the blockchain.
 
-VeChainThor's Proof of Authority (PoA) consensus algorithm is powered by 101 Authority Masternodes who are tasked with producing blocks for the VeChain blockchain. In order to become an Authority Masternode, an individual or entity has to voluntarily disclose their identity to the foundation and undergo a strict know-your-customer (KYC) process, before being selected. Only a block produced by an Authorithy Masternode will be viewed as a valid block by the VeChainThor blockchain.
+VeChainThor's Proof of Authority (PoA) consensus algorithm is powered by 101 Authority Masternodes who are tasked with producing blocks for the VeChain blockchain. In order to become an Authority Masternode, an individual or entity has to voluntarily disclose their identity to the foundation and undergo a strict know-your-customer (KYC) process, before being selected. Only a block produced by an Authority Masternode will be viewed as a valid block by the VeChainThor blockchain.
 
 ## The Rationale Behind PoA: Addressing the Blockchain Trilemma
 
 There is a well known trade off in consensus algorithms which Vitalik Buterin, founder of the Ethereum blockchain, coined the "The Blockchain Trilemma". In essence, Buterin asserted peer-to-peer (P2P) decentralised networks cannot score highly on decentralisation, security and speed. Every blockchain network will be required to sacrifice one attribute to achieve the desired blockchain configuration. VeChain's aim is to be an enterprise grade, sustainable blockchain, and so the tradeoff was to reduce the amount of actors involved in block production in order to improve speed and security.
 
-However, as all Authority Masternodes have their identities and reputations at stake, they are all held accountable and are incentivised to work in the best interest for the networks growth and security. Authorithy Masternode's also earn rewards for producing blocks, which further incentivises them to act in good faith and to the benefit of the VeChainThor blockchain.
+However, as all Authority Masternodes have their identities and reputations at stake, they are all held accountable and are incentivised to work in the best interest for the networks growth and security. Authority Masternode's also earn rewards for producing blocks, which further incentivise them to act in good faith and to the benefit of the VeChainThor blockchain.
 
 ## Future-Proofing VeChainThor
 

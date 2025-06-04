@@ -4,7 +4,7 @@ description: A deeper dive into our PoA consensus mechanism.
 
 # Consensus Deep Dive
 
-## Proof of Authority (PoA)
+## Proof of Authority (PoA) <a href="#proof-of-authority-poa" id="proof-of-authority-poa"></a>
 
 Designing a consensus algorithm for a public blockchain network is a critical decision that influences how participants agree on the blockchain's growth and embodies the governance model of the network. VeChainThor implements the PoA consensus algorithm, aligning with our governance philosophy:
 
