@@ -14,13 +14,13 @@ This example used below will utilize the VTHO contract, which manages VeChain's 
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
 * Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://gitabihub.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
-## `contracts.load(address, abi)`
+### `contracts.load(address, abi)`
 
 A contract instance using address and ABI definition provides instant access to logs.
 
 ### Create Contract Object
 
-To filter events, just like with any other interaction, a contract object needs to be created. It requies to specify a network first, because in general a contract with a specific address only exists on one network
+To filter events, just like with any other interaction, a contract object needs to be created. It requires to specify a network first, because in general a contract with a specific address only exists on one network
 
 ```javascript
 import { HttpClient, ThorClient } from '@vechain/sdk-network';
