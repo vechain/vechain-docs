@@ -6,6 +6,9 @@ description: Economic and X-Node interactions with the official node rewards dAp
 
 {% hint style="info" %}
 The official node rewards dApp is available at [app.rewards.vechain.org](https://app.rewards.vechain.org)
+Note: Rewards Programme enters sunset mode on 24th June 2025, replaced as per [Vechain Renaissance 2025](https://vechainofficial.medium.com/the-vechain-renaissance-2025-roadmap-evolving-greatness-d8eaf3cd5fea) 
+As of 1st July 2025, rewards benefits will cease to be applied.
+As of 1st October 2025, rewards dApp will be withdrawn, along with Rewards API, Rewards Explorer, Rewards ThorPubAPI, and associated services.
 {% endhint %}
 
 In blockchain ecosystems the word node is a reserved word which is used to refer to a computer system which stores a copy of the blockchain transactions. In the VeChain ecosystem the word node can also be used to refer to a non-contractual address that holds, soft stakes, a certain amount of VET. These reward nodes are more accurately called Economic and X-Nodes, but they are often referred just referred to as nodes. Accounts which hold an Economic or X-Node are identified by the ownership of a non-fungible token (NFT). Additional privileges are attributed to Economic and X-Node holders. Both Economic and X-Node holders have voting rights on VeChain governance proposals. Additionally, X-Node holders are entitled to additional VTHO rewards from the VeChainThor X-Node bonus pool, which are VTHO rewards on top of the basic generation.
