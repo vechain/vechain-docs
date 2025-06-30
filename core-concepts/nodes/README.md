@@ -32,9 +32,9 @@ There's a rigorous process implemented in order for a person/entity to run an AM
 
 ### Economic & X-Nodes
 
-With only 101 nodes being responsible for the network, both VeChain Economic and X-Node programs aims to increase stability in the VeChain ecosystem and act as a distribution of power and privilege within the blockchain’s economy.&#x20;
+With only 101 nodes being responsible for the network, both VeChain Economic and X-Node programs aim to increase stability in the VeChain ecosystem and act as a distribution of power and privilege within the blockchain’s economy.&#x20;
 
-Both nodes are governance tokens and are tight to a minimum requirement of VET soft-locked in the wallet, and the two node types but have slightly different requirements.
+Both node types are governance tokens and are tied to a minimum requirement of VET soft-locked in the wallet, and the two node types have slightly different requirements.
 
 <table><thead><tr><th width="156.33333333333331"></th><th>Economic Nodes</th><th>X-Nodes</th></tr></thead><tbody><tr><td>Rewards</td><td>--</td><td>VTHO generated from 5bln VET X-Node pool.</td></tr><tr><td>Application</td><td>Applied for based on minimum VET required or purchased on secondary market.</td><td>X-Node non-fungible tokens (NFTs) were distributed upon mainnet launch but can be purchased on secondary market.</td></tr><tr><td>Upgrade</td><td>Upgradeable, minimum threshold of next tier applies.</td><td>Upgradeable, minimum threshold of next tier applies.</td></tr><tr><td>Revoke</td><td><p>VET drops below current level minimum threshold then node level gets downgraded.</p><p>Unclaimed VTHO can be claimed.</p></td><td>VET drops below current level minimum threshold then Node token loses X status and becomes an Economic Node. VeThorX node in this case gets destroyed as lowest X level node<br><br>Unclaimed VTHO can be claimed.</td></tr></tbody></table>
 
