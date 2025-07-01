@@ -50,7 +50,7 @@ On the other hand, for each transaction, a transaction fee must be paid to pay f
 
 $$E_{con} = p \cdot G$$
 
-Where $$E_{con}$$ is the price in VTHO for performing a transaction. $$G$$ denoates the amount of gas required to process the transaction and $$p$$ the gas price in VTHO, which is a constant equal to $$1 \cdot 10^{-5}$$. An example would be, if an individual were performing a transaction costing 21k gas, they would have to pay 0.21 VTHO.
+Where $$E_{con}$$ is the price in VTHO for performing a transaction. $$G$$ denotes the amount of gas required to process the transaction and $$p$$ the gas price in VTHO, which is a constant equal to $$1 \cdot 10^{-5}$$. An example would be, if an individual were performing a transaction costing 21k gas, they would have to pay 0.21 VTHO.
 
 The gas price $$p$$ can vary in the range $$[p^{base}, 2 \cdot p^{base}]$$ where $$p^{base}$$ is a parameter that can be adjusted according to the market supply and demand of VTHO. Currently, we set $$p^{base} = 1 \cdot 10^{-5}$$.
 
