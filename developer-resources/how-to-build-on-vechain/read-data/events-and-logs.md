@@ -1,6 +1,6 @@
 # Events & Logs
 
-Events are signals that are emitted from smart contracts. Every event is logged, immutable and accessible using a blockchain node only. Smart contracts can not access events themself.
+Events are signals that are emitted from smart contracts. Every event is logged, immutable and accessible using a blockchain node only. Smart contracts can not access events themselves.
 
 Client-Applications can either listen to events and act accordingly or use logged events to access historical data.
 
@@ -20,14 +20,14 @@ A contract instance using address and ABI definition provides instant access to 
 
 ### Create Contract Object
 
-To filter events, just like with any other interaction, a contract object needs to be created. It requies to specify a network first, because in general a contract with a specific address only exists on one network
+To filter events, just like with any other interaction, a contract object needs to be created. It requires to specify a network first, because in general a contract with a specific address only exists on one network
 
 ```javascript
 import { HttpClient, ThorClient } from '@vechain/sdk-network';
 import { ErrorDecoder } from 'ethers-decode-error';
 import energyAbi from './energy.json' assert { type: 'json' };
 
-const thor = ThorClient.at('https://testnet.vechain.org/'));
+const thor = ThorClient.at('https://testnet.vechain.org/');
 const vtho = thor.contracts.load(
   '0x0000000000000000000000000000456e65726779',
   energyAbi
