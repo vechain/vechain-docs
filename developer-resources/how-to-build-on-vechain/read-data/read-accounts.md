@@ -33,5 +33,5 @@ Type definition and documentation of all attributes:
 
 The same information is available using the JSON-API:
 
-* [GET accounts(address)](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779)
-* [GET accounts(address)/code](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779/code)
+* [GET /accounts/{address}](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779)
+* [GET /accounts/{address}/code](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779/code)
