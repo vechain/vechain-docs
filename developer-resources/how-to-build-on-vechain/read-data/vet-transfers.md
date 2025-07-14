@@ -46,9 +46,9 @@ Multiple optional criteria can be configured to filter for various addresses.
 
 Type definition and documentation of all options and results:
 
-* [Filter Transfer Log Options](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.FilterTransferLogsOptions.html)
-* [Transfer Logs Result](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransferLogs.html)
+* [Filter Transfer Log Options](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.FilterTransferLogsOptions.html)
+* [Transfer Logs](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.TransferLogs.html)
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-gsqtn8if?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/ts-vechain-academy-read-logs-vet-transfers?embed=1&file=index.ts&hideExplorer=1&hideNavigation=1&view=editor" %}
