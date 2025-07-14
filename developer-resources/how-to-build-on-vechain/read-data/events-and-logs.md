@@ -12,7 +12,7 @@ This example used below will utilize the VTHO contract, which manages VeChain's 
 
 * Smart Contract Address: `0x0000000000000000000000000000456e65726779`
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
-* Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://gitabihub.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
+* This and many other Application Binary Interface (ABI) are available on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://gitabihub.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json), but feel free to use your own.
 
 ## `contracts.load(address, abi)`
 
@@ -24,7 +24,6 @@ To filter events, just like with any other interaction, a contract object needs 
 
 ```javascript
 import { HttpClient, ThorClient } from '@vechain/sdk-network';
-import { ErrorDecoder } from 'ethers-decode-error';
 import energyAbi from './energy.json' assert { type: 'json' };
 
 const thor = ThorClient.at('https://testnet.vechain.org/');
@@ -73,51 +72,54 @@ To receive the logs from the blockchain, the built filter object provides a `.ge
 
 ```ts
 const allTransfers = vtho.filters.Transfer()
-const result = await allTransfers.get()
+const result = await thorClient.logs.filterEventLogs()
 ```
 
 For pagination, there are three optional parameters that allow filtering for a specific range, paginating, and ordering the result set. All options are optional:
 
 ```ts
 .get(
- { unit?: 'block' | 'time', from?: number, to?: number },
- { offset?: number, limit?: number },
- 'asc' | 'desc'
+    // Specify the range of blocks to search for events
+    range: {
+        unit: 'block' | 'time', 
+        from: 0,
+        to: undefined
+    },
+    // Additional options for the query, such as offset and limit
+    options: {
+        offset: 0,
+        limit: 1000
+    },
+    // Define criteria for filtering events
+     criteriaSet: [
+      filteredTransfers
+    ],
+    // Specify the order in which logs should be retrieved
+    order: 'asc' | 'desc'
 )
 ```
 
 ### Browse Results
 
-`.get()` returns a list of results because it can support multiple requests as well.
+`.filterEventLogs()` returns a list of results because it can support multiple requests as well.
 
 The data is available in both raw and decoded forms:
 
 ```ts
-const transfers = vtho.filters
-
+const transferCriteria = contract.criteria
   // pass filters in the order of the input definition for the event
   // skip values by passing null or undefined
   .Transfer(null, '0x0000000000000000000000000000456e65726779');
 
-const results = await transfers.get(null, { limit: 2})
-
-results.forEach(result => {
-    result.forEach(log => {
-        // raw log data
-        console.log(log)
-
-        // access to decoded data
-        console.log("Transfer", log.decodedData._from, log.decodedData._to, log.decodedData._value)
-    })
-})
-
+const eventLogs = await thorClient.logs.filterEventLogs()
+eventLogs.forEach(log => {
+  // Decode each event
+  console.log('Decoded event', log.decodedData);
+}); 
 ```
 
-### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-1puuxszb?ctl=1&embed=1&file=index.mjs&hideExplorer=1&view=editor" %}
-
-### `filterEventLogs()`: Multiple Events in one Request
+### `filterEventLogs()` to manage multiple events in one request
 
 With `filterEventLogs()`, logs for multiple events can be requested in a single request, improving network performance and simplifying interaction.
 
@@ -138,12 +140,7 @@ const results = await thor.logs.filterEventLogs({
 
 results.forEach((result) => {
   result.forEach((log) => {
-    console.log(
-      'Transfer',
-      log.decodedData._from,
-      log.decodedData._to,
-      log.decodedData._value
-    );
+    console.log('Decoded event', log.decodedData);
   });
 });
 ```
@@ -169,15 +166,14 @@ const encodedTopics = event.encodeFilterTopics([])
 
 `indexed` variables can be filtered directly in the filter request, providing fast access to a subset of information. The list argument on the encoding can provide them.
 
-Our example will filter for the second variable `to`:
 
+The example will filter for the second variable `to`:
 ```js
 const encodedTopics = event.encodeFilterTopics([
   // first indexed value is "from", set to null to not use it
   null,
-
   // second indexed value is "to"
-  '0x0000000000000000000000000000456e65726779',
+  '0x...', // <- address to filter for
 ]);
 ```
 
@@ -186,7 +182,7 @@ With the encoded version `logs.filterRawEventLogs` can be called to return all m
 ```js
 const filteredLogs = await thor.logs.filterRawEventLogs({
   criteriaSet: [
-    // filter by address and topics, empty topics are ignored
+    // filter by contract address and topics, empty topics are ignored
     {
       address: '0x0000000000000000000000000000456e65726779',
       topic0: encodedTopics[0],
@@ -201,7 +197,7 @@ const filteredLogs = await thor.logs.filterRawEventLogs({
 
 For pagination `options` (`{ offset?: number, limit?: number }`) and `order` (`'asc' | 'desc'`) can be passed as additional parameter. Additionally the logs can be restricted to a certain block range by defining a `range` (`{ unit?: 'block' | 'time', from?: number, to?: number }`).
 
-You can find the full documentation in the description of the [Filter Event Logs Options](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.FilterEventLogsOptions.html).
+You can find the full documentation in the description of the [Filter Event Logs Options](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.EventOptions.html).
 
 ### **Handle Response**
 
@@ -213,8 +209,8 @@ const decodedLogs = filteredLogs.map(log => event.decodeEventLog(log))
 
 Each decoded log will have an attribute for each event variable, like `decodedLog.from` and can alternatively be accessed as list in the order of the event parameter definition (`decodedLog[0]` equals `from`).
 
-The types of the results are fully documented in the [Event Logs Interface.](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.EventLogs.html)
+The types of the results are fully documented in the [Event Logs Interface.](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.EventLogs.html)
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-rjc98gta?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/ts-vechain-academy-read-logs?embed=1&file=index.ts&hideExplorer=1&hideNavigation=1&view=editor" %}
