@@ -10,7 +10,7 @@ This example used below will utilize the VTHO contract, which manages VeChain's 
 * The contract's source code can be found on GitHub at: [https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol](https://github.com/vechain/thor/blob/f58c17ae50f1ec8698d9daf6e05076d17dcafeaf/builtin/gen/energy.sol)
 * Its Application Binary Interface (ABI) is shared on b32, a repository that gathers publicly available interfaces for VeChain projects: [https://github.com/vechain/b32/blob/master/ABIs/energy.json](https://github.com/vechain/b32/blob/master/ABIs/energy.json)
 
-## `executeCall(contractAddress, functionAbi, functionData, contractCallOptions?)`
+## executeCall
 
 Retrieving information is "calling" a function within a contract, which can be variables, view functions, and even functions that alter the state for simulation purposes.
 
@@ -40,248 +40,7 @@ const contractABI = new ABIcontract ([
         "stateMutability": "pure",
         "type": "function"
     },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_spender",
-                "type": "address"
-            },
-            {
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "approve",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "totalSupply",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_from",
-                "type": "address"
-            },
-            {
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "transferFrom",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "decimals",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint8"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "pure",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "_owner",
-                "type": "address"
-            }
-        ],
-        "name": "balanceOf",
-        "outputs": [
-            {
-                "name": "balance",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "symbol",
-        "outputs": [
-            {
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "pure",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "transfer",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "_from",
-                "type": "address"
-            },
-            {
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "move",
-        "outputs": [
-            {
-                "name": "success",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "totalBurned",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "_owner",
-                "type": "address"
-            },
-            {
-                "name": "_spender",
-                "type": "address"
-            }
-        ],
-        "name": "allowance",
-        "outputs": [
-            {
-                "name": "remaining",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "name": "_from",
-                "type": "address"
-            },
-            {
-                "indexed": true,
-                "name": "_to",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "Transfer",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "name": "_owner",
-                "type": "address"
-            },
-            {
-                "indexed": true,
-                "name": "_spender",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "name": "_value",
-                "type": "uint256"
-            }
-        ],
-        "name": "Approval",
-        "type": "event"
-    }
+    ...
 ]);
 
 const name = await thor.contracts.executeCall(
@@ -339,13 +98,11 @@ If the transaction encounters an error, the method call will also throw an error
 
 ### Example Project
 
+{% embed url="https://stackblitz.com/edit/ts-vechain-academy-execute-call?embed=1&file=index.ts&hideExplorer=1&hideNavigation=1&view=editor" %}
 
+## contracts.load
 
-{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-f5zzyjdv?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
-
-## contracts.load(address, abi)
-
-To simplify interaction a dynamic object can be created that can interact with passing less of the repeating arguments.
+To simplify interaction a dynamic object can be created that can interact with passing less of the repeating arguments. This way is suitable when you have the full ABI and want to interact multiple times with the same contract.
 
 For example contracts.read.name() can load the name without the need to pass function signature, address and thor client every time.
 
@@ -390,9 +147,9 @@ vtho.setContractReadOptions({ revision: "12345678" });
 const balancePast = await vtho.read.balanceOf(
   '0x0000000000000000000000000000000000000000'
 );
-console.log('Balance Past', balancePast);
+console.log('Balance Past', balancePast/ 1000000000000000000n);
 ```
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/github/vechain-energy/example-snippets/tree/v1.0.0/sdk/read-contract.load?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/ts-vechain-academy-contract-read?embed=1&file=index.ts&hideExplorer=1&hideNavigation=1&view=editor" %}
