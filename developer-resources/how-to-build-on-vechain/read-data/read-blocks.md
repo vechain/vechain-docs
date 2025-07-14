@@ -36,18 +36,18 @@ Test it yourself:
 
 Type definition and documentation of all attributes:
 
-* [Compressed Block Detail](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.CompressedBlockDetail.html)
-* [Expanded Block Detail](https://tsdocs.dev/docs/@vechain/sdk-network/test/interfaces/network.ExpandedBlockDetail.html)
+* [Compressed Block Detail](https://vechain.github.io/vechain-sdk-js/classes/_vechain_sdk_network.BlocksModule.html#getBestBlockCompressed)
+* [Expanded Block Detail](https://vechain.github.io/vechain-sdk-js/classes/_vechain_sdk_network.BlocksModule.html#getBestBlockExpanded)
 
 The same information is available using the JSON-API:
 
-* [https://mainnet.vechain.org/blocks/12345678](https://mainnet.vechain.org/blocks/12345678)
-* [https://mainnet.vechain.org/blocks/12345678?expanded=true](https://mainnet.vechain.org/blocks/12345678?expanded=true)
+* [GET /blocks/{block}](https://mainnet.vechain.org/blocks/12345678)
+* [GET /blocks/{block}?expanded=true](https://mainnet.vechain.org/blocks/12345678?expanded=true)
 
 ### **Special Blocks**
 
 There are specific keywords associated with special blocks:
 
-* **Genesis** refers to the initial block (number `0`) on a chain, serving to identify the available chain on a network.
+* **Genesis** refers to the initial block (number `0`) on a chain, serving also to identify the chain (chain ID) in the ecosystem and among similar networks (EVMs).
 * **Best** represents the most recent block, typically having a maximum age of 10 seconds, as a new block is added every 10 seconds.
 * **Final** denotes the most recent finalized block, marking the end of an epoch. It is guaranteed that there will be no further re-ordering or changes. A checkpoint happens every 180 blocks and finalization of a checkpointed block occurs again after 180 blocks.
