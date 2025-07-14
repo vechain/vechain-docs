@@ -22,7 +22,7 @@ This will receive a new block as soon as it is added to the blockchain, in the f
 
 To resume listening from a specific block position, the options can include a `blockID` to continue from where a previous listener may have disconnected.
 
-For additional details on the options, refer to the documentation of [`BlockSubscriptionOptions`](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.BlockSubscriptionOptions.html).
+For additional details on the options, refer to the documentation of [`BlockSubscriptionOptions`](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.BlockSubscriptionOptions.html).
 
 ## Block Details
 
