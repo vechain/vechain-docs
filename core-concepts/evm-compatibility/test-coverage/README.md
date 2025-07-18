@@ -12,7 +12,7 @@ You can find detailed analysis of the coverage categories in the pages to follow
 
 ### Summary Table (OZ v5)
 
-<table><thead><tr><th width="271">Category</th><th width="394">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>Custom Error</td><td>Failures due to custom errors specific to the implementation.</td><td>928</td></tr><tr><td>Hardhat Specific</td><td>Issues specific to Hardhat Network.</td><td>335</td></tr><tr><td>Justifiable</td><td>Failures that result from the inherent design differences between VeChain and Ethereum.</td><td>83</td></tr><tr><td>Max code size limit</td><td>Failures due to exceeding the maximum contract code size limit.</td><td>4</td></tr><tr><td>eth_sign</td><td>See <a href="https://docs.vechain.org/core-concepts/evm-compatibility/test-coverage/eth_sign">here</a>.</td><td>4</td></tr><tr><td>BadBeaconProxy Address 0x1</td><td>See <a href="https://github.com/vechain/vechain-docs/blob/main/core-concepts/evm-compatibility/test-coverage/broken-reference/README.md">here</a></td><td>1</td></tr></tbody></table>
+<table><thead><tr><th width="271">Category</th><th width="394">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>URL set</td><td>No set URI in ERC721 and ERC721Enumerable test case. Have 6 tests result pedding. For compatibility testing, URI test cases are not necessary. </td><td>0</td></tr></tbody></table>
 
 ### Detailed Table (OZ v4)
 
@@ -20,4 +20,82 @@ You can find detailed analysis of the coverage categories in the pages to follow
 
 ### Detailed Table (OZ v5)
 
-<table><thead><tr><th width="306">Contract Name</th><th>Pass</th><th>Fail</th><th>Total</th><th data-hidden>Test Coverage</th></tr></thead><tbody><tr><td><strong>Total</strong></td><td><strong>7063</strong></td><td><strong>1351</strong></td><td><strong>5057</strong></td><td></td></tr><tr><td>AccessControl</td><td>30</td><td>9</td><td>39</td><td></td></tr><tr><td>Ownable</td><td>8</td><td>4</td><td>12</td><td></td></tr><tr><td>Ownable2Step</td><td>6</td><td>2</td><td>8</td><td></td></tr><tr><td>AccessControlDefaultAdminRules</td><td>94</td><td>67</td><td>161</td><td></td></tr><tr><td>AccessControlEnumerable</td><td>37</td><td>11</td><td>48</td><td></td></tr><tr><td>AccessManaged</td><td>11</td><td>6</td><td>17</td><td></td></tr><tr><td>AccessManager</td><td>160</td><td>185</td><td>345</td><td></td></tr><tr><td>AuthorityUtils</td><td>4</td><td>0</td><td>4</td><td></td></tr><tr><td>VestingWallet</td><td>6</td><td>5</td><td>11</td><td></td></tr><tr><td>Governor</td><td>202</td><td>143</td><td>345</td><td></td></tr><tr><td>TimelockController</td><td>53</td><td>38</td><td>91</td><td></td></tr><tr><td>GovernorERC721</td><td>4</td><td>2</td><td>6</td><td></td></tr><tr><td>GovernorPreventLateQuorum</td><td>10</td><td>7</td><td>17</td><td></td></tr><tr><td>GovernorTimelockCompound</td><td>38</td><td>36</td><td>74</td><td></td></tr><tr><td>GovernorTimelockControl</td><td>42</td><td>37</td><td>79</td><td></td></tr><tr><td>GovernorVotesQuorumFraction</td><td>12</td><td>10</td><td>22</td><td></td></tr><tr><td>GovernorWithParams</td><td>14</td><td>11</td><td>25</td><td></td></tr><tr><td>Votes</td><td>46</td><td>14</td><td>60</td><td></td></tr><tr><td>ERC2771Context</td><td>11</td><td>0</td><td>11</td><td></td></tr><tr><td>ERC2771Forwarder</td><td>37</td><td>19</td><td>56</td><td></td></tr><tr><td>Clones</td><td>30</td><td>1</td><td>31</td><td></td></tr><tr><td>ERC1967Proxy</td><td>26</td><td>12</td><td>38</td><td></td></tr><tr><td>BeaconProxy</td><td>10</td><td>8</td><td>18</td><td></td></tr><tr><td>UpgradeableBeacon</td><td>6</td><td>3</td><td>9</td><td></td></tr><tr><td>ProxyAdmin</td><td>7</td><td>4</td><td>11</td><td></td></tr><tr><td>TransparentUpgradeableProxy</td><td>26</td><td>12</td><td>38</td><td></td></tr><tr><td>Initializable</td><td>29</td><td>8</td><td>37</td><td></td></tr><tr><td>UUPSUpgradeable</td><td>11</td><td>10</td><td>21</td><td></td></tr><tr><td>ERC1155</td><td>89</td><td>29</td><td>118</td><td></td></tr><tr><td>ERC1155Burnable</td><td>6</td><td>2</td><td>8</td><td></td></tr><tr><td>ERC1155Pausable</td><td>11</td><td>8</td><td>19</td><td></td></tr><tr><td>ERC1155Supply</td><td>11</td><td>0</td><td>11</td><td></td></tr><tr><td>ERC1155URIStorage</td><td>4</td><td>0</td><td>4</td><td></td></tr><tr><td>ERC1155Holder</td><td>7</td><td>2</td><td>9</td><td></td></tr><tr><td>ERC20</td><td>122</td><td>34</td><td>156</td><td></td></tr><tr><td>ERC20Burnable</td><td>13</td><td>3</td><td>16</td><td></td></tr><tr><td>ERC20Capped</td><td>5</td><td>3</td><td>8</td><td></td></tr><tr><td>ERC20FlashMint</td><td>12</td><td>4</td><td>16</td><td></td></tr><tr><td>ERC20Pausable</td><td>12</td><td>4</td><td>16</td><td></td></tr><tr><td>ERC20Permit</td><td>6</td><td>3</td><td>9</td><td></td></tr><tr><td>ERC20Votes</td><td>92</td><td>30</td><td>122</td><td></td></tr><tr><td>ERC20Wrapper</td><td>44</td><td>12</td><td>56</td><td></td></tr><tr><td>ERC4626</td><td>71</td><td>11</td><td>82</td><td></td></tr><tr><td>SafeERC20</td><td>35</td><td>12</td><td>47</td><td></td></tr><tr><td>ERC721</td><td>378</td><td>71</td><td>449</td><td></td></tr><tr><td>ERC721Enumerable</td><td>400</td><td>80</td><td>480</td><td></td></tr><tr><td>ERC721Burnable</td><td>5</td><td>4</td><td>9</td><td></td></tr><tr><td>ERC721Consecutive</td><td>34</td><td>22</td><td>56</td><td></td></tr><tr><td>ERC721Pausable</td><td>9</td><td>5</td><td>14</td><td></td></tr><tr><td>ERC721Royalty</td><td>16</td><td>4</td><td>20</td><td></td></tr><tr><td>ERC721URIStorage</td><td>17</td><td>6</td><td>23</td><td></td></tr><tr><td>ERC721Votes</td><td>25</td><td>7</td><td>32</td><td></td></tr><tr><td>ERC721Wrapper</td><td>384</td><td>72</td><td>456</td><td></td></tr><tr><td>ERC721Holder</td><td>1</td><td>0</td><td>1</td><td></td></tr><tr><td>Address</td><td>29</td><td>14</td><td>43</td><td></td></tr><tr><td>Arrays</td><td>15</td><td>0</td><td>15</td><td></td></tr><tr><td>Base64</td><td>5</td><td>0</td><td>5</td><td></td></tr><tr><td>Context</td><td>4</td><td>0</td><td>4</td><td></td></tr><tr><td>Create2</td><td>8</td><td>2</td><td>10</td><td></td></tr><tr><td>Multicall</td><td>4</td><td>2</td><td>6</td><td></td></tr><tr><td>Nonces</td><td>6</td><td>1</td><td>7</td><td></td></tr><tr><td>Pausable</td><td>11</td><td>5</td><td>16</td><td></td></tr><tr><td>ReentrancyGuard</td><td>6</td><td>3</td><td>9</td><td></td></tr><tr><td>ShortStrings</td><td>14</td><td>6</td><td>20</td><td></td></tr><tr><td>StorageSlot</td><td>24</td><td>0</td><td>24</td><td></td></tr><tr><td>Strings</td><td>71</td><td>1</td><td>72</td><td></td></tr><tr><td>ECDSA</td><td>15</td><td>11</td><td>26</td><td></td></tr><tr><td>EIP712</td><td>13</td><td>0</td><td>13</td><td></td></tr><tr><td>MerkleProof</td><td>10</td><td>3</td><td>13</td><td></td></tr><tr><td>MessageHashUtils</td><td>4</td><td>0</td><td>4</td><td></td></tr><tr><td>ERC165</td><td>5</td><td>2</td><td>7</td><td></td></tr><tr><td>ERC165Checker</td><td>40</td><td>0</td><td>40</td><td></td></tr><tr><td>Math</td><td>44</td><td>1</td><td>45</td><td></td></tr><tr><td>SafeCast</td><td>444</td><td>190</td><td>634</td><td></td></tr><tr><td>SignedMath</td><td>12</td><td>0</td><td>12</td><td></td></tr><tr><td>BitMap</td><td>10</td><td>0</td><td>10</td><td></td></tr><tr><td>Checkpoints</td><td>33</td><td>3</td><td>36</td><td></td></tr><tr><td>DoubleEndedQueue</td><td>9</td><td>2</td><td>11</td><td></td></tr><tr><td>EnumerableMap</td><td>60</td><td>5</td><td>65</td><td></td></tr><tr><td>EnumerableSet</td><td>24</td><td>0</td><td>24</td><td></td></tr><tr><td>Time</td><td>7</td><td>0</td><td>7</td><td></td></tr><tr><td>GovernorStorage</td><td>0</td><td>2</td><td>2</td><td></td></tr><tr><td>GovernorTimelockAccess</td><td>0</td><td>2</td><td>2</td><td></td></tr><tr><td>ERC1967Utils</td><td>0</td><td>3</td><td>3</td><td></td></tr><tr><td>SignatureChecker</td><td>0</td><td>1</td><td>1</td><td></td></tr></tbody></table>
+<table><thead>
+<tr><th width="306">Contract Name</th><th>Pass</th><th>Fail</th><th>Total</th><th data-hidden>Test Coverage</th></tr></thead>
+<tbody>
+<tr><td><strong>Total</strong></td><td><strong>2611</strong></td><td><strong>0</strong></td><td><strong>2617</strong></td><td></td></tr>
+<tr><td>AccessControl</td><td>30</td><td>0</td><td>30</td><td></td></tr>
+<tr><td>Ownable</td><td>8</td><td>0</td><td>8</td><td></td></tr>
+<tr><td>Ownable2Step</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>AccessControlDefaultAdminRules</td><td>56</td><td>0</td><td>56</td><td></td></tr>
+<tr><td>AccessControlEnumerable</td><td>36</td><td>0</td><td>36</td><td></td></tr>
+<tr><td>AccessManaged</td><td>8</td><td>0</td><td>8</td><td></td></tr>
+<tr><td>AccessManager</td><td>113</td><td>0</td><td>113</td><td></td></tr>
+<tr><td>AuthorityUtils</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>VestingWallet</td><td>2</td><td>0</td><td>2</td><td></td></tr>
+<tr><td>Governor</td><td>136</td><td>0</td><td>136</td><td></td></tr>
+<tr><td>GovernorERC721</td><td>2</td><td>0</td><td>2</td><td></td></tr>
+<tr><td>GovernorPreventLateQuorum</td><td>5</td><td>0</td><td>5</td><td></td></tr>
+<tr><td>GovernorStorage</td><td>3</td><td>0</td><td>3</td><td></td></tr>
+<tr><td>GovernorTimelockAccess</td><td>3</td><td>0</td><td>3</td><td></td></tr>
+<tr><td>GovernorTimelockCompound</td><td>8</td><td>0</td><td>8</td><td></td></tr>
+<tr><td>GovernorTimelockControl</td><td>12</td><td>0</td><td>12</td><td></td></tr>
+<tr><td>GovernorVotesQuorumFraction</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>GovernorWithParams</td><td>7</td><td>0</td><td>7</td><td></td></tr>
+<tr><td>Votes</td><td>44</td><td>0</td><td>44</td><td></td></tr>
+<tr><td>ERC2771Context</td><td>11</td><td>0</td><td>11</td><td></td></tr>
+<tr><td>ERC2771Forwarder</td><td>36</td><td>0</td><td>36</td><td></td></tr>
+<tr><td>Clones</td><td>30</td><td>0</td><td>30</td><td></td></tr>
+<tr><td>ERC1967Proxy</td><td>19</td><td>0</td><td>19</td><td></td></tr>
+<tr><td>BeaconProxy</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>UpgradeableBeacon</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>ProxyAdmin</td><td>5</td><td>0</td><td>5</td><td></td></tr>
+<tr><td>TransparentUpgradeableProxy</td><td>19</td><td>0</td><td>19</td><td></td></tr>
+<tr><td>Initializable</td><td>29</td><td>0</td><td>29</td><td></td></tr>
+<tr><td>UUPSupgradeable</td><td>8</td><td>0</td><td>8</td><td></td></tr>
+<tr><td>ERC721</td><td>375</td><td>0</td><td>378</td><td></td></tr>
+<tr><td>ERC721Enumerable</td><td>397</td><td>0</td><td>400</td><td></td></tr>
+<tr><td>ERC721Wrapper</td><td>18</td><td>0</td><td>18</td><td></td></tr>
+<tr><td>ERC721Holder</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+<tr><td>ERC721Burnable</td><td>5</td><td>0</td><td>5</td><td></td></tr>
+<tr><td>ERC721COnsecutive</td><td>34</td><td>0</td><td>34</td><td></td></tr>
+<tr><td>ERC721Pausable</td><td>9</td><td>0</td><td>9</td><td></td></tr>
+<tr><td>ERC721Royalty</td><td>16</td><td>0</td><td>16</td><td></td></tr>
+<tr><td>ERC721URIStorage</td><td>17</td><td>0</td><td>17</td><td></td></tr>
+<tr><td>ERC721Votes</td><td>23</td><td>0</td><td>23</td><td></td></tr>
+<tr><td>ERC721Holder</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+<tr><td>ERC1155</td><td>89</td><td>0</td><td>89</td><td></td></tr>
+<tr><td>ERC1155Burnable</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>ERC1155Pausable</td><td>11</td><td>0</td><td>11</td><td></td></tr>
+<tr><td>ERC1155Supply</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>ERC1155URIStorage</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>ERC1155Holder</td><td>7</td><td>0</td><td>7</td><td></td></tr>
+<tr><td>Address</td><td>7</td><td>0</td><td>7</td><td></td></tr>
+<tr><td>Address</td><td>29</td><td>0</td><td>29</td><td></td></tr>
+<tr><td>Arrays</td><td>20</td><td>0</td><td>20</td><td></td></tr>
+<tr><td>Base64</td><td>5</td><td>0</td><td>5</td><td></td></tr>
+<tr><td>Context</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>Create2</td><td>8</td><td>0</td><td>8</td><td></td></tr>
+<tr><td>Multicall</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>Nonces</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>Pausable</td><td>11</td><td>0</td><td>11</td><td></td></tr>
+<tr><td>ReentrancyGuard</td><td>6</td><td>0</td><td>6</td><td></td></tr>
+<tr><td>ShortStrings</td><td>14</td><td>0</td><td>14</td><td></td></tr>
+<tr><td>StorageSlot</td><td>24</td><td>0</td><td>24</td><td></td></tr>
+<tr><td>Strings</td><td>71</td><td>0</td><td>71</td><td></td></tr>
+<tr><td>ECDSA</td><td>14</td><td>0</td><td>14</td><td></td></tr>
+<tr><td>EIP712</td><td>13</td><td>0</td><td>13</td><td></td></tr>
+<tr><td>MerkleProof</td><td>10</td><td>0</td><td>10</td><td></td></tr>
+<tr><td>MessageHashUtils</td><td>4</td><td>0</td><td>4</td><td></td></tr>
+<tr><td>ERC165</td><td>5</td><td>0</td><td>5</td><td></td></tr>
+<tr><td>ERC165Checker</td><td>40</td><td>0</td><td>40</td><td></td></tr>
+<tr><td>Math</td><td>44</td><td>0</td><td>44</td><td></td></tr>
+<tr><td>SafeCast</td><td>444</td><td>0</td><td>444</td><td></td></tr>
+<tr><td>SignedMath</td><td>12</td><td>0</td><td>12</td><td></td></tr>
+<tr><td>BitMap</td><td>10</td><td>0</td><td>10</td><td></td></tr>
+<tr><td>Checkpoints</td><td>33</td><td>0</td><td>33</td><td></td></tr>
+<tr><td>DoubleEndedQueue</td><td>9</td><td>0</td><td>9</td><td></td></tr>
+<tr><td>EnumerableMap</td><td>60</td><td>0</td><td>60</td><td></td></tr>
+<tr><td>EnumerableSet</td><td>24</td><td>0</td><td>24</td><td></td></tr>
+<tr><td>Time</td><td>7</td><td>0</td><td>7</td><td></td></tr>
+</tbody></table>
