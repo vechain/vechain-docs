@@ -12,7 +12,7 @@ You can find detailed analysis of the coverage categories in the pages to follow
 
 ### Summary Table (OZ v5)
 
-<table><thead><tr><th width="271">Category</th><th width="394">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>URL set</td><td>No set URI in ERC721 and ERC721Enumerable test case. Have 6 tests result pedding. For compatibility testing, URI test cases are not necessary. </td><td>0</td></tr></tbody></table>
+<table><thead><tr><th width="271">Category</th><th width="394">Short Description</th><th>Failures</th></tr></thead><tbody><tr><td>Set base URI</td><td>URI was not set in the ERC721 and ERC721Enumerable test cases, causing 6 tests to remain pending. Since these tests focus on compatibility, URI validation is not essential. </td><td>0</td></tr></tbody></table>
 
 ### Detailed Table (OZ v4)
 
