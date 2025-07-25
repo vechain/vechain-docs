@@ -12,4 +12,4 @@ Therefore, we modified the test code. When calculating the `eip712Domain` locall
 
 | Contract Name                  |
 |--------------------------------|
-| EIP712                         |
+| ERC712                         |
