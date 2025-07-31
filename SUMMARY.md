@@ -70,6 +70,7 @@
     * [Test Coverage](core-concepts/evm-compatibility/test-coverage/README.md)
       * [Gas model](core-concepts/evm-compatibility/test-coverage/gas-model.md)
       * [Raw transaction](core-concepts/evm-compatibility/test-coverage/raw-transaction.md)
+      * [Chain id](core-concepts/evm-compatibility/test-coverage/hardhat-specific/chain_id.md)
       * [hardhat specific](core-concepts/evm-compatibility/test-coverage/hardhat-specific/README.md)
         * [Ganache failures](core-concepts/evm-compatibility/test-coverage/hardhat-specific/ganache-failures.md)
         * [evm_increaseTime](core-concepts/evm-compatibility/test-coverage/hardhat-specific/evm_increasetime.md)

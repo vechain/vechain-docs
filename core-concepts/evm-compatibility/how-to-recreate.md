@@ -106,10 +106,8 @@ npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
 
 ### Run all tests
 
-```bash
-npx hardhat test --network vechain
-```
-or in case of OZ5
+> **⚠️ Disclaimer**: Running the complete OpenZeppelin test suite can take several hours due to Thor Solo's processing limitations. Consider running tests in smaller batches.
+
 ```bash
 npm run test:solo
 ```

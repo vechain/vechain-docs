@@ -10,7 +10,7 @@ On-chain governance in blockchain refers to the process of making decisions and 
 
 ## VeChain's On-Chain Governance Implementation
 
-VeChain leverages on-chain governance to enable stakeholders, or its governing body, to make decisions on some critical on-chain actions and the execution those actions. The actions can, for instance, be authorizing or revoking consensus validators (i.e., the Authority Masternodes), changing network parameters, such as the base gas price and block reward ratio, or any on-chain activity embodied by a smart contract deployed on the VeChainThor blockchain.
+VeChain leverages on-chain governance to enable stakeholders — or its governing body — to make decisions on critical on-chain actions and execute those actions. The actions can, for instance, be authorizing or revoking consensus validators (i.e., the Authority Masternodes), changing network parameters, such as the base gas price and block reward ratio, or any on-chain activity embodied by a smart contract deployed on the VeChainThor blockchain.
 
 VeChain's on-chain governance process consists of three phases:
 
