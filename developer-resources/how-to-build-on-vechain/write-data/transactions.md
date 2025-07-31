@@ -35,7 +35,7 @@ const clauses = [
 ];
 ```
 
-A clause can also send VET in the same action. Check the [type definition](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/_internal_.TransactionClause.html) to also learn more about the internals.
+A clause can also send VET in the same action. Check the [type definition](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_core.TransactionClause.html) to also learn more about the internals.
 
 ### Calculate Gas
 
@@ -68,7 +68,7 @@ const txBody = await thor.transactions.buildTransactionBody(
 ```
 
 {% hint style="info" %}
-There are [several options](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransactionBodyOptions.html) that can optionally be passed as third argument to enable fee delegation, 
+There are [several options](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.TransactionBodyOptions.html) that can optionally be passed as third argument to enable fee delegation, 
 dependency on other transactions, priority and an expiration.
 You will learn more about them in other sections.
 {% endhint %}
@@ -156,4 +156,54 @@ const txReceipt = await thor.transactions.waitForTransaction(
 
 ### Example Project
 
-{% embed url="https://stackblitz.com/edit/github-gsktbqp6-zmkgak5v?ctl=1&embed=1&file=index.mjs&hideExplorer=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/vechain-academy-build-transaction-example?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+
+## Execute Transactions
+
+### Transfer Token
+
+Using `executeTransaction` the signed transaction will directly be published to the network
+
+```javascript
+const tokenContract = '0x5ef79995fe8a89e0812330e4378eb2660cede699'; // B3TR
+const amount = 1.234 * 10**18; // 1.234 B3TR 
+
+const transferAbi = new ABIFunction("function transfer(address to, uint256 value) public returns (bool)")
+
+const transactionResult = await thorClient.transactions.executeTransaction(
+  signer,
+  tokenContract,
+  transferAbi,
+  [receiverAddress,amount]
+)
+```
+
+### Delegated transaction - Transfer Token
+
+If your transaction is delegated, you need to enable the fee delegation on your provider,
+
+```typescript
+const provider = new VeChainProvider(
+  // Thor client used by the provider
+  thorClient,
+  // Internal wallet used by the provider (needed to call the getSigner() method)
+  wallet,
+  // Enable fee delegation
+  true
+);
+```
+and the `delegationUrl` must be provided. 
+```typescript
+const transactionResult = await thorClient.transactions.executeTransaction(
+  signer,
+  tokenContract,
+  transferAbi,
+  [receiverAddress,amount],
+  {delegationUrl:'https://sponsor-testnet.vechain.energy/by/441'}
+)
+```
+
+### Example Project
+
+{% embed url="https://stackblitz.com/edit/vechain-academy-transfer-token?embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+

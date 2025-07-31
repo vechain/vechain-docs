@@ -16,22 +16,22 @@ Here's an example snippet for accessing account details for the VTHO contract:
 
 ```js
 const contract = await thor.accounts.getAccount(
-  '0x0000000000000000000000000000456e65726779'
+  '0x0000000000000000000000000000456e65726779' // <- whatever EOA or Smart contract
 );
 const bytecode = await thor.accounts.getBytecode(
-  '0x0000000000000000000000000000456e65726779'
+  '0x0000000000000000000000000000456e65726779' // <- whatever Smart contract
 );
 ```
 
 Test it yourself:
 
-{% embed url="https://stackblitz.com/edit/vechain-energy-example-snippets-uhqg3cen?ctl=1&embed=1&file=index.mjs&hideExplorer=1&hideNavigation=1&view=editor" %}
+{% embed url="https://stackblitz.com/edit/ts-vechain-academy-get-account-info?embed=1&file=index.ts&hideExplorer=1&hideNavigation=1&view=editor" %}
 
 Type definition and documentation of all attributes:
 
-* [Account Detail](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.AccountDetail.html)
+* [Account Detail](https://vechain.github.io/vechain-sdk-js/classes/_vechain_sdk_network.AccountDetail.html)
 
 The same information is available using the JSON-API:
 
-* [https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779)
-* [https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779/code](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779/code)
+* [GET /accounts/{address}](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779)
+* [GET /accounts/{address}/code](https://mainnet.vechain.org/accounts/0x0000000000000000000000000000456e65726779/code)

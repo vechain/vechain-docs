@@ -85,7 +85,7 @@ const wsUrl = subscriptions.getEventSubscriptionUrl(
 To resume listening from a specific block position, the options can define a `blockID` to continue from where a previous listener may have disconnected.
 
 {% hint style="info" %}
-For additional details on the options, check out the documentation of [`EventSubscriptionOptions`](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.EventSubscriptionOptions.html).
+For additional details on the options, check out the documentation of [`EventSubscriptionOptions`](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.EventSubscriptionOptions.html).
 {% endhint %}
 
 ## Decoding Events
@@ -146,7 +146,7 @@ ws.onmessage = (message) => {
 ```
 
 {% hint style="info" %}
-Generic transaction details such as ID, block information, or the origin of the transaction are available in the object as well. Check `eventLog.meta` from the example. Learn more about the message type definition in the documentation of [`EventLogs`](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.EventLogs.html#meta).
+Generic transaction details such as ID, block information, or the origin of the transaction are available in the object as well. Check `eventLog.meta` from the example. Learn more about the message type definition in the documentation of [`EventLogs`](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.EventLogs.html).
 {% endhint %}
 
 ## Example Project

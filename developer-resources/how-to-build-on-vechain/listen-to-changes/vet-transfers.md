@@ -36,7 +36,7 @@ const wsUrl = subscriptions.getVETtransfersSubscriptionUrl(
 
 ## Transfer Details
 
-The transfers are received as JSON-encoded strings. These strings must be parsed into usable objects, resulting in an object of type [`TransferLogs`](https://tsdocs.dev/docs/@vechain/sdk-network/latest/interfaces/network.TransferLogs.html#meta).
+The transfers are received as JSON-encoded strings. These strings must be parsed into usable objects, resulting in an object of type [`TransferLogs`](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.TransferLogs.html).
 
 An example result is:
 

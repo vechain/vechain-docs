@@ -255,7 +255,7 @@ For the full implementation of this functionality, refer to [`src/BuyCoffee/Bala
 
 The [`@vechain/sdk-core`](https://www.npmjs.com/package/@vechain/sdk-core) library offers tools to easily create blockchain commands.
 
-A "clause" is a single command, similar to a function call, that's included in a transaction. The `clauseBuilder` helps create these commands in a more straightforward way. Additionally, `unitsUtils` helps adjust user inputs to the correct format for the blockchain:
+A "clause" is a single command, similar to a function call, that's included in a transaction. The `Clause` helps create these commands in a more straightforward way. Additionally, `unitsUtils` helps adjust user inputs to the correct format for the blockchain:
 
 * `unitsUtils.parseVET(amount)` – Since VET tokens are divided into 18 decimal places, this function adjusts the input number to include these decimals, converting it into a format the blockchain can understand.
 * `clauseBuilder.transferVET(recipient, parsedVET)` – This command creates instructions to send VET tokens to another wallet.
@@ -263,7 +263,7 @@ A "clause" is a single command, similar to a function call, that's included in a
 * `clauseBuilder.transferToken(token, recipient, parsedAmount)` – This command generates instructions to send a specified amount of a particular token to another wallet.
 
 {% hint style="info" %}
-To explore more about the clauseBuilder and its additional functionalities, check out the [tsdocs](https://tsdocs.dev/docs/@vechain/sdk-core/1.0.0-beta.3/variables/core.clauseBuilder.html).
+To explore more about the clauseBuilder and its additional functionalities, check out the [Clause](https://vechain.github.io/vechain-sdk-js/classes/_vechain_sdk_core.Clause.html).
 {% endhint %}
 
 For our Buy me a Coffee with any token app this will translate into this snippet:
@@ -324,7 +324,7 @@ const receipt = useQuery<TransactionReceipt | null>({
 })
 ```
 
-The [`Transaction Receipt`](https://tsdocs.dev/docs/@vechain/sdk-network/1.0.0-beta.3/interfaces/network.TransactionReceipt.html) provides details regarding the fundamental transaction information along with its outcomes. When checking the success of the transaction, we will specifically examine the `reverted` indicator in the receipt.
+The [`Transaction Receipt`](https://vechain.github.io/vechain-sdk-js/interfaces/_vechain_sdk_network.TransactionReceipt.html) provides details regarding the fundamental transaction information along with its outcomes. When checking the success of the transaction, we will specifically examine the `reverted` indicator in the receipt.
 
 Initially, before the transaction is confirmed, the receipt will be absent, resulting in three possible states:
 
