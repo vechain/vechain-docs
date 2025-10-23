@@ -1,4 +1,4 @@
-# 🌐 Network Configuration
+# Network Configuration
 
 ## Overview
 
