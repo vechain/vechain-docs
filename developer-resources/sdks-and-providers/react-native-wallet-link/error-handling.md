@@ -1,4 +1,4 @@
-# 🧰 Error Handling & Security
+# Error Handling & Security
 
 ## Overview
 

@@ -1,4 +1,4 @@
-# ⚙️ The `useVeWorldWallet` Hook
+# The `useVeWorldWallet` Hook
 
 ## Overview
 

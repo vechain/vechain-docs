@@ -1,4 +1,4 @@
-# 🔧 Integration Guide
+# Integration Guide
 
 ## Overview
 

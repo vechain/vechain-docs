@@ -1,4 +1,4 @@
-# ⚡ Event Handlers
+# Event Handlers
 
 ## Overview
 
@@ -32,7 +32,7 @@ You define these handlers inside the `config` prop of the `VeWorldProvider`.
 
 ---
 
-## 🪄 onVeWorldConnected
+## onVeWorldConnected
 
 Triggered when the user connects their VeWorld wallet successfully.
 
@@ -66,7 +66,7 @@ onVeWorldConnected: (response) => {
 
 ---
 
-## 🔌 onVeWorldDisconnected
+## onVeWorldDisconnected
 
 Triggered when the user disconnects from the wallet or the session is invalidated.
 
@@ -92,7 +92,7 @@ onVeWorldDisconnected: (response) => {
 
 ---
 
-## 🧾 onVeWorldSignedCertificate
+## onVeWorldSignedCertificate
 
 Triggered when the wallet signs a plain-text or certificate message.
 
@@ -120,7 +120,7 @@ onVeWorldSignedCertificate: (response) => {
 
 ---
 
-## 🧱 onVeWorldSignedTypedData
+## onVeWorldSignedTypedData
 
 Triggered after a successful EIP-712 typed data signing operation.
 
@@ -148,7 +148,7 @@ onVeWorldSignedTypedData: (response) => {
 
 ---
 
-## 💸 onVeWorldSentTransaction
+## onVeWorldSentTransaction
 
 Triggered when a transaction is signed and submitted by the wallet.
 
