@@ -4,10 +4,6 @@ description: A collection of useful links and resources.
 
 # Useful Links
 
-## Developer Grants
-
-VeChain has an open milestone based grant program, with a maximum funding of $30,000, payable in USDC. Successful grant applicants can range from the development of decentralized applications (dApps), integrations, developer tooling or research based projects. For more details or to apply for a grant please redirect to the grant program, [https://github.com/vechain/grant-program](https://github.com/vechain/grant-program).
-
 ## VeChain Improvement Proposals (VIPs)
 
 The VIP campaign is formally launched with initial funding of **$100k**. This campaign aims to encourage community developers to propose ideas or solutions in the form of VIPs to improve and expand the VeChainThor blockchain. For each VIP, we’ll award **$2k** USD! Read more about the VIP process and how you can contribute here, [https://github.com/vechain/VIPs](https://github.com/vechain/VIPs).
