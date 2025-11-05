@@ -45,7 +45,7 @@ npx hardhat
                     enabled: true,
                     runs: 200
                 },
-                evmVersion: 'paris' // EVM version (e.g., "byzantium", "constantinople", "petersburg", "istanbul", "berlin", "london")
+                evmVersion: 'shanghai' // EVM version (e.g., "shanghai", "paris", "london")
             }
         },
         ]
@@ -74,7 +74,7 @@ npx hardhat
     };
     ```
 
-> **Notice**: At the date of writing, VeChainThor EVM is aligned with Ethereum's at the `paris` hard fork. Set the [evmVersion](https://docs.soliditylang.org/en/latest/using-the-compiler.html#setting-the-evm-version-to-target) to `paris` if you are using solidity compiler version `0.8.20` or above.
+> **Notice**: At the date of writing, VeChainThor EVM is aligned with Ethereum's at the `shanghai` hard fork. Set the [evmVersion](https://docs.soliditylang.org/en/latest/using-the-compiler.html#setting-the-evm-version-to-target) to `shanghai` if you are using solidity compiler version `0.8.20` or above.
 
 ### Networks
 
