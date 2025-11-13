@@ -1,5 +1,5 @@
 ---
-description: Using the VeChain dApp kit
+description: Using the vechain dApp kit
 ---
 
 # Usage

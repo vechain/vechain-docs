@@ -1,79 +1,54 @@
-# Contracts Interaction on VeChain
+# Contracts
 
-The following sections provide detailed information on interacting with VeChain smart contracts using the VeChain SDK.
+## Build a deploy contract clause
 
-## Building clauses
+### Overview
 
+This example showcases the process of building a clause to deploy a smart contract using the Vechain SDK.
 
-VeChain uses clauses to interact with smart contracts. A clause is a single operation that can be executed on the blockchain. The VeChain SDK provides a `ClauseBuilder` class to create clauses for various operations.
+```typescript
+import { clauseBuilder } from '@vechain/vechain-sdk-core';
+import { expect } from 'expect';
 
-
-
-> ⚠️ **Warning:**
-> To execute the clauses, you need to build a transaction and sign it with a wallet. The signed transaction can then be sent to the blockchain. This process is covered ahead in the documentation.
-
-### Transfer VET and VTHO clauses
-
-The following example shows you how to build clauses to transfer the two main token of VeChain, the token VET and the energy token VTHO (the one used to pay for transaction fees)
-
-```typescript { name=contract-clauses, category=example }
-import {
-    Address,
-    Clause,
-    Units,
-    VET,
-    VTHO,
-    VTHO_ADDRESS
-} from '@vechain/sdk-core';
-
-// build some example clauses
-
-// 1. Transfer vet
-
-const transferVetClause = Clause.transferVET(
-    Address.of('0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54'),
-    VET.of(300n, Units.wei)
-);
-
-// 2. Transfer VTHO
-
-const transferVTHOClause = Clause.transferVTHOToken(
-    Address.of('0xf02f557c753edf5fcdcbfe4c1c3a448b3cc84d54'),
-    VTHO.of(300n, Units.wei)
-);
-
-```
-
-### Deploying a Smart Contract Clause
-
-#### Steps:
-
-1. **Clause Construction**: Use `clauseBuilder.deployContract` from `@vechain/sdk-core` to construct a deployment clause.
-2. **Smart Contract Bytecode**: Pass the compiled contract's bytecode to deploy it.
-3. **Clause Building**: create the deployment clause
-
-```typescript { name=contract-deploy, category=example }
 // 1 - Init contract bytecode to deploy
 
-const contractBytecode = HexUInt.of(
-    '0x608060405234801561000f575f80fd5b506101438061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610034575f3560e01c806360fe47b1146100385780636d4ce63c14610054575b5f80fd5b610052600480360381019061004d91906100ba565b610072565b005b61005c61007b565b60405161006991906100f4565b60405180910390f35b805f8190555050565b5f8054905090565b5f80fd5b5f819050919050565b61009981610087565b81146100a3575f80fd5b50565b5f813590506100b481610090565b92915050565b5f602082840312156100cf576100ce610083565b5b5f6100dc848285016100a6565b91505092915050565b6100ee81610087565b82525050565b5f6020820190506101075f8301846100e5565b9291505056fea2646970667358221220427ff5682ef89b62b910bb1286c1028d32283512122854159ad59f1c71fb6d8764736f6c63430008160033'
-);
+const contractBytecode =
+    '0x608060405234801561000f575f80fd5b506101438061001d5f395ff3fe608060405234801561000f575f80fd5b5060043610610034575f3560e01c806360fe47b1146100385780636d4ce63c14610054575b5f80fd5b610052600480360381019061004d91906100ba565b610072565b005b61005c61007b565b60405161006991906100f4565b60405180910390f35b805f8190555050565b5f8054905090565b5f80fd5b5f819050919050565b61009981610087565b81146100a3575f80fd5b50565b5f813590506100b481610090565b92915050565b5f602082840312156100cf576100ce610083565b5b5f6100dc848285016100a6565b91505092915050565b6100ee81610087565b82525050565b5f6020820190506101075f8301846100e5565b9291505056fea2646970667358221220427ff5682ef89b62b910bb1286c1028d32283512122854159ad59f1c71fb6d8764736f6c63430008160033';
 
 // 2 - Create a clause to deploy the contract
-const clause = Clause.deployContract(contractBytecode);
+const clause = clauseBuilder.deployContract(contractBytecode);
+
+// The first clause of the transaction should be a deployed contract clause
+expect(clause.data).toEqual(contractBytecode);
+
 ```
 
-### Calling a Contract Function Clause
+### Code Explanation
 
-### Steps:
+* The `clauseBuilder.deployContract` function from `@vechain/vechain-sdk-core` is employed to construct a clause needed to perform a deploy contract transaction.
+* The smart contract bytecode is represented by the `contractBytecode` variable.
+* The `clauseBuilder.deployContract` function is invoked with the contract bytecode, resulting in the creation of a clause object.
 
-1. **Understand the ABI**: The ABI (JSON format) defines contract functions and parameters.
-2. **Clause Creation**: Use `clauseBuilder.functionInteraction` to create a clause for function calls.
-3. **Clause Building**: Build the clause, e.g., calling `setValue(123)` to modify the contract state.
+### Conclusion
 
-```typescript { name=contract-function-call, category=example }
+This example provides a practical demonstration of utilizing the vechain SDK to build a clause which can be used to deploy a smart contract.
+
+## Build a Contract Function Call clause
+
+### Overview
+
+This example demonstrates the process of building a clause to call a function on a deployed smart contract using the vechain SDK.
+
+```typescript
+import {
+    clauseBuilder,
+    coder,
+    type FunctionFragment
+} from '@vechain/vechain-sdk-core';
+import { expect } from 'expect';
+
 // 1 - Init a simple contract ABI
-const contractABI = [
+const contractABI = JSON.stringify([
     {
         constant: false,
         inputs: [
@@ -102,146 +77,111 @@ const contractABI = [
         stateMutability: 'view',
         type: 'function'
     }
-] as const;
+]);
 
 // 2 - Create a clause to call setValue(123)
-const clause = Clause.callFunction(
-    Address.of('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed'), // just a sample deployed contract address
-    ABIContract.ofAbi(contractABI).getFunction('setValue'),
+const clause = clauseBuilder.functionInteraction(
+    '0x7567d83b7b8d80addcb281a71d54fc7b3364ffed', // just a sample deployed contract address
+    coder
+        .createInterface(contractABI)
+        .getFunction('setValue') as FunctionFragment,
     [123]
 );
+
+// 3 - Check the parameters of the clause
+
+expect(clause.to).toBe('0x7567d83b7b8d80addcb281a71d54fc7b3364ffed');
+expect(clause.value).toBe(0);
+expect(clause.data).toBeDefined();
+
 ```
 
+### Code Explanation
 
-or you can load the contract using the thor client and then you can build the clause using the contract object.
+* The example involves a smart contract with an ABI (Application Binary Interface) defined in JSON format. The ABI describes the functions and their parameters in the contract.
+* The `clauseBuilder.functionInteraction` function from `@vechain/vechain-sdk-core` is used to create a clause for calling a specific function on the smart contract.
+* The function `setValue` is called with an argument of 123, representing the value to be set in the smart contract.
 
-```typescript { name=contract-function-call, category=example }
-// 1 - Build the thor client and load the contract
+### Conclusion
 
-const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
+This example illustrates the process of creating a clause that is useful for interacting with a deployed smart contract on vechain.
 
-const contract = thorSoloClient.contracts.load(
-    '0x7567d83b7b8d80addcb281a71d54fc7b3364ffed',
-    contractABI
+## Create a sample ERC20 token
+
+### Overview
+
+The ERC20 token standard is widely used for creating and issuing smart contracts on Ethereum blockchain. Vechain, being compatible with Ethereum's EVM, allows for the implementation of ERC20 tokens on its platform. This provides the benefits of VeChain's features, such as improved scalability and lower transaction costs, while maintaining the familiar ERC20 interface.
+
+### Example
+
+The vechain SDK allows to create a sample ERC20 token with a few lines of code. The example below shows how to create a sample ERC20 token with the name "SampleToken" and symbol "ST" with a total supply of 1000000000000000000000000.
+
+#### Compile the contract
+
+The first step is to compile the contract using a solidity compiler. In this example we will compile an ERC20 token contract based on the OpenZeppelin ERC20 implementation. The contract is the following one:
+
+The bytecode and the ABI have been obtained by compiling the following contract:
+
+```solidity
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract SampleToken is ERC20 {
+    constructor() ERC20("SampleToken", "ST") {
+        _mint(msg.sender, 1000000 * (10 ** uint256(decimals())));
+    }
+}
+```
+
+#### Deploy the contract
+
+Once the contract is compiled, we can deploy it using the vechain SDK. The following code shows how to deploy the contract:
+
+```typescript
+const soloNetwork = new HttpClient(_soloUrl);
+const thorSoloClient = new ThorClient(soloNetwork);
+
+// Creating the contract factory
+const contractFactory = thorSoloClient.contracts.createContractFactory(
+    VIP180_ABI,
+    erc20ContractBytecode,
+    privateKeyDeployer
 );
 
-// 2 - Create a clause to call setValue(123)
-const setValueClause = contract.clause.setValue(123);
-```
+// Deploying the contract
+await contractFactory.startDeployment();
 
-## Multi-Clause Contract Interaction
+// Awaiting the contract deployment
+const contract = await contractFactory.waitForDeployment();
 
-Now that we have seen how to build clauses, let's see how to send it to the blockchain. VeChain allows multiple clauses in a single transaction, enabling interactions with multiple contracts or operations.
+// Awaiting the transaction receipt to confirm successful contract deployment
+const receipt = contract.deployTransactionReceipt;
 
-### Multiple Clauses in a Single Transaction
+// Asserting that the contract deployment didn't revert, indicating a successful deployment
+expect(receipt.reverted).toEqual(false);
 
-In the following example we will see how to execute multiple read operations to get information regarding a deployed ERC20 token contract.
-
-```typescript { name=contract-create-erc20-token, category=example }
-// Reading data from multiple clauses in a single call
-const multipleClausesResult =
-    await thorSoloClient.contracts.executeMultipleClausesCall([
-        contract.clause.totalSupply(),
-        contract.clause.name(),
-        contract.clause.symbol(),
-        contract.clause.decimals()
-    ]);
-
-expect(multipleClausesResult[0]).toEqual({
-    success: true,
-    result: {
-        plain: expectedBalance,
-        array: [expectedBalance]
-    }
-});
-expect(multipleClausesResult[1]).toEqual({
-    success: true,
-    result: {
-        plain: 'SampleToken',
-        array: ['SampleToken']
-    }
-});
-expect(multipleClausesResult[2]).toEqual({
-    success: true,
-    result: {
-        plain: 'ST',
-        array: ['ST']
-    }
-});
-expect(multipleClausesResult[3]).toEqual({
-    success: true,
-    result: {
-        plain: 18,
-        array: [18]
-    }
-});
-```
-
-> ⚠️ **Warning:**
-> The example above shows a multi clause read call. It's also possible to execute multi clause transactions with the method executeMultipleClausesTransaction, but you need to build a signer first. Please refer to the signer section for more information
-
-
-## Commenting Contract Invocations
-
-Add comments to operations when using wallets, helping users understand transaction details during signing.
-
-```typescript { name=contract-transfer-erc20-token, category=example }
-// Transfer tokens to another address with a comment
-
-await contract.transact.transfer(
-    { comment: 'Transferring 100 ERC20 tokens' },
-    '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    Units.parseEther('100').bi
+const balance = await contract.read.balanceOf(
+    addressUtils.fromPrivateKey(Buffer.from(privateKeyDeployer, 'hex'))
 );
+
+// Asserting that the initial balance of the deployer is the expected amount (1e24)
+expect(balance).toEqual([unitsUtils.parseUnits('1', 24)]);
 ```
 
-## Specifying Revisions in Read Functions
+#### Transfer tokens to another address
 
-You can specify revisions (`best` or `finalized`) for read functions, similar to adding comments.
+Once the contract is deployed, we can transfer tokens to another address using the vechain SDK. The following code shows how to transfer 10000 token smallest unit to another address:
 
-## Delegating a Contract Call
-
-VeChain supports delegated contract calls where fees are paid by the gas-payer.
-
-```typescript { name=contract-delegation-erc20, category=example }
-const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
-const provider = new VeChainProvider(
-    thorSoloClient,
-    new ProviderInternalBaseWallet([deployerAccount], {
-        gasPayer: {
-            gasPayerPrivateKey: gasPayerAccount.privateKey
-        }
-    }),
-    true
-);
-const signer = await provider.getSigner(deployerAccount.address);
-
-// Defining a function for deploying the ERC20 contract
-const setupERC20Contract = async (): Promise<Contract<typeof ERC20_ABI>> => {
-    const contractFactory = thorSoloClient.contracts.createContractFactory(
-        ERC20_ABI,
-        erc20ContractBytecode,
-        signer
-    );
-
-    // Deploying the contract
-    await contractFactory.startDeployment();
-
-    // Waiting for the contract to be deployed
-    return await contractFactory.waitForDeployment();
-};
-
-// Setting up the ERC20 contract and getting its address
-const contract = await setupERC20Contract();
-
-// Transferring 10000 tokens to another address with a delegated transaction
+```typescript
 const transferResult = await contract.transact.transfer(
     '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    10000n
+    10000
 );
 
 // Wait for the transfer transaction to complete and obtain its receipt
-const transactionReceiptTransfer = await transferResult.wait();
+const transactionReceiptTransfer =
+    (await transferResult.wait()) as TransactionReceipt;
 
 // Asserting that the transaction has not been reverted
 expect(transactionReceiptTransfer.reverted).toEqual(false);

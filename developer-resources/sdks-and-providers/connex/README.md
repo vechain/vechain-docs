@@ -1,6 +1,6 @@
 # Connex
 
-Connex is the standard interface to connect decentralized applications (dApps) and users with the VeChainThor blockchain. This documentation provides a comprehensive guide to using the Connex library, including installation, usage instructions, and details about its key features and methods.
+Connex is the standard interface to connect decentralized applications (dApps) and users with the VechainThor blockchain. This documentation provides a comprehensive guide to using the Connex library, including installation, usage instructions, and details about its key features and methods.
 
 Connex can be utilized through two distinct methodologies: as a Browser application or as a conventional Command Line Interface (CLI) application.
 
@@ -20,7 +20,7 @@ Connex is available through several interfaces:
 
 ## Key Features
 
-The Connex library offers a wide range of functionalities related to the VeChainThor blockchain and dApp development. Some of the key features include:
+The Connex library offers a wide range of functionalities related to the VechainThor blockchain and dApp development. Some of the key features include:
 
 1. **Blocks and node status**: The library enables developers to interact with and retrieve information about blocks on the VeChainThor blockchain. This includes accessing block data and querying the status of connected VeChain nodes.
 2. **Accounts**: Connex facilitates interactions with Externally Owned Accounts (EOAs), allowing developers to manage and transact with individual user accounts on the VeChainThor blockchain. This includes sending VET tokens and interacting with VTHO (VeThor) tokens.
@@ -31,7 +31,7 @@ The Connex library offers a wide range of functionalities related to the VeChain
 
 ## Online Functionality
 
-Connex serves as an "online" library, primarily used for dApp development and blockchain-related operations that can be performed online. For example, users can use Connex to create, sign and broadcast transactions to the VeChainThor blockchain network.
+Connex serves as an "online" library, primarily used for dApp development and blockchain-related operations that can be performed online. For example, users can use Connex to create, sign and broadcast transactions to the VechainThor blockchain network.
 
 ## License
 

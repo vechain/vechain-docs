@@ -6,7 +6,7 @@ description: A browser plugin wallet
 
 ## **What is VeWorld?**
 
-VeWorld is the latest VeChainThor browser plugin wallet that is designed to work with all mainstream web browsers and mobile devices.
+VeWorld is the latest VechainThor browser plugin wallet that is designed to work with all mainstream web browsers and mobile devices.
 
 ## Installation Guide <a href="#install-sync-on-windows" id="install-sync-on-windows"></a>
 

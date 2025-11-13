@@ -1,9 +1,9 @@
 # Thor DevKit
 
-[Thor DevKit](https://github.com/vechain/thor-devkit.js) is a library specifically designed to aid in decentralized application (dApp) development on the VeChainThor blockchain. This documentation provides a comprehensive guide to using the Thor DevKit library, including installation, usage instructions, and details about its key features and methods.
+Thor DevKit is a library specifically designed to aid in decentralized application (dApp) development on the VechainThor blockchain. This documentation provides a comprehensive guide to using the Thor DevKit library, including installation, usage instructions, and details about its key features and methods.
 
 {% hint style="info" %}
-An alternative [SDK](../sdk/) is currently available as a beta release. The VeChain SDK offers enhanced features, improved performance, and better compatibility with the latest developments on the VeChainThor blockchain.
+Available on GitHub [here](https://github.com/vechain?q=thor-devkit\&type=all\&language=\&sort=).
 {% endhint %}
 
 ## Languages
@@ -17,12 +17,12 @@ The Thor DevKit library is available in the following languages:
 
 ## Key Features
 
-The Thor DevKit library offers a wide range of functionalities related to the VeChainThor blockchain and dApp development. Some of the key features include:
+The Thor DevKit library offers a wide range of functionalities related to the VechainThor blockchain and dApp development. Some of the key features include:
 
 1. **Hash Functions** and **Public Key Cryptography**: Thor DevKit provides essential hash functions and public key cryptography methods that are essential for secure blockchain operations. (blake2b256, keccak256, and secp256k)
 2. **Accounts Handling**: The library offers tools to manage accounts and perform operations related to account management, including private key generation, mnemonic handling, and keystore encryption / decryption. (mnemonics and keystore)
-3. **Transactions**: Thor DevKit enables users to build, sign, and manipulate transactions to interact with the VeChainThor blockchain. Users can construct transactions with various clauses and gas settings. (transactions and ABI)
-4. **Recursive Length Prefix (RLP)**: The library includes RLP encoding and decoding capabilities, which are essential for efficient data serialisation and deserialisation on the VeChainThor blockchain.
+3. **Transactions**: Thor DevKit enables users to build, sign, and manipulate transactions to interact with the VechainThor blockchain. Users can construct transactions with various clauses and gas settings. (transactions and ABI)
+4. **Recursive Length Prefix (RLP)**: The library includes RLP encoding and decoding capabilities, which are essential for efficient data serialisation and deserialisation on the VechainThor blockchain.
 5. **Certificates**: Thor DevKit supports the creation and verification of client-side self-signed certificates, enabling secure identification and validation processes.
 6. **Bloom filter**: The Bloom filter is a highly efficient and space-efficient probabilistic data structure employed to enhance the speed and efficiency of element lookup within a given set. It operates by providing a mechanism to test whether an element is a member of the set, thus offering a valuable tool in numerous applications, including database management, network routing, and caching systems.
 

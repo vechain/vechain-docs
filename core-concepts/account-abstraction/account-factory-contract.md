@@ -12,16 +12,13 @@ Account Factory contracts are not uniform. They differ based on the type of Acco
 
 ## Role
 
-The Account Factory contract plays a crucial role in the lifecycle of a UserOperation:
-
-* **Initialization with initCode**: When a UserOperation includes the initCode field, the EntryPoint contract invokes the Account Factory contract to deploy the corresponding Account contract.
-* **Seamless Integration**: Ensures the created Account contract adheres to the required interface for subsequent operations.
+During the EntryPoint contracts verification of a UserOperation, if the UserOperation contains the `initCode` field the EntryPoint contract calls on the Account Factory contract to create a new smart contract wallet.
 
 ## Implementation
 
-Each Account Factory contract is independently deployed. Each smart contract wallet provider may create their own Account Factory tailored to their specific requirements. The Smart Account contract that gets deployed may also be different.
+Each Account Factory contract is an individually deployed and configured contract. Each smart contract wallet provider will likely create their own Account Factory contracts offering unique features to differentiate themselves from the competition.
 
-### Example: SimpleAccountFactory Interface
+### SimpleAccountFactory Interface
 
 In the code snippet below there are two main functions of the `SimpleAccountFactory` helper contract. The `createAccount()` method is used by the EntryPoint contract to deploy the Account contract and the `getAddress()` method is used by the client side code to generate the Account contract address.
 

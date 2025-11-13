@@ -8,11 +8,11 @@
 * [VeChain Application is latest version(≥1.0.4)](https://support.ledger.com/hc/en-us/articles/360006523674)
 * [Sync is latest version (≥1.2.0)](https://env.vechain.org/)
 
-## Install VeChain Ledger app <a href="#install-vechain-ledger-app" id="install-vechain-ledger-app"></a>
+## Install Vechain Ledger app <a href="#install-vechain-ledger-app" id="install-vechain-ledger-app"></a>
 
 1. Open the Manager in Ledger Live. Connect and unlock your Ledger device.
 2. If asked, allow the manager on your device by pressing the right button.
-3. Find VeChain in the app catalog.
+3. Find Vechain in the app catalog.
 4. Click the Install button of the app.
 5. Follow the instruction when installation window appears.
 
@@ -39,13 +39,13 @@
 
 1. **Ledger device: INS\_NOT\_SUPPORTED (0x6d00).**
    * Ensuring your device runs the latest firmware version.
-   * Reinstalling the apps on your device, so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
+   * Reinstalling the apps on your device so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
 2. **Ledger device: INCORRECT\_DATA (0x6a80).**
    * In VeChain App Setting ,set **Contract data** to **Yes**
    * In VeChain App Setting ,set **Multi-clause** to **Yes**
 3. **Sync: Unable to connect your device, please retry.**
    * Close other applications (Ledger apps, crypto wallets, Geth, Parity, Mist, Bitcoin Core, etc).
-   * Turn OFF VPN and antivirus temporarily. If that works, make sure to whitelist Sync.
+   * Turn OFF VPN and anti-virus temporarily. If that works, make sure to whitelist Sync.
    * Change the USB cable if possible. Try removing any dongles or docks you're using.
    * Try different USB ports.
    * Restart your computer.

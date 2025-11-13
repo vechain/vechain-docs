@@ -1,12 +1,12 @@
 ---
-description: A web browser with a built in VeChain wallet
+description: A web browser with a built in vechain wallet
 ---
 
 # Sync
 
 ## What is Sync? <a href="#system-requirement" id="system-requirement"></a>
 
-Sync is a web browser wallet with the ability to connect to decentralized applications (dApps) on the VeChainThor blockchain.
+Sync is a web browser wallet with the ability to connect to decentralized applications (dApps) on the VechainThor blockchain.
 
 ## Installation Guide <a href="#install-sync-on-windows" id="install-sync-on-windows"></a>
 

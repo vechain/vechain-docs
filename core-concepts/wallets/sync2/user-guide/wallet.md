@@ -79,7 +79,6 @@ The mnemonic words store all the information that is needed at any point in time
 
 Wallet name is the identifier to help you easily tell the wallet.
 
-1. Click upper right ![](../../../../.gitbook/assets/more\_horiz.svg)
 1. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
 2. Click **Rename**
 3. Enter the name of your wallet

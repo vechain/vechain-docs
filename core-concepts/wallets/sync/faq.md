@@ -8,7 +8,7 @@ Please check [Export wallet](user-guide/wallet.md#export-keystore)
 
 ## How to connect custom node ? <a href="#how-to-connect-custom-node" id="how-to-connect-custom-node"></a>
 
-1. [Run thor](../../../how-to-run-a-node/how-to-run-a-thor-solo-node.md)
+1. [Run thor](../../../start-building/tutorials/how-to-run-a-thor-solo-node/)
 2. Open Sync
 3. Follow the step to [add custom node](user-guide/browser-dapps-and-web.md#connect-to-a-node)
 
@@ -29,7 +29,7 @@ You can visit [Faucet](https://faucet.vecha.in/)
 ### **Main Processor(ONLY Available in Dev Mode)**
 
 1. Move your cursor to tab area
-2. Right-click the mouse
+2. Right click the mouse
 3. Click "**Inspect Element**"
 
 ### **Web Content**

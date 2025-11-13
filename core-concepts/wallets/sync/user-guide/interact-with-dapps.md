@@ -1,6 +1,6 @@
 # Interact with dApps
 
-When you are going to interact with a dApp, Once the dApp sends the signing request to sync, it will automatically pop up a signing window and request you to sign the transaction/content. when the signing details are popped-up, it will show clauses/contents which you need to sign.
+When you are going to interact with a dApp, Once the dApp sends the signing request to sync, it will automatically pop-up a signing window and request you to sign the transaction/content. when the signing details are popped-up, it will show clauses/contents which you need to sign.
 
 Note
 

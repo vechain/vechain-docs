@@ -8,8 +8,8 @@ When you've found an issue in sync, here's how to report an issue. Thanks a ton 
 
 1. At top right in home page, click setting
 2. Find the row named **Report an issue** , Click **OPEN** on the right side
-3. It will be redirected to GitHub login page
+3. It will be redirect to Github login page
 4. At upper right , Click **New Issue**
-5. Login to GitHub / register an account
+5. Login to Github / register an account
 6. Filled-in the issue template
 7. Click **Submit new issue**

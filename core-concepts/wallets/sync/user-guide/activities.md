@@ -23,10 +23,10 @@ When the transaction is reverted , it will be shown <img src="../../../../.gitbo
 
 There are 4 status of transaction :
 
-1. **Sending** <img src="../../../../.gitbook/assets/download (11).png" alt="" data-size="line">: After signing a transaction , sync will send the signed transaction to node. if the transaction can not be sent , you can click <img src="../../../../.gitbook/assets/download (1).png" alt="" data-size="line">
+1. **Sending** <img src="../../../../.gitbook/assets/download (11).png" alt="" data-size="line">: After signing a transaction , sync will send the signed transaction to node. if the transaction can not be send , you can click <img src="../../../../.gitbook/assets/download (1).png" alt="" data-size="line">
 2. **Confirming** <img src="../../../../.gitbook/assets/download (2).png" alt="" data-size="line">: he transaction is at confirming stage.
 3. **Confirmed** <img src="../../../../.gitbook/assets/download (3) (1).png" alt="" data-size="line">: The transaction is confirmed.
-4. **Dropped** <img src="../../../../.gitbook/assets/download (4) (1).png" alt="" data-size="line">: The transaction is expired, can not be resent.
+4. **Dropped** <img src="../../../../.gitbook/assets/download (4) (1).png" alt="" data-size="line">: The transaction is expired, can not be resend.
 
 ## Reveal Transaction <a href="#reveal-transaction" id="reveal-transaction"></a>
 

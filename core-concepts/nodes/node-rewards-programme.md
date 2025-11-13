@@ -6,12 +6,9 @@ description: Economic and X-Node interactions with the official node rewards dAp
 
 {% hint style="info" %}
 The official node rewards dApp is available at [app.rewards.vechain.org](https://app.rewards.vechain.org)
-Note: Rewards Programme enters sunset mode on 24th June 2025, replaced as per [Vechain Renaissance 2025](https://vechainofficial.medium.com/the-vechain-renaissance-2025-roadmap-evolving-greatness-d8eaf3cd5fea) 
-As of 1st July 2025, rewards benefits will cease to be applied.
-As of 1st October 2025, rewards dApp will be withdrawn, along with Rewards API, Rewards Explorer, Rewards ThorPubAPI, and associated services.
 {% endhint %}
 
-In blockchain ecosystems the word node is a reserved word which is used to refer to a computer system which stores a copy of the blockchain transactions. In the VeChain ecosystem the word node can also be used to refer to a non-contractual address that holds, soft stakes, a certain amount of VET. These reward nodes are more accurately called Economic and X-Nodes, but they are often referred just referred to as nodes. Accounts which hold an Economic or X-Node are identified by the ownership of a non-fungible token (NFT). Additional privileges are attributed to Economic and X-Node holders. Both Economic and X-Node holders have voting rights on VeChain governance proposals. Additionally, X-Node holders are entitled to additional VTHO rewards from the VeChainThor X-Node bonus pool, which are VTHO rewards on top of the basic generation.
+In blockchain ecosystems the word node is a reserved word which is used to refer to a computer system which stores a copy of the blockchain transactions. In the vechain ecosystem the word node can also be used to refer to a non-contractual address that holds, soft stakes, a certain amount of VET. These reward nodes are more accurately called Economic or X-Nodes, but they are often referred just referred to as nodes. Accounts which hold an Economic or X-Node are identifiable by ownership of a non-fungible token (NFT). Additional privileges are provided to Economic and X-Node holders. Both Economic and X-Node holders having voting rights on vechain governance proposals. Additionally, X-Node holders are entitled to additional VTHO rewards from the VechainThor X-Node bonus pool, which are VTHO rewards on top of the basic generation formula.
 
 {% hint style="warning" %}
 To maintain node ownership, it is crucial to retain a specified amount of VET in your wallet; failure to do so may result in node downgrading or destruction.
@@ -20,29 +17,29 @@ To maintain node ownership, it is crucial to retain a specified amount of VET in
 Both Economic and X-Nodes have distinctive tiers which are determined by the following criteria:
 
 * **Balance Requirement:** The quantity of VET to be held in your wallet for the acquisition, generation, and sustenance of your node.
-* **Voting Tier:** Indicates the weight of your vote within VeChain's voting ecosystem, determined by the type of node you own.
+* **Voting Tier:** Indicates the weight of your vote within vechain's voting ecosystem, determined by the type of node you own.
 * **Maturity Period:** The duration of time required for your node to upgrade from the current level to the next level.
 * **Generation Ratio (Applicable exclusively to X-Nodes):** Represents the percentage of additional VTHO rewards generated in comparison to the basic generation formula.
 
 ### Economic Nodes
 
-Users can apply for an Economic Node if they meet the required balance of VET in their address. Additionally, they are available for purchase on the secondary market. Owning an Economic Node provides you with the right to participate in VeChain's governance process.
+Users can apply for an Economic Node if they meet the required balance of VET in their address. Additionally, they are available for purchase on the secondary market. Owning an Economic Node provides you with the right to participate in vechain's governance process.
 
 ### X-Nodes
 
-These nodes are exclusively available for purchase on the secondary market. They generate additional VTHO rewards derived from a 5 billion VET locked by the VeChain foundation to generate VTHO for the VeChainThor X-node bonus pool.\* Owning an X-Node provides you the right to participate in VeChain's governance process.
+These nodes are exclusively available for purchase on the secondary market. They generate additional VTHO rewards derived from a 5 billion VET locked by the vechain foundation to generate VTHO for the VechainThor X-node bonus pool.\* Owning an X-Node provides you the right to participate in vechain's governance process.
 
 {% hint style="info" %}
-The VeChainThor X-Node bonus pool size is 5bln VET. This allocated VET is locked and produces 0.000432 VTHO per VET per day. The daily generated VTHO rewards of 2.16mln VTHO are rewarded to all eligible VeChainThor X-Node token holders.
+The VechainThor X-Node bonus pool size is 5bln VET. This allocated VET is locked and produces 0.000432 VTHO per VET per day. The daily generated VTHO rewards of 2.16mln VTHO are rewarded to all eligible VechainThor X-Node token holders.
 {% endhint %}
 
 {% hint style="info" %}
-[vevote.vechain.org](https://vevote.vechain.org) VeChain governance proposal website.
+[vevote.vechain.org](https://vevote.vechain.org) vechain governance proposal website.
 {% endhint %}
 
 ### X-Node Bonus VTHO Reward Claiming
 
-An X-Node owner can claim their bonus VTHO reward at any time by claiming from the smart contract. VTHO bonus reward claims are disbursed hourly through multitask transfers (MTT). Claiming rewards costs 40 VTHO from the claimed reward to cover transfer costs. VTHO claims are processed and credited within an hour. If you were an X-Node holder who disposed of the node, you still have the option to claim any unclaimed VTHO. The calculation for VTHO staking rewards is available [here](https://vechainstats.com/vtho-calculator/).
+An X-Node owner can claim their bonus VTHO reward at any time by claiming from the smart contract. VTHO bonus reward claims are disbursed hourly through multi-task transfers (MTT). Claiming rewards costs 40 VTHO from the claimed reward to cover transfer costs. VTHO claims are processed and credited within an hour. If you were an X-Node holder who disposed of the node, you still have the option to claim any unclaimed VTHO. The calculation for VTHO staking rewards is available [here](https://vechainstats.com/vtho-calculator/).
 
 ### Node Upgrades and Downgrades
 
@@ -62,7 +59,7 @@ Users can either transfer their Economic or X-Node to another address instantly 
 
 In both scenarios, the node holder is required to maintain the minimum VET corresponding to the node tier until the node ownership is successfully transferred. It is essential for the recipient to ensure that their address meets the minimum VET holding requirement. It is worth noting that nodes cannot be transferred or placed on direct sale during the maturity period, and upgrades are not available during the transfer or sale process.
 
-If the recipient address currently possesses a VeChainThor Node, they will not be eligible to receive an additional node. Following the successful transfer or sale of node ownership to a new address, a 24-hour cooldown period will ensue before another transfer or sale can take place.
+If the recipient address currently possesses a VechainThor Node, they will not be eligible to receive an additional node. Following the successful transfer or sale of node ownership to a new address, a 24-hour cooldown period will ensue before another transfer or sale can take place.
 
 ### Node marketplace
 
@@ -72,7 +69,7 @@ In the Fixed Price Auction, the node holder, when initiating the order, must spe
 
 For those opting for a Dutch Auction, the node holder needs to set a starting price, the lowest price, and a valid order period between 1 and 7 days. During a Dutch Auction, the price gradually decreases every 5 minutes in a linear manner until it reaches the lowest price.
 
-Nodes available for purchase can be viewed by users in the marketplace section of the [official VeChain rewards dApp](https://app.rewards.vechain.org). If the node is on Dutch Auction, the current price will be displayed.
+Nodes available for purchase can be viewed by users in the marketplace section of the [official vechain rewards dApp](https://app.rewards.vechain.org). If the node is on Dutch Auction, the current price will be displayed.
 
 In both auction types, the principle of first come, first served applies. Once a user successfully purchases the node, ownership is transferred, and it will no longer be visible on the trading market. If no one purchases the node, the auction will be automatically cancelled after the valid period.
 

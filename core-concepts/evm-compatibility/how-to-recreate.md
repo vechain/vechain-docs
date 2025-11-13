@@ -8,7 +8,7 @@ description: >-
 
 ## Run a Thor Solo Node
 
-Use the tutorial [how-to-run-a-thor-solo-node](../../how-to-run-a-node/how-to-run-a-thor-solo-node.md "mention") to start up a thor solo node.
+Use the tutorial [how-to-run-a-thor-solo-node](../../start-building/tutorials/how-to-run-a-thor-solo-node/ "mention") to start up a thor solo node.
 
 ## Configure a Development Environment
 
@@ -19,7 +19,7 @@ git clone git@github.com:OpenZeppelin/openzeppelin-contracts.git
 cd openzeppelin-contracts
 ```
 
-### Install the required VeChain libraries
+### Install the required Vechain libraries
 
 ```bash
 npm install @vechain/hardhat-vechain@0.0.1 --save-exact
@@ -36,7 +36,7 @@ require("@vechain/hardhat-vechain");
 require("@vechain/hardhat-web3");
 ```
 
-Add the VeChain network settings
+Add the vechain network settings
 
 ```javascript
    vechain: {
@@ -74,48 +74,4 @@ npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
 npx hardhat test --network vechain
 ```
 
-## Running VeChain custom fork
-This section explains how to run the custom tests adapted to run on VeChainThor blockchain. This fork is based on [OpenZeppelin version 5](https://github.com/OpenZeppelin/openzeppelin-contracts/releases/tag/v5.0.2).
-
-### Clone openzeppelin-contracts
-
-```bash
-git clone -b thor-compatibility git@github.com:vechain/openzeppelin-contracts.git
-cd openzeppelin-contracts
-```
-
-### Run thor solo
-When running the custom fork you need to increase the gas limit.
-```bash
-bin/thor solo --on-demand --gas-limit 10000000000
-```
-
-## Run the OpenZeppelin Tests
-
-Assuming you have cloned OpenZeppelin and are running thor locally in solo mode we can now move on to running the OpenZeppelin tests. First navigate to the appropriate directory.
-
-```bash
-cd openzeppelin-contracts
-```
-
-### Run a single test
-
-```bash
-npx hardhat test --network vechain test/access/AccessControlEnumerable.test.js
-```
-
-### Run all tests
-
-> **⚠️ Disclaimer**: Running the complete OpenZeppelin test suite can take several hours due to Thor Solo's processing limitations. Consider running tests in smaller batches.
-
-```bash
-npm run test:solo
-```
-
-### Run all tests in a specific directory (OZ5)
-```bash
-npm run test:solo:dir <dir_relative_path>
-```
-
-### Results
-All the tests in the custom fork are expected to pass.
+After running a given number of tests a `*.csv` file with the results of the tests will appear under openzeppelin-contracts folder.

@@ -24,7 +24,7 @@ TBAs allow ERC-721 and ERC-1155 tokens to have their own smart contract account 
 
 * **Identity**: Individuals can utilise a TBA enabled NFT as their on-chain identity.
 * **Metaverse**: By utilising a TBA enabled NFT as their on-chain identity the user can enter and interact in the metaverse as their NFT avatar.
-* **Membership / DAO Management**: Soul bound tokens, rewards or proof of participation (PoP) tokens are sent to the decentralized autonomous organization (DAO) TBA NFT instead of a user account.
+* **Membership / DAO Management**: Soul bound tokens, rewards or proof of participation (PoP) tokens are sent to the decentalized autonomous organization (DAO) TBA NFT instead of a user account.
 * **Composability**: A TBA can be an inventory system holding different types of digital assets. For example, you could equip an NFT with different clothing or accessories which could provide your NFT with different abilities.
 * **Gaming**: Your TBA enabled NFT holds your in game assets. You can customise your NFT with different gear or equipment giving it different capabilities or abilities.
 
@@ -36,7 +36,7 @@ Token Bound Accounts are formalized through ERC-6551 If you wish to read more on
 
 ### ERC-6551: Registry
 
-The registry is permissionless and immutable, and it deploys a smart contract account for an NFT. As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the VeChainThor blockchain mainnet and testnet networks.
+The registry is permissionless and immutable, and it deploys a smart contract account for an NFT. As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the VechainThor blockchain mainnet and testnet networks.
 
 <table><thead><tr><th width="303">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>0x3E9a72618b4D27c110793a76bdEE83173b9686fB</td></tr><tr><td>Testnet</td><td>0x6eBeed52e2BAf27B0d9763c874AbaA23cE1D134a</td></tr></tbody></table>
 

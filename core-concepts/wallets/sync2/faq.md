@@ -33,7 +33,7 @@ Before the user confirms the transaction/certificate details, Sync2 will automat
 ### INS\_NOT\_SUPPORTED (0x6d00) <a href="#ins-not-supported-0x6d00" id="ins-not-supported-0x6d00"></a>
 
 * Ensuring your device runs the latest firmware version.
-* Reinstalling the apps on your device, so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
+* Reinstalling the apps on your device so you run the latest versions. Uninstalling apps does not affect your crypto assets, that are secured on the blockchain.
 
 ### INCORRECT\_DATA (0x6a80) <a href="#incorrect-data-0x6a80" id="incorrect-data-0x6a80"></a>
 
@@ -44,8 +44,8 @@ Before the user confirms the transaction/certificate details, Sync2 will automat
 
 ### Unable to connect your device <a href="#unable-to-connect-your-device" id="unable-to-connect-your-device"></a>
 
-* Close other applications (Ledger apps, crypto wallets, Geth, Parity, Mist, Bitcoin Core, etc.).
-* Turn OFF VPN and antivirus temporarily. If that works, make sure to whitelist Sync.
+* Close other applications (Ledger apps, crypto wallets, Geth, Parity, Mist, Bitcoin Core, etc).
+* Turn OFF VPN and anti-virus temporarily. If that works, make sure to whitelist Sync.
 * Change the USB cable if possible. Try removing any dongles or docks you're using.
 * Try different USB ports.
 * Restart your computer.
@@ -53,7 +53,7 @@ Before the user confirms the transaction/certificate details, Sync2 will automat
 
 ### Check status failed <a href="#check-status-failed" id="check-status-failed"></a>
 
-The error "**checking status failed**" shown during the Ledger connection, it means that the device you are trying to connect **IS NOT** the device that belongs to the wallet you imported. In other words, it's a brand-new ledger device you never imported. Please check that your Ledger device is the proper device that belongs to the selected account(imported wallet). The easiest way to identify the issue is [import your ledger device](user-guide/wallet.md#link-ledger-device) again and compare the wallet address.
+The error "**checking status failed**" shown during the Ledger connection, it means that the device you are trying to connect **IS NOT** the device that belongs to the wallet you imported. In other words, it's a brand new ledger device you never imported. Please check that your Ledger device is the proper device that belongs to the selected account(imported wallet). The easiest way to identify the issue is [import your ledger device](user-guide/wallet.md#link-ledger-device) again and compare the wallet address.
 
 Reset your Ledger device:
 

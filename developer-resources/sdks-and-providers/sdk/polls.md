@@ -1,19 +1,22 @@
-# Polling Mechanisms
+# Polls
 
 ## Synchronous Polling
 
 Synchronous polling mechanisms are implemented to await the fulfillment of specific conditions. Upon the satisfaction of these conditions, the polling process yields the result of the given condition.
 
 ### Monitoring for a New Block Production
+
 This section illustrates the methodology for monitoring the production of a new block. Utilizing synchronous polling, the waitUntil function is employed to efficiently wait for the production of a new block.
 
-```typescript { name=sync-poll-wait-new-block, category=example }
-import { Poll, TESTNET_URL, ThorClient } from '@vechain/sdk-network';
+```typescript
+import { HttpClient, Poll, ThorClient } from '@vechain/vechain-sdk-network';
 import { expect } from 'expect';
 
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.at(TESTNET_URL);
+const _testnetUrl = 'https://testnet.vechain.org';
+const testNetwork = new HttpClient(_testnetUrl);
+const thorClient = new ThorClient(testNetwork);
 
 // 2 - Get current block
 
@@ -42,16 +45,19 @@ console.log('New block:', newBlock);
 ```
 
 ### Observing Balance Changes Post-Transfer
+
 Here, we explore the approach to monitor balance changes after a transfer. Synchronous polling leverages the waitUntil function to detect balance changes following a transfer.
 
-```typescript { name=sync-poll-wait-balance-update, category=example }
-import { Poll, THOR_SOLO_URL, ThorClient } from '@vechain/sdk-network';
-import { Address, HexUInt, Transaction } from '@vechain/sdk-core';
+```typescript
+import { HttpClient, Poll, ThorClient } from '@vechain/vechain-sdk-network';
+import { dataUtils, TransactionHandler } from '@vechain/vechain-sdk-core';
 import { expect } from 'expect';
 
 // 1 - Create thor client for solo network
 
-const thorSoloClient = ThorClient.at(THOR_SOLO_URL);
+const _soloUrl = 'http://localhost:8669';
+const soloNetwork = new HttpClient(_soloUrl);
+const thorSoloClient = new ThorClient(soloNetwork);
 
 // 2- Init transaction
 
@@ -61,16 +67,18 @@ const latestBlock = await thorSoloClient.blocks.getBestBlockCompressed();
 // 2.2 - Transaction sender and receiver
 const sender = {
     address: '0x2669514f9fe96bc7301177ba774d3da8a06cace4',
-    privateKey: HexUInt.of(
-        'ea5383ac1f9e625220039a4afac6a7f868bf1ad4f48ce3a1dd78bd214ee4ace5'
-    ).bytes
+    privateKey: Buffer.from(
+        'ea5383ac1f9e625220039a4afac6a7f868bf1ad4f48ce3a1dd78bd214ee4ace5',
+        'hex'
+    )
 };
 
 const receiver = {
     address: '0x9e7911de289c3c856ce7f421034f66b6cde49c39',
-    privateKey: HexUInt.of(
-        '1758771c54938e977518e4ff1c297aca882f6598891df503030734532efa790e'
-    ).bytes
+    privateKey: Buffer.from(
+        '1758771c54938e977518e4ff1c297aca882f6598891df503030734532efa790e',
+        'hex'
+    )
 };
 
 // 2.2 - Create transaction clauses
@@ -100,17 +108,20 @@ const transactionBody = {
 };
 
 // 2.5 - Sign and get raw transaction
-const encoded = Transaction.of(transactionBody).sign(sender.privateKey).encoded;
-const raw = HexUInt.of(encoded).toString();
+const encoded = TransactionHandler.sign(
+    transactionBody,
+    sender.privateKey
+).encoded;
+const raw = `0x${encoded.toString('hex')}`;
 
 // 3 - Get the sender and receiver balance before the transaction
 
 const senderBalanceBefore = (
-    await thorSoloClient.accounts.getAccount(Address.of(sender.address))
+    await thorSoloClient.accounts.getAccount(sender.address)
 ).balance;
 
 const receiverBalanceBefore = (
-    await thorSoloClient.accounts.getAccount(Address.of(receiver.address))
+    await thorSoloClient.accounts.getAccount(receiver.address)
 ).balance;
 
 console.log('Sender balance before:', senderBalanceBefore);
@@ -124,15 +135,14 @@ const sentTransaction =
 // 4.1 - Check if the transaction is sent successfully (check if the transaction id is a valid hex string)
 expect(sentTransaction).toBeDefined();
 expect(sentTransaction).toHaveProperty('id');
-expect(HexUInt.isValid0x(sentTransaction.id)).toBe(true);
+expect(dataUtils.isHexString(sentTransaction.id)).toBe(true);
 
 // 4 -Wait until balance is updated
 
 // New balance of sender (wait until the balance is updated)
 const newBalanceSender = await Poll.SyncPoll(
     async () =>
-        (await thorSoloClient.accounts.getAccount(Address.of(sender.address)))
-            .balance
+        (await thorSoloClient.accounts.getAccount(sender.address)).balance
 ).waitUntil((newBalance) => {
     return newBalance !== senderBalanceBefore;
 });
@@ -140,8 +150,7 @@ const newBalanceSender = await Poll.SyncPoll(
 // New balance of receiver (wait until the balance is updated)
 const newBalanceReceiver = await Poll.SyncPoll(
     async () =>
-        (await thorSoloClient.accounts.getAccount(Address.of(receiver.address)))
-            .balance
+        (await thorSoloClient.accounts.getAccount(receiver.address)).balance
 ).waitUntil((newBalance) => {
     return newBalance !== receiverBalanceBefore;
 });
@@ -162,16 +171,18 @@ console.log('New balance of receiver:', newBalanceReceiver);
 Asynchronous polling is utilized for waiting in a non-blocking manner until a specific condition is met or to capture certain events. This type of polling makes use of the Event Emitter pattern, providing notifications when the specified condition or event has been met or emitted.
 
 ### Implementing a Simple Async Poll in a DAPP
+
 This example demonstrates the application of an asynchronous poll for tracking transaction events, allowing for the execution of additional operations concurrently.
 
-```typescript { name=event-poll-dapp, category=example }
-import { Poll, TESTNET_URL, ThorClient } from '@vechain/sdk-network';
+```typescript
+import { HttpClient, Poll, ThorClient } from '@vechain/vechain-sdk-network';
 import { expect } from 'expect';
-import { Address } from '@vechain/sdk-core';
 
 // 1 - Create thor client for testnet
 
-const thorClient = ThorClient.at(TESTNET_URL);
+const _testnetUrl = 'https://testnet.vechain.org';
+const testNetwork = new HttpClient(_testnetUrl);
+const thorClient = new ThorClient(testNetwork);
 
 // 2 - Init accounts
 
@@ -184,7 +195,7 @@ const accounts = [
 
 for (const account of accounts) {
     const monitoringPoll = Poll.createEventPoll(
-        async () => await thorClient.accounts.getAccount(Address.of(account)),
+        async () => await thorClient.accounts.getAccount(account),
         1000
     )
         // Add listeners for start event
@@ -217,7 +228,3 @@ for (const account of accounts) {
 }
 
 ```
-
-
-
-

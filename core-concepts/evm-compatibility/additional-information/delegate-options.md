@@ -1,6 +1,6 @@
 # Delegate Options
 
-VeChain supports delegating transaction fees to a different address in order for users to be able to easily use services without the friction of high transaction fees. We have added an option in our `hardhat-toolbox` plugin in order for a user to be able to use delegate options when using our plugin. The following is part of a sample `hardhat.config.js` file with empty delegate options.
+Vechain supports delegating transaction fees to a different address in order for users to be able to easily use services without the friction of high transaction fees. We have added an option in our `hardhat-toolbox` plugin in order for a user to be able to use delegate options when using our plugin. The following is part of a sample `hardhat.config.js` file with empty delegate options.
 
 ```javascript
 vechain: {

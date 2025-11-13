@@ -1,12 +1,18 @@
+---
+description: >-
+  How to install @vechain/dapp-kit-react in order to use it with TypeScript or
+  Javascript.
+---
+
 # Installation
 
-check the [example app](https://github.com/vechain/vechain-dapp-kit/tree/main/examples/sample-react-app) for a quick start
+If using TypeScript follow the NPM installation steps, for JavaScript follow the CommonJS (CJS) installation steps.
 
-## Installation
-
-{% hint style="warning" %}
-dApp-kit has been built on top of Connex, which will require crypto, buffer, http, https and some other node polyfills, check [example app](https://github.com/vechain/vechain-dapp-kit/tree/main/examples) configuration files if you are stuck. Check also [Node Polyfills page](https://app.gitbook.com/s/HKk8xWsgscVhGUM2fb7S/developer-resources/sdks-and-providers/dapp-kit/dapp-kit-1/node-polyfills).
+{% hint style="info" %}
+Should you wish to implement this in a pure JavaScript project, it is recommended to use CommonJS (CJS) imports. Potential complications might arise with ES Module (ESM) imports.
 {% endhint %}
+
+## NPM
 
 ```bash
 npm i @vechain/dapp-kit-react

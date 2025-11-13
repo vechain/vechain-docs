@@ -8,34 +8,36 @@ description: >-
 
 ## Overview
 
-The EntryPoint contract is a core component of account abstraction, serving as a "global trusted singleton" that processes UserOperations. Bundlers submit these UserOperations to the `handleOps` method of the EntryPoint contract, which verifies their validity and executes them on-chain through the respective Account contracts. This ensures a secure and seamless flow of transactions while supporting advanced features like social recovery and multi-signature wallets.
+The EntryPoint contract is a singleton contract that acts as a "guard" or "entry point" to account abstraction. Bundlers that receive signed UserOperations pass them to the EntryPoint contract in the `handleOps` public method. The EntryPoint contract then uses the Account contract to verify the `signature` of the UserOperation, which could include any additional arbitrary logic, and if valid proceeds to execute it on chain. A more detailed step-by-step process of the EntryPoint role can be found below.
 
 ## Role
 
-The EntryPoint contract plays a pivotal role in the verification and execution of transactions. Below is a step-by-step outline of its operation:
+The role of the EntryPoint contract is to handle the verification and execution logic of transactions.
 
-1. **Verification Simulation:** The Bundler listens for UserOperations and calls the `EntryPoint.simulateVerification()` function for the UserOperation.  If successful, the process proceeds.
-2. **Handling Operations:** The Bundler calls `EntryPoint.handleOps()`, initiating a verification and execution loop.
-3. **Account Deployment:** If this is the first time the account has made a transaction, the EntryPoint contract will use the `userOperation.initCode` field to deploy the Account contract via the Account Factory contract.
-4. **UserOperation Validation:** Now that the Account contract is deployed the EntryPoint contract will call `Account.validateUserOp()` passing in the UserOperation as a parameter. The account is responsible for verifying the `signature` which could potentially have arbitrary verification logic such as social recovery, muti-signature, etc.
-5. **Fee Payment:** The EntryPoint contract passes the fee in the `Account.validateUserOp()` and if it is a valid UserOperation the Account contract pays the fee back to the EntryPoint contract. If there is a Paymaster involved then the Paymaster will be asked to pay the fee by the EntryPoint contract by running `Paymaster.validatePaymasterUserOp()` to verify that the Paymaster is willing to pay the fee.
-6. **Execution:** If that verification step passes, finally, the EntryPoint contract calls the account contract with `UserOperation.callData`. Which executes the user’s intent as a transaction.
+Below is an example flow of a transaction focusing on the EntryPoint contract.
+
+1. The Bundler listens for UserOperations and calls the `EntryPoint.simulateVerification()` function for the UserOperation. If the verification simulation is successful the process continues to the next step.
+2. The Bundler calls the `EntryPoint.handleOps()` function which triggers the verification and execution loop performed by the EntryPoint contract.
+3. If this is the first time the account has made a transaction, the EntryPoint contract will use the `userOperation.initCode` field to deploy the Account contract via the Account Factory contract.
+4. Now that the Account contract is deployed the EntryPoint contract will call `Account.validateUserOp()` passing in the UserOperation as a parameter. The account is responsible for verifying the `signature` which could potentially have arbitrary verification logic such as social recovery, muti-signature, etc.
+5. The EntryPoint contract passes the fee in the `Account.validateUserOp()` and if it is a valid UserOperation the Account contract pays the fee back to the EntryPoint contract. If there is a Paymaster involved then the Paymaster will be asked to pay the fee by the EntryPoint contract by running `Paymaster.validatePaymasterUserOp()` to verify that the Paymaster is willing to pay the fee.
+6. If that verification step passes, finally, the EntryPoint contract calls the account contract with `UserOperation.callData`. Which executes the user’s intent as a transaction.
 
 ## Implementation
 
-As a singleton, the EntryPoint contract has a single deployment on both VeChainThor’s mainnet and testnet:
+As the EntryPoint contract is a singleton contract there only exists a single implementation and deployment of the contract on the VechainThor blockchain mainnet and testnet.
 
 <table><thead><tr><th width="132">Network</th><th>Address</th></tr></thead><tbody><tr><td>Mainnet</td><td>0xeE8A9E01A08bbdf3586dFa97d15aCA174DFc4d29</td></tr><tr><td>Testnet</td><td>0xf9188E94783Ca505886488F04249DD7f6a36770B</td></tr></tbody></table>
 
-### VeChain-Specific Modifications
+### Vechain EntryPoint Contract Modifications
 
-The EntryPoint contract was developed for the Ethereum blockchain. Given VeChain has some modifications that are not present in Ethereum it is expected that the EntryPoint contract requires some modifications to be interoperable with VeChain.
+The EntryPoint contract was developed for the Ethereum blockchain. Given vechain has some modifications that are not present in Ethereum it is expected that the EntryPoint contract requires some modifications to be interoperable with vechain.
 
-The most significant modification to implementing account abstraction on VeChain is to adjust the smart contracts to accommodate for the VeChain [two-token design](../../introduction-to-vechain/dual-token-economic-model/) which is in contrast to the single asset ETH on Ethereum. On Ethereum, all account abstraction participants spend and are compensated in ETH, the native token of Ethereum. Whereas, on VeChain the account abstraction participants are modified to accept VTHO, the VeChain gas token, instead of VET, the VeChain utility token, by adding additional VTHO-equivalent methods.
+The most significant modification to implementing account abstraction on vechain is to adjust the smart contracts to accommodate for the vechain [two-token design](https://github.com/vechain/vechain-docs/blob/add-sdk-docs/core-concepts/account-abstraction/broken-reference/README.md) which is in contrast to the single asset ETH on Ethereum. On Ethereum, all account abstraction participants spend and are compensated in ETH, the native token of Ethereum. Whereas, on vechain the account abstraction participants are modified to accept VTHO, the vechain gas token, instead of VET, the vechain utility token, by adding additional VTHO-equivalent methods.
 
 The EntryPoint contract was modified to accept VTHO instead of VET by adding additional VTHO-equivalent methods to its public interface and subsequently the BaseAccount and Paymaster were modified to reimburse VTHO instead of VET back to the EntryPoint contract using these new methods.
 
-### StakeManager Adjustments
+### StakeManager Modifications
 
 Modifications were made to the StakeManager contract which the EntryPoint contract inherits from. The purpose of the modifications to the StakeManager contract was to use the VTHO asset instead of the VET asset. Modifications were made to all methods that were payable to not payable since we do not require the Account contract or the Paymaster contract to deposit VET. We also added `depositAmount()` and `addStakeAmount()` alongside `deposit()` and `addStake()` such that the Account contract or Paymaster contract can deposit a specific amount and not all of their VTHO allowance.
 

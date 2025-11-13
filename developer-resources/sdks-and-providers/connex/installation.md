@@ -12,7 +12,7 @@ Connex is available to developers in several ways. The installation approach doe
 2. **Framework:** This technique empowers the instantiation of a Connex instance from the ground up. It is commonly employed for NodeJS projects and command line interface (CLI) applications.
 
 {% hint style="info" %}
-The below snippets contain links to veblocks nodes feel free to connect to any of the public nodes [https://github.com/vechain/vechain-docs/blob/main/developer-resources/nodes.md](https://github.com/vechain/vechain-docs/blob/main/developer-resources/nodes.md "mention")
+The below snippets contain links to veblocks nodes feel free to connect to any of the public nodes [nodes.md](../../nodes.md "mention")
 {% endhint %}
 
 ## Connex Browser implementation

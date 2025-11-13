@@ -1,5 +1,5 @@
 ---
-description: Enforce a transaction order on the VeChainThor blockchain.
+description: Enforce a transaction order on the VechainThor blockchain.
 ---
 
 # Transaction Dependency
@@ -35,5 +35,5 @@ if dep := tx.DependsOn(); dep != nil {
 Now let us have a close look at the code. According to its definition, `DependsOn` is a pointer pointing to the ID of the transaction it depends on. The first thing the code does is to get the value of the current transaction's `DependsOn` value via `dep := tx.DependsOn()`. If the field is set, it goes to check the status of the referred transaction using its $$TxID$$ through `found, reverted, err := findTx(*dep)`. The rest of the code checks whether the transaction exists and then whether it's been reverted. It rejects the current transaction if either check fails.
 
 {% hint style="info" %}
-This [article](https://peter-zhou.medium.com/what-you-might-not-know-about-vechainthor-yet-part-ii-forcible-transaction-dependency-ac3e98c4c955) provides additional information and a demonstration of `DependsOn` on the VeChainThor blockchain.
+This [article](https://peter-zhou.medium.com/what-you-might-not-know-about-vechainthor-yet-part-ii-forcible-transaction-dependency-ac3e98c4c955) provides additional information and a demonstration of `DependsOn` on the VechainThor blockchain.
 {% endhint %}
