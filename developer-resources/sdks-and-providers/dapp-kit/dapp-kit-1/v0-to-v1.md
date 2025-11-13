@@ -22,7 +22,7 @@ we changed the component name
 
 we changed the component name
 
-`vwk-vechain-dapp-connect-kit` -> `vwk-button`
+`vwk-vechain-dapp-connect-kit` -> `vdk-button`
 
 ### Configuration
 

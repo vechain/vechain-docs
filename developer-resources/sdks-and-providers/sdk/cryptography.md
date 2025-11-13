@@ -8,24 +8,18 @@ description: Main cryptography related functions.
 
 Hash functions are algorithms that take input data of differing size as an input, and it produces a fixed-size output. The output of a hash function is typically represented as a sequence of numbers and letters. Hash functions are commonly used in computer science for various purposes, such as ensuring data integrity, securing storing passwords, and creating unique identifiers for data.
 
-vechain sdk supports blake2b256 and keccak256 hash functions.
+vechain sdk supports \_blake2b256 and \_keccak256 hash functions.
 
 ### Blake2b256
 
-Blake2b256 is a specific type of hash function known for its speed and security. It takes any input data and generates a 256-bit (32-byte) hash value. The blake2b256 part refers to the specific design of the algorithm, and the 256 indicates the length of the resulting hash code. Blake2b256 is widely used in cryptographic applications, blockchain technologies, and secure data storage.
+Blake2b256 is a specific type of hash function known for its speed and security. It takes any input data and generates a 256-bit (32-byte) hash value. The \_blake2b256 part refers to the specific design of the algorithm, and the 256 indicates the length of the resulting hash code. Blake2b256 is widely used in cryptographic applications, blockchain technologies, and secure data storage.
 
 ```typescript
-import { blake2b256, type HashInput } from '@vechain/vechain-sdk-core';
-import { expect } from 'expect';
+// Input of hash function must be an expression representable as an array of bytes.
+// The class Txt assures a consistent byte encoding for textual strings.
+const toHash = Txt.of('hello world');
 
-// Input of hash function (it can be a string or a Buffer)
-const toHash: HashInput = 'hello world';
-
-const hash = blake2b256(toHash);
-expect(hash.toString('hex')).toBe(
-    '256c83b297114d201b30179f3f0ef0cace9783622da5974326b436178aeef610'
-);
-
+const hash = Blake2b256.of(toHash.bytes);
 ```
 
 ### Keccak256
@@ -33,17 +27,12 @@ expect(hash.toString('hex')).toBe(
 Keccak256 is another type of hash function, and it's particularly well-known for its use in the blockchain world, specifically in cryptocurrencies like Ethereum. Similar to Blake2b256, Keccak256 also takes input data and generates a 256-bit (32-byte) hash value. The Keccak part refers to the family of algorithms, and again, 256 denotes the length of the output hash code.
 
 ```typescript
-import { keccak256, type HashInput } from '@vechain/vechain-sdk-core';
-import { expect } from 'expect';
+// Input of hash function must be an expression representable as an array of bytes.
+// The class Txt assures a consistent byte encoding for textual strings.
+const toHash = Txt.of('hello world');
 
-// Input of hash function (it can be a string or a Buffer)
-const toHash: HashInput = 'hello world';
-
-const hash = keccak256(toHash);
-expect(hash.toString('hex')).toBe(
-    '47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad'
-);
-
+//
+const hash = Keccak256.of(toHash.bytes);
 ```
 
 ## Public key cryptography
@@ -59,41 +48,27 @@ Secp256k1 is mainly used for generating public and private key pairs in cryptogr
 * **Security Considerations**: The security of Secp256k1 relies on the difficulty of the elliptic curve discrete logarithm problem. Breaking this problem requires an impractical amount of computational power, making Secp256k1 a secure choice for cryptographic applications, including blockchain networks.
 
 ```typescript
-import {
-    keccak256,
-    secp256k1,
-    addressUtils,
-    type HashInput
-} from '@vechain/vechain-sdk-core';
-import { expect } from 'expect';
+// 1 - Generate a private key.
 
-// 1 - Generate a private key
-
-const privateKey = secp256k1.generatePrivateKey();
-console.log('Private key:', privateKey.toString('hex'));
+const privateKey = await Secp256k1.generatePrivateKey();
+console.log('Private key:', Hex.of(privateKey).toString());
 // Private key: ...SOME_PRIVATE_KEY...
 
-// 2 - Derive public key and address from private key
+// 2 - Derive the public key and address from private key.
+//     By default, the key is returned in compressed form.
 
-const publicKey = secp256k1.derivePublicKey(privateKey);
-const userAddress = addressUtils.fromPublicKey(publicKey);
+const publicKey = Secp256k1.derivePublicKey(privateKey);
+const userAddress = Address.ofPublicKey(publicKey).toString();
 console.log('User address:', userAddress);
 // User address: 0x...SOME_ADDRESS...
 
 // 3 - Sign message
 
-const messageToSign: HashInput = 'hello world';
-const hash = keccak256(messageToSign);
+const messageToSign = Txt.of('hello world');
+const hash = Keccak256.of(messageToSign.bytes);
 console.log(`Hash: ${hash.toString()}`);
 
-const signature = secp256k1.sign(hash, privateKey);
-console.log('Signature:', signature.toString('hex'));
+const signature = Secp256k1.sign(hash.bytes, privateKey);
+console.log('Signature:', Hex.of(signature).toString());
 // Signature: ...SOME_SIGNATURE...
-
-// 4 - Test recovery of public key
-
-const recoveredPublicKey = secp256k1.recover(hash, signature);
-expect(publicKey.equals(recoveredPublicKey)).toBeTruthy();
-// Recovered public key is correct: true
-
 ```

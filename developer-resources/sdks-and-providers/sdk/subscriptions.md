@@ -6,18 +6,15 @@ description: Subscriptions URLs
 
 ## Getting Started with Subscriptions
 
-The subscriptions module of the vechain sdk provides various endpoints for subscribing to different types of blockchain data, including blocks, events, and transfers. These subscriptions are useful for real-time monitoring of blockchain activities. To use the subscription endpoints, import the \`subscriptions\`\` object from the vechain sdk. You can then call various methods on this object to create WebSocket URLs for different types of subscriptions.
+The subscriptions module of the VeChain sdk provides various endpoints for subscribing to different types of blockchain data, including blocks, events, and transfers. These subscriptions are useful for real-time monitoring of blockchain activities. To use the subscription endpoints, import the \`subscriptions\`\` object from the VeChain sdk. You can then call various methods on this object to create WebSocket URLs for different types of subscriptions.
 
 ### Smart contract event subscription
 
 Subscribe to specific contract events through the `subscriptions.getEventSubscriptionUrl`. You can filter events based on contract address and topics.
 
 ```typescript
-import { subscriptions } from '@vechain/vechain-sdk-network';
-import WebSocket from 'ws';
-
-// The URL of the node to request the subscription from.
-const testnetUrl = 'https://testnet.vechain.org';
+import { subscriptions, TESTNET_URL } from '@vechain/sdk-network';
+import WebSocket from 'isomorphic-ws';
 
 /**
  * The event to subscribe to.
@@ -35,7 +32,7 @@ const senderSampleAddress = '0x9e7911de289c3c856ce7f421034f66b6cde49c39';
 const toSampleAddress = '0xfe7911df289c3c856ce7f421034f66b6cd249c39';
 
 const wsURL = subscriptions.getEventSubscriptionUrl(
-    testnetUrl,
+    TESTNET_URL,
     swapEvent,
     /**
      * The values of the indexed parameters to construct the topic filters.
@@ -79,21 +76,18 @@ ws.close();
 
 This example demonstrates how to create a WebSocket URL for subscribing to swap events of a specific contract.
 
-The vechain sdk also provides other subscription endpoints for subscribing to different types of blockchain data. These include:
+The VeChain sdk also provides other subscription endpoints for subscribing to different types of blockchain data. These include:
 
 ### Block subscription
 
 Subscribe to new blocks as they are added to the blockchain through the `subscriptions.getBlockSubscriptionUrl` method.
 
 ```typescript
-import { subscriptions } from '@vechain/vechain-sdk-network';
-import WebSocket from 'ws';
-
-// The URL of the node to request the subscription from.
-const testnetUrl = 'https://testnet.vechain.org';
+import { subscriptions, TESTNET_URL } from '@vechain/sdk-network';
+import WebSocket from 'isomorphic-ws';
 
 // The URL for subscribing to the block
-const wsURL = subscriptions.getBlockSubscriptionUrl(testnetUrl);
+const wsURL = subscriptions.getBlockSubscriptionUrl(TESTNET_URL);
 
 // Any websocket library can be used to connect to the websocket
 const ws = new WebSocket(wsURL);
@@ -125,7 +119,7 @@ ws.close();
 
 ### Other subscriptions
 
-The vechain sdk also provides other subscription endpoints for subscribing to different types of blockchain data. These include:
+The VeChain sdk also provides other subscription endpoints for subscribing to different types of blockchain data. These include:
 
 * `subscriptions.getVETtransfersSubscriptionUrl` for subscribing to VET transfers
 * `subscriptions.getNewTransactionsSubscriptionUrl` for subscribing to new transactions

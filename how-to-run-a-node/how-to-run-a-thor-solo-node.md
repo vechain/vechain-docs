@@ -1,6 +1,8 @@
 ---
 description: >-
-    A thor solo node is a VeChainThor blockchain node running in a sandbox, particularly useful for developers who might need to wait for a specific condition to be met, that in a living environment would for example take too much time, or be too expensive, even in a testnet environment since the tokens are scarse and not easy to get in large amounts. Solo comes with some pre-funded accounts and can start without the need to download any older block.
+  A thor solo node is a VeChainThor blockchain node running in a sandbox,
+  particularly useful for developers who might need to wait for a specific
+  condition to be met, that in a living environment would
 ---
 
 # How to run a Thor Solo Node

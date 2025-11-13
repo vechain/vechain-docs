@@ -2,10 +2,10 @@
 
 **Q: Does VeChain have RPC URLs?**
 
-VeChain has a list of public nodes that can found [here](https://docs.vechain.org/how-to-run-a-node/nodes#mainnet-nodes), but they all expose RESTful API endpoints instead of RPC. This interface should be preferred. &#x20;
+VeChain has a list of public nodes that can found [here](https://docs.vechain.org/how-to-run-a-node/nodes#mainnet-nodes), but they all expose RESTful API endpoints instead of RPC. This interface should be preferred.
 
 For faster integration and migration from Ethereum, you can run a [docker](https://hub.docker.com/r/vechain/sdk-rpc-proxy) or the command\
-&#x20;_`npx @vechain/sdk-rpc-proxy`_
+&#xNAN;_`npx @vechain/sdk-rpc-proxy`_
 
 A local [JSON-RPC proxy](https://www.npmjs.com/package/@vechain/sdk-rpc-proxy?activeTab=readme) of a Testnet node will be available at `http://127.0.0.1:8545`.
 
@@ -56,4 +56,4 @@ Note that VeChainThor considers the id of the _genesis block_ (block number 0) a
 
 **Q: If I import my Ethereum mnemonic into VeWorld, will I get the same address?**
 
-* Yes, but you have to select the Ethereum derivation path.&#x20;
+* Yes, but you have to select the Ethereum derivation path.

@@ -1,6 +1,6 @@
 # Interact with dApps
 
-When you are going to interact with a dApp, Once the dApp sends the signing request to sync, it will automatically pop-up a signing window and request you to sign the transaction/content. when the signing details are popped-up, it will show clauses/contents which you need to sign.
+When you are going to interact with a dApp, Once the dApp sends the signing request to sync, it will automatically pop up a signing window and request you to sign the transaction/content. when the signing details are popped-up, it will show clauses/contents which you need to sign.
 
 Note
 
@@ -35,7 +35,7 @@ The certificate is a message signing based mechanism which can easily provide yo
 
 #### Local Wallets <a href="#local-wallets-2" id="local-wallets-2"></a>
 
-1. Check the type of certificate ( <img src="../../../../.gitbook/assets/download (8) (1).png" alt="" data-size="line"> / <img src="../../../../.gitbook/assets/download (9) (1).png" alt="" data-size="line"> )
+1. Check the type of certificate ( <img src="../../../../.gitbook/assets/download (8) (1).png" alt="" data-size="line"> / <img src="../../../../.gitbook/assets/download (9).png" alt="" data-size="line"> )
 2. Review the content
 3. Choose the Wallet type `Local`
 4. Choose a wallet to sign the certificate
@@ -44,7 +44,7 @@ The certificate is a message signing based mechanism which can easily provide yo
 
 #### Ledger <a href="#ledger-2" id="ledger-2"></a>
 
-1. Check the type of certificate( <img src="../../../../.gitbook/assets/download (8) (1).png" alt="" data-size="line"> / <img src="../../../../.gitbook/assets/download (9) (1).png" alt="" data-size="line"> )
+1. Check the type of certificate( <img src="../../../../.gitbook/assets/download (8) (1).png" alt="" data-size="line"> / <img src="../../../../.gitbook/assets/download (9).png" alt="" data-size="line"> )
 2. Review the content
 3. Choose the Wallet type `LedgerName`
 4. Choose a wallet to sign the certificate

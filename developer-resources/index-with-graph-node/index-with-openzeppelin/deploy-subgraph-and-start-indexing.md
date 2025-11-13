@@ -15,7 +15,7 @@ Deploying the subgraph is a multi-step process:
 3. `graph create` generates the namespace on the node where all the subgraph data will be stored. It must only be run once.
 4. `graph deploy` uploads the subgraph package to IPFS and instructs the graph node to use it.
 
-## _**`codegen`****\*\*\*\* \*\*\*\*with example output**_
+## _**`codegen`****\*\*\*\*\*\*\*\* \*\*\*\*with example output**_
 
 ```shell
 npx graph codegen vebetterdao/tokens.subgraph.yaml

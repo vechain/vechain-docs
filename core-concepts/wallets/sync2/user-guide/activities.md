@@ -1,6 +1,6 @@
 # Activities
 
-<figure><img src="../../../../.gitbook/assets/activities.36116c16 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/activities.36116c16.png" alt=""><figcaption></figcaption></figure>
 
 ## Activities status <a href="#activities-status" id="activities-status"></a>
 
@@ -10,8 +10,8 @@
 * **Confirming** : Transaction is packed into a block and can be "View" on the blockchain but required 12 blocks to confirm.
 
 {% hint style="info" %}
-* Unstable connection to the transaction pool may cause the transactions to fail. Sync2 will automatically retry the transaction request until it expires. Once expired, Sync2 will update the status to "expired".
-* Transaction required 12 blocks to be confirmed.
+- Unstable connection to the transaction pool may cause the transactions to fail. Sync2 will automatically retry the transaction request until it expires. Once expired, Sync2 will update the status to "expired".
+- Transaction required 12 blocks to be confirmed.
 {% endhint %}
 
 ### Completed <a href="#completed" id="completed"></a>
@@ -21,8 +21,8 @@
 * **Reverted**: Several reasons may cause the transaction to revert.
 
 {% hint style="info" %}
-* Reverted transaction will deduct the VTHO due to vm(virtual machine) computed
-* All the signed transactions/certificates are **stored in local**, therefore, it only shows the transaction/content which you signed on the device.
+- Reverted transaction will deduct the VTHO due to vm(virtual machine) computed
+- All the signed transactions/certificates are **stored in local**, therefore, it only shows the transaction/content which you signed on the device.
 {% endhint %}
 
 ## View On explorer (Transaction Only) <a href="#view-on-explorer" id="view-on-explorer"></a>

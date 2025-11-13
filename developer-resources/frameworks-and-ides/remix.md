@@ -34,44 +34,34 @@ With rpc-proxy, you can use the following CLI options. CLI options override the 
 
 #### Provide the configuration file
 
-- `-c, --configurationFile <config>`: The path to the configuration file.
-    - -e.g.- `npx rpc-proxy -c /path/of/custom-config.json` OR `rpc-proxy --configurationFile custom-config.json`
-
-- `-p, --port <port>`: The port on which the proxy server will run.
-    - -e.g.- `npx rpc-proxy -p 8545` OR `rpc-proxy --port 8545`
-
-- `-u, --url <url>`: The URL of the VeChain Thor node.
-    - -e.g.- `npx rpc-proxy -u http://testnet.vechain.org` OR `rpc-proxy --url http://testnet.vechain.org`
-
-- `-v, --verbose`: Whether to enable verbose logging.
-    - -e.g.- `npx rpc-proxy -v` OR `rpc-proxy --verbose`
+* `-c, --configurationFile <config>`: The path to the configuration file.
+  * -e.g.- `npx rpc-proxy -c /path/of/custom-config.json` OR `rpc-proxy --configurationFile custom-config.json`
+* `-p, --port <port>`: The port on which the proxy server will run.
+  * -e.g.- `npx rpc-proxy -p 8545` OR `rpc-proxy --port 8545`
+* `-u, --url <url>`: The URL of the VeChain Thor node.
+  * -e.g.- `npx rpc-proxy -u http://testnet.vechain.org` OR `rpc-proxy --url http://testnet.vechain.org`
+* `-v, --verbose`: Whether to enable verbose logging.
+  * -e.g.- `npx rpc-proxy -v` OR `rpc-proxy --verbose`
 
 #### Provide the accounts
 
-- `-a, --accounts <accounts>`: The accounts (private keys) that the proxy server will use to sign transactions. It is a
-  space-separated list of private keys.
-    - -e.g.- `npx rpc-proxy -a "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
-    OR `npx rpc-proxy --accounts "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
-
-- `-m, --mnemonic <mnemonic>`: The mnemonic that the proxy server will use to sign transactions.
-- `-mc, --mnemonicCount <mnemonicCount>`: The number of accounts to derive from the mnemonic.
-- `-mi, --mnemonicInitialIndex <mnemonicInitialIndex>`: The index from which to start deriving accounts from the
-  mnemonic.
-    - -e.g.- `npx rpc-proxy -m "denial kitchen pet squirrel other broom bar gas better priority spoil cross" -mc 10 -mi 1`
-      OR `npx rpc-proxy --mnemonic "denial kitchen pet squirrel other broom bar gas better priority spoil cross" --mnemonicCount 10 --mnemonicInitialIndex 1`
-    - **NOTE**: --mnemonic, --mnemonicCount, and --mnemonicInitialIndex MUST be used together.
+* `-a, --accounts <accounts>`: The accounts (private keys) that the proxy server will use to sign transactions. It is a space-separated list of private keys.
+  * -e.g.- `npx rpc-proxy -a "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"` OR `npx rpc-proxy --accounts "7f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158"`
+* `-m, --mnemonic <mnemonic>`: The mnemonic that the proxy server will use to sign transactions.
+* `-mc, --mnemonicCount <mnemonicCount>`: The number of accounts to derive from the mnemonic.
+* `-mi, --mnemonicInitialIndex <mnemonicInitialIndex>`: The index from which to start deriving accounts from the mnemonic.
+  * -e.g.- `npx rpc-proxy -m "denial kitchen pet squirrel other broom bar gas better priority spoil cross" -mc 10 -mi 1` OR `npx rpc-proxy --mnemonic "denial kitchen pet squirrel other broom bar gas better priority spoil cross" --mnemonicCount 10 --mnemonicInitialIndex 1`
+  * **NOTE**: --mnemonic, --mnemonicCount, and --mnemonicInitialIndex MUST be used together.
 
 #### Use delegation
 
-- `-e, --enableDelegation`: Whether to enable delegation.
-- `-dp, --gasPayerPrivateKey <gasPayerPrivateKey>`: The private key of the gasPayer.
-- `-du, --gasPayerUrl <gasPayerUrl>`: The URL of the gasPayer.
-    - -e.g.- `npx rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
-      OR `npx rpc-proxy --enableDelegation --gasPayerPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
-    - -e.g.- `npx rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...`
-      OR `npx rpc-proxy --enableDelegation --gasPayerUrl https://sponsor-testnet.vechain.energy/by/...`
-    - **NOTE**: --gasPayerPrivateKey and --gasPayerUrl are mutually exclusive.
-    - **NOTE**: if --enableDelegation is used, --gasPayerPrivateKey OR --gasPayerUrl MUST be used.
+* `-e, --enableDelegation`: Whether to enable delegation.
+* `-dp, --gasPayerPrivateKey <gasPayerPrivateKey>`: The private key of the gasPayer.
+* `-du, --gasPayerUrl <gasPayerUrl>`: The URL of the gasPayer.
+  * -e.g.- `npx rpc-proxy -e -dp 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158` OR `npx rpc-proxy --enableDelegation --gasPayerPrivateKey 8f9290cc44c5fd2b95fe21d6ad6fe5fa9c177e1cd6f3b4c96a97b13e09eaa158`
+  * -e.g.- `npx rpc-proxy -e -du https://sponsor-testnet.vechain.energy/by/...` OR `npx rpc-proxy --enableDelegation --gasPayerUrl https://sponsor-testnet.vechain.energy/by/...`
+  * **NOTE**: --gasPayerPrivateKey and --gasPayerUrl are mutually exclusive.
+  * **NOTE**: if --enableDelegation is used, --gasPayerPrivateKey OR --gasPayerUrl MUST be used.
 
 ## Configuration file
 
@@ -119,7 +109,7 @@ If you want to use VeChain `testnet` or `mainnet` use the following urls: `https
 
 #### 1. Go to `DEPLOY & RUN TRANSACTIONS` section
 
-<figure><img src="../../.gitbook/assets/deploy_run_trxs (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/deploy_run_trxs.png" alt=""><figcaption></figcaption></figure>
 
 #### 2. Choose Custom - External HTTP provider
 

@@ -80,9 +80,10 @@ The mnemonic words store all the information that is needed at any point in time
 Wallet name is the identifier to help you easily tell the wallet.
 
 1. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
-2. Click **Rename**
-3. Enter the name of your wallet
-4. Click **Confirm**
+2. Click upper right ![](../../../../.gitbook/assets/more_horiz.svg)
+3. Click **Rename**
+4. Enter the name of your wallet
+5. Click **Confirm**
 
 ## Delete wallet <a href="#delete-wallet" id="delete-wallet"></a>
 

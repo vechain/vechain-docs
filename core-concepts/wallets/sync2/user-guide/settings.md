@@ -1,6 +1,6 @@
 # Settings
 
-<figure><img src="../../../../.gitbook/assets/settings.d31d71f9 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/settings.d31d71f9.png" alt=""><figcaption></figcaption></figure>
 
 ## Switch Language <a href="#switch-language" id="switch-language"></a>
 
@@ -40,7 +40,7 @@ Nodes are the primary communication bridge of the blockchain. If the default nod
 ### Add node <a href="#add-node" id="add-node"></a>
 
 1. Click **Node**
-2. Click ![](../../../../.gitbook/assets/add\_circle\_outline.svg) at upper right
+2. Click ![](../../../../.gitbook/assets/add_circle_outline.svg) at upper right
 3. Enter the node's url with `http` or `https`
 4. Click **Add** to add node
 

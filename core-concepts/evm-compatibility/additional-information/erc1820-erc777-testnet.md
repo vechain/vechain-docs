@@ -2,7 +2,7 @@
 
 ## Description
 
-`ERC1820` is a contract that is considered a special case since it requires a few modifications in order to work on Vechain. It is used by `ERC777` so failure in `ERC1820` inevitably results in failure in `ERC777` also. The changes required for deploying `ERC1820/ERC777` on testnet were the following:
+`ERC1820` is a contract that is considered a special case since it requires a few modifications in order to work on VeChain. It is used by `ERC777` so failure in `ERC1820` inevitably results in failure in `ERC777` also. The changes required for deploying `ERC1820/ERC777` on testnet were the following:
 
 1. Chain Tag
 2. Contract Owner address
