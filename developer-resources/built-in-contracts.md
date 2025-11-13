@@ -4,7 +4,7 @@ Examples of how to use the built-in contracts can be found [here](https://github
 
 ### staker.sol <a href="#staker-sol" id="staker-sol"></a>
 
-[staker.sol](https://github.com/vechain/thor/blob/master/builtin/gen/staker.sol) is related to the delegated proof of stake (dPoS) consensus mechanism. The Staker contract manages a list of validators that are responsible for packing transactions into a block. This contract replaces [#authority-sol-1](built-in-contracts.md#authority-sol-1 "mention") after the hayabusa fork and transition period. The contract also allows adding delegations. For more information please refer to the [relevant VIP](https://github.com/vechain/VIPs/blob/master/vips/VIP-253.md)
+[staker.sol](https://github.com/vechain/thor/blob/master/builtin/gen/staker.sol) is related to the delegated proof of stake (dPoS) consensus mechanism. The Staker contract manages a list of validators that are responsible for packing transactions into a block. This contract replaces `authority.sol` after the hayabusa fork and transition period. The contract also allows adding delegations. For more information please refer to the [relevant VIP](https://github.com/vechain/VIPs/blob/master/vips/VIP-253.md)
 
 **Address** :0x00000000000000000000000000005374616b6572
 
