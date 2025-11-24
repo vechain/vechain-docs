@@ -1,75 +1,62 @@
 # How to Integrate VIP-191 (I)
 
-Hi guys, welcome to this section of the tutorials. I am very excited about the new features that VeChain has introduced recently, for example, the VIP-191 fee delegation. I will quickly walk you through what it is and how to use it in the following tutorials.
+This document provides an introduction to VIP-191 Fee Delegation on VeChain, explaining its purpose, significance, and potential applications. Subsequent sections will include practical examples of integrating VIP-191 into a dApp workflow.
 
 ### What is VIP-191? <a href="#what-is-vip-191" id="what-is-vip-191"></a>
 
-In short, VIP-191 is a fee delegation proposal that gets realized on VeChain that enables the end-user to use blockchain without paying native tokens/cryptocurrencies. The fee is paid by a sponsor. To make a metaphor in real life, it is like a father as a primary credit cardholder giving his kid a secondary credit card to go shopping. All the fees incurred are paid by the father in the end.
+VIP-191 is a fee delegation proposal introduced by VeChain. It enables users to interact with the blockchain without needing to pay transaction fees in native tokens. Instead, these fees are covered by a designated sponsor.
 
-<figure><img src="https://cdn-images-1.medium.com/max/2152/1*-vWHlvBFcxlm3D_XeF6AlA.png" alt=""><figcaption><p><em>Father pays for his son’s shopping cart.</em></p></figcaption></figure>
+To illustrate, consider a real-world analogy: a parent provides their child with a supplementary credit card. The child can make purchases, but the parent ultimately pays the bill.
+
+<figure><img src="https://cdn-images-1.medium.com/max/2152/1*-vWHlvBFcxlm3D_XeF6AlA.png" alt=""><figcaption><p><em>The sponsor pays for the user’s blockchain fees.</em></p></figcaption></figure>
 
 ### Why is VIP-191 Important? <a href="#why-is-vip-191-important" id="why-is-vip-191-important"></a>
 
-Just as Ethereum has introduced **CREATE2** opcode to solve (in a weird way) the “user-onboarding” issue described in [this article](https://medium.com/coinmonks/user-on-boarding-and-create2-a67a185fd149), VeChain also realized the friction (huge obstacle, to be honest) for new users to adopt the blockchain system. For example, wallet setup, private key safekeeping, buying cryptocurrencies on exchanges, calculating transaction fees and so on.
+Adopting blockchain technology can pose significant challenges for new users, such as:
 
-On the developer’s side, it’s difficult to attract new users _**outside**_ the crypto community to try out the app even if it is awesome.
+* Setting up and managing wallets.
+* Safeguarding private keys.
+* Purchasing cryptocurrency.
+* Understanding and paying transaction fees.
 
-On the users’ side, the high setup knowledge of crypto will render them helpless before they get a taste of the awesome new app.
+These complexities can hinder user adoption, particularly among individuals unfamiliar with blockchain concepts. For developers, this limits the potential user base, as onboarding non-technical users becomes increasingly difficult.
 
-If the above practice continues, any blockchain will soon find the user-base is not expanding but shrinking. Only “savvy” tech users are in this game but inexperienced users are excluded outside. It’s against the “stupid and simple” norm we’ve been used to today since the Web2.0 and mobile-dominant era where apps are easy to use day by day.
+The result is a lack of growth in user numbers, with blockchain ecosystems primarily catering to technically proficient individuals. This issue is contrary to the ease-of-use principles widely embraced in Web 2.0 and the mobile app era.
 
-This _death spiral_ needs to be stopped and replaced by an easy-to-go approach:
+VIP-191 addresses these challenges by enabling a frictionless user experience, where users can interact with dApps without requiring a detailed understanding of blockchain fees. This enhances accessibility and encourages broader adoption.
 
-> How about the users don’t worry about the fees/crypto and just go using the dApps directly?
+### Key Use Cases for VIP-191 <a href="#key-use-cases-for-vip-191" id="key-use-cases-for-vip-191"></a>
 
-Here comes the VIP-191 fee delegation protocol on VeChain. 😃
+The following are examples of scenarios where VIP-191 fee delegation can be effectively utilized:
 
-### Where does VIP-191 Come to Play? <a href="#where-does-vip-191-come-to-play" id="where-does-vip-191-come-to-play"></a>
+**1) Web Applications and Games**
 
-Quite a few scenarios as I have observed.
+A game that leverages VeChain as a database for tracking points or progress would typically require users to pay VTHO for transactions.
 
-I give three examples that can benefit from the fee delegation of VIP-191.
+With VIP-191, developers can sponsor the transaction fees for new users as part of a promotion (e.g., a 3-day trial period). This allows users to try the application without needing prior knowledge of blockchain systems, improving accessibility and potentially increasing user engagement. Developers can later monetize the service through subscription models or other mechanisms.
 
-**1) A Standalone Web App Game.**
+<figure><img src="https://cdn-images-1.medium.com/max/2832/1*0r9a_RmPNJqKYrWSiA6ZTA.png" alt=""><figcaption><p><em>Example: Web-based games using VIP-191 for user onboarding.</em></p></figcaption></figure>
 
-So suppose you have a web game that uses VeChain as a “points storing” database. Whenever the end-user calls your smart contract to upgrade their game hero, normally, they should pay for the transaction fee in VTHO (a gas token like ETH). However, now you have launched a “promotion” where newly registered users are allowed to try out your game 3 days free, all the transaction fees are covered by you — the developer’s big wallet.
+**2) Logistics and Supply Chain Management**
 
-<figure><img src="https://cdn-images-1.medium.com/max/2832/1*0r9a_RmPNJqKYrWSiA6ZTA.png" alt=""><figcaption><p><em>Games use VIP-191 for promotion</em></p></figcaption></figure>
+In industries such as shipping and logistics, blockchain is often used to track cargo movement. Employees at various checkpoints (e.g., customs clearance, shipping, and inspection) may need to interact with smart contracts, incurring transaction fees.
 
-This will improve your exposure to non-tech users without knowing VeChain at all. And once they get addicted to the game, you can charge them a subscription fee in fiat ($5/month?) and keep sponsoring the game operation by your wallet. Win-Win.
+With VIP-191, a centralized management team can sponsor these fees using a corporate wallet. This eliminates the need for employees to manage wallet balances or tokens, improving security and operational efficiency.
 
-**2) Shipping & Logistics company**
+<figure><img src="https://cdn-images-1.medium.com/max/3252/1*yMF-aQQtSHU1PfIlKOd2mA.png" alt=""><figcaption><p><em>Example: Logistics companies using VIP-191 for streamlined operations.</em></p></figcaption></figure>
 
-Suppose a shipping company is using the VeChain as its blockchain backbone for tracking cargos. Employees on the positions, eg. custom clearing, shipping, and inspecting need to write to the blockchain. All those operations need VTHO to fuel them. Sometimes each shipment involves up to 20–30 middlemen.
+### How VIP-191 Works <a href="#how-vip-191-works" id="how-vip-191-works"></a>
 
-Instead of charging each account the employee holds with the minimum tokens they need and keeping an eye on the balance of each account, the management team can “sponsor” their employees’ actions and all the fees are deducted directly from a big wallet — the company’s operation wallet.
+VIP-191 introduces a modified transaction signature mechanism. Normally, a valid transaction contains a signature from the sender. Under VIP-191, the transaction includes a composite signature, formed by combining the user’s signature and the sponsor’s signature.
 
-This improves security by eliminating the possible theft of wallets and ease the burden of balance tracking. The management team can also dynamically choose for whom and for what actions they would like to sponsor.
+The process is as follows:
 
-<figure><img src="https://cdn-images-1.medium.com/max/3252/1*yMF-aQQtSHU1PfIlKOd2mA.png" alt=""><figcaption><p><em>Shipping Company uses VIP-191</em></p></figcaption></figure>
+1. The user creates a transaction and signs it.
+2. The sponsor signs the transaction hash, including metadata specifying for whom the fees are being covered.
+3. The two signatures are concatenated and sent to the VeChain network along with the transaction data.
 
-**3) The Crypto Exchanges**
+<figure><img src="https://cdn-images-1.medium.com/max/3412/1*EqQX-xtv6RLNb0t1nUQCdQ.png" alt=""><figcaption><p><em>How VIP-191 signatures are constructed.</em></p></figcaption></figure>
 
-Nowadays crypto exchanges use simple logic to collect ERC20/VIP-180 tokens from the end-users: It gives end-user a temp “deposit address” to transfer to. Once the user has done deposition, the exchange then fuels the account with some ETH/VTHO and then “withdraw” further to the exchange’s cold wallet for safekeeping (by initiating another transaction).
+### Next Steps <a href="#next-steps" id="next-steps"></a>
 
-This 2-step process can be largely improved by the VIP-191 fee delegation protocol.
-
-Suppose the exchange has a hefty wallet that can sponsor the withdraw action, then the exchange can eliminate the 1st step of transferring fuel money to the deposit address (which involves a careful calculation of the fee and one online transaction which takes minutes). It can simply initiate the 2nd step withdraw immediately and let the fee be deducted from the hefty wallet, simple and elegant.
-
-### How does VIP-191 Work? <a href="#how-does-vip-191-work" id="how-does-vip-191-work"></a>
-
-It is very simple.
-
-As a developer, you probably already understood a normal valid transaction request is a transaction object with the sender’s signature.
-
-VIP-191 is using a specially formed signature composed by the user and the sponsor together.
-
-Just as the picture below has depicted, once the transaction is forged, the user extracts the hash (information digest) and signs it as normal. At the same time, the sponsor also signs the hash but with additional information “for whom”. Then we concatenate the two signatures together, then send the final composed signature along with the transaction itself, to the VeChain network.
-
-<figure><img src="https://cdn-images-1.medium.com/max/3412/1*EqQX-xtv6RLNb0t1nUQCdQ.png" alt=""><figcaption><p><em>Concatenate Signatures to forge a VIP-191 signature</em></p></figcaption></figure>
-
-### What’s next: <a href="#what-s-on-next" id="what-s-on-next"></a>
-
-Thanks for reading this article.
-
-After solving the problem of “why and how”, I will set up a small example to show off how to integrate the VIP-191 to your dApp workflow. Keep reading!
+This document outlined the purpose and applications of VIP-191 Fee Delegation. The next section will provide a step-by-step guide for implementing VIP-191 in your dApp workflow.
