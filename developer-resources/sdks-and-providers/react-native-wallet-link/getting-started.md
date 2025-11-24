@@ -73,6 +73,63 @@ export default function App() {
   );
 }
 ```
+### With Expo router
+After you wrapped the app with the provider at the root level of your **App** folder create a new file named `+native-intent.tsx` since Expo router don't allow to use deep links to a route that doesn't exists and add the following content:
+```ts
+import { LinkEvent, isVeWorldResponse, processResponse } from "@vechain/react-native-wallet-link"
+
+export function redirectSystemPath({
+  path,
+}: {
+  path: string;
+  initial: boolean;
+}) {
+  try {
+    if (isVeWorldResponse(path)) {
+      return processResponse(path)
+        .then((response) => {
+          switch (response.event) {
+            case LinkEvent.OnVeWorldConnected:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldDisconnected:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedTransaction:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedCertificate:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedTypedData:
+              return "/your-custom-route";
+            default:
+              return "/your-custom-route";
+          }
+        })
+        // Will throw error if the response from veworld is an error
+        .catch((err) => {
+          switch (err.event) {
+            case LinkEvent.OnVeWorldConnected:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldDisconnected:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedTransaction:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedCertificate:
+              return "/your-custom-route";
+            case LinkEvent.OnVeWorldSignedTypedData:
+              return "/your-custom-route";
+            default:
+              return "/error-or-custom-route";
+          }
+        });
+    }
+    return path;
+  } catch {
+    return "/error-or-custom-route";
+  }
+}
+```
+This file will handle the redirect to a specific route inside the app. You can take a look at [Expo docs](https://docs.expo.dev/router/advanced/native-intent/#rewrite-incoming-native-deep-links) for further details
+
+*Inside here you can also manipulate/read data that you got from VeWorld the response.*
 
 ### 2) Configure Deep Linking
 
