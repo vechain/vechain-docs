@@ -24,7 +24,6 @@ The Thor node uses a **master key system** for validator operations. This master
 
 ### Key Files
 - **Master Key**: `~/.org.vechain.thor/master.key` (or `$CONFIG_DIR/master.key`)
-- **P2P Key**: `~/.org.vechain.thor/p2p.key` (used for peer-to-peer networking)
 
 
 ## Master Key Management Commands
