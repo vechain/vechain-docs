@@ -17,8 +17,9 @@ VeChain had implemented an improvement proposal defining a new fungible token st
 
 Unlike VET, VTHO doesn't have a fixed maximum supply. Its supply is governed by:
 
-* Generation rate: new VTHO is generated at every block production and it is a function of Total VET being locked
-* Consumption: VTHO is used for transaction fees, which is split in two parts
+* Generation rate (pre Hayabusa fork): new VTHO is generated at every block by holding VET
+* Generation rate (post Hayabusa fork): new VTHO is generated at every block production and it is a function of Total VET being locked
+* Consumption (as of Galactica fork): VTHO is used for transaction fees, which is split in two parts
   * Base fee gets burned
   * Priority fee goes to the Validator Masternode who proposed the block as reward
 
