@@ -98,7 +98,7 @@ For validator staking, you need to understand two distinct key components:
 
 ### Staking Workflow
 1. Generate/obtain master key: `bin/thor master-key`
-2. Ensure node is fully synced: `bin/thor --network main`
+2. Ensure node is fully synced: `bin/thor --network main --skip-logs`
 3. Use the master key address as the "Validator" parameter in staking contract
 4. Use your VET-holding account as the "Caller/Endorser" address
 5. Execute staking transaction with proper parameters
