@@ -106,9 +106,8 @@ For validator staking, you need to understand two distinct key components:
 
 ### File Permissions and Backup
 ```bash
-# Ensure key files have restricted permissions
+# Ensure key file has restricted permissions
 chmod 600 ~/.org.vechain.thor/master.key
-chmod 600 ~/.org.vechain.thor/p2p.key
 
 # Export keys immediately after generation
 bin/thor master-key --export > backup-keystore.json
