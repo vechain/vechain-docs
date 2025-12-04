@@ -64,7 +64,7 @@ This allows you to provide the master key directly via stdin rather than using t
 
 When you first run a Thor node, the key generation happens automatically:
 
-1. **Load Attempt**: First tries to load existing key from `~/.org.vechain.thor/master.key`
+1. **Load Attempt**: First tries to load existing key from `~/.org.vechain.thor/master.key` (Linux and MacOS) `C:\Users\<user-name>\AppData\Roaming\org.vechain.thor` (Windows) 
 2. **Generate New**: If no key exists, generates a new ECDSA private key using `crypto.GenerateKey()`
 3. **Save**: Automatically saves the new key to the file system using `crypto.SaveECDSA()`
 
