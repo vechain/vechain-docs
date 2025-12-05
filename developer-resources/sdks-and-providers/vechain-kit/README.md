@@ -4,7 +4,7 @@
 
 ## Description
 
-VeChain Kit is a comprehensive SDK designed to make building frontend applications on VeChain fast and straightforward. It offers:
+VeChain Kit is a comprehensive SDK designed to make building frontend applications on VeChain fast and straightforward.
 
 ## Repo
 
