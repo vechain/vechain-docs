@@ -31,6 +31,6 @@ For more details, refer to the [VeVote documentation](https://docs.vevote.vechai
 The governing body of VeChain, was originally a steering committee, which represented the balanced interests of all VeChainThor blockchain stakeholders. The steering committee has been deprecated, and decisions are in the hands of Node holders and Validators casting their votes on VeVote.
 
 {% hint style="info" %}
-Explore VeChain's on-chain governance and view past or future proposals, visit [VeVote](https://vevote.vechain.org/home), VeChain's voting platform. VeVote enhances ecosystem transparency and decentralization.
+Explore VeChain's on-chain governance and view past or future proposals, visit [VeVote](https://vevote.vechain.org/), VeChain's voting platform. VeVote enhances ecosystem transparency and decentralization.
 Specific documentation and details about the new governance can be found here: [docs.vevote.vechain.org](docs.vevote.vechain.org)
 {% endhint %}
