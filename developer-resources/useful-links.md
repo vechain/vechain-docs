@@ -37,7 +37,7 @@ If you want to add a community to the list please follow the contribution guidel
 * [Discord](https://www.discord.gg/vechain)
 * [Discourse](https://vechain.discourse.group/)
 * [Telegram Official](https://t.me/vechainandfriends)
-* [Telegram Devs](https://t.me/VeChainDevCommunity)
+* [Telegram Devs](https://t.me/vechainbuilders)
 * [Medium](https://medium.com/@vechainofficial)
 
 ## GitHub Links
