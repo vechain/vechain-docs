@@ -44,7 +44,7 @@
         * [Signing](core-concepts/wallets/veworld/user-guide/signing.md)
         * [Activities](core-concepts/wallets/veworld/user-guide/activities.md)
         * [Settings](core-concepts/wallets/veworld/user-guide/settings.md)
-      * [FAQ](core-concepts/wallets/veworld/faq.md)* 
+      * [FAQ](core-concepts/wallets/veworld/faq.md) 
     * [VeChain Kit](developer-resources/sdks-and-providers/vechain-kit/README.md)
     * [Sync2 (Legacy)](core-concepts/wallets/sync2/README.md)
       * [User Guide](core-concepts/wallets/sync2/user-guide/README.md)
