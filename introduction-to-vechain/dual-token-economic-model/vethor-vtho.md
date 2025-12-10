@@ -44,9 +44,7 @@ How to start earning:
 To make the first step to start accumulating VTHO reward you can either:
 - become a **delegator**: buying a StarGate NFTs and delegating it to a validator in StarGate.
 - become a **validator**: running the node infrastructure to propose blocks and staking 25 M VET.
-  More about staking can be found in the StarGate docs:
-
-https://docs.stargate.vechain.org/hayabusa
+  More about staking can be found in the [StarGate docs](https://docs.stargate.vechain.org).
 
 ## VTHO generation formula
 
