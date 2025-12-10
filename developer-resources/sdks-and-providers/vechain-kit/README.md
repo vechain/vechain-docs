@@ -25,7 +25,7 @@ VeChain Kit is a comprehensive SDK designed to make building frontend applicatio
 
 📚 For detailed documentation, visit our VeChain [Kit Docs](https://docs.vechainkit.vechain.org/)​​
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Currently supports React and Next.js only
 {% endhint %}
 
