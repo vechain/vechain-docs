@@ -8,7 +8,11 @@ VeChain Kit is a comprehensive SDK designed to make building frontend applicatio
 
 ## Repo
 
-[https://github.com/vechain/vechain-kit](https://github.com/vechain/vechain-kit)
+* GitHub: [https://github.com/vechain/vechain-kit](https://github.com/vechain/vechain-kit)
+
+## Package
+
+* NPM Package: [https://www.npmjs.com/package/@vechain/vechain-kit](https://www.npmjs.com/package/@vechain/vechain-kit)
 
 
 ## Key Features
@@ -28,15 +32,7 @@ Currently supports React and Next.js only
 ## Resources
 
 * [​Live Demo​](https://vechainkit.vechain.org/)
-* [NPM Package](https://www.npmjs.com/package/@vechain/vechain-kit)
 * [Getting Started](https://docs.vechainkit.vechain.org/quickstart/installation)
-* [Customization](https://docs.vechainkit.vechain.org/customization/theming)
-* [Components](https://docs.vechainkit.vechain.org/components/intro)  
-
-## Migrate to VeChain Kit v2
-
-* [From VeChain kit v1](https://docs.vechainkit.vechain.org/migrations/upgrade-vechain-kit-from-1.x-to-2.x)
-* [From DAppKit](https://docs.vechainkit.vechain.org/migrations/migrate-from-dappkit)
 
 ## Troubleshooting
 
