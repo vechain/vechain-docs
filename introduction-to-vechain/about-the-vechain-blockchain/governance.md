@@ -10,7 +10,7 @@ On-chain governance in blockchain refers to the process of making decisions and 
 
 ## VeChain's On-Chain Governance Implementation
 
-VeChain leverages on-chain governance to enable stakeholders to make decisions on critical on-chain actions.
+VeChain leverages on-chain governance to enable stakeholders to make decentralize decision with on-chain voting.
 Execution though was kept off-chain. This means that the outcome will require a human action to propagate the change.
 These actions can, for instance, be activating or not a new network upgrade, changing token emission parameters, gas rules or block rewards, or any technical or economic mechanics that can be implemented on the VeChainThor blockchain.
 
@@ -20,17 +20,13 @@ VeChain's on-chain governance process consists of three phases:
 * **Authorization:** actual creation of the proposal by whitelisted accounts to safeguard on-chain governance against malicious activities.
 * **Execution:** off-chain mechanics to execute a proposal that has passed, ending in an on-chain transaction to track and notify that the change was executed.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-07-20 at 16.01.48.png" alt=""><figcaption><p>Framework for on-chain governance.</p></figcaption></figure>
-
-{% hint style="info" %}
-The governing body of the mainnet is the steering committee of VeChain Foundation
-{% endhint %}
-
 ## Voters
 
-Voting power is available to all stakers, and delegators. The number of votes, the voting power, is determined by the node tiers owned or managed.
+Voting power is available through staking. The number of votes, the voting power, is determined by the node tiers owned or managed.
 
 For more details, refer to the [VeVote documentation](https://docs.vevote.vechain.org). 
+
+  More about staking can be found in the [StarGate docs](https://docs.stargate.vechain.org).
 
 ## Some History
 
