@@ -5,7 +5,7 @@ VeChainThor introduces several key features that differentiate it from Ethereum:
 1. **Two-Token System (VET & VTHO):**
 
 * **VET (VeChain Token):** The primary reserve of value token. VET has a maximum fixed supply of around 86 billion tokens which have already been minted. No more VET will be created.
-* **VTHO (VeChainThor Energy):** Functions as a “gas token,” is an ERC20 native currency used to pay for the cost of computation (gas) on the blockchain. Transactions consume VTHO, a portion of which gets burned. VET holders generate VTHO over time (at a rate of 0.000432 VTHO per VET per day).
+* **VTHO (VeChainThor Energy):** Functions as a “gas token,” is an ERC20 native currency used to pay for the cost of computation (gas) on the blockchain. Transactions consume VTHO, a portion of which gets burned. VET can be staked to generate VTHO over time.
 * **Benefit:** Decouples transaction costs (VTHO) from the price volatility of the main asset (VET), leading to more predictable and stable transaction fees for businesses.
 * **Implication:** Developers must manage both VET and VTHO.
 
