@@ -8,7 +8,7 @@ description: >-
 
 ## Why do I need to pay fees for transactions?
 
-Transaction fees for blockchain transactions are analogous to bank fees for bank transactions. All open, public blockchains will have one thing in common, a user will pay a fee in order to send a transaction. The main reason for this is due to incentivisation. There are actors within in the system who add transactions to a block and add blocks to the blockchain. These actors are known as miners, stakepool operators, or in VeChain's case, Authority Masternodes (AM). Regardless of the consensus approach, these actors are financially incentivized to maintain the blockchain, in part or in full, by the fees users pay to send transactions.
+Transaction fees for blockchain transactions are analogous to bank fees for bank transactions. All open, public blockchains will have one thing in common, a user will pay a fee in order to send a transaction. The main reason for is to give some incentive to the actors who add transactions to the blockchain. These actors are known as Validators, who operates a blockchain node of VeChainThor. 
 
 ## How do transaction fees differ to banking fees?
 
