@@ -26,7 +26,7 @@ Voting power is available to all VeChainThor Validators, as well as StarGate NFT
 
 For more details, refer to the [VeVote documentation](https://docs.vevote.vechain.org). 
 
-  More about staking can be found in the [StarGate docs](https://docs.stargate.vechain.org).
+More about staking can be found in the [StarGate docs](https://docs.stargate.vechain.org).
 
 ## Some History
 
