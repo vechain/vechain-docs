@@ -20,7 +20,7 @@ Examples of how to use the built-in contracts can be found [here](https://github
 
 ### energy.sol <a href="#energy-sol" id="energy-sol"></a>
 
-[energy.sol ](https://github.com/vechain/thor/blob/master/builtin/gen/energy.sol)represents the sub-token in VeChainThor which conforms to VIP-180(ERC-20) standard. The name of the token is VeThor and the symbol is VTHO. 1 VTHO equals to 1e18 Wei. The main function of VTHO is to pay for the transaction fee. VTHO is generated from VET, so the initial supply of VTHO is zero in the genesis block. The growth rate of VTHO is 5000000000 wei per token(VET) per second, that is to say 1 VET will produce about 0.000432 VTHO per day. The miner will be rewarded with 30 percent of transaction fee and the remaining 70 percent of the transaction fee will be burned. So the total supply of VTHO is dynamic.
+[energy.sol ](https://github.com/vechain/thor/blob/master/builtin/gen/energy.sol)represents the sub-token in VeChainThor which conforms to VIP-180(ERC-20) standard. The name of the token is VeThor and the symbol is VTHO. 1 VTHO equals to 1e18 Wei. The main function of VTHO is to pay for the transaction fee. VTHO is generated from VET, so the initial supply of VTHO is zero in the genesis block. The growth rate of VTHO is dynamic and depends on both network utilization and the amount of VET Staked in the DPoS consensus. 
 
 **Address** :0x0000000000000000000000000000456e65726779
 
