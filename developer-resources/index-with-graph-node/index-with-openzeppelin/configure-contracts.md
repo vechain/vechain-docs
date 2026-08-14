@@ -32,7 +32,7 @@ Create a configuration file `vbd-tokens.json` with this information:
 ```
 
 ```shell
-npx graph-compiler \
+npx --package @amxx/graphprotocol-utils -- graph-compiler \
   --config vbd-tokens.json \
   --include node_modules/@openzeppelin/subgraphs/src/datasources \
   --export-schema \
