@@ -1,22 +1,26 @@
 # How to Integrate VIP-191 (II)
 
-From the [previous](how-to-integrate-vip-191-i.md) article, we have learned the basic “terminologies” of VeChain VIP-191 fee delegation. To summarize, the process can be simply described as below:
+This section continues from the [previous article](how-to-integrate-vip-191-i.md), where the fundamentals of VeChain’s VIP-191 fee delegation were introduced. Here, we will implement a practical example demonstrating the integration of VIP-191 in a dApp workflow.
 
-1. The “user” creates a transaction body.
-2. The “user” generates a “user signature”.
-3. The transaction is sent to a “sponsor” to get a “sponsor signature”.
-4. The two signatures are combined to forge a “final signature”.
-5. The final transaction is posted to the VeChain network.
+### Summary of the VIP-191 Process
 
-To get an overview, the idea is depicting as below:
+The VIP-191 process can be summarized as follows:
+
+1. The `user` creates a transaction body.
+2. The user generates a `user signature`.
+3. The transaction is sent to a `sponsor` to obtain a `sponsor signature`.
+4. Both signatures are combined to form a `final signature`.
+5. The final transaction is submitted to the VeChain network.
+
+The overall workflow is depicted below:
 
 <figure><img src="https://cdn-images-1.medium.com/max/3140/1*sn2Hy9U6PYsA5xCSqspBBQ.png" alt=""><figcaption><p><em>Overview of VIP-191 Fee Delegation.</em></p></figcaption></figure>
 
-Our example will involve a user with an “empty wallet” who tries to call a smart contract (which costs gas) then the sponsor pays for the operation. Let’s break it down step by step.
+This example will simulate a user with an empty wallet attempting to interact with a smart contract. The sponsor will cover the transaction costs. The implementation steps are outlined below.
 
-#### Deploy the Smart Contract <a href="#deploy-the-smart-contract" id="deploy-the-smart-contract"></a>
+#### Deploying the Smart Contract <a href="#deploying-the-smart-contract" id="deploying-the-smart-contract"></a>
 
-First, we need to deploy a simple contract on testnet for us to interact with. The source code of the smart contract is as simple as below. It contains a counter variable which will be increased each time the function increaseAmount is called by any user.
+First, deploy a simple smart contract on the VeChain testnet. Below is the source code for the contract, which includes a counter that increments each time the `increaseAmount` function is called.
 
 ```solidity
 pragma solidity ^0.5.11;
@@ -34,11 +38,13 @@ contract Hello {
 }
 ```
 
-Many tools can be used to deploy the smart contract, we won’t cover the process in this article, but you can read it from [this tutorial](https://medium.com/@abyteahead/how-to-fast-deploy-a-smart-contract-on-vechain-with-bare-hands-eab8d7d96b43).
+For deployment instructions, refer to [this guide](https://medium.com/@abyteahead/how-to-fast-deploy-a-smart-contract-on-vechain-with-bare-hands-eab8d7d96b43).
 
-> Also, I have deployed it on testnet already, on address: 0x6d48628bb5bf20e5b4e591c948e0394e0d5bb078 We will go with this address in the rest of the article.
+For simplicity, this tutorial will use a pre-deployed contract on the VeChain testnet.
 
-#### Build a Transaction Body <a href="#build-a-transaction-body" id="build-a-transaction-body"></a>
+`Contract Address: 0x6d48628bb5bf20e5b4e591c948e0394e0d5bb078`.
+
+#### Building a Transaction Body <a href="#building-a-transaction-body" id="building-a-transaction-body"></a>
 
 We employ the thor-devkit.js library to help us with the building of a transaction. To call the method, we build a simple transaction like this:
 
